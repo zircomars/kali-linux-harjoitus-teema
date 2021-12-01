@@ -11,3 +11,5 @@ Visualisointityökaluna Grafana on suosittu komponentti pinojen seurannassa, jot
 kuten InfluxDB , Prometheus ja Graphite, kanssa . valvonta -alustoja , kuten Sensu, Icinga , Checkmk , Zabbix , Netdata ja PRTG ; SIEM: t ,
 kuten Elasticsearch ja Splunk ; ja muut tietolähteet. Grafanan käyttöliittymä perustui alun perin Kibanan versioon 3 . 
 Grafana - https://fi.abcdef.wiki/wiki/Grafana
+
+![Alt text](images/graph_gradient_area.jpeg?raw=true "None")
