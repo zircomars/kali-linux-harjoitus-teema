@@ -4,5 +4,14 @@
 ![Alt text](images/Sieppaa2-install&purkaus.PNG?raw=true "None")
 ![Alt text](images/Sieppaa3-aktivoiPrometheus.PNG?raw=true "None")
 
-![Alt text](images/.PNG?raw=true "None")
+![Alt text](images/Sieppaa4-PrometheusPolku.PNG?raw=true "None")
+![Alt text](images/Sieppaa5-TargetPolku.PNG?raw=true "None")
+![Alt text](images/Sieppaa6-metricSivu.PNG?raw=true "None")
+
+![Alt text](images/Sieppaa7-valitaanJokuLuku.PNG?raw=true "None")
+![Alt text](images/Sieppaa8-pieniKuvaus.PNG?raw=true "None")
+![Alt text](images/Sieppaa9-haekohde.PNG?raw=true "None")
+
+![Alt text](images/Sieppaa10-haekohde.PNG?raw=true "None")
+![Alt text](images/Sieppaa11-haeKohdeGrafiikka.PNG?raw=true "None")
 
