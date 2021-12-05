@@ -1,3 +1,4 @@
+#special variables - special muuttuja
 echo "File Name: $0"
 echo "First Parameter : $1"
 echo "Second Parameter : $2"
