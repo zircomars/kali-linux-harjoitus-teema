@@ -3,4 +3,4 @@ Perus shell-skripti eli komentotulki & vähä kuin odottaa käyttäjä antaa jot
 Myös sitä voi tallentaa usein käytettyihin komentosarjoihin tiedostoon.
 Kun antaa komentotulkissa skriptin nimen, se suorittaa siinä olevat komennot. Joissain komentotulkeissa on ohjausrakenteita joilla voi ohjelmoida näitä skriptejä.
 
-![Alt text](/images/scripti.png?raw=true "None")
+![Alt text](images/scripti.png?raw=true "None")
