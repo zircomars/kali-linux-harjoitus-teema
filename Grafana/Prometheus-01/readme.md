@@ -1,4 +1,5 @@
 <h1>Grafana & Prometheus 28.11.2021</h1>
+<b> Lisä vaihe kuvia löytyy kansio prometheus & images </b>
 
 ![Alt text](images/Sieppaa1-prometheusDownload.PNG?raw=true "None")
 ![Alt text](images/Sieppaa2-install&purkaus.PNG?raw=true "None")
