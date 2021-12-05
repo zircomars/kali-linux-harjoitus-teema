@@ -30,3 +30,13 @@ echo "Hello, $firstName , $lastName & age is: $age"
 # age?
 # 22
 # Hello, John , Smith & age is: 22
+
+#esim3)
+# a = "texti" , että tulostettaan a - , tässä pitää huomioida, pitää olla yhteen, eikä saa olla väliä välissä. Koska jokinlainen järjestelmä, että a on just just se tekijänsä objekti
+
+TERV="zxcv"
+echo $TERV
+
+#console/outputs::::::
+# zxcv
+#
