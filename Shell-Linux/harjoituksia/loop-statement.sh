@@ -45,4 +45,40 @@ do
    a=`expr $a + 1`
 done
 
+#continue statement
+# jatkuva käsky, eli sama kuin break silmukka, paitsi se aiheuttaa silmukan nykyisessä iteraation poistumisessa koko silmukan ajan
+
+#sitä myös voidaan break komentoa, että continue komennolla avulla voidaan antaa kokonaislukuargumenttia, jotta ohittaa komennon sisäkkäisellä silmukalla
+
+#esim 3) parillinen ja pariton
+NUMS="1 2 3 4 5 6 7 8 9 10"
+
+for NUM in $NUMS #numerolle tehdää jotain
+do
+   Q=`expr $NUM % 2` #onko pariton tai parillinen
+   if [ $Q -eq 0 ] #jos on pariton
+   then
+      echo "Number is an even number!!"
+      continue
+   fi #muu, sitten on pariton
+   echo "Found odd number"
+done
+
+# console/outputs:::::
+# Found odd number
+# Number is an even number!!
+# Found odd number
+# Number is an even number!!
+# Found odd number
+# Number is an even number!!
+# Found odd number
+# Number is an even number!!
+# Found odd number
+# Number is an even number!!
+#
+#
+
+
+
+
 
