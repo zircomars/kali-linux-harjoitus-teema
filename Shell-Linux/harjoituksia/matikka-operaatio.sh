@@ -38,7 +38,7 @@ then
    echo "a is not equal to b"
 fi
 
-# a ja b ero, & if-else statement
+# a ja b ero, & if-else statement 
 if [ $a > $b ]
 then 
   echo "a on pienempi kuin b"
