@@ -1,0 +1,60 @@
+#Metacharacters / metamerkkit
+
+#Unix Shell tarjoaa erilaisia metamerkkejä, joilla on erityinen merkitys käytettäessä niitä missä tahansa Shell-komentosarjassa ja jotka aiheuttavat sanan lopettamisen, ellei sitä lainata.
+
+#erikois merkkit ovat - 
+#* ? [ ] ' " \ $ ; & ( ) | ^ < >
+
+#error, tuottaa syntax error
+#echo moikka; zcxv
+
+#correct, toimii
+#echo Hello\; Word
+
+#correct, toimii & erityisesti esim. raha summa ja valuutta & shell dollari-merkkissä on erikoinen toiminta kuten: muuttuja, echo-juttu, loop, matikka operaattio ja yms.
+#echo "I have \$1200 + €500"
+
+#### Single Quotes ####
+#echo \<-\$1500.\*\*\>\; \(update\?\) \[y\|n\]
+#console/outputs::
+# <-$1500.**>; (update?) [y|n]
+
+## toinen vaihtoehto ##
+#echo '<-$1500.**>; (update?) [y|n]'
+#console/outputs::
+#<-$1500.**>; (update?) [y|n]
+
+
+#### Double Quotes ####
+VAR=Calvin
+echo "$VAR owes <-\$1500.**>; [ as of (`date +%m/%d`) ]"
+
+#console/outputs::
+#Calvin owes <-$1500.**>; [ as of (12/07) ]
+
+#kaksoislainausmerkien poistavien kaikkien merkkien erityismerkityksen paitsi seuraavia
+#
+#$ for parameter substitution
+#Backquotes for command substitution
+#\$ to enable literal dollar signs
+#\` to enable literal backquotes
+#\" to enable embedded double quotes
+#\\ to enable embedded backslashes
+#All other \ characters are literal (not special)
+#
+#
+
+#samoin tähän vaikuttaa englannin tai kirjoituksen erikois merkkiä mm. it's , valuutta $12, matikkan operaation objektit ja jne.
+#esim:
+#echo "It\'s Shell Programming"
+
+#### Backquotes ####
+# `` syntaksi jotakin erikois merkki, että toteutaa jokinlaisen komennon ja data muuttujan
+
+#esim päiväys
+DATE=`date`
+
+echo "Current Date: $DATE"
+
+#console/outputs::
+#Current Date: Tue Dec  7 19:33:58 UTC 2021
