@@ -1,0 +1,70 @@
+#### Unix linux regular expression ####
+## eli komento/console, että cat, pinggaus, echo ja jne, syntaksit, sudo nano jne.
+
+##vi, grep, awk, gbek ja jne. jotakin tiedoston editointia ja määritystä, mutta perus "sudo nano"
+
+### SED = stream editor ###
+
+#sed generaalin syntaksit
+#määrä ja pieni kuvaus::
+#p - printtaa rivin
+#d - poistaa rivin
+#s/kuvio1/kuvio2 - - kuvio(pattern), korvaa kuvion1 tai 2
+
+##komennot ja muut muistiinpanot START HERE
+
+##tulostaa asetukset/options, että sisäisen työpuskurit, ja SED käyttön operaatioon
+#cat /etc/passwd |sed
+
+##tässä kahdessa komennossa ei tapahdu mitään, vain mukaan poistaa kaikki rivi/muodon 'sed' kanssa
+#tapa1
+#$ cat /etc/passwd | sed 'd'
+
+#tapa2
+#$ sed -e 'd' /etc/passwd
+
+#### SED osoitteet ####
+##sed tukee osoiteitta, mitä on tiettyjen paikkojen tiedostoi tai alueita, jossa on tietyt muokkauskomennot tulee käyttää & Kun tai jos 'sed' ei löydä osoiteita, se suorittaa toiminnan jokaisella tiedoston rivillä
+
+#numero
+#$ cat /etc/passwd | sed '1d' |more
+
+#tulostuu aika paljon::
+# daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+# bin:x:2:2:bin:/bin:/usr/sbin/nologin
+# sys:x:3:3:sys:/dev:/usr/sbin/nologin
+# sync:x:4:65534:sync:/bin:/bin/sync
+
+#SEd address määrä/alue, että yritettään hakea sitä määärä, mitä lopussa sijoittuu syntaksi
+
+### SED range(määrä) ja pieni kuvaus ja tohon '<väliin>'
+# cat /etc/passwd | sed '1, 5d' |more
+
+# '4,10d'
+#rivit alkavat tulostua 4:stä ja päättyy kunnes on 10:es ovat poistettu
+
+# '10,d4'
+# vai 10 riviä pistettu, koska sed ei voi määrittää vastakaista suuntaan
+
+# '4,+5d'
+# täsmää vain 4 riviä tiedostosta, poistaa sen kyseisen rivin poistamista ja lopettaa sittten poistamisen ja tulostaa loput
+
+# '2,5!d'
+# poistaa kaikki muut paitsi alkaen 2:sta ja päättyy 5:teen
+
+#'1~3d'
+#Poista ensimmäisen rivin, siirtyy kolmanen seuraavaan rivin ylitse, ja poistaa sitten neljännen rivin. SED jatkaa mallin käyttöä tiedoston loppuun asti
+
+#'2~2d'
+#käskee SED poistaa toisen rivin, ja siirtyy seuraavan rivin ylitse, poistaa seuraavan rivin ja toistaa kunnes tiedosto päättyy
+
+#'4,10p'
+#aloittaa tulostaa rivin 4:stä ja päättyy 10:neen, 
+
+# '4,d'
+# syntax error
+
+# ',10d'
+# syntax error
+
+## kun käyttää p sanan toiminnassa, ennen sitä pitää olla jokin luku, että vältä rivintulostuksen toistamista
