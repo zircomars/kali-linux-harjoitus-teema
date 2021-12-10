@@ -1,0 +1,92 @@
+# /////////////////////////////////////////////////////////
+######## Matching Characters #######
+#tiedoston haku kohde, että vähä tarkentaa tiedoston polkua ja muita ylläpitoa
+
+### esim joku vastaava polku tai semmoinen, ennen testausta & etsi polusta /etc/zx ###
+#$ cat /etc/debconf.conf | sed -n '/^[[:alpha:]]/p'
+
+#Config: configdb
+#Templates: templatedb
+#Name: config
+#Driver: File
+#Mode: 644
+#Reject-Type: password
+#Filename: /var/cache/debconf/config.dat
+#Name: passwords
+#Driver: File
+#Mode: 600
+#Backup: false
+#Required: false
+#Accept-Type: password
+#Filename: /var/cache/debconf/passwords.dat
+
+### tiedoston tai polun hakemisessa pitää olla jokin suodatus, että esim. haettaan a-z nimeä, 1-9 tunnuslukua, a-z+1-9 id-tunnus tai muuta määritettyä tiedoston kohdetta, eli hakee tarkempaa haku kohdetta
+
+### hakemisen ilmaisu ja pieni kuvaus ###
+
+# /a.c/
+#Vastaa rivejä, jotka sisältävät merkkijonoja, kuten a+c, a-c, abc, match ja a3c
+
+#/a*c/
+#Sopii yhteen samojen kielten kanssa, kuten ässä, yacc ja arktinen
+
+#/[tT]he/
+#täsmää string "The" tai the (ensimmäinen kirjain iso/pieni)
+
+# /^$/
+#Vastaa tyhjiä rivejä
+
+#/^.*$/
+#Sopii kokonaiseen riviin, oli se sitten mikä tahansa
+
+#/ */
+#täsmää yhen tai useaman väli (space)
+
+#/^$/
+#Vastaa tyhjiä rivejä
+
+### näyttää joitain usein käytettyjä merkkejä ##
+
+#[a-z]
+#täsmää pieniä kirjaimia
+
+#[A-Z]
+#täsmää isoja kirjaimia
+
+#[a-zA-Z]
+#täsmää yksittäisen kirjaimen
+
+#[0-9]
+#täsmää yksittäisen numeron
+
+#[a-zA-Z0-9]
+#täsmää yksittäisen kirjaimen tai numeron
+
+
+##### Character Class Keywords ######
+## jossain special avainsanoissa on säännöllinen lausekke, esim. GNU-apuohjelma, mitä käytävät säännöllisiä lausekkeita. Myös hyödyllisiä SED-säännössä käytössä, ja koska ne yksinkertaistava asioita ja parantavat luetteloita
+
+#Esimerkiksi merkit a–z ja merkit A–Z muodostavat yhden sellaisen merkkiluokan, jolla on avainsana [[:alpha:]]
+
+#esim edellisen haku kohteen /etc/debconf.conf ja jälkimäisen avainsanan komento tulostaa tietyi rivei, ja aakkosten kirjaimia
+
+#saman äskeisen esimerkkin komennossa on alpha, ja mitä on yksi listasta tai esimerkki, tai avainsana, mitä GNU käyttää
+
+## character luokka ja kuvaus
+# sivustolta löytyy lisää:: https://www.tutorialspoint.com/unix/unix-regular-expressions.htm
+
+
+#[[:alnum:]]
+#alpha numerot [a-z A-Z 0-9]
+
+#[[:alpha:]]
+#aakkosjärjestykset [a-z A-Z]
+
+#[[:blank]]
+#tyhjät merkit (väli tai tab)
+
+#[[:cntrl:]]
+#ohjaushahmot / control character
+
+#[[:digit:]]
+#numerot [0-9]
