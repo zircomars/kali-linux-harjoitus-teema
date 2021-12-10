@@ -1,22 +1,84 @@
 # ////////////////////////////////////////////////////////////
-####### Substitution command #######
+####### Using an Alternative String Separator #######
 
-#merkkijonossa korvautuu toiselle sed:lle, mitä on oltava tiedosto, missä ensimmäinen merkkijono päättyy ja korvausmerkkijono alkaa & tämän takia käytettään päättämistä /, eli polku tiedosto 
+#oletettaan, että on korvattavia merkkijonoija, mitä sisältää polkumerkki / & sen kanssa voi määärittää toisen erottimen antamalla määritetyn merkin s:n jälkeen
 
-# hakee käyttäjien polkua, että havaitsee polun olevan shell/bash käytön
-#$ cat /etc/passwd | sed 's/root/amrood/'
+#esim tässä komennossa on erotettuna kaksoispiste kauttaviiva ja polku sijainti, koska yriti etsi ä yksinkertaisen juuren sijainnin
+#$ cat /etc/passwd | sed 's:/root:/amrood:g'
 
-#amrood:x:0:0:root:/root:/bin/bash
+#root:x:0:0:root:/amrood:/bin/bash
 #daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
 #bin:x:2:2:bin:/bin:/usr/sbin/nologin
-#jatkuu pälä pälä
+# jatkuu pälä pälä
 
-#perän loppussa on g , mitä tarkoittaa globaalia & 
-#$ cat /etc/passwd | sed 's/root/amrood/g'
+### korvaa välin (space), että poistaa korvausmerkkien jonon root:lle ###
 
-#amrood:x:0:0:amrood:/amrood:/bin/bash
+#$ cat /etc/passwd | sed 's/root//g'
+
+#x:0:0::/:/bin/bash
+#daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+#bin:x:2:2:bin:/bin:/usr/sbin/nologin
+#sys:x:3:3:sys:/dev:/usr/sbin/nologin
+#sync:x:4:65534:sync:/bin:/bin/sync
+# jatkuu pälä pälä
+
+### osoitteen korvaaminen ###
+#jos haluttaan korvata string sh , mitä kautta quiet vain 10 riviä
+# $ cat /etc/passwd | sed '10s/sh/quiet/g'
+
+#root:x:0:0:root:/root:/bin/bash
 #daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
 #bin:x:2:2:bin:/bin:/usr/sbin/nologin
 #sys:x:3:3:sys:/dev:/usr/sbin/nologin
 #sync:x:4:65534:sync:/bin:/bin/sync
 #jatkuu pälä pälä
+
+##samankaltaisen osoiteen voidaan rajoittaa määrän korvauksen & komennon tuloksena näkyy pää viisi ensimmäistä riviä merkkijonoa sh muuttui, mutta lopput rivit jätetiin koskemattomiksi
+#$ cat /etc/passwd | sed '1,5s/sh/quiet/g'
+
+#root:x:0:0:root:/root:/bin/baquiet
+#daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+#bin:x:2:2:bin:/bin:/usr/sbin/nologin
+#sys:x:3:3:sys:/dev:/usr/sbin/nologin
+#sync:x:4:65534:sync:/bin:/bin/sync
+#games:x:5:60:games:/usr/games:/usr/sbin/nologin
+#lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+#mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+#news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+#uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+#jatkuu pälä pälä
+#
+
+###### komennon täsmäys ######
+
+#vaihtoehtona on p-vaihtoehtoa yhdessä -n vaihtoehto kanssa tulostakseen kaikki vastaavat rivit 
+
+#$ cat testing | sed -n '/root/p' (ei toimi)
+#$ cat /etc/passwd |sed -n '/root/p'
+
+#root:x:0:0:root:/root:/bin/bash
+
+#### säännöllisen lausekkeen käyttäminen ####
+### kun tai yrittää sovittaa, voi käyttää säännöölisen lauseketta, mitä tarjoaa enemmän joustavuutta
+
+### esim, mitä vastaa kaikkiin daemon riveihin ja poistaa niitä
+
+#$ cat testing | sed '/^daemon/d' (ei toimi)
+#$ cat /etc/passwd | sed '/^daemon/d' (toimii) 
+
+#root:x:0:0:root:/root:/bin/bash
+#bin:x:2:2:bin:/bin:/usr/sbin/nologin
+#sys:x:3:3:sys:/dev:/usr/sbin/nologin
+#sync:x:4:65534:sync:/bin:/bin/sync
+#games:x:5:60:games:/usr/games:/usr/sbin/nologin
+#man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+
+### tämä, mikä poistaa kaikki rivit, jotka päättyvät sh − 
+#cat /etc/passwd |sed '/sh$/d'
+
+#daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+#bin:x:2:2:bin:/bin:/usr/sbin/nologin
+#sys:x:3:3:sys:/dev:/usr/sbin/nologin
+#sync:x:4:65534:sync:/bin:/bin/sync
+#games:x:5:60:games:/usr/games:/usr/sbin/nologin
+#man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
