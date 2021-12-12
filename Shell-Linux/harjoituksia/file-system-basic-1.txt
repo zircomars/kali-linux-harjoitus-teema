@@ -1,0 +1,96 @@
+##### file system basics ####
+
+#Tiedostojärjestelmä on looginen kokoelma tiedostoja osiolla tai levyllä. Osio on tietosäiliö, joka voi haluttaessa kattaa koko kiintolevyn.
+
+#Kiintolevylläsi voi olla useita osioita, jotka sisältävät yleensä vain yhden tiedostojärjestelmän, kuten yksi /file-järjestelmän sisältävä tiedostojärjestelmä tai toinen, joka sisältää /home-tiedostojärjestelmän.
+
+#Yksi tiedostojärjestelmä osiota kohti mahdollistaa erilaisten tiedostojärjestelmien loogisen ylläpidon ja hallinnan.
+
+#jokaisessa Unix pidetään tiedostona, että on fyysiset laiteistot, DVD-ROM levyt, USB-laitteet ja levykeasemat
+
+#Unixin tiedostorakenteet ylin taso on juuri- eli root-hakemisto, johon viitataan / -merkillä. Siinä on aina märätty joukko alihakemistojakuten esim. bin, dev, etc, lib, mnt, tmp ja usr. Alijoukkoja voi olla enemmänkin. Yleensä Unix -hakemistojen perässä näkyy listauksessa kauttaviiva /
+
+##alihakemistojen polku ja pieni kuvaus
+#http://materiaali.osao.fi/kaul/verkko-opetus/datanomi/ammatilliset_valinnaiset/UnixLinux/Tiedostojarjestelma/Tiedostojarjestelma.htm
+
+#/bin - suoritettavat tiedostot. Nämä tiedostot ovat kaikkien käyttäjien saatavilla 
+
+#/dev  - laitteistojen ajurit
+
+#/etc - Valvojan hakemistokomennot, asetustiedostot, levyn määritystiedostot, kelvolliset käyttäjäluettelot, ryhmät, ethernet, isännät, mihin kriittiset viestit lähetetään
+
+#/lib - Sisältää jaetut kirjastotiedostot ja joskus muita ytimeen liittyviä tiedostoja
+
+#/boot - sisältää tiedostojen järjestelmän käynnistymistä varten
+
+#/home - Sisältää kotihakemiston käyttäjille ja muille tileille & haku tai kohde mitä käyttäjiä on olemassa tai tiedosto tyyppiä
+
+#/mnt - Käytetään muiden väliaikaisten tiedostojärjestelmien liittämiseen, kuten cdrom ja levyke CD-ROM-asemalle ja levykeasemalle, vastaavasti
+
+#/proc - Sisältää kaikki prosessit, jotka on merkitty tiedostoiksi prosessinumerolla tai muulla järjestelmälle dynaamisella tiedolla 
+
+#/tmp - Säilyttää väliaikaiset tiedostot, joita käytetään järjestelmän käynnistysten välillä
+
+#/usr - Käytetään erilaisiin tarkoituksiin, ja monet käyttäjät voivat käyttää sitä. Sisältää järjestelmänvalvojan komennot, jaetut tiedostot, kirjastotiedostot ja muut
+
+#/var - Tyypillisesti vaihtelevan pituisia tiedostoja, kuten loki- ja tulostustiedostoja sekä minkä tahansa muun tyyppisiä tiedostoja, jotka voivat sisältää vaihtelevan määrän dataa
+
+#/sbin - Binaariset (suoritettavat) tiedostot, yleensä järjestelmän hallintaa varten. Esimerkiksi fdisk- ja ifconfig-apuohjelmat
+
+#/kernel - yhdintiedostot
+
+#################################################
+
+### navigoidaan tiedosto tyyppiä ###
+#https://www.tutorialspoint.com/unix/unix-file-system.htm
+
+#jokaisessa tiedostossa tulee aina muokata, lukaista tai purkaa koko pakettia & myös siirtää, kopioida tai muuta toimintaa
+
+#### HUOM!! Tänne vain lisääntyy perus ja tärkeimmät komennot tyypit, ei ihan kaikkia tule
+
+#cat - näyttää tiedoston sisäisen asiakirjan 
+
+#cd - mennään kohteen kansion polkuun
+
+#cp - kopio tiedosto/kansio
+#$ cp -r tiedosto/kansio <kohde>
+
+#file - tunnistaa tiedostontyyppi (binääri, teksti ja jne)
+
+#find - etsiä tiedoston/kansion
+#$find - "folder_name"
+#$find - "foldername"/ <tab><tab>
+
+#head - melko sama kuin find, mutta <tab> <tab> avulla näyttää sisäisen tiedoston
+
+#mkdir - tiedoston/kansion luominen
+
+#more - vähä kuin lukaisisi tiedoston, mutta täysin erilainen kuin "nano", vaan tulostuu näyttöön
+
+#mv - tiedoston/kansion siirto tai koko nimi muuttuu
+
+#rm - tiedoston poistaminen & rmdir - poistaa hakemiston
+
+#touch - tiedoston luominen
+
+#whereis - näyttää tiedoston sijainnin
+
+# /////////////////////////////////////
+###### df command ######
+#df (disk free)
+
+#df -k 
+#komento, mikä näyttää levytilan käytön kilotavuina & -m megatavu
+
+#df --help - antaa lisä komentoa, että mitä voi syöttää ja jne
+
+##### du command #######
+
+#du (disk usage) - komennolla voit määrittää hakemistoja, jotka näyttävät tietyn hakemiston levytilan käytön.
+
+### komennon avulla voi määrittää, kuinka paljon tilaa tietty hakemisto vie & esim. seuraava komento näyttää kukin hakemiston käytämien lohkojen määrää. Yksi lohko voi kestää järjestelmästä riippuen joko n. 512 tavua tai 1kilotavua.
+
+#$ du /etc
+
+# -h kanssa helpottaa tulostamien yksikköä, että tietää onko kilo vai miljtavua
+#$ du -h /etc
