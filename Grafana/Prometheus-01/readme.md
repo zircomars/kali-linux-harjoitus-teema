@@ -11,6 +11,9 @@ Prometheus sovelluksessa, mitä pitää aktivoida päälle, jotta voi suorittaa 
 
 ![Alt text](images/Sieppaa1-prometheusDownload.PNG?raw=true "None")
 ![Alt text](images/Sieppaa2-install&purkaus.PNG?raw=true "None")
+
+<h3>Prometheus software running </h3> <br>
+
 ![Alt text](images/Sieppaa3-aktivoiPrometheus.PNG?raw=true "None")
 
 ![Alt text](images/Sieppaa4-PrometheusPolku.PNG?raw=true "None")
