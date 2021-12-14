@@ -4,6 +4,8 @@
 <h1> Mikä on prometheus sovellus? </h1>
 Ilmainen ohjelmisto sovellus, mitä käytettään tapahtumien seurannassa ja hälytyksissä. Sitä voi tallentaa reaaliaikaisia mittarrien diagrammia kuten ympyrät, viivakaaviot, pylväskaavio, taulukkot ja maapallo kartta tietokannan. Myös diagrammin seurannassa tulostuu luvun mittayksikkköt, että esim. lämpötilan celcsius ja fahrenheit. Aikasarjantietokannat, mitä rakentuu käyttämällä HTTP protokollaa, mitä joustaa kyseisen ja reaaliaikaisen hälytyksen.
 
+<br>
+
 Prometheus sovelluksessa, mitä pitää aktivoida päälle, jotta voi suorittaa reaaliaikaisen ajan seurannan.
 
 <h2> Linux install prometheus ALKAA TÄSTÄ </h2>
