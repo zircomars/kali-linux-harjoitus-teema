@@ -1,0 +1,48 @@
+##### system performance ######
+
+#Unix käyttöjärjestelmän suorituskyvyn valvonta ja hallinta. Työkaluista tarjoavat ohjeita suorituskyvynongelmien diagnosoimista ja korjaa Unix ympäristössä.
+
+#Koneen suorituskyvystä on perus tutut ja yleiset diagnosointia
+
+# CPU
+# Memory
+# Disk space
+# commmunication lines
+# I/O time
+# Network time
+# application programs
+
+###### performance components (suorituskyvyn komponentit) #######
+#CPU - Central processing Unit (suoritin / prosessori ), jonka CPU käyttää käyttäjien ohjelman suorittamiseen käyttäjätilassa. Se sisältää ajan, joka kuluu kirjastokutsujen suorittamiseen, mutta ei sisällä ytimessä sen puolesta käytettyä aikaa 
+
+#System state CPU - CPU viettää järjestelmätilassa tämän ohjelman puolesta. Kaikki I/O-rutiinit vaativat ytimen palvelut. Ohjelmoija voi vaikuttaa tähän arvoon estämällä I/O-siirrot 
+
+#I/O Time and Network Time - aika, joka kuluu tiedon siirtämiseen ja I/O-pyyntöjen huoltoon 
+
+#virtual memory perfomance - sisältää kontekstin vaihtamisen ja vaihtamisen 
+
+#application program - Muiden ohjelmien suorittamiseen käytetty aika - kun järjestelmä ei palvele tätä sovellusta, koska toisessa sovelluksessa on tällä hetkellä suoritin 
+
+
+####### Performance Tools (suorituskyvyn työkalut) #######
+#Unix tarjoaa seuraavat tärkeät työkalut Unix-järjestelmän suorituskyvyn mittaamiseen ja hienosäätämiseen 
+
+### Unix työkalun komennot, mitä voi kokeilla syötää komenntotulkissa ###
+
+#nice / renice - Suorittaa ohjelman muokatulla aikataulutusprioriteetilla
+
+#netstat - Tulostaa verkkoyhteydet, reititystaulukot, käyttöliittymätilastot, naamiaiset yhteydet ja monilähetysjäsenyydet
+
+#time - Auttaa ajoittamaan yksinkertaisen komennon tai antamaan resurssien käyttöä
+
+#uptime - Tämä on järjestelmän kuormituksen keskiarvo
+
+#ps - Raportoi tilannekuvan nykyisistä prosesseista
+
+#vmstat - Raportoi virtuaalisen muistin tilastot
+
+#gprof - Näyttää puhelukaavion profiilitiedot
+
+#prof - Helpottaa prosessien profilointia
+
+#top - Näyttää järjestelmätehtävät
