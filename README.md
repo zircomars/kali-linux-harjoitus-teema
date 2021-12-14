@@ -1,6 +1,6 @@
 # Linux-monitoring
 
-<b>Ubuntu Linux</b>
+<h1>Ubuntu Linux</h1>
 
 # Grafana
 ![Alt text](/Graph_Grafana/images/Sieppaa6_takeSoftware_LI.jpg?raw=true "None")
