@@ -1,6 +1,13 @@
 <h1>Grafana & Prometheus 28.11.2021</h1>
 <b> Lisä vaihe kuvia löytyy kansio prometheus & images </b>
 
+<h1> Mikä on prometheus sovellus? </h1>
+Ilmainen ohjelmisto sovellus, mitä käytettään tapahtumien seurannassa ja hälytyksissä. Sitä voi tallentaa reaaliaikaisia mittarrien diagrammia kuten ympyrät, viivakaaviot, pylväskaavio, taulukkot ja maapallo kartta tietokannan. Myös diagrammin seurannassa tulostuu luvun mittayksikkköt, että esim. lämpötilan celcsius ja fahrenheit. Aikasarjantietokannat, mitä rakentuu käyttämällä HTTP protokollaa, mitä joustaa kyseisen ja reaaliaikaisen hälytyksen.
+
+Prometheus sovelluksessa, mitä pitää aktivoida päälle, jotta voi suorittaa reaaliaikaisen ajan seurannan.
+
+<h2> Linux install prometheus ALKAA TÄSTÄ </h2>
+
 ![Alt text](images/Sieppaa1-prometheusDownload.PNG?raw=true "None")
 ![Alt text](images/Sieppaa2-install&purkaus.PNG?raw=true "None")
 ![Alt text](images/Sieppaa3-aktivoiPrometheus.PNG?raw=true "None")
