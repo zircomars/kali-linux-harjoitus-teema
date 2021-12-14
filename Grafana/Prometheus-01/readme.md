@@ -9,6 +9,7 @@ Prometheus sovelluksessa, mitä pitää aktivoida päälle, jotta voi suorittaa 
 
 <h2> Linux install prometheus ALKAA TÄSTÄ </h2>
 
+<b>Downloads & wget package </b>
 ![Alt text](images/Sieppaa1-prometheusDownload.PNG?raw=true "None")
 ![Alt text](images/Sieppaa2-install&purkaus.PNG?raw=true "None")
 
