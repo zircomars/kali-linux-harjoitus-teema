@@ -1,4 +1,4 @@
-<h1>Oikea Grafana 18.11.2021 </h1>
+<h1>Varsinainen Grafana 18.11.2021 </h1>
 
 Grafana on monialustainen avoimen lähdekoodin analytiikka- ja interaktiivinen visualisointisovellus.
 Se tarjoaa kaavioita, kaavioita ja hälytyksiä verkolle, kun ne on yhdistetty tuettuihin tietolähteisiin. 
