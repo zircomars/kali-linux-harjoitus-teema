@@ -13,6 +13,7 @@ Prometheuksen tiedot tallennetaan metriikan muodossa ja jokaisessa mittarilla on
 <br>
 
 <h2> Linux install prometheus ALKAA TÄSTÄ </h2>
+<!-- https://www.youtube.com/watch?v=4WWW2ZLEg74 -->
 
 <br>
 <h2>Downloads & wget package </h2><br>
