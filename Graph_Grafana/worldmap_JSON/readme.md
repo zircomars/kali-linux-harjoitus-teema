@@ -14,4 +14,8 @@ Sateliittin sijainti voidaan päivittää grafanan avulla esim. x - minuutti/tun
 <h2>Where is the ISS satelite live sijainti</h2>
 ![Alt text](images/whereistheISS-live.PNG?raw=true "None")
 
-<2>Sateliitin pieni dokumentti ja json formaattit </h2>
+<h2>Sateliitin pieni dokumentti ja json formaattit </h2>
+
+![Alt text](images/whereistheISS-httpPath.PNG?raw=true "None")
+
+![Alt text](images/whereistheISS-jsonFormat.PNG?raw=true "None")
