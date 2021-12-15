@@ -6,3 +6,12 @@ Sateliittin sijainti voidaan päivittää grafanan avulla esim. x - minuutti/tun
 <h2> Varsinainen karttasovellus ja vihreä pallero on sateliitin sijainti </h2>
 
 ![Alt text](images/worldmap-world.png?raw=true "None")
+
+![Alt text](images/worldmap-settings-1.PNG?raw=true "None")
+
+![Alt text](images/grafana-worldmap-dashboard.PNG?raw=true "None")
+
+<h2>Where is the ISS satelite live sijainti</h2>
+![Alt text](images/whereistheISS-live.PNG?raw=true "None")
+
+<2>Sateliitin pieni dokumentti ja json formaattit </h2>
