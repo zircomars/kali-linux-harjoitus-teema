@@ -16,9 +16,11 @@ Sateliittin sijainti voidaan päivittää grafanan avulla esim. x - minuutti/tun
 <h2>Grafana worldmap panel install </h2>
 <b>https://grafana.com/grafana/plugins/grafana-worldmap-panel/?tab=installation</b> <br>
 $ grafana-cli plugins install grafana-worldmap-panel
+<br><br>
 Ladatun jälkeen kannattaa uudelleen käynnistää grafana sovellus järjestelmän eli ($ sudo systemctl restart grafana-server)
-![Alt text](images/grafana-worldmap-install.PNG?raw=true "None")
+<br>
 
+![Alt text](images/grafana-worldmap-install.PNG?raw=true "None")
 
 <h2>Where is the ISS satelite live sijainti</h2>
 
