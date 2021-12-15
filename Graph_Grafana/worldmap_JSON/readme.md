@@ -14,9 +14,9 @@ Sateliittin sijainti voidaan päivittää grafanan avulla esim. x - minuutti/tun
 ![Alt text](images/grafana-worldmap-dashboard.PNG?raw=true "None")
 
 <h2>Grafana worldmap panel install </h2>
-<b>https://grafana.com/grafana/plugins/grafana-worldmap-panel/?tab=installation</b>
+<b>https://grafana.com/grafana/plugins/grafana-worldmap-panel/?tab=installation</b> <br>
 $ grafana-cli plugins install grafana-worldmap-panel
-
+Ladatun jälkeen kannattaa uudelleen käynnistää grafana sovellus järjestelmän eli ($ sudo systemctl restart grafana-server)
 ![Alt text](images/grafana-worldmap-install.PNG?raw=true "None")
 
 
