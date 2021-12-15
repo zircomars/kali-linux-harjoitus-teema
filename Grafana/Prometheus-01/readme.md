@@ -7,6 +7,11 @@ Ilmainen ohjelmisto sovellus, mitä käytettään tapahtumien seurannassa ja hä
 <br>
 Prometheus sovelluksessa, mitä pitää aktivoida päälle, jotta voi suorittaa reaaliaikaisen ajan seurannan. Ennen sitä pitää ensin asentaa se paketti sovellus, ja tarkistaa HTTP polusta, että se toimii ja oletus polku loppu osa on 9090 eli <oma_IP>:9090 <br>
 
+<br>
+<h2>Tietojen tallentaminen </h2>
+Prometheuksen tiedot tallennetaan metriikan muodossa ja jokaisessa mittarilla on nimi, jota käytetään sen viitaamisen ja kyselemisessä. Jokaisessa mittarissa voi kuin porata mielivaltaisen määrällä avain = arvo - pareja (tarroja). Mitä voi sisältää tietolähteitä (miltä palvelimelta tiedot oat peräisin), ja muita sovelluskohtaisia tietoja, kuten HTTP-polku tiedosto. Myös HTTP-polku vastaa vastaus liityvän tiedot, ja kyselymenetelmät. Prometheuksen tietomallia kutsutaan myös moniulotteiseksi, koska on kykyä määrittää mielivaltaisen mittariluetteloa, ja tehdä kyselyn niiden perusteltun reaaliajan.
+<br>
+
 <h2> Linux install prometheus ALKAA TÄSTÄ </h2>
 
 <b>Downloads & wget package </b>
