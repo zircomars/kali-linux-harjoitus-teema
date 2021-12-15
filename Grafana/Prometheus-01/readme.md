@@ -13,8 +13,6 @@ Prometheuksen tiedot tallennetaan metriikan muodossa ja jokaisessa mittarilla on
 <br>
 
 <h2> Linux install prometheus ALKAA TÄSTÄ </h2>
-<!-- https://www.youtube.com/watch?v=4WWW2ZLEg74 -->
-
 <br>
 <h2>Downloads & wget package </h2><br>
 
@@ -37,3 +35,10 @@ Prometheuksen tiedot tallennetaan metriikan muodossa ja jokaisessa mittarilla on
 ![Alt text](images/Sieppaa10-haekohde.PNG?raw=true "None")
 ![Alt text](images/Sieppaa11-haeKohdeGrafiikka.PNG?raw=true "None")
 
+
+<h2> Grafana & Prometheus tutorials </h2>
+Tutoriaalit löytyvät aina netistä, mutta sovellukset päivittyvät usein ehkä n. kerran tai kaks kuussa tai vuodessa. Ja aina pitää tarkistaa miltä vuodelta ne on tehty joko 2015 jälkeen...
+<ul>
+  <li>https://www.youtube.com/watch?v=4WWW2ZLEg74</li>
+  <li>https://phoenixnap.com/kb/prometheus-grafana</li>  
+</ul>
