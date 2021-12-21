@@ -12,4 +12,6 @@ kuten InfluxDB , Prometheus ja Graphite, kanssa . valvonta -alustoja , kuten Sen
 kuten Elasticsearch ja Splunk ; ja muut tietolähteet. Grafanan käyttöliittymä perustui alun perin Kibanan versioon 3 . 
 Grafana - https://fi.abcdef.wiki/wiki/Grafana
 
+<h2>Grafan työpöytä esim. yksi tilastografiikka </h2>
+
 ![Alt text](images/graph_gradient_area.jpeg?raw=true "None")
