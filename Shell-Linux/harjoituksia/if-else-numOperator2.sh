@@ -7,6 +7,21 @@
 
 #vaihtoehtona on, että joko tulostaa suurimman numeron kolmesta numerosta. Tässä esim. sisäkkäisen if-lauseiden sijasta loogistaa AND-operaattoria &&
 
+# if..elif..else operaattori merkit
+
+# integer = kokonaisluku (ohjelmointi int)
+# operaattorissa siellä lukee -eq ja jne.
+
+# int1 -eq int2 : tosi jos int1 ja int ovat yhtä suuri
+
+# int1 -gt int2 : tosi jos int1 on suurempi kuin int2
+
+# int1 -lt int2 : tosi jos int1 on pienempi kuin int2
+
+# int1 -ge int2 : tosi jos int1 on yhtä suuri tai suurempi kuin int2
+
+# int1 -le int2 : tosi jos int1 on yhtä suuri tai pienempi kuin int2
+
 #käyttä antaa luvun
 echo -n "Ensimmäinen luku: "
 read NUM1
