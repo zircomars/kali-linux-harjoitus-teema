@@ -1,0 +1,7 @@
+if - jos operattoria, että esim. jos tai kun tulee tämmöinen vastaus, toistettaan jotakin tai muu vaihtoehto tilanne "jos" tulee/toistaa jokin muu vastaus ja annettaan sille jokin vastaus.
+
+esim. annettaan luku, jos on suurempi/pienempi tai yhtä suuri kuin 5, sille 5:lle toistetaan jotain
+myös operaatiossa suoritettaan jokin useampi, jos tai halutaan toistaa jokin muu vastaus.
+
+if, if..else, if..elif..else
+
