@@ -12,14 +12,15 @@
   #STATEMENTS3
 #fi
 
-
 echo -n "Anna jokin luku: "
 read NUM
 
-if [[ $NUM -gt 10 ]]
+if [[ $NUM -gt 10 ]] #-gt tarkoittaa kokonaisluku (integer), mutta viiva edessä on jokin merkitys
 then
-  echo "Antamasi numero on suurempi kuin 10."
+  echo "The variable is greater than 10."
+elif [[ $NUM -eq 10 ]]
+then
+  echo "The variable is equal to 10."
 else
-  echo "Antamasi numero on tasan tai pienmpi kuin 10."
+  echo "The variable is less than 10."
 fi
-
