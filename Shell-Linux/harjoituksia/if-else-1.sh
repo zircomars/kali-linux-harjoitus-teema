@@ -16,6 +16,7 @@ echo -n "Anna jokin luku: "
 read NUM
 
 if [[ $NUM -gt 10 ]] #-gt tarkoittaa kokonaisluku (integer), mutta viiva edessä on jokin merkitys
+
 then
   echo "The variable is greater than 10."
 elif [[ $NUM -eq 10 ]]
