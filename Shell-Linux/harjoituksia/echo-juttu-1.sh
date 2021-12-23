@@ -19,6 +19,7 @@ echo "qwerty"
 
 # \c - estää rivinvaihdon perässä, vähä kuin toi alemman rivin ylös \c paikalle ja puhdistaa jälkimmäiset tekstit
 # Value of a is 10 * 2 tulos on:  20
+# \e - mahdollistaa kenoviivan pakokkeiden tulkinnan & varsinaisesti ei tapahdu fyysisesti mitään, jos ei havaitse mitään toistamisessa
 
 # \f - muotosyöte (form feed)
 #Value of a is 10 * 2 
