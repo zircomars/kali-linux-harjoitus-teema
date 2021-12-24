@@ -22,6 +22,7 @@
 
 # int1 -le int2 : tosi jos int1 on yhtä suuri tai pienempi kuin int2
 
+#tässä esimerkissä syötettään kolme eri lukua, ja havaitaan kolmen luvun ero, että mikä on isoin
 #käyttä antaa luvun
 echo -n "Ensimmäinen luku: "
 read NUM1
@@ -40,3 +41,19 @@ then
 else
   echo "Luku $NUM3 on suurin numero."
 fi
+
+#######
+#esim 2) tämä on sama kuin edellinen, mutta vain havaitaan esim. maksimi on 100, että mitä lukua käyttäjä syöttää
+
+read -p "Anna luku:" num  
+  
+if [ $num -gt 100 ]; #-gt greater than
+then  
+  echo "Antamasi numero on suurempi"  
+elif [ $num -lt 100 ];  #-lt less than
+then  
+  echo "Antamasi numeron pienempi"  
+else  
+  echo "BINGO!!"  
+  echo "$num on yhtä suuri"  
+fi  
