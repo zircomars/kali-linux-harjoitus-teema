@@ -1,4 +1,4 @@
-<h1> Shell-Linux </h1>
+<h1> Bash Shell Scripting</h1>
 
 Perus shell-skripti eli komentotulki & vähä kuin odottaa käyttäjä antaa jotakin komentoa, että toistettaan se käyttäjän haluama toiminta mm. pwd, ls, ipconfig ja yms.
 Myös sitä voi tallentaa usein käytettyihin komentosarjoihin tiedostoon.
