@@ -20,3 +20,17 @@ echo "Name?":
 read nimi
 
 echo "Nimi on: $nimi"
+
+##tämä on myös kommenti tyyppi, ettei tarvi käyttää aina ristikkomerkkiä tai nuolia << ja jne.   
+: '  
+This is the first comment  
+This is the second comment  
+This is the third comment  
+'  
+  
+echo "Hello World" 
+
+: '
+ sadfdsa
+'
+echo "asdf"
