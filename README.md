@@ -1,3 +1,8 @@
+#Ubuntu Linux
+<h2>Pää työkalu </h2>
+
+![](/images/Desktop_Ubuntu_20.04.png)
+
 # Grafana
 ![Alt text](/Graph_Grafana/images/Sieppaa6_takeSoftware_LI.jpg?raw=true "None")
 
