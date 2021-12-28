@@ -12,6 +12,14 @@ kuten InfluxDB , Prometheus ja Graphite, kanssa . valvonta -alustoja , kuten Sen
 kuten Elasticsearch ja Splunk ; ja muut tietolähteet. Grafanan käyttöliittymä perustui alun perin Kibanan versioon 3 . 
 Grafana - https://fi.abcdef.wiki/wiki/Grafana
 
+<h2> Check systemctl <command> grafana-server </h2>
+<ul>
+  <li> sudo systemctl start grafana-server </li>
+  <li> sudo systemctl stop grafana-server </li>
+  <li> sudo systemctl restart grafana-server </li>
+  <li> sudo systemctl status grafana-server </li>
+</ul>
+
 <h2>Grafan työpöytä esim. yksi tilastografiikka </h2>
 
 ![Alt text](images/graph_gradient_area.jpeg?raw=true "None")
