@@ -4,4 +4,8 @@ Perus shell-skripti eli komentotulki & vähä kuin odottaa käyttäjä antaa jot
 Myös sitä voi tallentaa usein käytettyihin komentosarjoihin tiedostoon.
 Kun antaa komentotulkissa skriptin nimen, se suorittaa siinä olevat komennot. Joissain komentotulkeissa on ohjausrakenteita joilla voi ohjelmoida näitä skriptejä.
 
+Bash voidaan mieltää ohjelmointikieleksi, ja sitä toteutetaan csh-komentotulkin tyylisen komentohistorialla.
+
+Bash skription ohjelmointia toimii kuin kerran, että toistetaan vain kerran sisäisen ohjelman komennon/käskyn
+
 ![Alt text](images/scripti.png?raw=true "None")
