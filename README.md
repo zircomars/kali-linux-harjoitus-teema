@@ -1,10 +1,12 @@
-<h1>Pää työkalu </h1>
+<h1>Linux työkalu </h1>
 
+- [VmWare](#VmWare)
 - [Grafana](#Grafana)
 - [Prometheus](#Prometheus)
 - [Bash shell](#Bash-shell)
 - [Amazon Web Services vs Microsoft Azure vs Google Cloud](#Amazon-Web-Services-vs-Microsoft-Azure-vs-Google-Cloud)
 
+# VmWare
 ![](/images/Desktop_Ubuntu_20.04.png)
 
 # Grafana
