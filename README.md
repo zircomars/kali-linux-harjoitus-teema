@@ -1,5 +1,9 @@
-#Ubuntu Linux
-<h2>Pää työkalu </h2>
+<h1>Pää työkalu </h1>
+
+- [Grafana](#Grafana)
+- [Prometheus](#Prometheus)
+- [Bash shell](#Bash-shell)
+- [Amazon Web Services vs Microsoft Azure vs Google Cloud](#Amazon-Web-Services-vs-Microsoft-Azure-vs-Google-Cloud)
 
 ![](/images/Desktop_Ubuntu_20.04.png)
 
