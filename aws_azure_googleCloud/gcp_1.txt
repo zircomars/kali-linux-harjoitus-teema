@@ -1,0 +1,35 @@
+https://www.youtube.com/watch?v=xI7SMA5y-Kk
+
+wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
+
+git clone https://github.com/alexdanca341341/vnc-google-shell.git
+
+cd vnc-google-shell
+
+sudo apt-get update
+
+cp vnc.py ../
+
+poistunut vnc-google-shell:istä
+cd
+
+python vnc.py
+
+latauksen kesto menee
+
+
+kysyy keyboard layout: 1
+
+kunnes tulostuu "vnc up"
+
+mene sivustoon:
+https://remotedesktop.google.com/unsupported-browser/?target=/headless
+https://remotedesktop.google.com/headless
+
+123456
+syötä joku 6 pin  koodi & kaksi kertaa
+
+
+
+sivuston remotedesktop:ista saa "remote access" joku koodin & syötä sama koodi, mitä syötettiin 6 numeroisen koodia
+
