@@ -11,3 +11,6 @@
 
 # Bash shell
 ![Alt text](/images/Bash-shell.PNG?raw=true "None")
+
+# Amazon Web Services vs Microsoft Azure vs Google Cloud
+![Alt text](/images/aws_azure_googleCloud.PNG?raw=true "None")
