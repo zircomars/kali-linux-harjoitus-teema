@@ -7,7 +7,7 @@
 
 # VmWare
 ![](/images/Desktop_Ubuntu_20.04.png)
-![Alt text](/images/wmvare_laptopPublic.PNG?raw=true "None")
+![Alt text](/images/wmvare_laptopPublic2.jpg?raw=true "None")
 
 # Grafana
 ![Alt text](/Graph_Grafana/images/Sieppaa6_takeSoftware_LI.jpg?raw=true "None")
