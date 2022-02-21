@@ -4,10 +4,10 @@
 - [Grafana](#Grafana)
 - [Prometheus](#Prometheus)
 - [Bash shell](#Bash-shell)
-- [Amazon Web Services vs Microsoft Azure vs Google Cloud](#Amazon-Web-Services-vs-Microsoft-Azure-vs-Google-Cloud)
 
 # VmWare
 ![](/images/Desktop_Ubuntu_20.04.png)
+![Alt text](/images/wmvare_laptopPublic.PNG?raw=true "None")
 
 # Grafana
 ![Alt text](/Graph_Grafana/images/Sieppaa6_takeSoftware_LI.jpg?raw=true "None")
@@ -17,6 +17,3 @@
 
 # Bash shell
 ![Alt text](/images/Bash-shell.PNG?raw=true "None")
-
-# Amazon Web Services vs Microsoft Azure vs Google Cloud
-![Alt text](/images/aws_azure_googleCloud.PNG?raw=true "None")
