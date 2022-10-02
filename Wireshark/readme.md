@@ -8,7 +8,12 @@ Käyttäjä voi nähdä kaapatut paketit korostettuna värillä. Wireshark käyt
 
 | väri | kuvaus | 
 | ----- | ----- |
-| $\textcolor{ #e5ccff}{Vaaleanvioletti}$ | TCP - liikenne |
+| $\textcolor{ #e7e6ff}{Vaaleanvioletti}$ | TCP - liikenne |
+| | TCP-paketti SYN- tai FIN-lipulla |
+| | TCP-paketti RST-lipulla |
+| | TCP-paketit, joissa on ongelma (yleensä paketteja, joissa on sekava järjestysnumero) |
+| | HTTP liikenne |
+| | DNS ja UDP liikenne |
 
 ![Alt text](/images/.PNG?raw=true "None")
 
