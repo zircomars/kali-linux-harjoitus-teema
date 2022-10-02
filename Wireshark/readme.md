@@ -9,11 +9,11 @@ Käyttäjä voi nähdä kaapatut paketit korostettuna värillä. Wireshark käyt
 | väri | kuvaus | 
 | ----- | ----- |
 | $\textcolor{ #e7e6ff}{Vaaleanvioletti}$ | TCP - liikenne |
-| | TCP-paketti SYN- tai FIN-lipulla |
-| | TCP-paketti RST-lipulla |
-| | TCP-paketit, joissa on ongelma (yleensä paketteja, joissa on sekava järjestysnumero) |
-| | HTTP liikenne |
-| | DNS ja UDP liikenne |
+| $\textcolor{ #e7e6ff}{harmaa}$ | TCP-paketti SYN- tai FIN-lipulla |
+| $\textcolor{ #a40000}{punainen}$ | TCP-paketti RST-lipulla |
+| $\textcolor{ #12272e}{musta}$ | TCP-paketit, joissa on ongelma (yleensä paketteja, joissa on sekava järjestysnumero) |
+| $\textcolor{ #e4ffc7}{vaaleanvihreä}$ | HTTP liikenne |
+| $\textcolor{ #daeeff}{vaaleansininen }$ | DNS ja UDP liikenne |
 
 ![Alt text](/images/.PNG?raw=true "None")
 
