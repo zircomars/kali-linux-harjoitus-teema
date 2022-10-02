@@ -4,7 +4,7 @@ Wireshark käyttö
 
 # Värikoodit
 
-Käyttäjä voi nähdä kaapatut paketit korostettuna värillä. Wireshark käyttää näitä värejä auttamaan käyttäjää tunnistamaan yhdellä silmäyksellä kaapatun liikenteen tyypin.
+Käyttäjä voi nähdä kaapatut paketit korostettuna värillä. Wireshark käyttää näitä värejä auttamaan käyttäjää tunnistamaan yhdellä silmäyksellä kaapatun liikenteen tyypin. Sovelluksessa voi nähdä tarkalleen, mitä värikoodit tarkoittavat ja vähä tarkentaa värikoodien ja teknisen kuvauksen, sekä voi myös tarvittaess muokata värisääntöjä jos haluaa.
 
 | väri | kuvaus | 
 | ----- | ----- |
@@ -15,7 +15,7 @@ Käyttäjä voi nähdä kaapatut paketit korostettuna värillä. Wireshark käyt
 | $\textcolor{ #e4ffc7}{vaaleanvihreä}$ | HTTP liikenne |
 | $\textcolor{ #daeeff}{vaaleansininen }$ | DNS ja UDP liikenne |
 
-![Alt text](/images/.PNG?raw=true "None")
+![Alt text](/images/wireshark-colorrules.PNG?raw=true "None")
 
 
 # ohje kuinka ladataan wireshark ubuntun kautta & ja kuinka aktivoidaan se sovellus
