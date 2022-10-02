@@ -17,6 +17,15 @@ Käyttäjä voi nähdä kaapatut paketit korostettuna värillä. Wireshark käyt
 
 <img src="images/wireshark-colorrules.PNG" width="750">
 
+# ubuntu
+
+$sudo wireshark 
+käynnistää varsinaisen wireshark sovelluksen käyntii, ja jos laitaa kommentoon vaan $wireshark , niin aktivoituu sovellus, mutta sisäisen varsinaisen verkkojen seurata datat ei
+
+$apt show wireshark <br>
+tulostaa wireshark sovelluksen version esim. 3.2.1.0
+ 
+
 # ohje kuinka ladataan wireshark ubuntun kautta & ja kuinka aktivoidaan se sovellus
 https://linuxhint.com/install_configure_wireshark_ubuntu/
 
