@@ -24,7 +24,8 @@ käynnistää varsinaisen wireshark sovelluksen käyntii, ja jos laitaa kommento
 
 $apt show wireshark <br>
 tulostaa wireshark sovelluksen version esim. 3.2.1.0
- 
+
+# icmp (Internet Control Message Protocol)
 
 # ohje kuinka ladataan wireshark ubuntun kautta & ja kuinka aktivoidaan se sovellus
 https://linuxhint.com/install_configure_wireshark_ubuntu/
