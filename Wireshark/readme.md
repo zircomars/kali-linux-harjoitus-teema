@@ -15,8 +15,7 @@ Käyttäjä voi nähdä kaapatut paketit korostettuna värillä. Wireshark käyt
 | $\textcolor{ #e4ffc7}{vaaleanvihreä}$ | HTTP liikenne |
 | $\textcolor{ #daeeff}{vaaleansininen }$ | DNS ja UDP liikenne |
 
-![Alt text](/images/wireshark-colorrules.PNG?raw=true "None")
-
+<img src="images/wireshark-colorrules.PNG" width="750">
 
 # ohje kuinka ladataan wireshark ubuntun kautta & ja kuinka aktivoidaan se sovellus
 https://linuxhint.com/install_configure_wireshark_ubuntu/
