@@ -28,6 +28,6 @@ tulostaa wireshark sovelluksen version esim. 3.2.1.0
 # icmp (Internet Control Message Protocol)
 
 # ohje kuinka ladataan wireshark ubuntun kautta & ja kuinka aktivoidaan se sovellus
-https://linuxhint.com/install_configure_wireshark_ubuntu/
+https://linuxhint.com/install_wireshark_ubuntu/
 
 https://www.youtube.com/watch?v=rtm_Bofv4-8
