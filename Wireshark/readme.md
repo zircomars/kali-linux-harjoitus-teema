@@ -2,6 +2,8 @@
 
 Wireshark on tämmöinen verkkoanalysaattori, joka voi analysoida ja tarkastella verkkon tietoja, mikä mahdollistaa kunkin paketin sisälllön poraamista ja lukemista - ja suodataa vastaamaan erityistarpeita. Wireshark käytettään yleisen verkon ongelmien vianmäärityksiin, että lisäksi ohjelmiston kehittämistä ja testaamista. Sovellus näyttää tietojen protokollia eli OSI-malli ja TCP/IP mallin protokollia kaikien tärkemmistä verkkotyypeistä. Datapakettia voi tarkastella reaaliaikaiseksi tai analysoida offline-tilassa, ja tuhansia kaappaus- / jäjitystiedostomuotoja kuten CAP tiedosto ja ERF (Extensible Record Format). 
 
+<img src="images/wireshark-software1.PNG" width="625">
+
 # Värikoodit
 
 Käyttäjä voi nähdä kaapatut paketit korostettuna värillä. Wireshark käyttää näitä värejä auttamaan käyttäjää tunnistamaan yhdellä silmäyksellä kaapatun liikenteen tyypin. Sovelluksessa voi nähdä tarkalleen, mitä värikoodit tarkoittavat ja vähä tarkentaa värikoodien ja teknisen kuvauksen, sekä voi myös tarvittaess muokata värisääntöjä jos haluaa.
