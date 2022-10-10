@@ -6,7 +6,7 @@ Wireshark on tämmöinen verkkoanalysaattori, joka voi analysoida ja tarkastella
 
 # capture
 
-Suom. kaappaus / analysoida tiettyä ominaisuuksia esim. kuten yhteystyypit Bluetooth - verkkoyhteys, Ethernet, Virtualbox Host , Wi-Fi, että riippuu mitä aktivoituu koneella niin ylemmän kuvan mukaan kuvaruutuun ponnahtaa kyseinen yhteys laite.
+Suom. kaappaus / analysoida tiettyä ominaisuuksia esim. kuten yhteystyypit Bluetooth - verkkoyhteys, Ethernet, Virtualbox Host , Wi-Fi eli langaton verkkon IEEE 802.11 standardi WLAN, että riippuu mitä aktivoituu koneella niin ylemmän kuvan mukaan kuvaruutuun ponnahtaa kyseinen yhteys laite.
 
 # Värikoodit
 
