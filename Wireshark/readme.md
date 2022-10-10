@@ -25,9 +25,7 @@ Käyttäjä voi nähdä kaapatut paketit korostettuna värillä. Wireshark käyt
 
 # ubuntu
 
-$sudo wireshark 
-käynnistää varsinaisen wireshark sovelluksen käyntii, ja jos laitaa kommentoon vaan $wireshark , niin aktivoituu sovellus, mutta sisäisen varsinaisen verkkojen seurata datat ei
-
+Ladataan sovellus ubuntu / etähallinta työpöytä ohjelmistoon <br>
 <img src="images/ubuntu-wireshark.PNG" width="500">
 
 $apt show wireshark <br>
