@@ -1,6 +1,6 @@
 # Wireshark
 
-Wireshark käyttö
+Wireshark on tämmöinen verkkoanalysaattori, joka 
 
 # Värikoodit
 
