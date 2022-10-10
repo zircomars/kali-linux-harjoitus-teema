@@ -4,6 +4,10 @@ Wireshark on tämmöinen verkkoanalysaattori, joka voi analysoida ja tarkastella
 
 <img src="images/wireshark-software1.PNG" width="625">
 
+# capture
+
+Suom. kaappaus / analysoida tiettyä ominaisuuksia esim. kuten yhteystyypit Bluetooth - verkkoyhteys, Ethernet, Virtualbox Host , Wi-Fi, että riippuu mitä aktivoituu koneella niin ylemmän kuvan mukaan kuvaruutuun ponnahtaa kyseinen yhteys laite.
+
 # Värikoodit
 
 Käyttäjä voi nähdä kaapatut paketit korostettuna värillä. Wireshark käyttää näitä värejä auttamaan käyttäjää tunnistamaan yhdellä silmäyksellä kaapatun liikenteen tyypin. Sovelluksessa voi nähdä tarkalleen, mitä värikoodit tarkoittavat ja vähä tarkentaa värikoodien ja teknisen kuvauksen, sekä voi myös tarvittaess muokata värisääntöjä jos haluaa.
