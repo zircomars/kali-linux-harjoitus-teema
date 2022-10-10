@@ -36,8 +36,15 @@ tulostaa wireshark sovelluksen version esim. 3.2.1.0
 <img src="images/ubuntu-wireshark-1.PNG" width="650">
 <b> YES </b> <br>
 
+## aktivointi
+Tässä käytettään komentoa <br>
 <img src="images/ubuntu-sudo-wireshark-1.PNG" width="750"> <br>
-<img src="images/ubuntu-sudo-wireshark-2.PNG" width="750">
+<img src="images/ubuntu-sudo-wireshark-2.PNG" width="650">
+
+Esimerkki cmd:stä pinggataan google dns 8.8.8.8 osoitteeseen
+
+<img src="images/ubuntu-wireshark-ping-1.PNG" width="850">
+<img src="images/ubuntu-wireshark-ping-2.PNG" width="750">
 
 
 # icmp (Internet Control Message Protocol)
