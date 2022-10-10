@@ -28,8 +28,17 @@ Käyttäjä voi nähdä kaapatut paketit korostettuna värillä. Wireshark käyt
 $sudo wireshark 
 käynnistää varsinaisen wireshark sovelluksen käyntii, ja jos laitaa kommentoon vaan $wireshark , niin aktivoituu sovellus, mutta sisäisen varsinaisen verkkojen seurata datat ei
 
+<img src="images/ubuntu-wireshark.PNG" width="500">
+
 $apt show wireshark <br>
 tulostaa wireshark sovelluksen version esim. 3.2.1.0
+
+<img src="images/ubuntu-wireshark-1.PNG" width="650">
+<b> YES </b> <br>
+
+<img src="images/ubuntu-sudo-wireshark-1.PNG" width="750"> <br>
+<img src="images/ubuntu-sudo-wireshark-2.PNG" width="750">
+
 
 # icmp (Internet Control Message Protocol)
 
