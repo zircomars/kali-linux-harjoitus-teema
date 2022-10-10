@@ -44,9 +44,6 @@ Esimerkki cmd:stä pinggataan google dns 8.8.8.8 osoitteeseen
 <img src="images/ubuntu-wireshark-ping-1.PNG" width="850">
 <img src="images/ubuntu-wireshark-ping-2.PNG" width="750">
 
-
-# icmp (Internet Control Message Protocol)
-
 # ohje kuinka ladataan wireshark ubuntun kautta & ja kuinka aktivoidaan se sovellus <br>
 https://linuxhint.com/install_wireshark_ubuntu/<br>
 
