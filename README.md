@@ -7,7 +7,8 @@
 - [Wireshark](#Wireshark)
 
 # VmWare
-![](/images/Desktop_Ubuntu_20.04.png)
+<img src="images/Desktop_Ubuntu_20.04.png" width="500">
+
 ![Alt text](/images/wmvare_laptopPublic2.jpg?raw=true "None")
 
 # Grafana
