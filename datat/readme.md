@@ -1,10 +1,18 @@
 # Erilliset datat
 
+Tähän tulee erilliset datat, josta tiedetään kuinka  yhteys toimii ja mitä protokollia on olemassa, että mitä niiden eroja ja yhteis tekijöitä on olemassa. 
 
-## TCP/IP
+- [TCP](#TCP)
+- [UDP](#UDP)
+  * [NTP](#NTP)
+- [UDP ja TCP erot](#UDP-ja-TCP-erot)
+
+## TCP
+
 Transmission Control Protocol (TCP)
 
 ## UDP
+
 User Datagram Protocol (UDP)
 
 ### NTP
