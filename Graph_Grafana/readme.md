@@ -68,16 +68,6 @@ Grafana - https://fi.abcdef.wiki/wiki/Grafana
 
 ![Alt text](images/graph_gradient_area.jpeg?raw=true "None")
 
-<2>Muita kuvia</h2>
-
-![Alt text](images/unknown (1).png?raw=true "None")
-
-![Alt text](images/unknown (2.png?raw=true "None")
-
-![Alt text](images/unknown (3).png?raw=true "None")
-
-![Alt text](images/unknown (4).png?raw=true "None")
-
 ![Alt text](images/unknown.png?raw=true "None")
 
 
