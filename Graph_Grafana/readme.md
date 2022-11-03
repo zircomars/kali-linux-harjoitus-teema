@@ -23,3 +23,64 @@ Grafana - https://fi.abcdef.wiki/wiki/Grafana
 <h2>Grafan työpöytä esim. yksi tilastografiikka </h2>
 
 ![Alt text](images/graph_gradient_area.jpeg?raw=true "None")
+
+<h1>Image kansion kuvia ja vaiheita</h1>
+
+![Alt text](images/Sieppaa.png?raw=true "None")
+
+![Alt text](images/Sieppaa1.png?raw=true "None")
+
+![Alt text](images/Sieppaa1_install.png?raw=true "None")
+
+![Alt text](images/Sieppaa2.png?raw=true "None")
+
+![Alt text](images/Sieppaa2_install.png?raw=true "None")
+
+![Alt text](images/Sieppaa2.1_install.png?raw=true "None")
+
+![Alt text](images/Sieppaa3-status.png?raw=true "None")
+
+![Alt text](images/Sieppaa3_cli.png?raw=true "None")
+
+![Alt text](images/Sieppaa4-enabled.png?raw=true "None")
+
+![Alt text](images/Sieppaa4_restart-status.png?raw=true "None")
+
+![Alt text](images/Sieppaa5-start.png?raw=true "None")
+
+![Alt text](images/Sieppaa5-ufwStatus.PNG?raw=true "None")
+
+![Alt text](images/Sieppaa5_ladattuPaketti_LI.jpg?raw=true "None")
+
+![Alt text](images/Sieppaa6-ufw3000_LI.jpg?raw=true "None")
+
+![Alt text](images/Sieppaa6_takeSoftware_LI.jpg?raw=true "None")
+
+![Alt text](images/Sieppaa7-tunnus_LI.jpg?raw=true "None")
+
+![Alt text](images/Sieppaa8-dashboard.png?raw=true "None")
+
+![Alt text](images/Sieppaa8-postman-api.png?raw=true "None")
+
+![Alt text](images/Sieppaa9_postman-api_path.png?raw=true "None")
+
+![Alt text](images/Sieppaa9_postman-api_path2.png?raw=true "None")
+
+![Alt text](images/graph_gradient_area.jpeg?raw=true "None")
+
+<2>Muita kuvia</h2>
+
+![Alt text](images/unknown (1).png?raw=true "None")
+
+![Alt text](images/unknown (2.png?raw=true "None")
+
+![Alt text](images/unknown (3).png?raw=true "None")
+
+![Alt text](images/unknown (4).png?raw=true "None")
+
+![Alt text](images/unknown.png?raw=true "None")
+
+
+
+
+
