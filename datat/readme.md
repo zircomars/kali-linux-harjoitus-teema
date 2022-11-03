@@ -23,7 +23,9 @@ Network Time Protocol (NTP) , joka on UDP pohjainenn protokolla täsmällisen ai
 ## UDP ja TCP erot
 
 
+# DNS
 
+Domain Name System (DNS), mikä tunnetaan parhaiten nimipalvleujärjestelmä, mikä muuntaa verkotunnusta IP-osoitteeksi esim. Google DNS IP-osoite ovat 8.8.8.8 ja 8.8.4.4
 
 
 
