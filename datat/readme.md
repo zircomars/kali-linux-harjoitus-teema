@@ -12,6 +12,13 @@ Tähän tulee erilliset datat, josta tiedetään kuinka yhteys toimii ja mitä p
 
 Transmission Control Protocol (TCP)
 
+<img src="images/data-tcp-1.PNG" width="475">
+
+<img src="images/data-tcp-2.PNG" width="400">
+
+<img src="images/data-tcp-3.PNG" width="375">
+
+
 ## UDP
 
 User Datagram Protocol (UDP)
