@@ -27,7 +27,8 @@ TCP toimittaa tiedonsiirron PAR (Positive Acknowledgement with Re-transmission) 
 Ylemässä kuvassa tulostuu kolme vaihdetta, että kuin lähettäjä lähettää datan vastaanottajalle/palvelimelle.
 
 1. Ensimmäisenä lähettäjä lähettää datan/viestin kohti yhteyden palvelimeen, josta tämä muodostuu segmenti SYN (Synchronize Sequence Number), joka ilmoittaa palvelimelle, ja asiakas/käyttäjä on mahdollista aloittanut viestinnän ja millä järjesteysnumerolla se alkaa.
-2. zxcv
+2. SYN + ACK , tarkoittaa palvelin vastaa lähettäjälle/käytäjälle pyyntä asettamalla SYN-ACK-signaali bittit. Acknowledgement (ACK) tarkoitaa sen vastaanottaman segmentin vastausta ja SYN tarkoitaa millä järjestysnumerolla se todennäköisesti aloittaa segmentin.
+3. ACK - viimeisessä osassa käyttäjä/asiakas kuittaa palvelimen vastauksen ja molemmat ovat muodostanneet luotettavan yhteyeden ja ne aloittavat lähettää varsinaisia tiedonsiirtoja.
 
 ## UDP
 
