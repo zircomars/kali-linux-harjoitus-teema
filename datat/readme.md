@@ -10,7 +10,7 @@ Tähän tulee erilliset datat, josta tiedetään kuinka yhteys toimii ja mitä p
 
 ## TCP
 
-Transmission Control Protocol (TCP) - tietoliikenneprotokolla, mikä tunnettaan parhaiten tietokoneiden välisen tiedonsiirtoa.
+Transmission Control Protocol (TCP) - tietoliikenneprotokolla, mikä tunnettaan parhaiten tietokoneiden välisen tiedonsiirtoa. Tiedostoja voi olla monipuolisia kuten dokumentti, data tai muu tiedosto, että käytetään sovellusta tai muu tiedonsiirto työkalua kuten sähköposti, pilvipalvelua, teams tai muu yhteys väline, jotta saadaan lähettäjä lähetettyä paketin vastaanottajalle. Yhteyden muodostamisessa vastaanottaja ja lähettäjän välillä.
 
 <img src="images/data-tcp-1.PNG" width="475">
 
