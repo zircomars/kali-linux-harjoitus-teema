@@ -1,3 +1,0 @@
-# Cacti
-
-Cactis sovellus
