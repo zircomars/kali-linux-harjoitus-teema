@@ -40,16 +40,23 @@ Network Time Protocol (NTP) , joka on UDP pohjainenn protokolla täsmällisen ai
 
 ## UDP ja TCP erot
 
+UDP ja TCP ovat protokollia, mutta mikä niiden erossa on? TCP on yhteyspohjainen ja UDP yhteydetön, sekä molemmissa on hyvät ja huonot puolensa. TCP on turvallisempi ja UDP on nopeampi.
+
 Virheiden prosessien havaitsemisessa, jossa TCP lähettää ja järjestää lähetettyjen paketti tiedostoja uudestaan, myös saappuvia paketteja, ja voi tuoda TCP latenssia. Esim. UDP ympärissä reaaliaikaisen sovelluksen Voice over IP (VoIP), suorantoisto ja pelit, missä käyttävät siirtoprosessia, koska se vähentää latenssia ja värinää jättämällä järjestelmättä paketteja tai lähettämällä uudestaan puuttuvia tietoja. 
 
 UDP luokitellaan datagrammi protokollaksi tai yhteydettömäksi protokollaksi, koska sillä ei ole mitään keinoa havaita, ovatko molemmat sovellukset lopettaneet edestakaisen viestinnän. Virheellisten datapakettien korjaamisen sijaan, kuten TCP tekee, UDP hylkää nämä paketit ja siirtää sovelluskerrokseen yksityiskohtaisempaa virheiden havaitsemista varten.
 
-UDP-datagrammin otsikko sisältää paljon vähemmän tietoa kuin TCP-segmentin otsikko. UDP-otsikko käy läpi myös paljon vähemmän käsittelyä kuljetuskerroksessa pienennetyn latenssin vuoksi.
+UDP-datagrammin otsikko sisältää paljon vähemmän tietoa kuin TCP-segmentin otsikko. UDP-otsikko käy läpi myös paljon vähemmän käsittelyä kuljetuskerroksessa pienennetyn latenssin vuoksi. Datan lähettyksessä hoitaa ilman ainutlaatuisia tunnuksia tai numero järjestyksiä. UDP ei tarjoa mitään virheiden korjausta, eikä kadonneita paketeita, ja käytettäessä sattuu helpommin virheitä, mutta se lähettää nopeammin kuin TCP.
+
+Molemmissa jakautuvat datat pienempiin yksikköihin eli datapaketi, missä sisältävät lähettäjän ja vastaanottajan IP-osoite, erilaisia konfiguraatiota, sisäisen lähettämän tiedon ja ilmiottaa mihin paketti päättyy (A--->B:lle)
+
+Turvallisuudessa UDP:tä on mahdototna pysyttää palomuuria, joka mahdollistaisi vain tietyn UDP-viestinnän ja estää loput, eli eivät suojaa täysin verrattuna TCP on helpompi suojata. Käyttäjä voi hyödyntää välityspalvelinta eli proxy:ä tiettyjen sovellusten käyttöä tai luoda tunneliyhteyden (tunneloiva yhteys) etäkäyttäjän ja yrityksen sisäisen verkon välille.
 
 <img src="images/data-tcp-upd-1.PNG" width="650">
 
 <img src="images/data-tcp-udp-2.PNG" width="500">
 
+Käyttöstä riippuu mihin käyttö tarkoitukseen olla käytössä, että jos tarvitsee nopea ja sujuvaa tiedonsiirtoa, joten käyttämä sovellus tai palvelu toimii kunnoolla joten UDP. Sama TCP on staatinen/muuttumaton ja luotettava protokolla, jota käytteässä data saapuu perille vastaanottajan luokse.
 
 # DNS
 
