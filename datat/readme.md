@@ -27,12 +27,20 @@ Esim. alemman kuvan mukaan, jossa lähettäjä tietokne lähettää viestin mik�
 
 User Datagram Protocol (UDP)
 
+UDP:ssä ei ole  mitään TCP:n virheiden käsittelystä, sekvensointia tai luotettavuutta. UDP:ssa lähettää jatkuvasti dataa kohti serverille/vastaanottajalle ikään kuin toistuvasti ettei välitä niiden sisäisen datojen luotettavuutta, ja joskus saattaa olla epäluotettava, mutta TCP tarjoaa eriomaisen yhteyden ja lutettavuuden, kaikeall on resurssien ja viiveen hintaa. Tämä esim. sopisi verkojen selailuu, tiedostjen siirtoon ja jne joissa ei välitä viiveongelmasta vastineeksi vakaasta yhteydestä. UDP:stä on hyötyä tilanteissa, jossa tarvitaa reaaliaikaisen yhteyden kuten ääni- tai videpuhelut, suoratoistot tai muu suora pelaamiset reaaliaikaisen yhteyden. Näissä ei ole varaa latenssiin näihin tilassa, josta ei voi käsitellä äänidatan katoamista kuten äänipuhelun tärinä. 
+
+<img src="images/data-udp-1.PNG" width="500">
+
 ### NTP
 Network Time Protocol (NTP) , joka on UDP pohjainenn protokolla täsmällisen aikatiedon välittämisen tietokoneiden välillä. Protokolla on suunniteltu ottamaan huomioon verkojen muuttuvia viiveitä, että toimivuudessa ja useiden palvelimen kellojen aikojen tahtia, että asiakas-palvelin käytöä.  
 
 <img src="images/data-ntp-1.PNG" width="500">
 
 ## UDP ja TCP erot
+
+<img src="images/data-tcp-udp-1.PNG" width="500">
+
+<img src="images/data-tcp-udp-2.PNG" width="500">
 
 
 # DNS
