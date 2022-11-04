@@ -16,7 +16,7 @@ Transmission Control Protocol (TCP) - tietoliikenneprotokolla, mikä tunnettaan 
 
 Protokolla huolehtii, että kyseinen tiedosto paketti pääse perille vastanottajalle, mutta mikäli jos tiedosto hävii voidaan lähettää uudestaan tai mahdollista olla vioittunut tiedosto. Luottamisen ja vakaan toteutuu kolmella tavalla (acknowledgements, sequencing, checksum) , mikä ikään kuin luoo luotettavan yhteyden. TCP tekee käyttämällä ns. kolmisuuntaisen kättelyn.
 
-Esim. alemman kuvan mukaan, jossa lähettäjä tietokne lähettää viestin mikä on nimeltään <ins> SYN </ins>, lyhennestä synchronize. 
+Esim. alemman kuvan mukaan, jossa lähettäjä tietokne lähettää viestin mikä on nimeltään <ins> SYN </ins>, lyhennestä synchronize. Myös vastaavasi kone/serveri vastaanottaa <ins> ack </ins> tai <ins> syn+ack </ins> palvelin vastaa lähetäjän pyynnön viestin tai kuin kuittaa lähettäjälle.
 
 <img src="images/data-tcp-2.PNG" width="400">
 
