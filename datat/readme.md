@@ -6,6 +6,7 @@ Tähän tulee erilliset datat, josta tiedetään kuinka yhteys toimii ja mitä p
 - [UDP](#UDP)
   * [NTP](#NTP)
 - [UDP ja TCP erot](#UDP-ja-TCP-erot)
+- [DNS](#DNS)
 
 ## TCP
 
