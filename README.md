@@ -5,7 +5,6 @@
 - [Prometheus](#Prometheus)
 - [Bash shell](#Bash-shell)
 - [Wireshark](#Wireshark)
-- [Cacti](#Cacti)
 
 
 # VmWare
@@ -25,5 +24,3 @@
 # Wireshark
 ![Alt text](/images/wireshark-logo.PNG?raw=true "None")
 
-# Cacti
-![Alt text](/images/cacti01.PNG?raw=true "None")
