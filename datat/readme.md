@@ -38,9 +38,11 @@ Network Time Protocol (NTP) , joka on UDP pohjainenn protokolla täsmällisen ai
 
 ## UDP ja TCP erot
 
-<img src="images/data-tcp-udp-1.PNG" width="500">
+<img src="images/data-tcp-upd-1.PNG" width="750">
 
 <img src="images/data-tcp-udp-2.PNG" width="500">
+
+<img src="images/data-tcp-udp-3.PNG" width="500">
 
 
 # DNS
