@@ -10,7 +10,7 @@ Tähän tulee erilliset datat, josta tiedetään kuinka yhteys toimii ja mitä p
 
 ## TCP
 
-Transmission Control Protocol (TCP)
+Transmission Control Protocol (TCP) - tietoliikenneprotokolla, mikä tunnettaan parhaiten tietokoneiden välisen tiedonsiirtoa.
 
 <img src="images/data-tcp-1.PNG" width="475">
 
