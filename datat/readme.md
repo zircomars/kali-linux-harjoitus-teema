@@ -20,8 +20,14 @@ Esim. alemman kuvan mukaan, jossa lähettäjä tietokne lähettää viestin mik�
 
 <img src="images/data-tcp-2.PNG" width="400">
 
+TCP toimittaa tiedonsiirron PAR (Positive Acknowledgement with Re-transmission) kanssa. PDU (Protocol Data Unit) kutsutaan segmentiksi, ja PAR:ia käyttävä laite lähettää datayksikön uudelleen, kunnes se vastaanottaa kuittauksen. Jos vastaanottimen päässä vastanotettu tietoyksikkö on varioittunut niin se hylkää segmentimen. Koska tarkistamisen ajalla tarkistaa tiedon virheentunnustuksen käytetyn siirtokeskustaa tarkistus summa toiminnan. Lähettäjä on periatteessa lähettävä uudelleen tietoyksikkön, jolle ei saada positiivista kuittausta.
+
 <img src="images/data-tcp-3.PNG" width="375">
 
+Ylemässä kuvassa tulostuu kolme vaihdetta, että kuin lähettäjä lähettää datan vastaanottajalle/palvelimelle.
+
+1. Ensimmäisenä lähettäjä lähettää datan/viestin kohti yhteyden palvelimeen, josta tämä muodostuu segmenti SYN (Synchronize Sequence Number), joka ilmoittaa palvelimelle, ja asiakas/käyttäjä on mahdollista aloittanut viestinnän ja millä järjesteysnumerolla se alkaa.
+2. zxcv
 
 ## UDP
 
