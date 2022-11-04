@@ -38,6 +38,12 @@ Network Time Protocol (NTP) , joka on UDP pohjainenn protokolla täsmällisen ai
 
 ## UDP ja TCP erot
 
+Virheiden prosessien havaitsemisessa, jossa TCP lähettää ja järjestää lähetettyjen paketti tiedostoja uudestaan, myös saappuvia paketteja, ja voi tuoda TCP latenssia. Esim. UDP ympärissä reaaliaikaisen sovelluksen Voice over IP (VoIP), suorantoisto ja pelit, missä käyttävät siirtoprosessia, koska se vähentää latenssia ja värinää jättämällä järjestelmättä paketteja tai lähettämällä uudestaan puuttuvia tietoja. 
+
+UDP luokitellaan datagrammi protokollaksi tai yhteydettömäksi protokollaksi, koska sillä ei ole mitään keinoa havaita, ovatko molemmat sovellukset lopettaneet edestakaisen viestinnän. Virheellisten datapakettien korjaamisen sijaan, kuten TCP tekee, UDP hylkää nämä paketit ja siirtää sovelluskerrokseen yksityiskohtaisempaa virheiden havaitsemista varten.
+
+UDP-datagrammin otsikko sisältää paljon vähemmän tietoa kuin TCP-segmentin otsikko. UDP-otsikko käy läpi myös paljon vähemmän käsittelyä kuljetuskerroksessa pienennetyn latenssin vuoksi.
+
 <img src="images/data-tcp-upd-1.PNG" width="650">
 
 <img src="images/data-tcp-udp-2.PNG" width="500">
@@ -46,10 +52,6 @@ Network Time Protocol (NTP) , joka on UDP pohjainenn protokolla täsmällisen ai
 # DNS
 
 Domain Name System (DNS), mikä tunnetaan parhaiten nimipalvleujärjestelmä, mikä muuntaa verkotunnusta IP-osoitteeksi esim. Google DNS IP-osoite ovat 8.8.8.8 ja 8.8.4.4
-
-
-
-
 
 
 
