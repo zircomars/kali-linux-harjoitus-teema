@@ -8,6 +8,16 @@ Tähän tulee erilliset datat, josta tiedetään kuinka yhteys toimii ja mitä p
 - [UDP ja TCP erot](#UDP-ja-TCP-erot)
 - [DNS](#DNS)
 
+<!-- HUOM! noista datojen tekijöistä voisi kirjoittaa 
+DATA X-nimi
+- mikä se on
+- mitä se tekee / mihin käyttö tarkoitukseen sitä käytettään - esimerkkiä sovelluksista tai laiteesta
+- sitten jotakin fysiikkaa paskaa, lukuja ja jne.
+- hyvät ja huonot puolet
+- turvallisuus ja riskit
+- muita tai yhteistä tekijöitä..
+-->
+
 ## TCP
 
 Transmission Control Protocol (TCP) - tietoliikenneprotokolla, mikä tunnettaan parhaiten tietokoneiden välisen tiedonsiirtoa. Tiedostoja voi olla monipuolisia kuten dokumentti, data tai muu tiedosto, että käytetään sovellusta tai muu tiedonsiirto työkalua kuten sähköposti, pilvipalvelua, teams tai muu yhteys väline, jotta saadaan lähettäjä lähetettyä viesti paketin vastaanottajalle. 
