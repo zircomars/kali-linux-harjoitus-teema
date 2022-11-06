@@ -16,6 +16,10 @@ Tiedostojen siirtämisessä käytettään ja varmistettaan turvallisuutta, kun t
 
 <img src="images/data-tcp-1.PNG" width="475">
 
+
+End-to-end principle
+<img src="images/data-tcp-04.PNG" width="550">
+
 Protokolla huolehtii, että kyseinen tiedosto paketti pääse perille vastanottajalle, mutta mikäli jos tiedosto hävii voidaan lähettää uudestaan tai mahdollista olla vioittunut tiedosto. Luottamisen ja vakaan toteutuu kolmella tavalla (acknowledgements, sequencing, checksum) , mikä ikään kuin luoo luotettavan yhteyden. TCP tekee käyttämällä ns. kolmisuuntaisen kättelyn.
 
 Esim. alemman kuvan mukaan, jossa lähettäjä tietokne lähettää viestin mikä on nimeltään <ins> SYN </ins>, lyhennestä synchronize. Myös vastaavasi kone/serveri vastaanottaa <ins> ack </ins> tai <ins> syn+ack </ins> palvelin vastaa lähetäjän pyynnön viestin tai kuin kuittaa lähettäjälle.
@@ -25,8 +29,6 @@ Esim. alemman kuvan mukaan, jossa lähettäjä tietokne lähettää viestin mik�
 TCP toimittaa tiedonsiirron PAR (Positive Acknowledgement with Re-transmission) kanssa. PDU (Protocol Data Unit) kutsutaan segmentiksi, ja PAR:ia käyttävä laite lähettää datayksikön uudelleen, kunnes se vastaanottaa kuittauksen. Jos vastaanottimen päässä vastanotettu tietoyksikkö on varioittunut niin se hylkää segmentimen. Koska tarkistamisen ajalla tarkistaa tiedon virheentunnustuksen käytetyn siirtokeskustaa tarkistus summa toiminnan. Lähettäjä on periatteessa lähettävä uudelleen tietoyksikkön, jolle ei saada positiivista kuittausta.
 
 <img src="images/data-tcp-3.PNG" width="400">
-
-<img src="images/data-tcp-4.PNG" width="400">
 
 Ylemässä kuvassa tulostuu kolme vaihdetta, että kuin lähettäjä lähettää datan vastaanottajalle/palvelimelle.
 
