@@ -20,17 +20,16 @@ DATA X-nimi
 
 ## TCP
 
-Transmission Control Protocol (TCP) - tietoliikenneprotokolla, mikä tunnettaan parhaiten tietokoneiden välisen tiedonsiirtoa. Tiedostoja voi olla monipuolisia kuten dokumentti, data tai muu tiedosto, että käytetään sovellusta tai muu tiedonsiirto työkalua kuten sähköposti, pilvipalvelua, teams tai muu yhteys väline, jotta saadaan lähettäjä lähetettyä viesti paketin vastaanottajalle. 
+Transmission Control Protocol (TCP) - tietoliikenneprotokolla, mikä tunnettaan parhaiten tietokoneiden lähettäjän ja vastaanottajan välisen tiedonsiirto yhteys. Tiedostoja voi olla monipuolisia kuten dokumentti, data tai muu tiedosto, että käytetään sovellusta tai muu tiedonsiirto työkalua kuten sähköpostit, pilvipalvelua, teams tai muu yhteys väline, jotta saadaan lähettäjän lähetettyä viesti paketin vastaanottajalle. 
 
-Tiedostojen siirtämisessä käytettään ja varmistettaan turvallisuutta, kun tiedostojen siirto tapahtuu käyttäjän/asiakkaan ja palvelimen väliltä. Se takaa verkon kautta, että lähetettävien tietojen eheyksiä niiden määrästä riippumatta. Tämän takia tietojen lähetttämisestä pitää olla korkea tason protokolla, jotta edelyttävät kaiken lähetetyjen tiedon saapumista. Esim. korkeita protokollia on SSH (Secure Shell), FTP (File transfer protocol), SMTP (Simple main transfer protocol), POP (post office protocol) ja HTTP.
+Tiedostojen siirtämisessä käytettään ja varmistettaan turvallisuutta, kun tiedostojen siirto tapahtuu käyttäjien ja palvelimen väliltä. Se takaa verkon kautta, että lähetettävien tietojen eheyksiä niiden määrästä riippumatta. Tämän takia tietojen lähettämisestä pitää olla korkea tason protokolla, jotta edelyttävät kaiken lähetetyjen tiedon saapumista. Esim. korkeita protokollia on SSH (Secure Shell), FTP (File transfer protocol), SMTP (Simple main transfer protocol), POP (post office protocol) ja HTTP.
 
-<img src="images/data-tcp-1.PNG" width="475">
+<img src="images/data-tcp-1.PNG" width="400">
 
+End-to-end principle <br>
+<img src="images/data-tcp-04.PNG" width="525">
 
-End-to-end principle
-<img src="images/data-tcp-04.PNG" width="550">
-
-Protokolla huolehtii, että kyseinen tiedosto paketti pääse perille vastanottajalle, mutta mikäli jos tiedosto hävii voidaan lähettää uudestaan tai mahdollista olla vioittunut tiedosto. Luottamisen ja vakaan toteutuu kolmella tavalla (acknowledgements, sequencing, checksum) , mikä ikään kuin luoo luotettavan yhteyden. TCP tekee käyttämällä ns. kolmisuuntaisen kättelyn.
+Protokolla huolehtii, että kyseinen tiedosto paketti pääse perille vastanottajalle, mutta mikäli jos tiedosto häviää niin voidaan lähettää uudestaan tai mahdollista olla vioittunut tiedosto. Uudelleen lähettämisessa TCP varmistaa luotettavan viestintäjärjestelmän. Paketin häviämisessä voi mahdollista olla verkon ruuhkaus, mitä aiheuttaa paketin tiedoston häviämistä. Luottamisen ja vakaan toteutuu kolmella tavalla (acknowledgements, sequencing, checksum), mikä ikään kuin luoo luotettavan yhteyden. TCP tekee käyttämällä ns. kolmisuuntaisen kättelyn.
 
 Esim. alemman kuvan mukaan, jossa lähettäjä tietokne lähettää viestin mikä on nimeltään <ins> SYN </ins>, lyhennestä synchronize. Myös vastaavasi kone/serveri vastaanottaa <ins> ack </ins> tai <ins> syn+ack </ins> palvelin vastaa lähetäjän pyynnön viestin tai kuin kuittaa lähettäjälle.
 
