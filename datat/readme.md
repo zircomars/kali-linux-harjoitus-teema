@@ -4,8 +4,8 @@ Tähän tulee erilliset datat, josta tiedetään kuinka yhteys toimii ja mitä p
 
 - [TCP](#TCP)
 - [UDP](#UDP)
-  * [NTP](#NTP)
 - [UDP ja TCP erot](#UDP-ja-TCP-erot)
+- [NTP](#NTP)
 - [DNS](#DNS)
 
 <!-- HUOM! noista datojen tekijöistä voisi kirjoittaa 
@@ -20,7 +20,7 @@ DATA X-nimi
 
 ## TCP
 
-Transmission Control Protocol (TCP) - tietoliikenneprotokolla, mikä tunnettaan parhaiten tietokoneiden lähettäjän ja vastaanottajan välisen tiedonsiirto yhteys. Tiedostoja voi olla monipuolisia kuten dokumentti, data tai muu tiedosto, että käytetään sovellusta tai muu tiedonsiirto työkalua kuten sähköpostit, pilvipalvelua, teams tai muu yhteys väline, jotta saadaan lähettäjän lähetettyä viesti paketin vastaanottajalle. 
+Transmission Control Protocol (TCP) - tietoliikenneprotokolla, mikä tunnettaan parhaiten tietokoneiden lähettäjän ja vastaanottajan välisen tiedonsiirto yhteys. Tiedostoja voi olla monipuolisia kuten dokumentti, data tai muu tiedosto, että käytetään sovellusta tai muu tiedonsiirto työkalua kuten sähköpostit, pilvipalvelua, teams tai muu yhteys väline, jotta saadaan lähettäjän lähetettyä viesti paketin vastaanottajalle. Myös koskee, kun käyttäjä käy luotettavan verkkosivulla.
 
 Tiedostojen siirtämisessä käytettään ja varmistettaan turvallisuutta, kun tiedostojen siirto tapahtuu käyttäjien ja palvelimen väliltä. Se takaa verkon kautta, että lähetettävien tietojen eheyksiä niiden määrästä riippumatta. Tämän takia tietojen lähettämisestä pitää olla korkea tason protokolla, jotta edelyttävät kaiken lähetetyjen tiedon saapumista. Esim. korkeita protokollia on SSH (Secure Shell), FTP (File transfer protocol), SMTP (Simple main transfer protocol), POP (post office protocol) ja HTTP.
 
@@ -31,7 +31,7 @@ End-to-end principle <br>
 
 Protokolla huolehtii, että kyseinen tiedosto paketti pääse perille vastanottajalle, mutta mikäli jos tiedosto häviää niin voidaan lähettää uudestaan tai mahdollista olla vioittunut tiedosto. Uudelleen lähettämisessa TCP varmistaa luotettavan viestintäjärjestelmän. Paketin häviämisessä voi mahdollista olla verkon ruuhkaus, mitä aiheuttaa paketin tiedoston häviämistä. Luottamisen ja vakaan toteutuu kolmella tavalla (acknowledgements, sequencing, checksum), mikä ikään kuin luoo luotettavan yhteyden. TCP tekee käyttämällä ns. kolmisuuntaisen kättelyn.
 
-Esim. alemman kuvan mukaan, jossa lähettäjä tietokne lähettää viestin mikä on nimeltään <ins> SYN </ins>, lyhennestä synchronize. Myös vastaavasi kone/serveri vastaanottaa <ins> ack </ins> tai <ins> syn+ack </ins> palvelin vastaa lähetäjän pyynnön viestin tai kuin kuittaa lähettäjälle.
+Esim. alemman kuvan mukaan, jossa lähettäjä tietokoneesta lähettää viestin mikä siirto on nimeltään <ins> SYN </ins> synchronize. Myös vastaavasi kone/serveri vastaanottaa <ins> ack </ins> tai <ins> syn+ack </ins> palvelin vastaa lähetäjän pyynnön viestin tai kuin kuittaa lähettäjälle.
 
 <img src="images/data-tcp-2.PNG" width="400">
 
@@ -49,16 +49,11 @@ Ylemässä kuvassa tulostuu kolme vaihdetta, että kuin lähettäjä lähettää
 
 User Datagram Protocol (UDP)
 
-UDP:ssä ei ole  mitään TCP:n virheiden käsittelyä, sekvensointia tai luotettavuutta. UDP:ssa lähettää dataa eteenpäin jatkuvasti kohti serverille/vastaanottajalle ikään kuin toistuvasti ettei välitä niiden sisäisen datojen luotettavuutta/turvallisuutta, ja joskus saattaa olla epäluotettava/epäilys. TCP tarjoaa eriomaisen yhteyden ja luotettavuuden, kaikealle on resurssien ja viiveen hintaan. Tämä esim. sopisi verkojen selailuun, tiedostojen siirtoon ja jne, joissa ei välitä viiveongelmasta vastineeksi vakaasta yhteydestä. UDP:stä on hyötyä tilanteissa, jossa tarvitaa reaaliaikaisen yhteyden kuten ääni- tai videpuhelut, suoratoistot tai muu suora pelaamiset reaaliaikaisen yhteyden. Näissä ei ole varaa latenssiin näihin tilassa, josta ei voi käsitellä äänidatan katoamista kuten äänipuhelun tärinä. 
+UDP:ssä ei ole mitään TCP:n virheiden käsittelyä, sekvensointia tai luotettavuutta. UDP:ssa lähettää dataa eteenpäin jatkuvasti kohti serverille/vastaanottajalle ikään kuin toistuvasti ettei välitä niiden sisäisen datojen luotettavuutta/turvallisuutta, ja joskus saattaa olla epäluotettava/epäilys. TCP tarjoaa eriomaisen yhteyden ja luotettavuuden, kaikealle on resurssien ja viiveen hintaan. Tämä esim. sopisi verkojen selailuun, tiedostojen siirtoon ja jne, joissa ei välitä viiveongelmasta vastineeksi vakaasta yhteydestä. UDP:stä on hyötyä tilanteissa, jossa tarvitaa reaaliaikaisen yhteyden kuten ääni- tai videpuhelut (palaverit), suoratoistot tai muu suorat pelamisen reaaliaikaisen (Twitch / Discord) yhteyden. Näissä ei ole varaa latenssiin näihin tilassa, josta ei voi käsitellä äänidatan katoamista kuten äänipuhelun tärinä. 
 
-UDP on erillinen/yhteydetön protokolla, koska se ei muodosta tiedonsiirron yhteytttä lähettäjän ja vastaanottajan välillä, ja siksi data ei välttämättä saavu perille ja UDP:ssa data liikkuu nopeammin kuin TCP:n käytettäessä.
+UDP on erillinen/yhteydetön protokolla, koska se ei muodosta tiedonsiirron yhteytttä lähettäjän ja vastaanottajan välillä, ja siksi data ei välttämättä saavu perille, ja UDP:ssa data liikkuu nopeammin kuin TCP:n käytettäessä.
 
 <img src="images/data-udp-1.PNG" width="350">
-
-### NTP
-Network Time Protocol (NTP) , joka on UDP pohjainenn protokolla täsmällisen aikatiedon välittämisen tietokoneiden välillä. Protokolla on suunniteltu ottamaan huomioon verkojen muuttuvia viiveitä, että toimivuudessa ja useiden palvelimen kellojen aikojen tahtia, että asiakas-palvelin käytöä.  
-
-<img src="images/data-ntp-1.PNG" width="450">
 
 ## UDP ja TCP erot
 
@@ -79,6 +74,11 @@ Turvallisuudessa UDP:tä on mahdototna pysyttää palomuuria, joka mahdollistais
 <img src="images/data-tcp-udp-2.PNG" width="500">
 
 Käyttöstä riippuu mihin käyttö tarkoitukseen olla käytössä, että jos tarvitsee nopea ja sujuvaa tiedonsiirtoa, joten käyttämä sovellus tai palvelu toimii kunnoolla joten UDP. Sama TCP on staatinen/muuttumaton ja luotettava protokolla, jota käytteässä data saapuu perille vastaanottajan luokse.
+
+# NTP
+Network Time Protocol (NTP) , joka on UDP pohjainenn protokolla täsmällisen aikatiedon välittämisen tietokoneiden välillä. Protokolla on suunniteltu ottamaan huomioon verkojen muuttuvia viiveitä, että toimivuudessa ja useiden palvelimen kellojen aikojen tahtia, että asiakas-palvelin käytöä.  
+
+<img src="images/data-ntp-1.PNG" width="450">
 
 # DNS
 
