@@ -24,6 +24,7 @@ Transmission Control Protocol (TCP) - tietoliikenneprotokolla, mikä tunnettaan 
 
 Tiedostojen siirtämisessä käytettään ja varmistettaan turvallisuutta, kun tiedostojen siirto tapahtuu käyttäjien ja palvelimen väliltä. Se takaa verkon kautta, että lähetettävien tietojen eheyksiä niiden määrästä riippumatta. Tämän takia tietojen lähettämisestä pitää olla korkea tason protokolla, jotta edelyttävät kaiken lähetetyjen tiedon saapumista. Esim. korkeita protokollia on SSH (Secure Shell), FTP (File transfer protocol), SMTP (Simple main transfer protocol), POP (post office protocol) ja HTTP.
 
+TCP header (kehys) taulukko <br>
 <img src="images/data-tcp-1.PNG" width="400">
 
 End-to-end principle <br>
@@ -55,6 +56,7 @@ UDP:stä on hyötyä tilanteesta, jossa tarvitaa reaaliaikaisen yhteyden kuten �
 
 UDP on erillinen/yhteydetön protokolla, koska se ei muodosta tiedonsiirron yhteytttä lähettäjän ja vastaanottajan välillä, ja siksi data ei välttämättä saavu perille, ja UDP:ssa data liikkuu nopeammin kuin TCP:n käytettäessä.
 
+UDP header (kehys) taulukko <br>
 <img src="images/data-udp-1.PNG" width="350">
 
 ## UDP ja TCP erot
