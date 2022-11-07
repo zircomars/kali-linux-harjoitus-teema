@@ -59,7 +59,7 @@ User Datagram Protocol (UDP)
 
 UDP:ssä ei ole mitään TCP:n virheiden käsittelyä, sekvensointia tai luotettavuutta. UDP:ssa lähettää dataa eteenpäin jatkuvasti kohti serverille/vastaanottajalle ikään kuin toistuvasti ettei välitä niiden sisäisen datojen luotettavuutta/turvallisuutta, ja joskus saattaa olla epäluotettava/epäilys. TCP tarjoaa eriomaisen yhteyden ja luotettavuuden, kaikealle on resurssien ja viiveen hintaan. Tämä esim. sopisi verkojen selailuun, tiedostojen siirtoon ja jne, joissa ei välitä viiveongelmasta vastineeksi vakaasta yhteydestä. 
 
-UDP:stä on hyötyä tilanteesta, jossa tarvitaa reaaliaikaisen yhteyden kuten ääni- tai videopuhelut (palaverit / VoIP), suoratoistot kuten pelamisen (Twitch / Discord) yhteyden, jossa jokaisen millisekunti on tärkeä info. Näissä ei ole varaa latenssiin näihin tilassa, josta ei voi käsitellä äänidatan katoamista kuten äänipuhelun tärinä, myös ei vaadi yhteyttä eikä se lähetä datapaketteja uudestaan.
+UDP:stä on hyötyä tilanteesta, jossa tarvitaa reaaliaikaisen yhteyden kuten ääni- tai videopuhelut (palaverit / VoIP), suoratoistot kuten pelamisen (Twitch / Discord) yhteyden, suoratoistoiset mediat/lähetykset (uutiset, urheilut, muu kanavat esim. youtube live), jossa jokaisen millisekunnissa on tärkeitä infoja. Näissä ei ole varaa latenssiin (latency) näihin tilassa, josta ei voi käsitellä äänidatan katoamista kuten äänipuhelun tärinä, myös ei vaadi yhteyttä eikä se lähetä datapaketteja uudestaan.
 
 UDP on erillinen/yhteydetön protokolla, koska se ei muodosta tiedonsiirron yhteytttä lähettäjän ja vastaanottajan välillä, ja siksi data ei välttämättä saavu perille, ja UDP:ssa data liikkuu nopeammin kuin TCP:n käytettäessä.
 
