@@ -18,6 +18,7 @@ DATA X-nimi
 - muita tai yhteistä tekijöitä..
 -->
 
+<!-- TCP START HERE -->
 # TCP
 
 Transmission Control Protocol (TCP) - tietoliikenneprotokolla, mikä tunnettaan parhaiten tietokoneiden lähettäjän ja vastaanottajan välisen tiedonsiirto yhteys. Tiedostoja voi olla monipuolisia kuten dokumentti, data tai muu tiedosto, että käytetään sovellusta tai muu tiedonsiirto työkalua kuten sähköpostit, pilvipalvelua, teams tai muu yhteys väline, jotta saadaan lähettäjän lähetettyä viesti paketin vastaanottajalle. Myös koskee, kun käyttäjä käy luotettavan verkkosivulla.
@@ -51,6 +52,7 @@ Ylemässä kuvassa tulostuu kolme vaihdetta, että kuin lähettäjä lähettää
 2. SYN + ACK , tarkoittaa palvelin vastaa lähettäjälle/käytäjälle pyyntä asettamalla SYN-ACK-signaali bittit. Acknowledgement (ACK) tarkoitaa sen vastaanottaman segmentin vastausta ja SYN tarkoitaa millä järjestysnumerolla se todennäköisesti aloittaa segmentin.
 3. ACK - viimeisessä osassa käyttäjä/asiakas kuittaa palvelimen vastauksen ja molemmat ovat muodostanneet luotettavan yhteyeden ja ne aloittavat lähettää varsinaisia tiedonsiirtoja.
 
+<!-- UDP START HERE -->
 # UDP
 
 User Datagram Protocol (UDP)
@@ -84,11 +86,13 @@ Turvallisuudessa UDP:tä on mahdototna pysyttää palomuuria, joka mahdollistais
 
 Käyttöstä riippuu mihin käyttö tarkoitukseen olla käytössä, että jos tarvitsee nopea ja sujuvaa tiedonsiirtoa, joten käyttämä sovellus tai palvelu toimii kunnoolla joten UDP. Sama TCP on staatinen/muuttumaton ja luotettava protokolla, jota käytteässä data saapuu perille vastaanottajan luokse.
 
+<!-- NTP START HERE -->
 ## NTP
 Network Time Protocol (NTP) , joka on UDP pohjainenn protokolla täsmällisen aikatiedon välittämisen tietokoneiden välillä. Protokolla on suunniteltu ottamaan huomioon verkojen muuttuvia viiveitä, että toimivuudessa ja useiden palvelimen kellojen aikojen tahtia, että asiakas-palvelin käytöä.  
 
 <img src="images/data-ntp-1.PNG" width="450">
 
+<!-- DNS START HERE -->
 # DNS
 
 Domain Name System (DNS), mikä tunnetaan parhaiten nimipalvleujärjestelmä, mikä muuntaa verkotunnusta IP-osoitteeksi esim. Google DNS IP-osoite ovat 8.8.8.8 ja 8.8.4.4
