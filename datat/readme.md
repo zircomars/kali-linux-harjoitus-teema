@@ -84,6 +84,15 @@ Turvallisuudessa UDP:tä on mahdototna pysyttää palomuuria, joka mahdollistais
 
 <img src="images/data-tcp-udp-2.PNG" width="500">
 
+<h3>Kahden protokollien ero taulukko</h3>
+
+| Tyyppit | TCP | UDP |
+| --- | --- | --- |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+
 Käyttöstä riippuu mihin käyttö tarkoitukseen olla käytössä, että jos tarvitsee nopea ja sujuvaa tiedonsiirtoa, joten käyttämä sovellus tai palvelu toimii kunnoolla joten UDP. Sama TCP on staatinen/muuttumaton ja luotettava protokolla, jota käytteässä data saapuu perille vastaanottajan luokse.
 
 <!-- NTP START HERE -->
