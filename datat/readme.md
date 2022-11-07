@@ -25,7 +25,12 @@ Transmission Control Protocol (TCP) - tietoliikenneprotokolla, mikä tunnettaan 
 Tiedostojen siirtämisessä käytettään ja varmistettaan turvallisuutta, kun tiedostojen siirto tapahtuu käyttäjien ja palvelimen väliltä. Se takaa verkon kautta, että lähetettävien tietojen eheyksiä niiden määrästä riippumatta. Tämän takia tietojen lähettämisestä pitää olla korkea tason protokolla, jotta edelyttävät kaiken lähetetyjen tiedon saapumista. Esim. korkeita protokollia on SSH (Secure Shell), FTP (File transfer protocol), SMTP (Simple main transfer protocol), POP (post office protocol) ja HTTP.
 
 TCP header (kehys) taulukko <br>
-<img src="images/data-tcp-1.PNG" width="400">
+| <img src="images/data-tcp-1.PNG" width="450"> | Tärkeät kohdat: <br> - <b>Source port:</b> lähteenprosessien käyttäm portin numero <br> - <b>Destination port: </b> kohdeprosessien käyttämä numeroportti<br> - <b>järjestysnumero: </b> nykyisen segementien sijainti viestissä <br> - <b>Kuittausnumero:</b> seuraava jäjrjestysnumero <br> - <b>ikkuna/window: </b> määrittää saapuville tiedoille käytettävissä oleva puskurin koon <br> - <b>checksum / tarkistussumma: </b> virheiden tarkistus <br>| 
+| ------ | ----- |
+
+Sovellustiedot kapseloituvat sovelluskerrokseen (application layer), ja tuloksena PDU (Protocol data unit) välittää TCP:lle, joka lisää oman kehyksen kerroksen luodakseen TCP-protokollan tietoyksikön, mitä kutsutaan <ins> segmentiksi. </ins> TCP:n kehys sisältää tarkistussummia (checksum), ja järjestysnumeroita (sequence number), jos viesti koostuu useammasta kuin yhdestä segmentistä. 
+
+Kun yhteys muodostuu, TCP välittää jokaisen segmentin IP-protokolle, joka pakkaa niitä datagrammeiksi jatkolähetykseen varten. Lähde- ja kohdeosoite, protokolla tunniste ja segmentin pituus välitetään myös Internet-protokolalle parametreina 96-bittisenä pseudokehykseen (pseudoheader), ja pseudokehys ei itse osaa segemnttiä. Tarkistussumma lasketaan käyttämällä segmentin ja pseudokehyksen sisältöä yhteenvetona. Kohdelaitteessa TCP-ohjelmisto kokoaa alkuperäisen viestin uudelleen käyttämällä kutakin segmentin sisältämiä järjestysnumeroita ja mahdollista pyyttää puuttuvia tai vaurioituneita segmenttejä uudelleen lähetykseen. Minkä tahansa oikea vastaanoteu segmentit kuittavat, ja jokaisen kuittauksen jälkeen sisältää yhden tai useamman segmentin järjestysnumeron.
 
 End-to-end principle <br>
 <img src="images/data-tcp-04.PNG" width="525">
