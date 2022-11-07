@@ -78,7 +78,7 @@ UDP-datagrammin otsikko sisältää paljon vähemmän tietoa kuin TCP-segmentin 
 
 Molemmissa jakautuvat datat pienempiin yksikköihin eli datapaketi, missä sisältävät lähettäjän ja vastaanottajan IP-osoite, erilaisia konfiguraatiota, sisäisen lähettämän tiedon ja ilmiottaa mihin paketti päättyy (A--->B:lle)
 
-Turvallisuudessa UDP:tä on mahdototna pysyttää palomuuria, joka mahdollistaisi vain tietyn UDP-viestinnän ja estää loput, eli eivät suojaa täysin verrattuna TCP on helpompi suojata. Käyttäjä voi hyödyntää välityspalvelinta eli proxy:ä tiettyjen sovellusten käyttöä tai luoda tunneliyhteyden (tunneloiva yhteys) etäkäyttäjän ja yrityksen sisäisen verkon välille.
+Turvallisuudessa UDP:tä on mahdotonta pystyttää palomuuria, joka mahdollistaisi vain tietyn UDP-viestinnän ja estää loput, eli eivät suojaa täysin verrattuna TCP on helpompi suojata. Käyttäjä voi hyödyntää välityspalvelinta eli proxy:ä tiettyjen sovellusten käyttöä tai luoda tunneliyhteyden (tunneloiva yhteys) etäkäyttäjän ja yrityksen sisäisen verkon välille.
 
 <img src="images/data-tcp-upd-1.PNG" width="650">
 
