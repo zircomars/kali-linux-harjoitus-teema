@@ -98,6 +98,8 @@ Turvallisuudessa UDP:tä on mahdotonta pystyttää palomuuria, joka mahdollistai
 | Lähetystuki | ei mitään lähetystä (joukko-, moni- tai yleislähetystä) tueta | Yksittäisen tai muun monipuoliset lähetyksen tukeminen |
 | Virheiden tunnistus mekanismit |  |  |
 |  |  |  |
+|  |  |  |
+|  |  |  |
 
 Käyttöstä riippuu mihin käyttö tarkoitukseen olla käytössä, että jos tarvitsee nopea ja sujuvaa tiedonsiirtoa, joten käyttämä sovellus tai palvelu toimii kunnoolla joten UDP. Sama TCP on staatinen/muuttumaton ja luotettava protokolla, jota käytteässä data saapuu perille vastaanottajan luokse.
 
