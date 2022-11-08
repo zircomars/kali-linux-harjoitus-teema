@@ -38,7 +38,7 @@ End-to-end principle <br>
 
 Protokolla huolehtii, että kyseinen tiedosto paketti pääse perille vastanottajalle, mutta mikäli jos tiedosto häviää niin voidaan lähettää uudestaan tai mahdollista olla vioittunut tiedosto. Uudelleen lähettämisessa TCP varmistaa luotettavan viestintäjärjestelmän. Paketin häviämisessä voi mahdollista olla verkon ruuhkaus, mitä aiheuttaa paketin tiedoston häviämistä. Luottamisen ja vakaan toteutuu kolmella tavalla (acknowledgements, sequencing, checksum), mikä ikään kuin luoo luotettavan yhteyden. TCP tekee käyttämällä ns. kolmisuuntaisen kättelyn.
 
-Esim. alemman kuvan mukaan, jossa lähettäjä tietokoneesta lähettää viestin mikä siirto on nimeltään <ins> SYN </ins> synchronize. Myös vastaavasi kone/serveri vastaanottaa <ins> ack </ins> tai <ins> syn+ack </ins> palvelin vastaa lähetäjän pyynnön viestin tai kuin kuittaa lähettäjälle.
+Esim. alemman kuvan mukaan, jossa lähettäjä tietokoneesta lähettää viestin, mikä siirto on nimeltään <ins> SYN </ins> synchronize. Myös vastaavasti kone/serveri vastaanottaa <ins> ack </ins> tai <ins> syn+ack </ins> palvelin vastaa lähetäjän pyynnön viestin tai kuin kuittaa lähettäjälle.
 
 <img src="images/data-tcp-2.PNG" width="400">
 
