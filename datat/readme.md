@@ -107,7 +107,9 @@ Käyttöstä riippuu mihin käyttö tarkoitukseen olla käytössä, että jos ta
 
 <!-- NTP START HERE -->
 ## NTP
-Network Time Protocol (NTP) , joka on UDP pohjainenn protokolla täsmällisen aikatiedon välittämisen tietokoneiden välillä. Protokolla on suunniteltu ottamaan huomioon verkojen muuttuvia viiveitä, että toimivuudessa ja useiden palvelimen kellojen aikojen tahtia, että asiakas-palvelin käytöä.  
+Network Time Protocol (NTP) , joka on UDP pohjainenn protokolla täsmällisen aikatiedon välittämisen tietokoneiden välillä. Protokolla on suunniteltu ottamaan huomioon verkojen muuttuvia viiveitä, että toimivuudessa ja useiden palvelimen kellojen aikojen tahtia, että asiakas-palvelin käytöä. 
+
+NTP tavoitteena on varmistaa, että kaikki verkon tietokoneet sopivat ajankohdalla, että pienikin ero voi aiheuttaa ongelmia. Jos esim. tietokone isäntä/emäntä ja Activery Directory - toimialue ohjaimessa on yli 5minuutin ero, mitä ei voi kirjautua takaisin AD-domain verkotunnuksiin. Activery Directory - on Microsoft Windows keskeinen ominaisuus, koska ilman sitä tietokoneen työasema ja palvelimet olisivat pelkiä yksittäisiä laitteita, että ilman keskitettyjä toimintoja. Activery Directory - toimii käyttäjätietokannan ja hakemispalvelun, joka sisältää käyttäjistä, tietokoneista ja verkon resursseista.
 
 <img src="images/data-ntp-1.PNG" width="450">
 
