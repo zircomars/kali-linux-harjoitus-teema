@@ -81,6 +81,8 @@ Molemmissa jakautuvat datat pienempiin yksikköihin eli datapaketi, missä sisä
 
 Turvallisuudessa UDP:tä on mahdotonta pystyttää palomuuria, joka mahdollistaisi vain tietyn UDP-viestinnän ja estää loput, eli eivät suojaa täysin verrattuna TCP on helpompi suojata. Käyttäjä voi hyödyntää välityspalvelinta eli proxy:ä tiettyjen sovellusten käyttöä tai luoda tunneliyhteyden (tunneloiva yhteys) etäkäyttäjän ja yrityksen sisäisen verkon välille.
 
+Käyttöstä riippuu mihin käyttö tarkoitukseen olla käytössä, että jos tarvitsee nopea ja sujuvaa tiedonsiirtoa, joten käyttämä sovellus tai palvelu toimii kunnoolla joten UDP. Sama TCP on staatinen/muuttumaton ja luotettava protokolla, jota käytteässä data saapuu perille vastaanottajan luokse.
+
 <img src="images/data-tcp-upd-1.PNG" width="650">
 
 <img src="images/data-tcp-udp-2.PNG" width="500">
@@ -101,7 +103,7 @@ Turvallisuudessa UDP:tä on mahdotonta pystyttää palomuuria, joka mahdollistai
 | Protokollat | HTTP, HTTPS, FTP, SMTP, Telnet | DNS, DHCP, TFTP, SNMP, RIP & VoIP |
 | sovellukset (application/software) / työkalut | Verkkoselain, tiedoston siirto, sähköposti (SMTP, IMAP/POP) | VPN, video- ja musiikkien striimaus eli suoratoistot, muu suoran videopelit, uutiset, broadcast & DNS (Domain name system), VoIP |
 
-Käyttöstä riippuu mihin käyttö tarkoitukseen olla käytössä, että jos tarvitsee nopea ja sujuvaa tiedonsiirtoa, joten käyttämä sovellus tai palvelu toimii kunnoolla joten UDP. Sama TCP on staatinen/muuttumaton ja luotettava protokolla, jota käytteässä data saapuu perille vastaanottajan luokse.
+<hr>
 
 <!-- NTP START HERE -->
 ## NTP
