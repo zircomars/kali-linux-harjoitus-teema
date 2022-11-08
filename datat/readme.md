@@ -111,6 +111,10 @@ Network Time Protocol (NTP) , joka on UDP pohjainenn protokolla täsmällisen ai
 
 NTP tavoitteena on varmistaa, että kaikki verkon tietokoneet sopivat ajankohdalla, että pienikin ero voi aiheuttaa ongelmia. Jos esim. tietokone isäntä/emäntä ja Activery Directory - toimialue ohjaimessa on yli 5minuutin ero, mitä ei voi kirjautua takaisin AD-domain verkotunnuksiin. Activery Directory - on Microsoft Windows keskeinen ominaisuus, koska ilman sitä tietokoneen työasema ja palvelimet olisivat pelkiä yksittäisiä laitteita, että ilman keskitettyjä toimintoja. Activery Directory - toimii käyttäjätietokannan ja hakemispalvelun, joka sisältää käyttäjistä, tietokoneista ja verkon resursseista.
 
+NTP käyttää UTC (Coordinated Universal Time) eli koordinoitu yleisaika synkranoidakseen tietokonen kellonajan erittäin tarkasti. Se tarjoaa erittäin tarkkan pienissä verkoissa jopa 1 ms (millisekuntia) lähiverkossa ja 10 ms (millisekuntia) internetissä. NTP ei ota huomioon aikavhyöhykkeitä (time zone), koska se luottaa tietokonen käyttäjään laskelmien suorittamista.
+
+NTP:tä käytettään ympäri mailmaa, että pääsy erittäin tarkkoihin atomikelloihin ja GPS:hän (Global positioning system) kelloihin. Erikoisessa vastaanottimessa on oltava suoraa yhteys NTP-palvelimiin aikapalveluun. Ei ole käyttännöllistä tai kustannustehokkuutta varustaa jokaista tietokonetta jollakin näistä vastaanottimista. Sijaan aikapalvelmiseksi nimetyt tietokoneet varustetaan vastaanottimilla ja ne käyttävät protokollia, kuten NTP, synkronoidakseen verkkon kytkettyjen tietokoneiden kellonaikaa. 
+
 <img src="images/data-ntp-1.PNG" width="450">
 
 <!-- DNS START HERE -->
