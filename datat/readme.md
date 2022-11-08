@@ -66,6 +66,7 @@ UDP on erillinen/yhteydetön protokolla, koska se ei muodosta tiedonsiirron yhte
 UDP header (kehys) taulukko <br>
 <img src="images/data-udp-1.PNG" width="350">
 
+<!-- UDP JA TCP EROT START HERE -->
 ## UDP ja TCP erot
 
 UDP ja TCP ovat protokollia, mutta mikä niiden erossa on? TCP on yhteyspohjainen ja UDP yhteydetön, sekä molemmissa on hyvät ja huonot puolensa. TCP on turvallisempi ja UDP on nopeampi.
@@ -88,9 +89,14 @@ Turvallisuudessa UDP:tä on mahdotonta pystyttää palomuuria, joka mahdollistai
 
 | Tyyppit | TCP | UDP |
 | --- | --- | --- |
-|  |  |  |
-|  |  |  |
-|  |  |  |
+| liitäntätyyppit | yhteyssuuntautunut - laitteen on muodostettava yhteys ennen tiedonsiirtoa ja suljettava yhteys lähetyksen jälkeen | yhteydentön - tietojen lähettäminen ei vaadi yhteyttä eikä käsittelyä |
+| luotettavuus | luotettava - datapakettien toimitus on takaus | epäluotettava - Datagrammien toimitusta ei takausta |
+| viestintä tietojen tyyppit | Tilallinen |  |
+| Kehys (header) koko | Muuttuja: 20-60 tavua /bytes) pituudeltaan | Kiinteä - 8 tavua (bytes) |
+| Nopeus | Hitaampi kuin UDP, mutta noudattaa monia vaihteiden tarkkuuuden varmistamista | Nopeampi kuin TCP, koska paljon yksinkertaisempi protokolla  |
+| Järjestys | Paketit toimitetaan vastaanottajalle tietyissä järjestyksessä | Datagrammit toimitetaan ilman erityistä järjestystä. Jos se vaatii jonkilaisen tilauksen, se on sovelluksen hallinnoiva |
+| Lähetystuki | ei mitään lähetystä (joukko-, moni- tai yleislähetystä) tueta | Yksittäisen tai muun monipuoliset lähetyksen tukeminen |
+| Virheiden tunnistus mekanismit |  |  |
 |  |  |  |
 
 Käyttöstä riippuu mihin käyttö tarkoitukseen olla käytössä, että jos tarvitsee nopea ja sujuvaa tiedonsiirtoa, joten käyttämä sovellus tai palvelu toimii kunnoolla joten UDP. Sama TCP on staatinen/muuttumaton ja luotettava protokolla, jota käytteässä data saapuu perille vastaanottajan luokse.
