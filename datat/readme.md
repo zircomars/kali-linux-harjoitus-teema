@@ -96,10 +96,10 @@ Turvallisuudessa UDP:tä on mahdotonta pystyttää palomuuria, joka mahdollistai
 | Nopeus | Hitaampi kuin UDP, mutta noudattaa monia vaihteiden tarkkuuuden varmistamista | Nopeampi kuin TCP, koska paljon yksinkertaisempi protokolla  |
 | Järjestys | Paketit toimitetaan vastaanottajalle tietyissä järjestyksessä | Datagrammit toimitetaan ilman erityistä järjestystä. Jos se vaatii jonkilaisen tilauksen, se on sovelluksen hallinnoiva |
 | Lähetystuki | ei mitään lähetystä (joukko-, moni- tai yleislähetystä) tueta | Yksittäisen tai muun monipuoliset lähetyksen tukeminen |
-| Virheiden tunnistus mekanismit |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
+| Virheiden tunnistus mekanismit | Laaja virheidentunnistus: virtauksen ohjaus, ruuhkahallinta ja tietojen hyväksyminen | perusvirheiden havaitseminen: tarkistussumma |
+| Yleistiedot (overhead) | resurssiintensiivinen | kevyt (lightweight) |
+| Protokollat | HTTP, HTTPS, FTP, SMTP, Telnet | DNS, DHCP, TFTP, SNMP, RIP & VoIP |
+| sovellukset (application/software) / työkalut | Verkkoselain, tiedoston siirto, sähköposti (SMTP, IMAP/POP) | VPN, video- ja musiikkien striimaus eli suoratoistot, muu suoran videopelit, uutiset, broadcast & DNS (Domain name system), VoIP |
 
 Käyttöstä riippuu mihin käyttö tarkoitukseen olla käytössä, että jos tarvitsee nopea ja sujuvaa tiedonsiirtoa, joten käyttämä sovellus tai palvelu toimii kunnoolla joten UDP. Sama TCP on staatinen/muuttumaton ja luotettava protokolla, jota käytteässä data saapuu perille vastaanottajan luokse.
 
