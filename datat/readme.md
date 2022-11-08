@@ -107,13 +107,15 @@ Käyttöstä riippuu mihin käyttö tarkoitukseen olla käytössä, että jos ta
 
 <!-- NTP START HERE -->
 ## NTP
-Network Time Protocol (NTP) , joka on UDP pohjainenn protokolla täsmällisen aikatiedon välittämisen tietokoneiden välillä. Protokolla on suunniteltu ottamaan huomioon verkojen muuttuvia viiveitä, että toimivuudessa ja useiden palvelimen kellojen aikojen tahtia, että asiakas-palvelin käytöä. 
+Network Time Protocol (NTP), joka on UDP pohjainenn protokolla ja täsmällisen aikatiedon välittämistä tietokoneiden välillä. Protokolla on suunniteltu ottamaan huomioon verkojen muuttuvia viiveitä, että toimivuudessa ja useiden palvelimen kellojen aikojen tahtia, että asiakas-palvelin käyttöä. 
 
 NTP tavoitteena on varmistaa, että kaikki verkon tietokoneet sopivat ajankohdalla, että pienikin ero voi aiheuttaa ongelmia. Jos esim. tietokone isäntä/emäntä ja Activery Directory - toimialue ohjaimessa on yli 5minuutin ero, mitä ei voi kirjautua takaisin AD-domain verkotunnuksiin. Activery Directory - on Microsoft Windows keskeinen ominaisuus, koska ilman sitä tietokoneen työasema ja palvelimet olisivat pelkiä yksittäisiä laitteita, että ilman keskitettyjä toimintoja. Activery Directory - toimii käyttäjätietokannan ja hakemispalvelun, joka sisältää käyttäjistä, tietokoneista ja verkon resursseista.
 
 NTP käyttää UTC (Coordinated Universal Time) eli koordinoitu yleisaika synkranoidakseen tietokonen kellonajan erittäin tarkasti. Se tarjoaa erittäin tarkkan pienissä verkoissa jopa 1 ms (millisekuntia) lähiverkossa ja 10 ms (millisekuntia) internetissä. NTP ei ota huomioon aikavhyöhykkeitä (time zone), koska se luottaa tietokonen käyttäjään laskelmien suorittamista.
 
 NTP:tä käytettään ympäri mailmaa, että pääsy erittäin tarkkoihin atomikelloihin ja GPS:hän (Global positioning system) kelloihin. Erikoisessa vastaanottimessa on oltava suoraa yhteys NTP-palvelimiin aikapalveluun. Ei ole käyttännöllistä tai kustannustehokkuutta varustaa jokaista tietokonetta jollakin näistä vastaanottimista. Sijaan aikapalvelmiseksi nimetyt tietokoneet varustetaan vastaanottimilla ja ne käyttävät protokollia, kuten NTP, synkronoidakseen verkkon kytkettyjen tietokoneiden kellonaikaa. 
+
+NTP pohjautuu UDP protokollaan, jossa porttiltaan 123 käytetään NTP-palvelinviestinnässä ja NTP-asiakkaat käyttävät porttia 1023 (esim. työpöytä).Kuten monissa protokollissa, NTP kärsii tietoturvaongelmis, koska on mahdollista huijata NTP-pakettia ja jolloin kellot asettuvat eri aikoihin. Koska ongelmista tietyissä ajoittain toimivissa palveluissa. Myös on useita tapauksia, joissa NTP:n on käytetty väärin, mitä palvelimiin joutuvat DoS-hyökkäyksen uhriksi. 
 
 <img src="images/data-ntp-1.PNG" width="450">
 
