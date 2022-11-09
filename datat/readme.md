@@ -117,7 +117,12 @@ NTP:tä käytettään ympäri mailmaa, että pääsy erittäin tarkkoihin atomik
 
 NTP pohjautuu UDP protokollaan, jossa porttiltaan 123 käytetään NTP-palvelinviestinnässä ja NTP-asiakkaat käyttävät porttia 1023 (esim. työpöytä).Kuten monissa protokollissa, NTP kärsii tietoturvaongelmis, koska on mahdollista huijata NTP-pakettia ja jolloin kellot asettuvat eri aikoihin. Koska ongelmista tietyissä ajoittain toimivissa palveluissa. Myös on useita tapauksia, joissa NTP:n on käytetty väärin, mitä palvelimiin joutuvat DoS-hyökkäyksen uhriksi. 
 
+NTP stratum model <br>
 <img src="images/data-ntp-1.PNG" width="450">
+
+NTP käyttää hierarkkia, mitä on puolikerroksinen aikalähteiden järjestelmä. Hierarkisen tasoa kutsutaan <ins> kerrostumaksi (stratum) (</ins>, ja kerroksiin annettaan numeroita, joka alkaa nollasta vertaillu kellolle ylhäällä. Kerros <ins>  n </ins> - palvelimelle synkronoitu palvelin toimii kerroksena <ins> n + 1 </in>. Luvut edustavat etäisyyttä viitekellosta ja sitä käytetään estämällä sykliset riippuvuuden hierarkiassa. Stratum ei aina ole merkki laadusta tai luotettavuudesta, vaan on tavallista löytää kerroksen 3 aiaklähdettä, jotka ovat laadukkaampia kuin muut kerroksen 2 aikalähteet ja kuvaus kerroksen (stratum) tyypistä.
+
+
 
 <img src="images/data-ntp-2.PNG" width="450">
 
