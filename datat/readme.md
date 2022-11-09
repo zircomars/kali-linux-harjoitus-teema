@@ -119,6 +119,8 @@ NTP pohjautuu UDP protokollaan, jossa porttiltaan 123 käytetään NTP-palvelinv
 
 <img src="images/data-ntp-1.PNG" width="450">
 
+<img src="images/data-ntp-2.PNG" width="450">
+
 Järjestelmän ylläpitoon, ongelmien vianmäärityksiin ja dokumentoinnin kannalta on tärkeä, että kaikki järjestelmät ovat aikasynkronoituja ja ajankohdalla. Koska tietoturvalokien tai tietoturvahyökkäysten syytteen takia, joten tietoturvalokien on oltava tarkkoja. Myös käytettynä NTP:ssä voi olla hierarkinen katastrofi palautusjärjestelmä, joka sisältää ja ensijaisen ajanlähteen ja toisensijaisen lähteet. Oikea ajan järjestelmässä on tärkeetä, koska monet ongelmat voivat ilmaantua, jos verkkoon kytkettyjä koneita ei synkoronoida. 
 
 <!-- DNS START HERE -->
