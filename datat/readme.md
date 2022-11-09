@@ -120,9 +120,15 @@ NTP pohjautuu UDP protokollaan, jossa porttiltaan 123 käytetään NTP-palvelinv
 NTP stratum model <br>
 <img src="images/data-ntp-1.PNG" width="450">
 
-NTP käyttää hierarkkia, mitä on puolikerroksinen aikalähteiden järjestelmä. Hierarkisen tasoa kutsutaan <ins> kerrostumaksi (stratum) (</ins>, ja kerroksiin annettaan numeroita, joka alkaa nollasta vertaillu kellolle ylhäällä. Kerros <ins>  n </ins> - palvelimelle synkronoitu palvelin toimii kerroksena <ins> n + 1 </in>. Luvut edustavat etäisyyttä viitekellosta ja sitä käytetään estämällä sykliset riippuvuuden hierarkiassa. Stratum ei aina ole merkki laadusta tai luotettavuudesta, vaan on tavallista löytää kerroksen 3 aiaklähdettä, jotka ovat laadukkaampia kuin muut kerroksen 2 aikalähteet ja kuvaus kerroksen (stratum) tyypistä.
+NTP käyttää hierarkkia, mitä on puolikerroksinen aikalähteiden järjestelmä. Hierarkisen tasoa kutsutaan <ins> kerrostumaksi (stratum) (</ins>, ja kerroksiin annettaan numeroita, joka alkaa nollasta vertaillu kellolle ylhäällä. Kerros <ins>  n </ins> - palvelimelle synkronoitu palvelin toimii kerroksena <ins> n + 1 </ins>. Luvut edustavat etäisyyttä viitekellosta ja sitä käytetään estämällä sykliset riippuvuuden hierarkiassa. Stratum ei aina ole merkki laadusta tai luotettavuudesta, vaan on tavallista löytää kerroksen 3 aiaklähdettä, jotka ovat laadukkaampia kuin muut kerroksen 2 aikalähteet ja kuvaus kerroksen (stratum) tyypistä.
 
+Stratum 0:  laite on kytketty suoraan esim. GPS-antenniin, ajastimia, atomikelloja ja jne. Laitteet eivät kuitenkaan voi jakaa aikaa verkon ylitse suoraan, vaan joten ne on likitettävä Stratum 1 - palvelimeen, joka jakaa Stratum 2 - palvelimille tai -asiakkaalle ja jne kohti alaspäin. Mitä suurempi Stratum-luku sitä enemmän ajoituksia tarkkuuteenja vakaus heikkenevät. NTP protokolla ei salli asiakkaiden hyväksyä aikaa Stratum 15:n laitteelta, joten 15 on alhaisin NTP Stratum.
 
+Yksittäiset kerroksien toiminta periaatteessa Stratum 2:sta eteenpäin toimii kuin Hosyan kolmio (Fibonaccin lukujono) <br>
+- Stratum 0: Viitekello itsensä - tyyppillinen atomikello, GPS - navigointi tai radiokelloon. Ne tuottavat erittäin tarkan pulssi skeunnin signaalin, joka laukaisee keskeytyksen ja aikaleiman yhdistetyssä tietokoneessa. NTP - palvelimet eivtä mainosta itsensä kerroksena, mutta arvoksi 0 asetettu ilmaisee määrittämätöntä kerrosta.
+- Stratum 1: viittaa mihin tahansa koneeseen, joka synkronoi järjestelmäkellonsa suoraan Stratum 0:ssa sijaitsevan "viitekellon" kanssa. Esimerkiksi palvelin, jonka johonkin sarjaporttiin on kytketty GPS-yksikkö.
+- Stratum 2: viittaa mihin tahansa koneeseen, joka synkronoi järjestelmäkellonsa Stratum 1 -palvelimen kellon kanssa.
+- Stratum 3: viittaa mihin tahansa koneeseen, joka synkronoi järjestelmäkellonsa Stratum 2 -palvelimen kellon kanssa ja niin edelleen.
 
 <img src="images/data-ntp-2.PNG" width="450">
 
