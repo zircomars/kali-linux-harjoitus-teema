@@ -128,11 +128,16 @@ Yksittäiset kerroksien toiminta periaatteessa Stratum 2:sta eteenpäin toimii k
 - Stratum 0: Viitekello itsensä - tyyppillinen atomikello, GPS - navigointi tai radiokelloon. Ne tuottavat erittäin tarkan pulssi skeunnin signaalin, joka laukaisee keskeytyksen ja aikaleiman yhdistetyssä tietokoneessa. NTP - palvelimet eivtä mainosta itsensä kerroksena, mutta arvoksi 0 asetettu ilmaisee määrittämätöntä kerrosta.
 - Stratum 1: viittaa mihin tahansa koneeseen, joka synkronoi järjestelmäkellonsa suoraan Stratum 0:ssa sijaitsevan "viitekellon" kanssa. Esimerkiksi palvelin, jonka johonkin sarjaporttiin on kytketty GPS-yksikkö.
 - Stratum 2: viittaa mihin tahansa koneeseen, joka synkronoi järjestelmäkellonsa Stratum 1 -palvelimen kellon kanssa.
-- Stratum 3: viittaa mihin tahansa koneeseen, joka synkronoi järjestelmäkellonsa Stratum 2 -palvelimen kellon kanssa ja niin edelleen.
+- Stratum 3: viittaa mihin tahansa koneeseen, joka synkronoi järjestelmäkellonsa Stratum 2 -palvelimen kellon kanssa ja niin edelleen. Eli joka seuraavan stratum taso viittaa edellisen kerrokseen
 
 <img src="images/data-ntp-2.PNG" width="450">
 
 Järjestelmän ylläpitoon, ongelmien vianmäärityksiin ja dokumentoinnin kannalta on tärkeä, että kaikki järjestelmät ovat aikasynkronoituja ja ajankohdalla. Koska tietoturvalokien tai tietoturvahyökkäysten syytteen takia, joten tietoturvalokien on oltava tarkkoja. Myös käytettynä NTP:ssä voi olla hierarkinen katastrofi palautusjärjestelmä, joka sisältää ja ensijaisen ajanlähteen ja toisensijaisen lähteet. Oikea ajan järjestelmässä on tärkeetä, koska monet ongelmat voivat ilmaantua, jos verkkoon kytkettyjä koneita ei synkoronoida. 
+
+<h3>Internet-aikapalvelimen vikoja</h3>
+
+<img src="images/data-ntp-3.PNG" width="450">
+
 
 <!-- DNS START HERE -->
 # DNS
