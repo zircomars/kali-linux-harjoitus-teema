@@ -136,7 +136,12 @@ Järjestelmän ylläpitoon, ongelmien vianmäärityksiin ja dokumentoinnin kanna
 
 <h3>Internet-aikapalvelimen vikoja</h3>
 
-<img src="images/data-ntp-3.PNG" width="450">
+Internet aikapalvelin altistavat verkko viruksille ja paljon julkisuutta tulleille NTP DDoS-hyökkäyksille. Miten, koska internet-aika vaatii avoimen UDP 123-portin, joka avataan palomuurin kautta. Tätä palomuurin ns. "reikä", sitä voidaan verrata otsonikerroksen (ozone layer) reikään. Kun otsonikerros on aukko, joka voimistaa auringonsäteiden vaikutusta, joten tietokoneverkkon palomuurin "reikä" lisää viruksen mahdollisuuksia tunkeutua järjestelmiin ja tuhoo ne.
+
+<img src="images/data-ntp-4.PNG" width="450">
+
+
+
 
 
 <!-- DNS START HERE -->
