@@ -134,16 +134,6 @@ Yksittäiset kerroksien toiminta periaatteessa Stratum 2:sta eteenpäin toimii k
 
 Järjestelmän ylläpitoon, ongelmien vianmäärityksiin ja dokumentoinnin kannalta on tärkeä, että kaikki järjestelmät ovat aikasynkronoituja ja ajankohdalla. Koska tietoturvalokien tai tietoturvahyökkäysten syytteen takia, joten tietoturvalokien on oltava tarkkoja. Myös käytettynä NTP:ssä voi olla hierarkinen katastrofi palautusjärjestelmä, joka sisältää ja ensijaisen ajanlähteen ja toisensijaisen lähteet. Oikea ajan järjestelmässä on tärkeetä, koska monet ongelmat voivat ilmaantua, jos verkkoon kytkettyjä koneita ei synkoronoida. 
 
-<h3>Internet-aikapalvelimen vikoja</h3>
-
-Internet aikapalvelin altistavat verkko viruksille ja paljon julkisuutta tulleille NTP DDoS-hyökkäyksille. Miten, koska internet-aika vaatii avoimen UDP 123-portin, joka avataan palomuurin kautta. Tätä palomuurin ns. "reikä", sitä voidaan verrata otsonikerroksen (ozone layer) reikään. Kun otsonikerros on aukko, joka voimistaa auringonsäteiden vaikutusta, joten tietokoneverkkon palomuurin "reikä" lisää viruksen mahdollisuuksia tunkeutua järjestelmiin ja tuhoo ne.
-
-<img src="images/data-ntp-4.PNG" width="450">
-
-
-
-
-
 <!-- DNS START HERE -->
 # DNS
 
