@@ -134,6 +134,10 @@ Yksittäiset kerroksien toiminta periaatteessa Stratum 2:sta eteenpäin toimii k
 
 Järjestelmän ylläpitoon, ongelmien vianmäärityksiin ja dokumentoinnin kannalta on tärkeä, että kaikki järjestelmät ovat aikasynkronoituja ja ajankohdalla. Koska tietoturvalokien tai tietoturvahyökkäysten syytteen takia, joten tietoturvalokien on oltava tarkkoja. Myös käytettynä NTP:ssä voi olla hierarkinen katastrofi palautusjärjestelmä, joka sisältää ja ensijaisen ajanlähteen ja toisensijaisen lähteet. Oikea ajan järjestelmässä on tärkeetä, koska monet ongelmat voivat ilmaantua, jos verkkoon kytkettyjä koneita ei synkoronoida. 
 
+Ajan synkroinnissa on elintärkeä/ehdottoman tärkeä tietoturvahäiriöiden hallinta, suojaaminen, virheenkorjaus ja tutkinta, jossa lokitiedostojen tarkat aikaleimat ovat välttämätämiä hälytyksiä ja oikeus/rikosteknisen analysointia varten. Lisäksi aikakorrelaatio tarvitsee todennusjärjestelmiä, verkon määrittystä, tiedostojojrjestelmän päivitys, ongelmien dianosointi, suojaussääntöjen toteuttamista ja jne. Ajan synkronointi käytettään UDP-porttia 123.
+
+NTP on yksi Internetin vanhemmista prootkollista, eikä se ole oletuksenarvoisesti suojattu, koska se on alttiina hajautetuille palvelunesto hyökkäys (DDos) ja väliintulohyökkäyksille (MITM,  man-in-the-middle attack). NTP vhavistus on eräänlainen heijastava DDoS-hyökkäys, josta hyökkääjä kohdistuu julkisen saatavilla olevan NTP-palvelimiin ja lähettää toistuvia pyyntöjä palvelimille käyttämällä väärennettyä IP-osoitetta lähetäkseen kohdejärjestelmälle suureen vastauksen NTP-apvelimelta. Tämä johtaa palvelun heikkenemistä kaistanlaeveyden suureen kysynynnän vuoksi, 
+
 <!-- DNS START HERE -->
 # DNS
 
