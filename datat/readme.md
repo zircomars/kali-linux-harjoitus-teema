@@ -138,8 +138,6 @@ Ajan synkroinnissa on elintärkeä/ehdottoman tärkeä tietoturvahäiriöiden ha
 
 NTP on yksi Internetin vanhemmista prootkollista, eikä se ole oletuksenarvoisesti suojattu, koska se on alttiina hajautetuille palvelunesto hyökkäys (DDos) ja väliintulohyökkäyksille (MITM,  man-in-the-middle attack). NTP vhavistus on eräänlainen heijastava DDoS-hyökkäys, josta hyökkääjä kohdistuu julkisen saatavilla olevan NTP-palvelimiin ja lähettää toistuvia pyyntöjä palvelimille käyttämällä väärennettyä IP-osoitetta lähetäkseen kohdejärjestelmälle suureen vastauksen NTP-apvelimelta. Tämä johtaa palvelun heikkenemistä kaistanlaeveyden suureen kysynynnän vuoksi, koska mikä voi estää laillisia käyttäjiä ja järjestelmiä pääsemästä verkkoresursseihin ja käyttämään niitä. Esim. NTP Amplification - hyökkäys voi estää Internetin käyttäjiä pääsemästä organisaation verkkosivuille ja verkkoresursseihin. Lisäksi NTP alttiina MITM-hyökkäystä. Nämä hyökkäykset antavat luvattomille käyttäjille mahdollisuuden siepata, lukea ja muokata asiakkaiden ja palvelimien välillä lähetetyä liikennettä. NTP on erityisen herkkä MITM-hyökkäyksille, koska se luottaa pieneen joukkoon palvelimia ja algrotimia, jota käytetään valitsemaan palvelin, jotta sen kanssa voi synkronoida.
 
-<img src="images/data-ntp-3.PNG" width="450">
-
 <!-- DNS START HERE -->
 # DNS
 
