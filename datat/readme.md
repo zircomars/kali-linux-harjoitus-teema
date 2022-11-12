@@ -143,6 +143,7 @@ NTP on yksi Internetin vanhemmista prootkollista, eikä se ole oletuksenarvoises
 
 Domain Name System (DNS), mikä tunnetaan parhaiten nimipalvleujärjestelmä, mikä muuntaa verkotunnusta IP-osoitteeksi esim. Google DNS IP-osoite ovat 8.8.8.8 ja 8.8.4.4
 
+<img src="images/data-dns-1.PNG" width="450">
 
-
+<img src="images/data-dns-2.PNG" width="450">
 
