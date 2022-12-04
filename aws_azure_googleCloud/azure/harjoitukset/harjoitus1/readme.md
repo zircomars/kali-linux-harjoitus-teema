@@ -33,6 +33,7 @@ Clikkaa tuosta kartta alemmasta josta on linkki, että avautuu (Service Health |
 
 Mene Home -sivulle klikkaamalla vasemman yläkulman ”Microsoft Azure” -tekstiä. Tutki, miten resursseja luodaan Azureen. Klikkaa valikosta + <b> Create a Resource </b> -valintaa. Huomaa, että valinta avaa Azure Marketplacen, josta voit valita valmiiksi määriteltyjä resursseja. Älä valitse vielä tässä vaiheessa mitään.
 
+<img src="harjoitus1/azure-09.PNG">
 
 ## Osa 3
 
@@ -42,3 +43,5 @@ Avaa valikosta Access Control (IAM) -blade. Valitse Role Assignments ja tarkista
 
 
 ## Osa 4
+
+Palaa takaisin Subscriptions -bladeen klikkaamalla Subscriptions -osaa vasemman yläkulman Home > Subscriptions -linkistä. Liitä Subscription -blade omaan Dahsboardiisi Pay-as-you-Go -tilauksen perässä olevasta kolmen pisteen valikosta klikkaamalla Pin to Sashboard. Tarkista, että Subscription -pikakuvake näkyy Dashboardissa. 
