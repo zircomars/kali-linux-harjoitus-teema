@@ -1,5 +1,7 @@
 # Azure kirjan lukemista
-Kuinka luodaan se serveri VM (virtual machine) ja kuinka käytettään sitä scripttausta (Linux / Shell)
+Kuinka luodaan se serveri VM (virtual machine) ja kuinka käytettään sitä scripttausta (Linux / Shell) ja yms virutaalikonen ympäristöä, sekä muita resurssia
+
+![Alt text](images/azure-01.PNG?raw=true "None")
 
 ![Alt text](images/azure-vm-1.PNG?raw=true "None")
 
