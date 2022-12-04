@@ -12,7 +12,7 @@ Jos sinulta kysytään Default-näkymää sivun avautuessa, valitse Dashboard ja
 Dashboard ikkuna
 <img src="harjoitus1/azure-03.PNG">
 
-Valitse Service Health ja tutki avautuvasta näkymästä yleistietoja. Katso aicun linkistä ongelmatilanteiden historiatiedot (Health History) ja saman ikkunan valikosta suunnitellut ylläpitotapahtumat (Planned Maintenance). Tutki myös, miten voit luoda hälytyksiä (Health Alerts). Palaa Dashboardiin klikkaamalla vasemman yläkulman linkistä Dashboard
+Valitse Service Health ja tutki avautuvasta näkymästä yleistietoja. Katso aicun linkistä ongelmatilanteiden historiatiedot <b> (Health History) </b> ja saman ikkunan valikosta suunnitellut ylläpitotapahtumat <b>(Planned Maintenance) </b>. Tutki myös, miten voit luoda hälytyksiä (Health Alerts). Palaa Dashboardiin klikkaamalla vasemman yläkulman linkistä Dashboard
 
 <img src="harjoitus1/azure-03-1.PNG" width="400">
 
