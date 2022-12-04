@@ -1,4 +1,5 @@
-# ensimmäinen harjoitus, että piti saada ensin tunnukset, että vasta pääsee microsoft azure sisään eli linkki on: portal.azure.com
+# ensimmäinen harjoitus
+Eneimmäisenä piti saada ensin tunnukset, että vasta pääsee microsoft azure sisään eli linkki on: portal.azure.com
 
 - [Osa 1 dashboard](#Osa-1-dashboard)
 - [Osa 2 resurssit](#Osa-2-resurssit)
