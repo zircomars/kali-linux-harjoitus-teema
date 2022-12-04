@@ -39,8 +39,25 @@ Mene Home -sivulle klikkaamalla vasemman yläkulman ”Microsoft Azure” -tekst
 
 Hae tilauksesi tiedot kirjoittamalla <b> Subscriptions </b> yläpalkin hakukenttään. Näet yhden tilauksen nimeltään <b> Pay-as-you-Go </b> . Klikkaa sitä avataksesi tilauksen asetusbladen. Valitse valikosta Cost Analysis ja tutki, mitkä resurssit ovat aiheuttaneet suurimman laskutuksen. Paljonko laskua on kertynyt? Mikä on ennuste nykyisellä kustannusrakenteella?
 
+<img src="harjoitus1/azure-10.PNG">
+
+<img src="harjoitus1/azure-11.PNG">
+
+<img src="harjoitus1/azure-12.PNG">
+
+Tummempi/shokki/kirkaampi värinen vihreä on kertynyt kustannus (acumulated cost) ja vaalea vihreä ennuste kustannus (forecast cost) & 1.joulukuusta alkaen n. 108.62e, eli mahdollista joulukuun loppulla ennustaa n. 910.05e <br>
+
+<img src="harjoitus1/azure-13-1.PNG">
+
+<img src="harjoitus1/azure-13.PNG">
+
 Avaa valikosta Access Control (IAM) -blade. Valitse Role Assignments ja tarkista, kenelle on myönnetty Owner -rooli tilaukseen. Katso. Mitä muuta tietoa tilauksestasi saat valikon valintojen avulla.
 
+<img src="harjoitus1/azure-14.PNG">
+
+<img src="harjoitus1/azure-14-1.PNG">
+
+<img src="harjoitus1/azure-14-2.PNG">
 
 ## Osa 4
 
