@@ -16,10 +16,16 @@ Valitse Service Health ja tutki avautuvasta näkymästä yleistietoja. Katso aic
 
 <img src="harjoitus1/azure-03-1.PNG" width="400">
 
-Clikkaa tuosta kartta alemmasta josta on linkki, että avautuu (Service Health | Health history)
+Clikkaa tuosta kartta alemmasta josta on linkki, että avautuu (Service Health | Health history) & ihan oikealla on tommoinen pinni, josta voi laittaa Dashboard ikkunaan näytölle
 <img src="harjoitus1/azure-04.PNG">
 
+<img src="harjoitus1/azure-06.PNG" width="650">
+
 <img src="harjoitus1/azure-05.PNG">
+
+<img src="harjoitus1/azure-07.PNG">
+
+<img src="harjoitus1/azure-08.PNG">
 
 <hr>
 
