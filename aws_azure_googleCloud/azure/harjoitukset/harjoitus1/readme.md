@@ -1,10 +1,11 @@
 # Harjoitus 1
 
-- [Osa 1](#Osa-1)
-- [Osa 2](#Osa-2)
-- [Osa 3](#Osa-3)
+- [Osa 1 dashboard](#Osa-1-dashboard)
+- [Osa 2 resurssit](#Osa-2-resurssit)
+- [Osa 3 haku](#Osa-3-haku)
+- [Osa 4](#Osa-4)
 
-## Osa 1
+## Osa 1 dashboard
 Jos sinulta kysytään Default-näkymää sivun avautuessa, valitse Dashboard ja klikkaa Save. Valitse Dashboard ja tutki näkymän eri vaihtohetoja. Dashboard löytyy vasemman yläkulman kolmewn viivan alta.
 
 <!-- <img src="harjoitus1/azure-02.PNG" width="400"> -->
@@ -29,13 +30,13 @@ Clikkaa tuosta kartta alemmasta josta on linkki, että avautuu (Service Health |
 
 <hr>
 
-## Osa 2
+## Osa 2 resurssit
 
 Mene Home -sivulle klikkaamalla vasemman yläkulman ”Microsoft Azure” -tekstiä. Tutki, miten resursseja luodaan Azureen. Klikkaa valikosta + <b> Create a Resource </b> -valintaa. Huomaa, että valinta avaa Azure Marketplacen, josta voit valita valmiiksi määriteltyjä resursseja. Älä valitse vielä tässä vaiheessa mitään.
 
 <img src="harjoitus1/azure-09.PNG">
 
-## Osa 3
+## Osa 3 haku
 
 Hae tilauksesi tiedot kirjoittamalla <b> Subscriptions </b> yläpalkin hakukenttään. Näet yhden tilauksen nimeltään <b> Pay-as-you-Go </b> . Klikkaa sitä avataksesi tilauksen asetusbladen. Valitse valikosta Cost Analysis ja tutki, mitkä resurssit ovat aiheuttaneet suurimman laskutuksen. Paljonko laskua on kertynyt? Mikä on ennuste nykyisellä kustannusrakenteella?
 
@@ -58,6 +59,8 @@ Avaa valikosta Access Control (IAM) -blade. Valitse Role Assignments ja tarkista
 <img src="harjoitus1/azure-14-1.PNG">
 
 <img src="harjoitus1/azure-14-2.PNG">
+
+<hr>
 
 ## Osa 4
 
