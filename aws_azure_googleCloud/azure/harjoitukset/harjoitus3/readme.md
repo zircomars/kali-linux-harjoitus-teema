@@ -29,6 +29,8 @@ Tarkista, että virtuaalikoneresurssiin ei ole liitetty ongelmailmoituksia. Avaa
 
 <img src="images/harjoitus3-3.PNG">
 
+<img src="images/harjoitus3-5.PNG">
+
 <img src="images/harjoitus3-5-1.PNG">
 
 <img src="images/harjoitus3-5-2.PNG">
@@ -37,7 +39,6 @@ Tarkista, että virtuaalikoneresurssiin ei ole liitetty ongelmailmoituksia. Avaa
 
 <img src="images/harjoitus3-5-4.PNG">
 
-<img src="images/harjoitus3-5.PNG">
 
 
 
