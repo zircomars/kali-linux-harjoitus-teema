@@ -23,11 +23,21 @@ Klikkaa Review + Create. Tarkista, että validointi meni läpi ja klikkaa Create
 
 Tarkista, että virtuaalikoneresurssiin ei ole liitetty ongelmailmoituksia. Avaa virtuaalikoneen blade (overview) klikkaamalla sitä ja mene valikossa alaspäin kohtaan Help. Valitse Resource Health ja tarkista, ettei hälyttäviä ilmoituksia ole. <br>
 
+<img src="images/harjoitus3-1.PNG">
 
+<img src="images/harjoitus3-2.PNG">
 
+<img src="images/harjoitus3-3.PNG">
 
+<img src="images/harjoitus3-5-1.PNG">
 
+<img src="images/harjoitus3-5-2.PNG">
 
+<img src="images/harjoitus3-5-3.PNG">
+
+<img src="images/harjoitus3-5-4.PNG">
+
+<img src="images/harjoitus3-5.PNG">
 
 
 
