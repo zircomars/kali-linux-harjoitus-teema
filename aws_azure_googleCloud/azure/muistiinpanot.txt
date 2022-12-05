@@ -101,7 +101,7 @@ regions - kysyy aina, mitä ollaan tekemässä azureen, minne sijoittaa?
 geographies - ei käyttöliittymässä, ehkä saattaa nähdä alue listoissa suluissa geographies europe (tarkempi sijainti eli nort tai east tai west), ne noudattaa tasoja & maan rajoja, yhdysvalta, tyynenmeri ja jne (ei mikään tärkeiä)
 
 
-avaibalityty zones - lisä kustannus , tietotruvat , zone <---> zone1 ja jne. kopio löytyy datacenter, virutaalikone jatkaa toiminnan muilla vyöhykkeille eli datacenterissä,
+avaibalityty zones - lisä kustannus , tietotruvat , zone <---> zone1 ja jne. kopio löytyy datacenter, virutaalikone jatkaa toiminnan muilla vyöhykkeille eli datacenterissä. Jos sattuu esim. vikojen sietokyky saavutetaan Azure-palvelujen redundanssin ja loogisen eristyksen ansiosta. Kestävyyden takaamiseksi kaikilla käytettävyysvyöhykekäyttöisillä alueilla on vähintään kolme erillistä käytettävyysvyöhykettä. Azuren saatavuusvyöhykkeet on yhdistetty tehokkaalla verkolla, jonka edestakainen viive on alle 2 ms
 
 kevyempi availability set  - konen ylhäällä oloa, jos päivityksessä 
 
