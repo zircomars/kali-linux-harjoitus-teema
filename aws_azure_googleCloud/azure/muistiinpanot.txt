@@ -1,0 +1,224 @@
+azure perusteet 5.12.
+
+keskseinen  termonologiaa
+
+pilviympäristö
+
+kolme eri kerrosta (pyramidi/kerroksesta)
+infrastructure as service (iaas)
+platform as service (paas)
+software as service (paas)
+
+
+pilvi - on alusta palvelulle
+
+ei ole ilmaista ole, että rahaa riippuu tilanteesta
+
+riippuu palvelusta mitä käyttää
+
+osa tuottaa yllätyksiä laskutuksia  :D opiframe mukaan 9k 
+
+lasku kuvio pitää olla mielessä ettei pyörä palvleua ettei käytä niitä
+jokaisesta palvelusta tuottaa lasku
+
+pilvipalveuiden etua
+
+termi teknologia, pilvimallit
+
+hybridi cloud tulee ad osalta (työssä)
+
+-  konsepti
+käyttää korkea käytettävyys, kahdennettu koneita, klustereita, sovelllusista riippuuen
+
+vaikka tekisi platform nii ei tarvi korkeatietoturvista, siselelä on enemmin oma kopio ja niistä ei tarvi välitää, ja joppa datacenter
+
+jos tuo konetta lisää nii tarvii prosessoria ,  muistia jotta ssaa suorituskykyä ja palvelinta
+
+resusrrsia voi parantaa avaibliti set, loadbalance jokaisesta tarjoaa vika ilmoisuta, riipppuu takuu, mittausjaksoisesti päällä
+sla tasoa ?
+
+jos data koruptoi niin azure kannalta loogiselta joutuu käsitöitä , varmistumisen on a inoa  ratkaaisu, automaaista on esim. sql:ssä , niin automaatisesti ei voi aina suorittaa
+
+eurooppassa on oma reusrssi (nort europe - hollanti), west europe - irlanti ja jne) microsoft kuulemma on tulossa suomeen dataa center
+
+viive pidetään mahdollisiiman pienenä, mutta riippuu asiakas ja datacenter ehkä saattaa tökkiä
+
+predictive cost considerations
+kustannus ennuste on oma prosesi - toteuttumisesta ei tietoa..  myös  saatettaan siivoa sitä datacenteriä (tietokanta) azure siinä subscription (pay-as-you-go)
+
+--------------------------------------
+
+economies of scale
+
+mainoksia, tarjoo palveluita ja kehittää pilvipalvelua 
+
+capex vs opx (capital expenditure) vs (operational expenditure)
+
+consuption base model - käyttäjä maksaa vian resursseja mitä ne on  luonnut ja käyttää, miutta ei vältämättä käytää mutta luoo, ja siitä lasku lalkaa lähtee!! aiheutuvua kustannus
+
+public cloud perus malli - ei ole mahdollista tehdä hybrdidi mallia, ei ole synkronoidu mistään, kuka voi tehdä tahansa tilauksen aj 
+kuka voi tahansa editoita sisäisen datat
+
+private cloud
+harvinainen isoilla on omia palveluita, oma datacenter, jaettaan palveluita asiakkaille kuka tahansa ei saa palveuita käyttää, yrityksillä on oma konehuone ja omia palveluita omalle väelle
+
+
+public ja private cloud = hybridid cloud - antaa käyttäjä suoritta asovelluksia on parmepi ja riippuu sijainnista, synkranoidaan pilvipalvleu active direcotry, vaattii autenkikointia,azurella ei ole oikeuta lukea käyttäj tunnus ja salassanaa, joko kopsaa salasan tai synkranoi
+
+synkronoida same size no, signle signe no
+
+muu sharepoinrt hybrdidi pointi
+
+- types of cloud 
+
+iaas on fyysiset data secenter microsof thallussa ,tietoturva, tietoliikenne turvat, virutali levyt ja maksimiallisen konehuonen ratkaisua,  konet ovat virtuaalisia ja samat vastuut kaikkia vika suhteet, 
+paas - palvleukesrros laajin, mitä voi littää pavlelua kuinka paljon, osittain päöällekkäisen iaas kanssa joko toteuttetaan sql tietokantantana tai iaas ratkaisuna, molemmat ovat eri ominaisuudet
+iaas - virtuaalisen palveli ja asennettaan sql server tuote tai palveluna looginen palvelinen tausta ja rakennetaan tietoapalvleua, ja lopputulos on sama mutta on oma käyttätarkoitus
+
+saas - software - tietyä sovellusta palvelitna , kaikki elementit on taustalla & kolmena kerroksina, sillä on oma käyttöliittymä
+
+saas on käyttäjä hallinta acitve directory
+
+on iot ympäristö, centar application piillotta monimutkaisua, voi olla sovelluskehitys työaklua, visual studio :3 
+
+management responsibilites 
+suurin osa vastuu on asiakaat, että microsoft ei vastaa mitään ehkä n. alle 30% jopa data centeriä
+---- module 2
+core azure services
+
+arkkitehtuuri, tuoteita ja yms eri ratkaisuja , hallintatyökalu
+
+sijainnista riippumatta, organisaatio alueesta ei maasta / ehkä maasta tai alueesta esim. perus alue on north europe (ei amsterdam) 
+
+subscription - tarkoittaa tilauksia (opiframe mukaan on pay-asyou-go) ope mukaan poistaa resurssit
+
+security standarad - standard
+
+size (pienin virtuaalikonen resursssit)
+
+regions - kysyy aina, mitä ollaan tekemässä azureen, minne sijoittaa? 
+
+geographies - ei käyttöliittymässä, ehkä saattaa nähdä alue listoissa suluissa geographies europe (tarkempi sijainti eli nort tai east tai west), ne noudattaa tasoja & maan rajoja, yhdysvalta, tyynenmeri ja jne (ei mikään tärkeiä)
+
+
+avaibalityty zones - lisä kustannus , tietotruvat , zone <---> zone1 ja jne. kopio löytyy datacenter, virutaalikone jatkaa toiminnan muilla vyöhykkeille eli datacenterissä,
+
+kevyempi availability set  - konen ylhäällä oloa, jos päivityksessä 
+
+resource groups - kansiona sijoitta kaikki yhteen liittyvät resurssit josta muodostaa sisällön ja ylläpitäjä haöuaa päästä eroon sovelluksesta tai yms, riittä kun poistaa resurss group sälää/roskaa vaikea metsätää, voi poistaa vain yksi kerrallaan
+azyre resoiurce manager - joka voi poistaa vain maangeri - tarjoaa mahdollista helpotusta resurssien käyttöönottoa asennusta joka viittaa templeit (ubuntu) github:ssa on templeit, pääsyhallinnasta arb luoda uusia käyttöoikeuksia, 
+
+compute services
+kategoriat, omia tuoteita ja palvleuita, päällee voi suorittaa jotakin sovellusta, virtuaalikone ja kontainer, joka toimii sovellusympäristönä, 
+
+
+virtuali koneesta - connect , syöttää annettut tunnukset eli mitä luotiin resurssistsa, kirjauduttaan sisään ja avautuu uusi windows 10 serveri
+
+virtuaali kone on perus elementti (vdi) palveluita ja elemeentti, container services ( teknologia), edellyttää isäntä kone containeria pyörittää/hallinnoi sillä ei ole käyttöjärjestelmä, josta pitää hakea eli joko azure containerst ja instanssit,
+
+verkkopalvelut (network services) ei rakennetta verkkoympäristöä, on verkkoa, subnet. load balancer - identtiset virtuaalikoneet hoittaa sama homman, kuorman perusteella palvelu perusteella sen hetkisen kuoramn ohjaa palvelu ohjaajan sinne,
+azure verkossa on perustava laatu, jos pitää keskustella kommunikoida nii tarvii gateway nii tarvii vpn yhteys tai on premisiss vekrko voi kommunikoida nii tarvii vpn ympäristö, 
+
+application gateway proxy ratkaisu pallu base on an event
+
+------------------------------------------------------------
+
+contenet delivery network - striimaus, järkeröivää video striimauksen ettei jaa joka puolelle eli vastaanottajia
+
+azure storage srevices - tallentaa jotakin pilveen nii se on hankala siellä ei oel tiedosto palvelia, levykulmaa ja siellä tarvii storage account, ei ole mitenkän käytetäviä, on olemassa monipuiolisia data tyyppejä noudattaa skemaa kentät ja ominaisuudet, tietokanta ratkaisut, on tuettu monipuolisia tapa
+
+semi strcuturer data - ei ole sääntöä ja ehtoja, eri tietoyyppiä, mutta parhaiten taulukko
+
+unstructured data - ei ole vaatimuksia, mikä tahansa data käy, pdf, kuvia, videoita ja tiedostot ja yms. eli sallii kaikki. 
+
+
+azure services
+
+vaattii virtuaali levy muistin, mahdolliset datat, mutta sikäli ei näy missään nii ainoastaan näkyy virtuaali konesta, file storage virtuaalkonen välillä, voi luoda jaettu hakemiston. arkistoa voi luoda backup
+
+
+database services - tuoettuja tietokantoja (cosmos db) voi liittää erilaisia palvelua & usein käytettään azure sql database - on muitakin palveluita, mysql palveluna ja jen. azure database migration - saadaan tuotua ulkoisia tieokanta sisään ja pyrkii minimoida 
+
+
+markplace - on sovelluksisa ilmaisi ja maksullisia palveluita - on useita kategorioita esim. wordpress, virtual network, windows server ja jne. 10 000 nimikeittä, osa maksullinen ja maksuttomia
+
+
+azure solution
+iot
+
+suosittu palvelu nykyaikana n. 2018 eteenpäin mittavataan järjestelmään mikro kone ja lähettää eteenpäin azure on aina iot hub vastassa johon rakennetaan jatko ratakaisusta
+
+microsoft iot central (oma saas) järjestelmä simuloitua dataa, jotta voi donentaa kaikki toimii
+
+hd inside
+
+ai (artificial intelligence) ratkaisu - graafinen ympäristö, ilman koodia (azure machine learning studio) poikeavuuksia, kuvan tunnistuminen
+
+komponenntia palvelinta kuin ajettaan pilvessä joku koodi, joku trikkeri sisältöä muuta tai sitten ajastetusti voi funktioita suoritta sovelluksesta
+
+logic app - ei ole sovellus vaan työnkulkua, johon kaavio toteutettaan samalaisena otettaan eri komponetia yhteyksiä ja sillä tehdään grafisella työkaluilla
+
+
+devops - sovelluskehittäjä ympäristö organisaatiossa, antaa mahdollisuuden sovelluskehitykseen sitä voi tuotanto tuottaa kehitystä ja ryhmätyö ominaisuudet, ja useita prosessia
+
+devops services ryhmätyö ominaisuudet esim. git ja github ja testaus ympäristö
+devtest labs - luodaan kehitys ympäristö azuren pilven päälle 
+
+azure management tools - hallinta 
+portaali esisijainen työkalu tilanteessa muokata useampi portaali ei ole hyvä ratkaisu, ja usein saatettaan äkyttää kommentoa cli ja azure powershell (ei ole olemassa) vaan pohja powershell moduuli ja jota tarvitaan azure hallintaan,
+toinen työkalu azure cli versio windows, linux ja macos operaattorijärejstelmä
+
+azure cloud shell - yhdistynyt cli, linux ja powershell
+
+powershell käytä sitä pay as you go
+
+
+azure advisor - ejoka ehdottaa asioita saadaan parannettua korkea tietoturva, kustnanusta ja yms. 
+
+web sovellukset
+
+------------------------------------------------
+
+management tools - hallintat työaklu
+
+cloud shell harjoituksessa asenna azure moduuli normaali powershell and command interface, jos ei halua asentaa niin cloud shell vaihtoehto, ei eroa azure ympäristössä
+
+
+avaa leikkisti powershell admin ja syötä kommento $ise jonka avautuu uusi ikkuna
+
+cmd follow the vern-noun (vebri-objekti) tai (verbi-substantiivi) verbi-tekemässä ja objekti jotakin
+
+
+Get-computerinfo
+Get-help Get-service -online
+
+cloud shell  on asennettu moduulit ettei tarvi yksittelen manuaalisesti asentaa
+
+------------------------------------------------
+
+virtual machine
+
+levyt, jos luoo oletuksena nii on yksi käyttöjärjestelmä levy, monessa pitä olla n data diskejä ja paljon dataa
+
+konserpti alla olevasta raudasta tuodaan sitä / käytettäään ohjelmasta koneessa &ja aina maksaa tietty, ja mahdollisuus luoda portaalli ja toinen on vaihtoheto template
+ja tulee sinne github kautta, ja template voi luoda olemasa olevasta konesta kautta 
+
+korkea käytettävyys, 
+
+azure vm (virtual machine)
+pilven päälle luotuja koneita, voi laajenta oprimi ympäristöä ja siirtymässä ottaa tehtäviä ja viedä pilveen virutaali konen päälle tai muita ympäristöä testiä ja tuotanto ympäristöä, jos on public cloud tuotanto ympäristö ei ole muita vaihtoehtoja
+
+eroavaisuus azure vm ja mihin muihin verratuna, ne on hyper-v vm, vm ominaisuus voi päivittää azureen ja käyttää siellä 
+hyper v on 2 mallista, 2 levyformaattia ja siellä on rajoja vedetty korkeammalle ja muistimäärät isot mitä tukee, ja samana levyt yletty azureen
+
+yksi parent levy mitä käyttöjärjestelmä, mutta jos on  5 konetta nii luodaan differenti levyksi, 
+
+virtuaalikonetta voi sammuttaa eli aja alas ja kustannus menee pois, mutta levy pyörii kuitenkin
+
+azure vm kokoaja voi olla paljon ja myös kalliitta, prosessia ja jne. tuhat e /kk o.O 
+
+computer optimized
+
+scaalautuminen (scalability) , sijoittaa max 1000 identtistä konetta ja sieltä tulee valmiiksi 5 update domain ja scaalauksen kautta,
+
+virtuaalikone yksi - os disk voi lisätä data levyjä tai asennuksen aikana, tallennus meenetelmi, kaikki levyt / data järjestlemä levyt, azure blob, virtuaalikoneessa on d levy muistivarassa sinne ei kantsi tallentaa tärkeitä asioita, kun virtuaalikonetta sammutetaan tai poistettaan
