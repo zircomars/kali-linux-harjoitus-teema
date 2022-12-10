@@ -14,3 +14,7 @@ Virtual machine - leikisti voisi luoda verkkosivuston apache pohjaisen sivuston,
 
 
 https://fi.admininfo.info/c-mo-crear-y-configurar-vpn-en-azure
+
+## harjoituksia 
+Microsoft learning (training) (products/azure)
+https://learn.microsoft.com/en-us/training/browse/?products=azure%2Cgithub&levels=beginner&roles=administrator%2Cdata-engineer%2Csecurity-operations-analyst%2Cstudent
