@@ -1,9 +1,10 @@
-# Network muistiinpanoja
+# Azure network muistiinpanoja
 
 - [Azure's load balancer](#Azure's-load-balancer)
   * [Load balancer komponentit](#Load-balancer-komponentit)
   * [Rules](#Rules)
 - [NSG](#NSG)
+- [DNS](#DNS)
 
 ## Azure's load balancer
 
@@ -44,6 +45,8 @@ Esim. käytettäisi portti 80 load balancer:in sääntöä liikenteen ohjaamista
 
 <img src="image/azure-loadbalancer-4.PNG?raw=true" width="500">
 
+<hr>
+
 ## NSG
 network security group - mitä tyyppillisesti tarvii jokin säännön verkkojen resursseihin. Näiden sääntö määrittää mitä tietoliikenne virtaa pois virtuaalikoneesta. 
 Käyttäjä voi määrittää portit, protokollat ja ip-osoitteet ovat sallitttu ja mihin suntaan. Joten nämä sallii ryhmitksen säännön jotta sallii yksittäisen tietoverkko käyttöliittymän tai koko aliverkkon subnet.
@@ -64,3 +67,13 @@ Uuden NSG sääntöjen luomisessa käytettään oletus sääntöjä saatavilla, 
 - load balancer (microsoft one of resources, it allow azure's load balancer to probe the health of user VMs and role instances)
 
 <img src="image/azure-nsg-2.PNG?raw=true" width="500">
+
+<hr>
+
+## DNS
+
+Domain name system - mikä tunnetaan parhaiten kun otettaan esim. yhteyttä Google DNS komennolla pinggauksen yhteyttä ping 8.8.8.8 - se tarkoittaa kuin, joka muuntaa nimiä IP-osoitteiksi. Mutta Azure DNS
+
+
+
+
