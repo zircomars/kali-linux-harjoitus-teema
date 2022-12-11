@@ -75,5 +75,7 @@ Uuden NSG sääntöjen luomisessa käytettään oletus sääntöjä saatavilla, 
 Domain name system - mikä tunnetaan parhaiten kun otettaan esim. yhteyttä Google DNS komennolla pinggauksen yhteyttä ping 8.8.8.8 - se tarkoittaa kuin, joka muuntaa nimiä IP-osoitteiksi. Mutta Azure DNS
 
 
+<img src="image/azure-dns-1.PNG?raw=true" width="500">
 
 
+<img src="image/azure-dns-2.PNG?raw=true" width="500">
