@@ -72,7 +72,7 @@ Uuden NSG sääntöjen luomisessa käytettään oletus sääntöjä saatavilla, 
 
 ## DNS
 
-Domain name system - mikä tunnetaan parhaiten kun otettaan esim. yhteyttä Google DNS komennolla pinggauksen yhteyttä ping 8.8.8.8 - se tarkoittaa kuin, joka muuntaa nimiä IP-osoitteiksi. Mutta Azure DNS on DNS-verkkotunnistuken isännöintipalvelu, joka tarjoaa nimen selvitykseen Microsoft Azure - infrastruktuurin avulla. Isännöinti verkkotunnuksia Azuressa voi hallita DNS-tietukea käyttämällä samoja tunnistietoja, API, työkaluja ja laskutusta kuin muut Azure-palvelut. Käyttäjän vyöhykkeen ja tietuen tallennetaan Azureen, ja nimipalvelimet, jotka vastaavat DNS-kyselyihin, on hajautettu maailmanlaajuisesti Azure-tietokeskuksiin.
+Domain name system - mikä tunnetaan parhaiten kun otettaan esim. yhteyttä Google DNS komennolla pinggauksen yhteyttä ping 8.8.8.8 - se tarkoittaa kuin, joka muuntaa nimiä IP-osoitteiksi tai kääntämiseen/ratkaisemiseen IP-osoitteeksi. Mutta Azure DNS on DNS-verkkotunnistuken isännöintipalvelu, joka tarjoaa nimen selvitykseen Microsoft Azure - infrastruktuurin avulla. Isännöinti verkkotunnuksia Azuressa voi hallita DNS-tietukea käyttämällä samoja tunnistietoja, API, työkaluja ja laskutusta kuin muut Azure-palvelut. Käyttäjän vyöhykkeen ja tietuen tallennetaan Azureen, ja nimipalvelimet, jotka vastaavat DNS-kyselyihin, on hajautettu maailmanlaajuisesti Azure-tietokeskuksiin.
 
 Ei voida käyttää Azure DNS:ää verkkotunnusta ostamiseen, koska vuosimaksua vastaa voi ostaa verkkotunnusta käytämällä App Service - verkkotunnusta tai kolmannen osapuolen verkkotunnusteen rekisteröintienpalvelua. Verkkotunnuksia voi sitten isännöidä Azure DNS:ää tietuen hallinoja varten. 
 
@@ -83,3 +83,13 @@ Yleensä yksittäinen IP-osoitetta mainostettaan useita alueita. Yksittäisen DN
 
 Alempi kuva on yksinkertaistettu DNS liikenne, että kuinka kulku näyttää ja kuinka käyttäjä lähettää DNS-pyyntöä osoitteesta www.azuremol.com DNS-palvelimelle, vastaanottaa vastauksen, joka sisältyen liitetty IP-osoitteet, ja voi sitten muodostaa yhteyttä verkkosovelluksen. <br>
 <img src="image/azure-dns-2.PNG?raw=true" width="500">
+
+### Private DNS
+
+Azure DNS ei tue vain Internetiin päin olevia DNS-verkkotunnuksia, vaan se tukee myös yksityisiä DNS-vyöhykkeitä.
+
+Azure Private DNS tarjoaa luotettavan ja suojatun DNS-palvelun virtuaaliverkkollesi. Azure Private DNS hallitsee ja ratkaisee verkkotunnuksia virtuaalisessa verkossa ilman mukautetun DNS-ratkaisun määrittämistä. Käyttämällä yksityisiä DNS-vyöhykkeitä voit käyttää omaa mukautettua toimialuenimeäsi Azuren toimittamien nimien sijaan käyttöönoton aikana.
+
+Käyttämällä verkkotunnuksen nimen käyttäminen auttaa sinua räätälöimään virtuaalisen verkkoarkkitehtuurin organisaatiosi tarpeita parhaiten vastaavaksi. Se tarjoaa nimeämisresoluution virtuaalikoneille (VM:ille) virtuaaliverkossa ja yhdistetyissä virtuaaliverkoissa. Lisäksi voit määrittää vyöhykkeiden nimet jaetun horisonttinäkymän avulla, jolloin yksityinen ja julkinen DNS-vyöhyke voivat jakaa nimen.
+
+
