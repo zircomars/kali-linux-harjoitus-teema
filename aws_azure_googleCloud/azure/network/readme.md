@@ -1,5 +1,10 @@
 # Network muistiinpanoja
 
+- [Azure's load balancer](#Azure's-load-balancer)
+  * [Load balancer komponentit](#Load-balancer-komponentit)
+  * [Rules](#Rules)
+- [NSG](#NSG)
+
 ## Azure's load balancer
 
 Suomeksi kuormituksen tasaaminen, mikä tietotekniikan käytettävä termi, tarkoittaa vaadittavan työmäärän jakamista kahden tai useamman palvelimille. Sen tarkoituksena on määrittely liikenteen jakaja, joka reitittää pyynnön ja tehtävät palvelimille. Tyypillisesti käyttökohteiden DNS-nimi palvelut ja verkkosivujen jakamista. Tasaisella voi varmistaa tehtävän valmistumista lyhyimmässä  ajassa (viiveen minimointia) ja palvelun laatujen parantamista. 
