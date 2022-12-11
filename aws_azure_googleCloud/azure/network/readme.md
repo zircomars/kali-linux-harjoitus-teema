@@ -7,6 +7,7 @@
 - [DNS](#DNS)
   * [Private DNS](#Private-DNS)
   * [Private Resolver](#Private-Resolver)
+  * [Oikean domain nimen delegointi](#Oikean-domain-nimen-delegointi)
 
 ## Azure's load balancer
 
@@ -104,4 +105,14 @@ Azure DNS private resolver - on uusi palvelu, jonka sen avulla voi tehdä kysely
 
 Kun luoo Azure DNS private resolver virtuaalikoneelle, josta luodaan yksi tai useampi saapuva päätepiste, jota voidaan käyttää DNS-kyselyä kohteena. Resolver lähtevä päätepiste käsittelee DNS-kyselyn määrittämiä DNS-edelleenlähetyksen sääntöjen perusteella. Sääntöjoukkoon linkitettyjen verkoissa aloitettujen DNS-kyselyt voi lähettää muihin DNS-palvelimille.
 
+<img src="image/azure-dns-6.PNG?raw=true" width="1000">
+
+### Oikean domain nimen delegointi
+
+Oikea  doman nimen delegointi Azure DNS:lle,
+
 <img src="image/azure-dns-5.PNG?raw=true" width="500">
+
+
+
+
