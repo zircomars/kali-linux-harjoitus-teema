@@ -102,11 +102,6 @@ Käyttämällä verkkotunnuksen nimen käyttäminen auttaa sinua räätälöimä
 
 Azure DNS private resolver - on uusi palvelu, jonka sen avulla voi tehdä kyselyjä Azure DNS-yksitäisistä vyöhykkeistä paikallisesta ympäristöstä ja sama päinvastoin ilman virtuaalikone VM DNS-palvelimien käyttöönottoa.
 
-Kun luoo Azure DNS private resolver virtuaalikoneelle
+Kun luoo Azure DNS private resolver virtuaalikoneelle, josta luodaan yksi tai useampi saapuva päätepiste, jota voidaan käyttää DNS-kyselyä kohteena. Resolver lähtevä päätepiste käsittelee DNS-kyselyn määrittämiä DNS-edelleenlähetyksen sääntöjen perusteella. Sääntöjoukkoon linkitettyjen verkoissa aloitettujen DNS-kyselyt voi lähettää muihin DNS-palvelimille.
 
 <img src="image/azure-dns-5.PNG?raw=true" width="500">
-
-
-
-
-
