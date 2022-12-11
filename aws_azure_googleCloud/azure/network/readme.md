@@ -6,6 +6,7 @@
 - [NSG](#NSG)
 - [DNS](#DNS)
   * [Private DNS](#Private-DNS)
+  * [Private Resolver](#Private-Resolver)
 
 ## Azure's load balancer
 
@@ -96,3 +97,14 @@ Azure Private DNS tarjoaa luotettavan ja suojatun DNS-palvelun virtuaaliverkkoll
 Käyttämällä verkkotunnuksen nimen käyttäminen auttaa sinua räätälöimään virtuaalisen verkkoarkkitehtuurin organisaatiosi tarpeita parhaiten vastaavaksi. Se tarjoaa nimeämisresoluution virtuaalikoneille (VM:ille) virtuaaliverkossa ja yhdistetyissä virtuaaliverkoissa. Lisäksi voit määrittää vyöhykkeiden nimet jaetun horisonttinäkymän avulla, jolloin yksityinen ja julkinen DNS-vyöhyke voivat jakaa nimen.
 
 <img src="image/azure-dns-4.PNG?raw=true" width="500">
+
+### Private Resolver
+
+Azure DNS private resolver - on uusi palvelu, jonka sen avulla voi tehdä kyselyjä Azure DNS-yksitäisistä vyöhykkeistä paikallisesta ympäristöstä ja sama päinvastoin ilman virtuaalikone VM DNS-palvelimien käyttöönottoa.
+
+
+
+
+
+
+
