@@ -109,7 +109,9 @@ Kun luoo Azure DNS private resolver virtuaalikoneelle, josta luodaan yksi tai us
 
 ### Oikean domain nimen delegointi
 
-Oikea  doman nimen delegointi Azure DNS:lle,
+Oikea  doman nimen delegointi Azure DNS:lle, kun rekisteröidään oikea domain nimi (verkkotunnus), niin palvelutarjoaja tarjoaa käyttäjälle hallintaliittymän ja työkalut kyseisen verkkotunnuksen  (domain) hallintaan. Asiakkaat voivat käyttää palvelua ja käyttää Azure DNS-vyöhykettä ja tietukea, verkkotunnuksen tulee valtuutuksen Azure-nimipalvelimille. Tämä deligointi aiheuttaa sen, että kaikki DNS-kyselyt ohjataan välittömästi kyseisiin Azure-nimipalvelimiin. Azure ei tällä hetkellä salli verkkotunnusten ostamista ja rekiströintiä alustassa,mutta käyttäjän tulee olemaan ostamaan verkkotunnusta ulkoisen rekisteröijän kautta ja osoitettava NS-tietuet Azure-nimipalvelimiin.
+
+Koska hallinnon ja toiminnan yksinkertaisemaksi. Jos luoo lisäpalveluita, joten pitää säätää kuormantasaajan kokoonpanoa/konfigurointia (load-balancer), tai mikäli jos haluaa parantaa vasteajat maailmanlaajuisen replikoidulla DNS:llä, niin Azure tarjoaa yhden hallintaliittymän näihin tehtävien suorittamiseen. Kun DNS-vyöhykke isännöidään Azuressa, voi myö ottaa käyttöön käsitellyistä Resource managerin suojausominaisuuksia, kuten roolipohjainen pääsyhallinta (Role-based acccess control, RBAC), joka rajoittaa ja valvoo DNS-vyöhykkeen pääsyä ja resurssien lukitusta, että estää vahingossa atapahtuvien tai jopa haitallista vyöhykkeen poistamista.
 
 <img src="image/azure-dns-5.PNG?raw=true" width="500">
 
