@@ -5,6 +5,7 @@
   * [Rules](#Rules)
 - [NSG](#NSG)
 - [DNS](#DNS)
+  * [Private DNS](#Private-DNS)
 
 ## Azure's load balancer
 
@@ -90,6 +91,8 @@ Azure DNS ei tue vain Internetiin päin olevia DNS-verkkotunnuksia, vaan se tuke
 
 Azure Private DNS tarjoaa luotettavan ja suojatun DNS-palvelun virtuaaliverkkollesi. Azure Private DNS hallitsee ja ratkaisee verkkotunnuksia virtuaalisessa verkossa ilman mukautetun DNS-ratkaisun määrittämistä. Käyttämällä yksityisiä DNS-vyöhykkeitä voit käyttää omaa mukautettua toimialuenimeäsi Azuren toimittamien nimien sijaan käyttöönoton aikana.
 
+<img src="image/azure-dns-3.PNG?raw=true" width="500">
+
 Käyttämällä verkkotunnuksen nimen käyttäminen auttaa sinua räätälöimään virtuaalisen verkkoarkkitehtuurin organisaatiosi tarpeita parhaiten vastaavaksi. Se tarjoaa nimeämisresoluution virtuaalikoneille (VM:ille) virtuaaliverkossa ja yhdistetyissä virtuaaliverkoissa. Lisäksi voit määrittää vyöhykkeiden nimet jaetun horisonttinäkymän avulla, jolloin yksityinen ja julkinen DNS-vyöhyke voivat jakaa nimen.
 
-
+<img src="image/azure-dns-4.PNG?raw=true" width="500">
