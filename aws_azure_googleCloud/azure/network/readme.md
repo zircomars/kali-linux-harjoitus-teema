@@ -72,10 +72,14 @@ Uuden NSG sääntöjen luomisessa käytettään oletus sääntöjä saatavilla, 
 
 ## DNS
 
-Domain name system - mikä tunnetaan parhaiten kun otettaan esim. yhteyttä Google DNS komennolla pinggauksen yhteyttä ping 8.8.8.8 - se tarkoittaa kuin, joka muuntaa nimiä IP-osoitteiksi. Mutta Azure DNS
+Domain name system - mikä tunnetaan parhaiten kun otettaan esim. yhteyttä Google DNS komennolla pinggauksen yhteyttä ping 8.8.8.8 - se tarkoittaa kuin, joka muuntaa nimiä IP-osoitteiksi. Mutta Azure DNS on DNS-verkkotunnistuken isännöintipalvelu, joka tarjoaa nimen selvitykseen Microsoft Azure - infrastruktuurin avulla. Isännöinti verkkotunnuksia Azuressa voi hallita DNS-tietukea käyttämällä samoja tunnistietoja, API, työkaluja ja laskutusta kuin muut Azure-palvelut. Käyttäjän vyöhykkeen ja tietuen tallennetaan Azureen, ja nimipalvelimet, jotka vastaavat DNS-kyselyihin, on hajautettu maailmanlaajuisesti Azure-tietokeskuksiin.
 
+Ei voida käyttää Azure DNS:ää verkkotunnusta ostamiseen, koska vuosimaksua vastaa voi ostaa verkkotunnusta käytämällä App Service - verkkotunnusta tai kolmannen osapuolen verkkotunnusteen rekisteröintienpalvelua. Verkkotunnuksia voi sitten isännöidä Azure DNS:ää tietuen hallinoja varten. 
 
-<img src="image/azure-dns-1.PNG?raw=true" width="500">
+Viiveen minimoitamiseen ja vasteaikoja parantamista Traffic manageria voi käyttää siten DNS-kyselyä tekemistä ja asiakkaiden ohjaamista heidän kaappeihin sovellusesiintymistä. <br>
+<img src="image/azure-dns-1.PNG?raw=true" width="650">
 
+Yleensä yksittäinen IP-osoitetta mainostettaan useita alueita. Yksittäisen DNS-kyselyn sijaan, joka ratkaisee takaisin yhteen IP-osoitteeseen, joka on olemassa vain yhdessä paikassa, <ins>anycast</ins> reitityksen avulla verkkoinfrastruktuuri voi määrittää älykkäästi, mistä pyyntö tulee, ja mistä reitittää asiakkaan lähimmälle mainostetun alueelle. Joten tämä reitityksen avulla asiakkaat voivat muodostaa yhteyden verkkosovellukseen nopeammin ja tarjota paremman yleisen asiakaskokemuksen/palautteen.
 
+Alempi kuva on yksinkertaistettu DNS liikenne, että kuinka kulku näyttää ja kuinka käyttäjä lähettää DNS-pyyntöä osoitteesta www.azuremol.com DNS-palvelimelle, vastaanottaa vastauksen, joka sisältyen liitetty IP-osoitteet, ja voi sitten muodostaa yhteyttä verkkosovelluksen. <br>
 <img src="image/azure-dns-2.PNG?raw=true" width="500">
