@@ -1,1 +1,1 @@
-# Tänne tulee kaikki harjoitukset
+# Tänne tulee kaikki harjoitukset & myös microsoft omat tutoriaalit
