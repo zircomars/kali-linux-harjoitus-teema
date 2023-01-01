@@ -7,6 +7,7 @@ Tähän tulee erilliset datat, josta tiedetään kuinka yhteys toimii ja mitä p
   * [UDP ja TCP erot](#UDP-ja-TCP-erot)
   * [NTP](#NTP)
 - [DNS](#DNS)
+- [FTP](#FTP)
 
 <!-- HUOM! noista datojen tekijöistä voisi kirjoittaa 
 DATA X-nimi
@@ -138,6 +139,8 @@ Ajan synkroinnissa on elintärkeä/ehdottoman tärkeä tietoturvahäiriöiden ha
 
 NTP on yksi Internetin vanhemmista prootkollista, eikä se ole oletuksenarvoisesti suojattu, koska se on alttiina hajautetuille palvelunesto hyökkäys (DDos) ja väliintulohyökkäyksille (MITM,  man-in-the-middle attack). NTP vhavistus on eräänlainen heijastava DDoS-hyökkäys, josta hyökkääjä kohdistuu julkisen saatavilla olevan NTP-palvelimiin ja lähettää toistuvia pyyntöjä palvelimille käyttämällä väärennettyä IP-osoitetta lähetäkseen kohdejärjestelmälle suureen vastauksen NTP-apvelimelta. Tämä johtaa palvelun heikkenemistä kaistanlaeveyden suureen kysynynnän vuoksi, koska mikä voi estää laillisia käyttäjiä ja järjestelmiä pääsemästä verkkoresursseihin ja käyttämään niitä. Esim. NTP Amplification - hyökkäys voi estää Internetin käyttäjiä pääsemästä organisaation verkkosivuille ja verkkoresursseihin. Lisäksi NTP alttiina MITM-hyökkäystä. Nämä hyökkäykset antavat luvattomille käyttäjille mahdollisuuden siepata, lukea ja muokata asiakkaiden ja palvelimien välillä lähetetyä liikennettä. NTP on erityisen herkkä MITM-hyökkäyksille, koska se luottaa pieneen joukkoon palvelimia ja algrotimia, jota käytetään valitsemaan palvelin, jotta sen kanssa voi synkronoida.
 
+<hr>
+
 <!-- DNS START HERE -->
 # DNS
 
@@ -147,3 +150,9 @@ Domain Name System (DNS), mikä tunnetaan parhaiten nimipalvleujärjestelmä, mi
 
 <img src="images/data-dns-2.PNG" width="450">
 
+
+<!-- FTP START HERE -->
+
+# FTP
+
+File Transfer Protocol (FTP),
