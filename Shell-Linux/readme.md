@@ -8,5 +8,6 @@ Bash voidaan mieltää ohjelmointikieleksi, ja sitä toteutetaan csh-komentotulk
 
 Bash skription ohjelmointia toimii kuin kerran, että toistetaan vain kerran sisäisen ohjelman komennon/käskyn
 
+$sudo su - mennään root käyttäjään, kun ollaan linux tai ubuntu komento cli:ssä
 
 ![Alt text](images/scripti.png?raw=true "None")
