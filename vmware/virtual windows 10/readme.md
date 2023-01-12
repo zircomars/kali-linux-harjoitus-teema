@@ -20,5 +20,10 @@ linkistä saa windows 10 iso tiedosot tyyppin ja se on n. melkee 5GB
 
 https://www.microsoft.com/en-us/software-download/windows10
 
+![Alt text](images/vmware-win10-2.PNG)
+
+
+
+
 
 
