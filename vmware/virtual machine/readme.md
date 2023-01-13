@@ -25,7 +25,7 @@ https://www.microsoft.com/en-us/software-download/windows10
 
 ## ubuntu file
 
-Sama koskien jos käyttää ubuntua eli linux:sta niin sama koskee tarvitaan .iso tiedosto tyyppiä, jotta suoritettaan virtuaalikone
+Sama koskien jos käyttää ubuntua eli linux:sta niin sama koskee tarvitaan .iso tiedosto tyyppiä, jotta suoritettaan virtuaalikone & sama koskien ubuntu riippumatta versiosta, että onko uusin vai vanha niin se ois melkee n. 3GB iso tiedosto
 
 ![Alt text](images/vmware-win10-3.PNG)
 
