@@ -1,12 +1,14 @@
 # vmware windows 10 simulaatio
 
-valmis pieni vmware simulaatio windows 10 ympäristö ja ladattuna ubuntu 
+valmis pieni vmware simulaatio windows 10 ympäristö ja ladattuna ubuntu & sekä tämä on pohjaltaan <b>VMware Workstation Pro </b>. 
 
 ![Alt text](images/vmware-win10-1.PNG)
 
 ## VMware Workstation Pro & license key
 
 VMwarella on kaksi tyyppistä versiota, että yksi on kokonainen pro ja toinen kokeilu versio oisko n. 1kk kokeilu tai tiety määräaikainen. Pro versiosta saa kuin itselle ikuisuuden version tai just tämmöinen simulaatio työkalu versio hyöydyntää ikuisuuden seuraavan pari-muutaman vuoden, ettei katoa mihinkään ellei päivitä seuraava versiota.
+
+VMware Workstation Pro on yksittäinen virtuaalikone työkalu pohja, että mitä siihen voidaan suorittaa, eli hakee tarvittavia työkaluja, josta vmware tukee. Tämä on eri asia kuin <b>VMware Horizon</b>. VMware Horizon on tämmöinen organisaatio työkalu, että jos on useita käyttäjiä niin he voivat ladata RDP:n, eli suorittaa vdi/virtuaalikonen laiteiston, vähä kuin suorittaa integraation että hakee kyseisen ip-osoitteen ja kirjautumisessa mennään sen määritettyn käyttäjätunnus : salasanan pohjaan. Kuin amk ajalla, että jos on etänä niin voi ladata työasemaan, kunhan on saanut koululta/organisaation tunnukset niin jotta voi liittää kodista kohti koulun serveriin.
 
 https://www.vmware.com/fi/products/workstation-pro/workstation-pro-evaluation.html
 
