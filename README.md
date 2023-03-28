@@ -13,10 +13,12 @@
 
 
 # VmWare
+Tämä on workstaion pro versio ja n. ladattuna 1.GB päälle
 <img src="images/Desktop_Ubuntu_20.04.png" width="500">
 ![Alt text](/images/wmvare_laptopPublic2.jpg?raw=true "None")
 
-# Virtualbox
+# Virtualbox 
+ladattuna n. 200-300
 ![Alt text](images/virtualbox-1.PNG)
 
 # Hyper v
