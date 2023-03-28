@@ -1,21 +1,26 @@
-<h1>Linux työkalu </h1>
+# Linux työkalu 
 
 - [Grafana](#Grafana)
 - [Prometheus](#Prometheus)
 - [Bash shell](#Bash-shell)
 - [Wireshark](#Wireshark)
 
-<h1>Virtuaalikoneet </h1>
+# Virtuaalikoneet 
 
 - [VmWare](#VmWare)
 - [Virtualbox](#Virtualbox)
-- [Hyper v](#Hyper-v)
+- [Hyper v](#hyper-v)
 
 
 # VmWare
 <img src="images/Desktop_Ubuntu_20.04.png" width="500">
-
 ![Alt text](/images/wmvare_laptopPublic2.jpg?raw=true "None")
+
+# Virtualbox
+![Alt text](images/virtualbox-1.PNG)
+
+# Hyper v
+![Alt text](images/Hyper-v-1.PNG)
 
 # Grafana
 ![Alt text](/Graph_Grafana/images/Sieppaa6_takeSoftware_LI.jpg?raw=true "None")
