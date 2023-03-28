@@ -18,7 +18,7 @@ Tämä on workstaion pro versio ja n. ladattuna 1.GB päälle
 ![Alt text](/images/wmvare_laptopPublic2.jpg?raw=true "None")
 
 # Virtualbox 
-ladattuna n. 200-300
+ladattuna n. 200-300 MB
 ![Alt text](images/virtualbox-1.PNG)
 
 # Hyper v
