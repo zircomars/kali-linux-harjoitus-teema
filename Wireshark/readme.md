@@ -2,6 +2,10 @@
 
 Wireshark on tämmöinen verkkoanalysaattori, joka voi analysoida ja tarkastella verkkon tietoja, mikä mahdollistaa kunkin paketin sisälllön poraamista ja lukemista - ja suodataa vastaamaan erityistarpeita. Wireshark käytettään yleisen verkon ongelmien vianmäärityksiin, että lisäksi ohjelmiston kehittämistä ja testaamista. Sovellus näyttää tietojen protokollia eli OSI-malli ja TCP/IP mallin protokollia kaikien tärkemmistä verkkotyypeistä. Datapakettia voi tarkastella reaaliaikaiseksi tai analysoida offline-tilassa, ja tuhansia kaappaus- / jäjitystiedostomuotoja kuten CAP tiedosto ja ERF (Extensible Record Format). 
 
+Periaatteessa katsoo, jos pinggaa A-paikasta B-paikkaan jos välisen sisäiset data tippuu tai katoaa tai muusta syystä niin wireshark kautta löytää sen jokin tietoliikenteen vian. Wireshark suorittaa paketti analysointi, liikenteen mitä koneesta menee ja lähtö, mutta ei pendaus hommaa, kun etsii yhteys ja paikantaa, ja kertoo paljon. 
+
+Hakemalla host <ip-osoite>, tai sen yksittäisen http/https datan. tai jopa ip add == <ip-osoite> ja jne. Myös jopa voi analysoida, että sivustolla on luotu tunnukset millä nimellä (username, sposti) ja jopa millä salasanalla (kalajoki9900). Myös toistaa mahdolliset jotakin error koodia eli väärikoodia). Kantsii filteröidä, että mitä on hakemassa.
+
 <img src="images/wireshark-software1.PNG" width="625">
 
 # capture
