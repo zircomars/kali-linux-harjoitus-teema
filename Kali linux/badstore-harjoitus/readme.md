@@ -1,2 +1,1 @@
 # Badstore harjoitus
-
