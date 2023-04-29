@@ -12,5 +12,9 @@ jos suorittaa kali linuxsta vmware:a pohjaan niin siinä on n. joko 14 tai 30pv 
 
 Vaihtoehtona pyörittää virtualibox, että sekin toimii ilmaisena. Myös huomiona kali linux käyttöjärjestelmä paketti on n. 2.7Gb tilaa dataa jos suorittaa 64-bittisellä versiolla, että viee paljon tilaa..
 
-Ladattavina kali linux; https://www.kali.org/get-kali/#kali-platforms
-Kali linux sisäiset työkalut; https://www.kali.org/tools/ 
+ensimmäisenä kantsii muuttaa linux:sen näppäimistö asetukset eli riittää avaa komentorivin ja syöttää;; <br> 
+┌──(kali㉿kali)-[~] <br> 
+└─$ setxkbmap fi <br>  
+ <br>
+Ladattavina kali linux; https://www.kali.org/get-kali/#kali-platforms <br>
+Kali linux sisäiset työkalut; https://www.kali.org/tools/  <br>
