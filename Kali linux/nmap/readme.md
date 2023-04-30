@@ -7,7 +7,16 @@ Skannaa monien verkkoprotokollien kautta, mukaan lukien TCP, UDP, ICMP, SNMP ja 
 Se luo yksityiskohtaisia ​​karttoja verkosta, jotka sisältävät olennaista tietoa siinä olevista laitteista.
 Se käyttää räätälöitäviä porttiskannausmenetelmiä verkkolaitteissa käynnissä olevien eri palveluiden tunnistamiseen.
 
+* [komentoja](#komentoja)
+
+- [lisätieoriaa mikä on nmap](#lisätieoriaa-mikä-on-nmap)
+    * [komentoja](#komentoja)
+    * [hyödyllisiä harjoituksia](#hyödyllisiä-harjoituksia)
+
 ![Alt text](images/nmap-1.PNG)
+
+## komentoja
+
 
 
 # lisätieoriaa mikä on nmap
