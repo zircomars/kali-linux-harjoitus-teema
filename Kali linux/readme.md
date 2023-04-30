@@ -6,7 +6,8 @@ Kali linux järjestelmässä on mukana mm. firefox selain, wireshark ja jne. ett
 
 Kali linux:sta voi käyttää virtuaalikone pohjaista sovellusta mm. vmware, virtualbox tai fyysisen WSL (Windows Subsystem for Linux) eli microsoft pohjaan ja jos mac osaan tulee maksulliseksi. Suositeltavina lataa virtuaalikone pohjan, josta upottaa ladatun kali linux tiedoston ja josta sen jälkeen suorittaa/aktivoi sen kali linux ympäristön. Saa mm. usb tikullakin ladatua kali linux:sta, että esim. vähä rikollista ja riskiä käyttäjälle jos suorittaa selaisen prosessin.
 
-* [muita harjoituksia ja hyviä vinkkejä hakkerointiin:](#muita-harjoituksia-ja-hyviä-vinkkejä-hakkerointiin)
+- [muita harjoituksia ja hyviä vinkkejä hakkerointiin:](#muita-harjoituksia-ja-hyviä-vinkkejä-hakkerointiin)
+    * [pdf kirjoja](#pdf-kirjoja)
 
 ![Alt text](images/kali_background.png)
 
@@ -23,7 +24,7 @@ ensimmäisenä kantsii muuttaa linux:sen näppäimistö asetukset eli riittää 
 ┌──(kali㉿kali)-[~] <br> 
 └─$ setxkbmap fi <br>  
 
-## muita harjoituksia ja hyviä vinkkejä hakkerointiin: <br>
+# muita harjoituksia ja hyviä vinkkejä hakkerointiin: <br>
 
 Suoraan tryhackme sivuston vaan:<br>
 https://tryhackme.com/resources/blog/free_path <br>
@@ -37,3 +38,7 @@ https://geekflare.com/practice-hacking-legally/ <br>
 <br>
 ladattavia vm; <br>
 https://www.vulnhub.com/ <br>
+
+## pdf kirjoja <br>
+ 
+http://mogesec.com/wp-content/uploads/2021/12/Metasploit-5.0-for-Beginners.pdf <br>

@@ -1,0 +1,129 @@
+$banner - komento
+
+Banner komento on periaatteessa yksinkertainen koemnto, sitä käytettään näyttämällä metasploit frameworkia banneri-tiedostoja. Sisältyvät tyyppillisesti sen versiotiedot ja tämän hetkisen asennus versioon käytettävien hyödykkeisiin, apuohjelmia, hyötykuormat, encoders ja NOP-generaattorin määrään.
+Ja muutama esimerkki, kun toistaa "$banner" komentoa
+
+msf6 > banner
+                                   ___          ____
+                               ,-""   `.      < HONK >
+                             ,'  _   e )`-._ /  ----                                                              
+                            /  ,' `-._<.===-'                                                                     
+                           /  /                                                                                   
+                          /  ;                                                                                    
+              _          /   ;                                                                                    
+ (`._    _.-"" ""--..__,'    |                                                                                    
+ <_  `-""                     \                                                                                   
+  <`-                          :                                                                                  
+   (__   <__.                  ;                                                                                  
+     `-.   '-.__.      _.'    /                                                                                   
+        \      `-.__,-'    _,'                                                                                    
+         `._    ,    /__,-'                                                                                       
+            ""._\__,'< <____                                                                                      
+                 | |  `----.`.                                                                                    
+                 | |        \ `.                                                                                  
+                 ; |___      \-``                                                                                 
+                 \   --<                                                                                          
+                  `.`.<                                                                                           
+                    `-'                                                                                           
+                                                                                                                  
+                                                                                                                  
+
+       =[ metasploit v6.3.4-dev                           ]
++ -- --=[ 2294 exploits - 1201 auxiliary - 409 post       ]
++ -- --=[ 968 payloads - 45 encoders - 11 nops            ]
++ -- --=[ 9 evasion                                       ]
+
+Metasploit tip: Use the resource command to run 
+commands from a file
+Metasploit Documentation: https://docs.metasploit.com/
+
+msf6 > banner
+
+                 _---------.                                                                                      
+             .' #######   ;."                                                                                     
+  .---,.    ;@             @@`;   .---,..                                                                         
+." @@@@@'.,'@@            @@@@@',.'@@@@ ".                                                                        
+'-.@@@@@@@@@@@@@          @@@@@@@@@@@@@ @;                                                                        
+   `.@@@@@@@@@@@@        @@@@@@@@@@@@@@ .'                                                                        
+     "--'.@@@  -.@        @ ,'-   .'--"                                                                           
+          ".@' ; @       @ `.  ;'                                                                                 
+            |@@@@ @@@     @    .                                                                                  
+             ' @@@ @@   @@    ,                                                                                   
+              `.@@@@    @@   .                                                                                    
+                ',@@     @   ;           _____________                                                            
+                 (   3 C    )     /|___ / Metasploit! \                                                           
+                 ;@'. __*__,."    \|--- \_____________/                                                           
+                  '(.,...."/                                                                                      
+
+
+       =[ metasploit v6.3.4-dev                           ]
++ -- --=[ 2294 exploits - 1201 auxiliary - 409 post       ]
++ -- --=[ 968 payloads - 45 encoders - 11 nops            ]
++ -- --=[ 9 evasion                                       ]
+
+Metasploit tip: To save all commands executed since start up 
+to a file, use the makerc command
+Metasploit Documentation: https://docs.metasploit.com/
+
+msf6 > banner
+
+      .:okOOOkdc'           'cdkOOOko:.                                                                           
+    .xOOOOOOOOOOOOc       cOOOOOOOOOOOOx.                                                                         
+   :OOOOOOOOOOOOOOOk,   ,kOOOOOOOOOOOOOOO:                                                                        
+  'OOOOOOOOOkkkkOOOOO: :OOOOOOOOOOOOOOOOOO'                                                                       
+  oOOOOOOOO.MMMM.oOOOOoOOOOl.MMMM,OOOOOOOOo                                                                       
+  dOOOOOOOO.MMMMMM.cOOOOOc.MMMMMM,OOOOOOOOx                                                                       
+  lOOOOOOOO.MMMMMMMMM;d;MMMMMMMMM,OOOOOOOOl                                                                       
+  .OOOOOOOO.MMM.;MMMMMMMMMMM;MMMM,OOOOOOOO.                                                                       
+   cOOOOOOO.MMM.OOc.MMMMM'oOO.MMM,OOOOOOOc                                                                        
+    oOOOOOO.MMM.OOOO.MMM:OOOO.MMM,OOOOOOo                                                                         
+     lOOOOO.MMM.OOOO.MMM:OOOO.MMM,OOOOOl                                                                          
+      ;OOOO'MMM.OOOO.MMM:OOOO.MMM;OOOO;                                                                           
+       .dOOo'WM.OOOOocccxOOOO.MX'xOOd.                                                                            
+         ,kOl'M.OOOOOOOOOOOOO.M'dOk,                                                                              
+           :kk;.OOOOOOOOOOOOO.;Ok:                                                                                
+             ;kOOOOOOOOOOOOOOOk:                                                                                  
+               ,xOOOOOOOOOOOx,                                                                                    
+                 .lOOOOOOOl.                                                                                      
+                    ,dOd,                                                                                         
+                      .                                                                                           
+
+       =[ metasploit v6.3.4-dev                           ]
++ -- --=[ 2294 exploits - 1201 auxiliary - 409 post       ]
++ -- --=[ 968 payloads - 45 encoders - 11 nops            ]
++ -- --=[ 9 evasion                                       ]
+
+Metasploit tip: Tired of setting RHOSTS for modules? Try 
+globally setting it with setg RHOSTS x.x.x.x
+Metasploit Documentation: https://docs.metasploit.com/
+
+
+msf6 > banner
+
+  Metasploit Park, System Security Interface                                                                      
+  Version 4.0.5, Alpha E                                                                                          
+  Ready...                                                                                                        
+  > access security                                                                                               
+  access: PERMISSION DENIED.
+  > access security grid
+  access: PERMISSION DENIED.
+  > access main security grid
+  access: PERMISSION DENIED....and...
+  YOU DIDN'T SAY THE MAGIC WORD!
+  YOU DIDN'T SAY THE MAGIC WORD!                                                                                  
+  YOU DIDN'T SAY THE MAGIC WORD!                                                                                  
+  YOU DIDN'T SAY THE MAGIC WORD!                                                                                  
+  YOU DIDN'T SAY THE MAGIC WORD!                                                                                  
+  YOU DIDN'T SAY THE MAGIC WORD!                                                                                  
+  YOU DIDN'T SAY THE MAGIC WORD!                                                                                  
+
+
+       =[ metasploit v6.3.4-dev                           ]
++ -- --=[ 2294 exploits - 1201 auxiliary - 409 post       ]
++ -- --=[ 968 payloads - 45 encoders - 11 nops            ]
++ -- --=[ 9 evasion                                       ]
+
+Metasploit tip: Use the analyze command to suggest 
+runnable modules for hosts
+Metasploit Documentation: https://docs.metasploit.com/
+
