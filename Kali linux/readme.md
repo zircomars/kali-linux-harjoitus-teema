@@ -28,7 +28,12 @@ ensimmäisenä kantsii muuttaa linux:sen näppäimistö asetukset eli riittää 
 Suoraan tryhackme sivuston vaan:<br>
 https://tryhackme.com/resources/blog/free_path <br>
 https://tryhackme.com/room/tutorial <br>
+https://www.hackthebox.com/ <br>
 
 <br>
 https://resources.infosecinstitute.com/topic/top-5-deliberately-vulnerable-web-applications-to-practice-your-skills-on/
 https://geekflare.com/practice-hacking-legally/ <br>
+
+<br>
+ladattavia vm; <br>
+https://www.vulnhub.com/ <br>
