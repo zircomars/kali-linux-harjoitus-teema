@@ -143,7 +143,20 @@ Matching Modules
 
 Muuttujia metasploit:ssa, useissa on käyttämiä hyväksikäyttöinen johon on asetettava arvo joillekin muuttujille. Alemmassa taulukossa on yleisiä ja tärkeimpiä muuttujia Metasploit framework toiminnassa.
 
+Ennen kuin ottaa muuttujan haltuun ennen sitä pitää olla lokaalit "get" , "getg", "set", "unset" ja "unsetg" - edessä, koska ikäänkuin käytettäisi sisältämään arvon noutamista tiettyissä paikallisessa muuttujissa metasploit ympäristössä. Esim. haluttaisi tarkistaa kohdejärjestelmän IP-osoitetta tietyille methodille.
+
 ![Alt text](metasploit-image/metasploit-variables.PNG)
+
+```
+esimerkkejä
+msf6 > set RHOSTS 10.23.158.180                                                                          
+RHOSTS => 10.23.158.180                                                                                                     
+msf6 > unset RHOTS
+>
+msf6 > get
+Usage: get var1 [var2...]  
+
+```
 
 
 <hr>
