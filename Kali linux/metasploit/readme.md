@@ -141,7 +141,10 @@ Matching Modules
 
 ## muuttujat (Variables)
 
-Muuttujia metasploit:ssa
+Muuttujia metasploit:ssa, useissa on käyttämiä hyväksikäyttöinen johon on asetettava arvo joillekin muuttujille. Alemmassa taulukossa on yleisiä ja tärkeimpiä muuttujia Metasploit framework toiminnassa.
+
+![Alt text](metasploit-image/metasploit-variables.PNG)
+
 
 <hr>
 
