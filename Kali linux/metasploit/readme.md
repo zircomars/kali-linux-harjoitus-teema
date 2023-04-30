@@ -2,7 +2,11 @@
 
 msfconsole on pelkkä Metasploit Framework:in komentorivien käyttöliittymä. Msfconsole saattaa aluksi näyttää hieman monimutkaiselta, se on kuulemma helpoin ja joustavin tapa olla vuorovaikutuksessa Metasploit Framework:in kanssa. <b>msf</b> on periaatteessa sana <ins> metasploit framework </ins>.
 
-Muutama esimerkki komentoja <br><br>
+* [Muutama esimerkki komentoja](#muutama-esimerkki-komentoja)
+* [muuttujat variables](#muuttujat-variables)
+- [linkkei harjoitukseen ja komentoja, että kirjoja](#linkkei-harjoitukseen-ja-komentoja-että-kirjoja)
+
+## Muutama esimerkki komentoja <br>
 <hr>
 msf6 > version <br> 
 Framework: 6.3.4-dev <br>
@@ -140,7 +144,8 @@ Matching Modules
 Muuttujia metasploit:ssa
 
 <hr>
-## linkkei harjoitukseen ja komentoja, että kirjoja <br>
+
+# linkkei harjoitukseen ja komentoja, että kirjoja <br>
 
 https://www.makeuseof.com/beginners-guide-metasploit-kali-linux/ <br>
 
