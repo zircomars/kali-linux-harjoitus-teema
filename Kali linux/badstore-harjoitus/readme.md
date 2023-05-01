@@ -21,6 +21,7 @@ Methodia on paljon, mutta yksi suosittuimista harjoituksista on esim. lataa ".is
 Harjoituksessa löytyy muutamia haavoituvuuksia, tekijöitä, salapoliisityötä tai jopa tutkimista, mutta ei tarvi mennä näiden kuvien mukaan. Näiden varsinaisia tuloksia löytyy useita sivustoista ja tänne kirjoitettu ainakin osa toiminnasta.
 
 <b>Feedback</b>
+<br><br>
 ![Alt text](badstore-images/badstore-2-1.PNG)
 
 ![Alt text](badstore-images/badstore-2.PNG)
@@ -38,7 +39,7 @@ Harjoituksessa löytyy muutamia haavoituvuuksia, tekijöitä, salapoliisityötä
 Ennen kun luo tunnuksensa kantsii avata F12 tai oikea hiirestä (inspect), kategoriasta (network) ja riittää (ctrl ja R), ikäänkuin päivittää sivuston. Niin valikkosta "action=register" näkyy, minkä käyttäjätunnuksen on luotu äskeittäin. Myös jos samanaikaisesti on aktivoinnut <b>wireshark</b> työkalun sivussa niin tämäkin toistuu siellä skannauksessa, mutta ei haittaa jos ei ole laitanut sitä päälle. Voi yrittää rekisteröidä uutta tunnusta niin sielä ponnahtaa pien ilmoitus ja kantsii vielä filtteröidä wireshark näkymää.
 
 Role = U (user) ja A = admin
-
+<br>
 ![Alt text](badstore-images/badstore-4.PNG)
 
 ![Alt text](badstore-images/badstore-4-1.PNG)
@@ -46,7 +47,7 @@ Role = U (user) ja A = admin
 ![Alt text](badstore-images/badstore-4-2.PNG)
 
 Tämän kuvan "after" ylemmässä on luotu uusi käyttis, että annettaan sille esim. admin oikeudet, mutta oikeudesta ei kauheasti anna mitään tasoa, että pitää mennä oikean admin tunnuksilla sisään. Tässä on vain näytetty kuinka sitä tapahtuu, kun tässä haavoittuvuudessa on oikein tapahtuu tai kuinka hakkeroituu sisään. 
-
+<br><br>
 ![Alt text](badstore-images/badstore-4-3.PNG)
 
 ![Alt text](badstore-images/badstore-4-4.PNG)
@@ -56,7 +57,7 @@ Tämän kuvan "after" ylemmässä on luotu uusi käyttis, että annettaan sille 
 <hr>
 
 <b>Random tilaus</b>
-
+<br><br>
 ![Alt text](badstore-images/badstore-5.PNG)
 
 ![Alt text](badstore-images/badstore-5-1.PNG)
