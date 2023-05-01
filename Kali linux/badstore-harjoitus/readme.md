@@ -6,9 +6,10 @@
     * [vm (virtual machines)](#vm-virtual-machines)
     * [steppi vaiheet](#steppi-vaiheet)
     * [mysql tietokanta](#mysql-tietokanta)
+    * [komentoja](#komentoja)
 
-- [tarkempaa ohjetta](#tarkempaa-ohjetta)
-    * [cheat sheets](#cheat-sheets)
+- [lataus materiaalit;](#lataus-materiaalit)
+- [tarkempaa ohjetta, cheet sheets ja vastauksia](#tarkempaa-ohjetta-cheet-sheets-ja-vastauksia)
 
 ## vm (virtual machines)
 
@@ -210,10 +211,223 @@ MySQL [badstoredb]> select * from userdb;
 
 ```
 
-# tarkempaa ohjetta
+## komentoja
+
+Linux nmap ja muita special komentoja kuinka skannaa sitä badstore ip-osoitetta, että mitä haavoittuvuuksia, kuinka tämä sovellus on rakennettu, millä tietokanta versiolla ja yms datalla rakennettu.
+
+```
+└─$ nmap --script=mysql-enum <host>
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-04-26 05:19 EDT
+Nmap scan report for <host>
+Host is up (0.0038s latency).
+Not shown: 997 closed tcp ports (conn-refused)
+PORT     STATE SERVICE
+80/tcp   open  http
+443/tcp  open  https
+3306/tcp open  mysql
+| mysql-enum: 
+|   Valid usernames: 
+|     root:<empty> - Valid credentials
+|     netadmin:<empty> - Valid credentials
+|     guest:<empty> - Valid credentials
+|     web:<empty> - Valid credentials
+|     user:<empty> - Valid credentials
+|     sysadmin:<empty> - Valid credentials
+|     administrator:<empty> - Valid credentials
+|     webadmin:<empty> - Valid credentials
+|     admin:<empty> - Valid credentials
+|     test:<empty> - Valid credentials
+|_  Statistics: Performed 10 guesses in 1 seconds, average tps: 10.0
+
+Nmap done: 1 IP address (1 host up) scanned in 0.76 seconds
+
+```
+
+```
+└─$ nmap -A <host>
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-04-26 14:07 EDT
+Nmap scan report for <host>
+Host is up (0.0045s latency).
+Not shown: 997 closed tcp ports (conn-refused)
+PORT     STATE SERVICE  VERSION
+80/tcp   open  http     Apache httpd 1.3.28 ((Unix) mod_ssl/2.8.15 OpenSSL/0.9.7c)
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-title: Welcome to BadStore.net v1.2.3s
+|_http-server-header: Apache/1.3.28 (Unix) mod_ssl/2.8.15 OpenSSL/0.9.7c
+| http-robots.txt: 5 disallowed entries 
+|_/cgi-bin /scanbot /backup /supplier /upload
+443/tcp  open  ssl/http Apache httpd 1.3.28 ((Unix) mod_ssl/2.8.15 OpenSSL/0.9.7c)
+| http-robots.txt: 5 disallowed entries 
+|_/cgi-bin /scanbot /backup /supplier /upload
+|_ssl-date: 2023-04-26T21:08:06+00:00; +3h00m00s from scanner time.
+| http-methods: 
+|_  Potentially risky methods: TRACE
+| ssl-cert: Subject: commonName=www.badstore.net/organizationName=BadStore.net/stateOrProvinceName=Illinois/countryName=US
+| Subject Alternative Name: email:root@badstore.net
+| Not valid before: 2006-05-10T12:52:53
+|_Not valid after:  2009-02-02T12:52:53
+|_http-server-header: Apache/1.3.28 (Unix) mod_ssl/2.8.15 OpenSSL/0.9.7c
+|_http-title: Welcome to BadStore.net v1.2.3s
+| sslv2: 
+|   SSLv2 supported
+|   ciphers: 
+|     SSL2_DES_64_CBC_WITH_MD5
+|     SSL2_RC2_128_CBC_EXPORT40_WITH_MD5
+|     SSL2_RC4_128_EXPORT40_WITH_MD5
+|     SSL2_RC4_128_WITH_MD5
+|     SSL2_RC2_128_CBC_WITH_MD5
+|     SSL2_IDEA_128_CBC_WITH_MD5
+|     SSL2_RC4_64_WITH_MD5
+|_    SSL2_DES_192_EDE3_CBC_WITH_MD5
+3306/tcp open  mysql    MySQL 4.1.7-standard
+| mysql-info: 
+|   Protocol: 10
+|   Version: 4.1.7-standard
+|   Thread ID: 30
+|   Capabilities flags: 33324
+|   Some Capabilities: Support41Auth, LongColumnFlag, ConnectWithDatabase, SupportsCompression, Speaks41ProtocolNew
+|   Status: Autocommit
+|_  Salt: 23IVT%YoFN4ZG6vqT3>!
+
+Host script results:
+|_clock-skew: 2h59m59s
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 14.84 seconds
+
+```
+
+```
+top ports monta kpl:ta vaikkapap 90 top protokollat tai top 5 kpl
+└─$ nmap --top-ports 90 <host>
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-04-29 09:20 EDT
+Nmap scan report for <host>
+Host is up (0.0019s latency).
+Not shown: 87 closed tcp ports (conn-refused)
+PORT     STATE SERVICE
+80/tcp   open  http
+443/tcp  open  https
+3306/tcp open  mysql
+
+Nmap done: 1 IP address (1 host up) scanned in 0.12 seconds
+
+```
+
+```
+Sama methodi komento tyyppi
+
+└─$ nmap -A T4 <host>
+Starting Nmap 7.93 ( https://nmap.org ) at 2022-05-01 09:37 EDT
+Failed to resolve "T4".
+Nmap scan report for <host>
+Host is up (0.0052s latency).
+Not shown: 997 closed tcp ports (conn-refused)
+PORT     STATE SERVICE  VERSION
+80/tcp   open  http     Apache httpd 1.3.28 ((Unix) mod_ssl/2.8.15 OpenSSL/0.9.7c)
+|_http-server-header: Apache/1.3.28 (Unix) mod_ssl/2.8.15 OpenSSL/0.9.7c
+| http-robots.txt: 5 disallowed entries 
+|_/cgi-bin /scanbot /backup /supplier /upload
+|_http-title: Welcome to BadStore.net v1.2.3s
+| http-methods: 
+|_  Potentially risky methods: TRACE
+443/tcp  open  ssl/http Apache httpd 1.3.28 ((Unix) mod_ssl/2.8.15 OpenSSL/0.9.7c)
+|_ssl-date: 2022-05-01T16:38:11+00:00; +2h59m59s from scanner time.
+| ssl-cert: Subject: commonName=www.badstore.net/organizationName=BadStore.net/stateOrProvinceName=Illinois/countryName=US
+| Subject Alternative Name: email:root@badstore.net
+| Not valid before: 2006-05-10T12:52:53
+|_Not valid after:  2009-02-02T12:52:53
+|_http-title: Welcome to BadStore.net v1.2.3s
+| http-methods: 
+|_  Potentially risky methods: TRACE
+| sslv2: 
+|   SSLv2 supported
+|   ciphers: 
+|     SSL2_DES_64_CBC_WITH_MD5
+|     SSL2_RC2_128_CBC_WITH_MD5
+|     SSL2_RC4_128_WITH_MD5
+|     SSL2_IDEA_128_CBC_WITH_MD5
+|     SSL2_RC2_128_CBC_EXPORT40_WITH_MD5
+|     SSL2_DES_192_EDE3_CBC_WITH_MD5
+|     SSL2_RC4_64_WITH_MD5
+|_    SSL2_RC4_128_EXPORT40_WITH_MD5
+|_http-server-header: Apache/1.3.28 (Unix) mod_ssl/2.8.15 OpenSSL/0.9.7c
+| http-robots.txt: 5 disallowed entries 
+|_/cgi-bin /scanbot /backup /supplier /upload
+3306/tcp open  mysql    MySQL 4.1.7-standard
+| mysql-info: 
+|   Protocol: 10
+|   Version: 4.1.7-standard
+|   Thread ID: 33
+|   Capabilities flags: 33324
+|   Some Capabilities: LongColumnFlag, ConnectWithDatabase, SupportsCompression, Support41Auth, Speaks41ProtocolNew
+|   Status: Autocommit
+|_  Salt: al{G-M{C{b[~)P6^Vr[S
+
+Host script results:
+|_clock-skew: 2h59m58s
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 29.76 seconds
+
+
+```
+
+``` 
+dirb komento, vähä kuin vahvempi kuin tietty nmap skannaus ja pitää laittaa eteen http:// protokolla ja näiden host eli ip-osoitteen perästä meitä myös kiinnostaa se polku, että mitä siellä takana mahtaa olla.
+
+└─$ dirb http://<host>
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+START_TIME: Mon May  1 09:40:19 2023
+URL_BASE: http://<host>
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+
+-----------------
+
+GENERATED WORDS: 4612                                                          
+
+---- Scanning URL: http://<host> ----
+==> DIRECTORY: http://<host>backup/                                                                                                                           
++ http://<host>/cgi-bin/ (CODE:403|SIZE:278)                                                                                                                   
++ http://<host>/favicon.ico (CODE:200|SIZE:1334)                                                                                                               
+==> DIRECTORY: http://<host>/images/                                                                                                                           
++ http://<host>/index (CODE:200|SIZE:3583)                                                                                                                     
++ http://<host>/index.html (CODE:200|SIZE:3583)                                                                                                                
++ http://<host>/robots (CODE:200|SIZE:316)                                                                                                                     
++ http://<host>/robots.txt (CODE:200|SIZE:316)                                                                                                                 
+==> DIRECTORY: http://<host>/supplier/                                                                                                                         
+                                                                                                                                                                        
+---- Entering directory: http://<host>/backup/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.                        
+    (Use mode '-w' if you want to scan it anyway)
+                                                                                                                                                                        
+---- Entering directory: http://<host>/images/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.                        
+    (Use mode '-w' if you want to scan it anyway)
+                                                                                                                                                                        
+---- Entering directory: http://<host>/supplier/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.                        
+    (Use mode '-w' if you want to scan it anyway)
+                                                                               
+-----------------
+END_TIME: Mon May  1 09:40:23 2023
+DOWNLOADED: 4612 - FOUND: 6
+
+```
+
+# lataus materiaalit;
+
+https://www.vulnhub.com/entry/badstore-123,41/
+
+# tarkempaa ohjetta, cheet sheets ja vastauksia
+
 https://medium.com/syscall59/badstore-1-2-3-walkthrough-vulnhub-7816f3001333
-
-
-## cheat sheets
+https://medium.com/@yassergersy/badstore-assignment-d93422e56b31
+https://armerj.github.io/SQLi-BadStore/
 
 https://maimonideanangst.wordpress.com/2012/03/30/hacking-cheat-sheet/
