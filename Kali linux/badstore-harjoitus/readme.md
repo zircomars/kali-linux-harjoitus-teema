@@ -22,7 +22,6 @@ Harjoituksessa löytyy muutamia haavoituvuuksia, tekijöitä, salapoliisityötä
 
 <b>Feedback</b>
 <br><br>
-![Alt text](badstore-images/badstore-2-1.PNG)
 
 ![Alt text](badstore-images/badstore-2.PNG)
 
