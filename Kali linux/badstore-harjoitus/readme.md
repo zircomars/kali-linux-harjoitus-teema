@@ -2,19 +2,42 @@
 
 ![Alt text](badstore-images/badstore-1.PNG)
 
-* [](#mysql-tietokanta)
-- [](#tarkempaa-ohjetta)
-    * [](#cheat-sheets)
+- [Badstore harjoitus](#badstore-harjoitus)
+    * [vm (virtual machines)](#vm-virtual-machines)
+    * [steppi vaiheet](#steppi-vaiheet)
+    * [mysql tietokanta](#mysql-tietokanta)
 
+- [tarkempaa ohjetta](#tarkempaa-ohjetta)
+    * [cheat sheets](#cheat-sheets)
+
+## vm (virtual machines)
+
+Harjoituksen kannalta kantsii mietii mihin tätä voisi suorittaa tai harjoittella oikeasti, että nykyään on paljon virtualikoneita joko suorittaa fyysisen oma työkoneen vmware, virtualbox tai hyper-v pohjaan tai <i> maksullise/maksuttoman </i> aws, azure tai google cloud virtuaalikone ympäristöön. 
+
+Methodia on paljon, mutta yksi suosittuimista harjoituksista on esim. lataa ".iso" tiedoston, että upottaa sen vmware tai virtualbox virtuaalikoneen pohjaan.
+
+## steppi vaiheet
+
+Harjoituksessa löytyy muutamia haavoituvuuksia, tekijöitä, salapoliisityötä tai jopa tutkimista, mutta ei tarvi mennä näiden kuvien mukaan. Näiden varsinaisia tuloksia löytyy useita sivustoista ja tänne kirjoitettu ainakin osa toiminnasta.
+
+<b>Feedback</b>
 ![Alt text](badstore-images/badstore-2-1.PNG)
 
 ![Alt text](badstore-images/badstore-2.PNG)
 
 ![Alt text](badstore-images/badstore-2-1.PNG)
 
+<hr>
+
 ![Alt text](badstore-images/badstore-3.PNG)
 
 <hr>
+
+<b>Luo rekisteri tunnus sisään</b>
+
+Ennen kun luo tunnuksensa kantsii avata F12 tai oikea hiirestä (inspect), kategoriasta (network) ja riittää (ctrl ja R), ikäänkuin päivittää sivuston. Niin valikkosta "action=register" näkyy, minkä käyttäjätunnuksen on luotu äskeittäin. Myös jos samanaikaisesti on aktivoinnut <b>wireshark</b> työkalun sivussa niin tämäkin toistuu siellä skannauksessa, mutta ei haittaa jos ei ole laitanut sitä päälle. Voi yrittää rekisteröidä uutta tunnusta niin sielä ponnahtaa pien ilmoitus ja kantsii vielä filtteröidä wireshark näkymää.
+
+Role = U (user) ja A = admin
 
 ![Alt text](badstore-images/badstore-4.PNG)
 
@@ -22,7 +45,17 @@
 
 ![Alt text](badstore-images/badstore-4-2.PNG)
 
+Tämän kuvan "after" ylemmässä on luotu uusi käyttis, että annettaan sille esim. admin oikeudet, mutta oikeudesta ei kauheasti anna mitään tasoa, että pitää mennä oikean admin tunnuksilla sisään. Tässä on vain näytetty kuinka sitä tapahtuu, kun tässä haavoittuvuudessa on oikein tapahtuu tai kuinka hakkeroituu sisään. 
+
+![Alt text](badstore-images/badstore-4-3.PNG)
+
+![Alt text](badstore-images/badstore-4-4.PNG)
+
+![Alt text](badstore-images/badstore-4-5.PNG)
+
 <hr>
+
+<b>Random tilaus</b>
 
 ![Alt text](badstore-images/badstore-5.PNG)
 
@@ -167,7 +200,11 @@ MySQL [badstoredb]> select * from userdb;
 | cup@cake.fcom        | 8b823f49ba31caa5cd88e520c2f82bdc | red     | sweetcake                   | U    |
 | cup@cake.fcom        | 8b823f49ba31caa5cd88e520c2f82bdc | red     | sweetcake                   | U    |
 | car@speed.com        | 2ac43aa43bf473f9a9c09b4b608619d3 | green   | fastcar                     | U    |
+| juice@orange.com     | a7887cc809cf0d4df17fc5dafd03e4e7 | green   | orangejuice                 | A    |
+| qwerty@alfa.com      | eb89f40da6a539dd1b1776e522459763 | green   | alfa                        | U    |
+| qwerty@alfa.com      | fea0f1f6fede90bd0a925b4194deac11 | green   | alfa                        | A    |
 +----------------------+----------------------------------+---------+-----------------------------+------+
+
 26 rows in set (0.001 sec)
 
 
