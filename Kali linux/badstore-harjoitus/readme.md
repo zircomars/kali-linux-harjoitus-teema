@@ -47,6 +47,7 @@ Role = U (user) ja A = admin
 
 Tämän kuvan "after" ylemmässä on luotu uusi käyttis, että annettaan sille esim. admin oikeudet, mutta oikeudesta ei kauheasti anna mitään tasoa, että pitää mennä oikean admin tunnuksilla sisään. Tässä on vain näytetty kuinka sitä tapahtuu, kun tässä haavoittuvuudessa on oikein tapahtuu tai kuinka hakkeroituu sisään. 
 <br><br>
+
 ![Alt text](badstore-images/badstore-4-3.PNG)
 
 ![Alt text](badstore-images/badstore-4-4.PNG)
