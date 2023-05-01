@@ -208,15 +208,7 @@ MySQL [badstoredb]> select * from userdb;
 
 26 rows in set (0.001 sec)
 
-
 ```
-
-
-
-
-- [](#tarkempaa-ohjetta)
-    * [](#cheat-sheets)
-
 
 # tarkempaa ohjetta
 https://medium.com/syscall59/badstore-1-2-3-walkthrough-vulnhub-7816f3001333
