@@ -4,7 +4,9 @@ msfconsole on pelkkä Metasploit Framework:in komentorivien käyttöliittymä. M
 
 * [Muutama esimerkki komentoja](#muutama-esimerkki-komentoja)
 * [muuttujat variables](#muuttujat-variables)
+  * [päivitys](#päivitys)
 - [linkkei harjoitukseen ja komentoja, että kirjoja](#linkkei-harjoitukseen-ja-komentoja-että-kirjoja)
+  
 
 ## Muutama esimerkki komentoja <br>
 <hr>
@@ -157,6 +159,33 @@ msf6 > get
 Usage: get var1 [var2...]  
 
 ```
+
+### päivitys
+
+Rapid7 (developer:it, yritys nimi) tukee metasploit framework:ia yhteistyönä/kauppallisesti ja paljon kehitysyhteisöä. Uusia haavoittuvuuksia löytyy lähes päivittäin erissä järjestelmistä. Jokaiseesta tällaisissa löydetyissä haavoittuvuuden osalta on melko todennäköistä, että saa käyttöönvalmiin hyväksikäytön metasploin framework:it. Tärkeänä pysyy ajantasalla uusimmista haavoittuvuuksista ja käyttää hyväkseen, että on työkalua metasploit framework:ia. 
+
+Ei tarvitse varusta kehystä uuden johtonmukaista (ellei ole läpäisytestaus osa päivittäistä työtä). ns. voi pyrkiä päivittää esim. viikottain. Päivittämiseen menee perus simppeli koodi kali linux:sessa eli "msfupdate".
+
+Tai vaihtoehtona on voi käyttää "$sudo apt install metasploit framework" komentoa, että päivittäkseen sen metasploit frameowrk uusimpaan saatavilla olevaa versiota.
+
+```
+root@kali:~# msfupdate
+[]
+[] Attempting to update the Metasploit Framework...
+[*]
+
+[] Checking for updates via the APT repository
+[] Note: expect weekly(ish) updates using this method
+/usr/bin/msfupdate:275:in update_apt!': undefined method blank?' for nil:NilClass (NoMethodError)
+from /usr/bin/msfupdate:140:in block in run!' from /usr/bin/msfupdate:134:in chdir'
+from /usr/bin/msfupdate:134:in run!' from /usr/bin/msfupdate:326:in 
+
+'
+I read somewhere that Kali is 1 month behind the latest releases?
+
+```
+
+
 
 
 <hr>
