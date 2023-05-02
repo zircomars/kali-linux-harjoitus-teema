@@ -40,5 +40,3 @@ ladattavia vm; <br>
 https://www.vulnhub.com/ <br>
 
 ## pdf kirjoja <br>
- 
-http://mogesec.com/wp-content/uploads/2021/12/Metasploit-5.0-for-Beginners.pdf <br>
