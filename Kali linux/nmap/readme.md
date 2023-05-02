@@ -29,6 +29,7 @@ https://www.trucoteca.com/fi/mik%C3%A4-on-nmap/ <br>
 https://www.linuxadictos.com/fi/nmap.html#Escaner_Xmas
 https://kulonpaa.com/?p=259
 https://tonivapalo.com/posts/tunkeutumistestaus/ptvt4/
+https://owasp.org/www-pdf-archive/Analysing_Networks_with_NMAP.pdf
 
 ## hyödyllisiä harjoituksia
 
