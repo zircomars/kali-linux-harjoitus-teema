@@ -6,6 +6,7 @@ msfconsole on pelkkä Metasploit Framework:in komentorivien käyttöliittymä. M
 * [muuttujat variables](#muuttujat-variables)
   * [päivitys](#päivitys)
 - [linkkei harjoitukseen ja komentoja, että kirjoja](#linkkei-harjoitukseen-ja-komentoja-että-kirjoja)
+ * [pdf kirjoja](#pdf-kirjoja)
   
 
 ## Muutama esimerkki komentoja <br>
@@ -185,12 +186,12 @@ I read somewhere that Kali is 1 month behind the latest releases?
 
 ```
 
-
-
-
 <hr>
 
 # linkkei harjoitukseen ja komentoja, että kirjoja <br>
 
 https://www.makeuseof.com/beginners-guide-metasploit-kali-linux/ <br>
 
+## pdf kirjoja
+
+http://mogesec.com/wp-content/uploads/2021/12/Metasploit-5.0-for-Beginners.pdf <br>
