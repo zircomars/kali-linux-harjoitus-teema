@@ -1,4 +1,4 @@
-# Linux työkalu 
+- [Linux / Kali LInux työkaluja](#linux--kali-linux-työkaluja)
 
 * [Grafana](#Grafana)
 * [Prometheus](#Prometheus)
@@ -26,18 +26,17 @@ ladattuna n. 200-300 MB
 
 <hr>
 
+# Linux / Kali LInux työkaluja
+<details>
 
-## Grafana
-![Alt text](/Graph_Grafana/images/Sieppaa6_takeSoftware_LI.jpg?raw=true "None")
+    ## Grafana
 
-## Prometheus
-![Alt text](/Grafana/Prometheus-01/images/Sieppaa4-PrometheusPolku.PNG?raw=true "None")
+    ## Prometheus
 
-## Bash shell
-![Alt text](/images/Bash-shell.PNG?raw=true "None")
+    ## Bash shell
 
-## Wireshark
-![Alt text](/images/wireshark-logo.PNG?raw=true "None")
+    ## Wireshark
 
-## kali linux
-![Alt text](Kali%20linux/images/kali_background.png)
+    ## kali linux
+
+</details>
