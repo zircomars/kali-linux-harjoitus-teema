@@ -26,8 +26,9 @@ BeEF on kuin puhas/ei vuoda tietojen käyttöliittymä järjestelmä hyökkäyks
 
 https://kalilinuxtutorials.com/hacking-with-beef/ <br>
 
+## helpot steppit harjoitukset
 
-
+https://www.golinuxcloud.com/beef-hacking-framework-tutorial/ <br>
 
 
 
