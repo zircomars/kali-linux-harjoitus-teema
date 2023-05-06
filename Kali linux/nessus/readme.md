@@ -10,6 +10,8 @@ Esim. haavoittuvuuksista ja altistumisesta, josta Nessus voi etsiä mm;
 
 Nessus periaatteessa skannaa kattavia laajan valikoman tekniikoita mm. käyttöjärjestelmät, verkkolaitteet, hypervisorit, tietokannat, verkkopalvleimet ja kriittisiä infrastruktuuria. 
 
+Skannauksesta voi olla url linkki joko http tai https - protokolla (http://name.fi) tai kohteen IP-osoite. Harjotuksen kanssa jos harjoittelee tiettyä sovellusta hakkerointiin niin on oman koti/työpaikan lähempänä sitä IP-osoitetta eli alkuun just 192.168.X.Y jotakin, koska käyttää just sitä DHCP:tä.
+
 * [Pien huomio latauksesta ja startup](#pien-huomio-latauksesta-ja-startup)
 
 ![Alt text](nessus_image/nessus_1.png)
