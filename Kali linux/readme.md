@@ -6,6 +6,8 @@ Kali linux järjestelmässä on mukana mm. firefox selain, wireshark ja jne. ett
 
 Kali linux:sta voi käyttää virtuaalikone pohjaista sovellusta mm. vmware, virtualbox tai fyysisen WSL (Windows Subsystem for Linux) eli microsoft pohjaan ja jos mac osaan tulee maksulliseksi. Suositeltavina lataa virtuaalikone pohjan, josta upottaa ladatun kali linux tiedoston ja josta sen jälkeen suorittaa/aktivoi sen kali linux ympäristön. Saa mm. usb tikullakin ladatua kali linux:sta, että esim. vähä rikollista ja riskiä käyttäjälle jos suorittaa selaisen prosessin.
 
+    * [](#)
+
 - [muita harjoituksia ja hyviä vinkkejä hakkerointiin:](#muita-harjoituksia-ja-hyviä-vinkkejä-hakkerointiin)
     * [pdf kirjoja](#pdf-kirjoja)
 
@@ -15,7 +17,6 @@ jos suorittaa kali linuxsta vmware:a pohjaan niin siinä on n. joko 14 tai 30pv 
 
 Vaihtoehtona pyörittää virtualibox, että sekin toimii ilmaisena. Myös huomiona kali linux käyttöjärjestelmä paketti on n. 2.7Gb tilaa dataa jos suorittaa 64-bittisellä versiolla, että viee paljon tilaa..
  
-
 <br>
 Ladattavina kali linux; https://www.kali.org/get-kali/#kali-platforms <br>
 Kali linux sisäiset työkalut; https://www.kali.org/tools/ <br><br>
@@ -23,6 +24,14 @@ Kali linux sisäiset työkalut; https://www.kali.org/tools/ <br><br>
 ensimmäisenä kantsii muuttaa linux:sen näppäimistö asetukset eli riittää avaa komentorivin ja syöttää;; <br> 
 ┌──(kali㉿kali)-[~] <br> 
 └─$ setxkbmap fi <br>  
+
+<hr>
+
+## Penetraatiotestaus
+
+http://www.secmeter.com/penetraatiotestaus.html
+
+<hr>
 
 # muita harjoituksia ja hyviä vinkkejä hakkerointiin: <br>
 
