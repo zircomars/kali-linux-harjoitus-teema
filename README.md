@@ -27,6 +27,7 @@ ladattuna n. 200-300 MB
 <hr>
 
 # Linux / Kali LInux työkaluja
+
 <details>
 
 ## Grafana
