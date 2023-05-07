@@ -10,6 +10,8 @@ BeEF antaa ammattimaiselle leviämistestausta arvioidakseen kohdeympäristön to
 
 Hakkerointivälineenä tehokas työkalu, jota järjestelmän asiantuntijat voivat hyödyntää mm. suunnittellakseen järjestelmiä, erityisesti verkkosovelluksia, jotka ovat turvallisia loppykäyttäjille käyttöön. Hakkeri, jolla on tarvittavia tietoja, voi olla myös lisätä omia muutoksia BeEF järjestelmän hakkerointikehykseen tehdäkseen niitä tehokkaamin. Hakkeri voi jopa esim. suunnitella minkä tahansa verkkosivuston kirjautumisen, joita hakkeri tarvitsee tietoja ja jopa muokkaa tietojenkalastelusivun URL-linkkien osoiteitta ja näyttävät uskottavalta uhrien silmien edessä. Kaikki käyttäjät tulee välttää vierailemasta haitallisia ja turvattomia verkkosivustoja, jotta vältettään BeEF hakkeroinnin uhreilta. Myös kaikki käyttäjät tulee tarkistaa niiden verkkosivujen aitoutta, jotka edellyttävät, että annettaan henlilökohtaisia tietoja.
 
+Harjoituksen kannalta kantsii harjoittella mielellään esim. kokeillee itse tai lähipiirissä (sisarukset/kotiväelle) kaverille ja jne. mutta ei mielellään yrityksessä, koska muuten tuottaisi riskiä ja tietojen vuotamista. Jos yrityksessä niin kantsii antaaa jokin pieni varoitus, että kennelle antaa sitä suorittaa sitä harjoitusta ja tehtävää.
+
 BeEF on kuin puhas/ei vuoda tietojen käyttöliittymä järjestelmä hyökkäyksiä tyypien mukaan ja myös ilmoittamalla, liittyykö kyseinen hyökkäys selaimeen kuten chrome. Eli voi osoittaa jotakin ja napsauttaa hyökkäyksiä käynnistäessä.
 
 <details>

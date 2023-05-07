@@ -1,4 +1,4 @@
-- [Linux / Kali LInux työkaluja](#linux--kali-linux-työkaluja)
+- [Linux / Kali Linux työkaluja](#linux--kali-linux-työkaluja)
 
 * [Grafana](#Grafana)
 * [Prometheus](#Prometheus)
@@ -26,7 +26,7 @@ ladattuna n. 200-300 MB
 
 <hr>
 
-# Linux / Kali LInux työkaluja
+# Linux / Kali Linux työkaluja
 
 <details>
 
