@@ -11,6 +11,8 @@ Myös protokollista, standardista ja yms. niiden alle vähä tarkempaa dokumentt
 - [DNS](#DNS)
 - [FTP](#FTP)
 - [SNMP](#SNMP)
+  * [snmp versio](#snmp-versio)
+  * [snmp wireshark](#snmp-wireshark)
 
 <!-- HUOM! noista datojen tekijöistä voisi kirjoittaa 
 DATA X-nimi
@@ -172,7 +174,29 @@ Simple Network Management Protocol (SNMP) - TPC/IP verkkon hallinnan tietoliiken
 
 ![Alt text](images/snmp-1.PNG)
 
-SNMP on eri versioita 1-3, erilaisia versioita ja turvalisuus ominaisuuksia protokollia, autentikointia ja yms. normaalisti tietoliikenne laitettaan verkkoon sieltä pääsee snmp pääsee kyseelle läpi juttuja sielä on semmoine joka normaalisti on public ja pääsee snmp pääsee asettaa arvoja. se on normaalisti oletuksena laitteessa vain lukutilassa, community ja public ja pystyy lajittelee ryhmiin ja miten jaotella ja mitä ryhmiä vasten. SNMPv2 & SNMPv3
+## SNMP versio
+
+SNMP on eri versioita 1-3, erilaisia versioita ja turvalisuus ominaisuuksia protokollia, autentikointia ja yms. normaalisti tietoliikenne laitettaan verkkoon sieltä pääsee snmp pääsee kyseelle läpi juttuja sielä on semmoine joka normaalisti on public ja pääsee snmp pääsee asettaa arvoja. se on normaalisti oletuksena laitteessa vain lukutilassa, community ja public ja pystyy lajittelee ryhmiin ja miten jaotella ja mitä ryhmiä vasten. 
+
+SNMPv1 - alkuperäinen versio ja tarjoaa vähimmäisen verkonhallinta toiminnan ja versio 1 tarjoaa yhteisön nimiin perustuvuien todennusta, mikä heikentää suojausta ja lisäksi rajoitettu määrä virhekoodia palautakseen pakettia. 
+
+SNMPv2 - todistaa yhteisön nimsen perustuvan todennusta. Versio 2:ssa on parannusta verrattuna versio 1:seen, vakiovirhekoodia, tietotyyppei (counter64 ja 32)ja toimintoihin, mukaan lukien GetBUlk ja Inform
+
+SNMPv3 - parantaa turvallisuutta ja  tarjoaa käyttöpohjaisen suojausmoduulin (user-based security module USM) perustuvien todennusta ja salauksen, että näkymäpohjaisen kuluvalvontamalliin (view-based access control model VACM). Versio 3:nen tukee samoja toimintoja kuin versio 2:nen.
+
+## SNMP wireshark
+
+SNMP käyttää UDP portteja, eli 162 kkyselyihin ja 162 hälytyksiin. 
+
+Wireshark filteröimällä tai haulla snmp;
+
+```
+udp port 161 or udp port 162
+```
+
+```
+snmp
+```
 
 https://www.netlab.tkk.fi/julkaisut/tyot/diplomityot/611/SNMP.html
 https://www.linux.fi/wiki/Simple_Network_Management_Protocol
