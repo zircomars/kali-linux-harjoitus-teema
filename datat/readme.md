@@ -10,6 +10,7 @@ Myös protokollista, standardista ja yms. niiden alle vähä tarkempaa dokumentt
   * [NTP](#NTP)
 - [DNS](#DNS)
 - [FTP](#FTP)
+  * [active & passive mode](#active--passive-mode)
 - [SNMP](#SNMP)
   * [snmp versio](#snmp-versio)
   * [snmp wireshark](#snmp-wireshark)
@@ -162,11 +163,21 @@ Domain Name System (DNS), mikä tunnetaan parhaiten nimipalvleujärjestelmä, mi
 
 File Transfer Protocol (FTP) - tiedonsiirtoprotokolla
 
-![Alt text](images/ftp-1.PNG)
+Tiedoston siirto, mikä periaattessa on tietokoneen tiedosto siirto ja tapahtuu kahden tietokoneen välillä esim. A ----- (tiedosto file) ---> B-koneelle. Yleensä käyttäjä (client) lähettää tiedoston niin kulkee yhteyttä ottamalla palvelimeen (server), mikä periaatteesa tarjoaa FTP-palvelun. Palvelin voi olla lähi- tai langaton verko (LAN & WLAN) yhteydessä. 
 
+Protokolla käyttää TCP 21 porttia yhteyden hallintaan ja vastaavasti 20 portti käytetätän datan siirron kautta. FTP client (käyttäjä) voidaan määrittää toiminnaltaan aktiivisen (active) ja passiivisen (passive) moodin. Eli periaatteessa client (käyttäjä) ja palvelimien (server) välisen yhteys tapahtuu aktiivinen ja passivinen moodi.
 
+<img src="images/ftp-1.PNG" width="400">
+
+## active & passive mode
 
 ![Alt text](images/ftp-2.PNG)
+
+https://www.techtarget.com/searchnetworking/definition/File-Transfer-Protocol-FTP
+https://www.linux.fi/wiki/FTP
+
+
+
 
 # SNMP
 
@@ -186,7 +197,7 @@ SNMPv3 - parantaa turvallisuutta ja  tarjoaa käyttöpohjaisen suojausmoduulin (
 
 ## SNMP wireshark
 
-SNMP käyttää UDP portteja, eli 162 kkyselyihin ja 162 hälytyksiin. 
+SNMP käyttää UDP portteja, eli 162 kyselyihin ja 162 hälytyksiin. 
 
 Wireshark filteröimällä tai haulla snmp;
 
