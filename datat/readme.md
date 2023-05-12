@@ -2,6 +2,8 @@
 
 Tähän tulee erilliset datat, josta tiedetään kuinka yhteys toimii ja mitä protokollia on olemassa, että mitä niiden eroja ja yhteis tekijöitä on olemassa. Osat näiden protokollista kirjoitettaan luetaan monipuoliisiin teorioihin/kirjojen mukaan, mutta mahdollista on samoja tekijöitä ja tekstin kirjoitus on melko sama methodi.
 
+Myös protokollista, standardista ja yms. niiden alle vähä tarkempaa dokumenttia ja näitä löytyy usein jatkuvasti eristä sivustoilta kuitenkin.
+
 - [TCP](#TCP)
 - [UDP](#UDP)
   * [UDP ja TCP erot](#UDP-ja-TCP-erot)
@@ -156,10 +158,30 @@ Domain Name System (DNS), mikä tunnetaan parhaiten nimipalvleujärjestelmä, mi
 
 # FTP
 
-File Transfer Protocol (FTP)
+File Transfer Protocol (FTP) - tiedonsiirtoprotokolla
+
+![Alt text](images/ftp-1.PNG)
+
+
+
+![Alt text](images/ftp-2.PNG)
 
 # SNMP
 
-Simple Network Management Protocol (SNMP) - TPC/IP verkkon hallinnan tietoliikenteen protokolla. protokollaa käytettään esim. laite tietojen hakemiseen esim. kytkin tukee snmp tulostimet ja voi hakea erilaisia tietoja laiteista löytyy semmoisia MIB (management information base) kuvaukset eli jos snmp hakee tietystä tulostimesta tietoa ja tulostimet on wifi kuvaus perusteella sen selkokielisen haettu arvo ja tulostimesta hakea tiedot väriä jäljellä ja onko väriä sini, pun ja jne. sillä on eri mibi.
+Simple Network Management Protocol (SNMP) - TPC/IP verkkon hallinnan tietoliikenteen protokolla. protokollaa käytettään esim. laite tietojen hakemiseen esim. kytkin tukee snmp tulostimet ja voi hakea erilaisia tietoja laiteista löytyy semmoisia MIB (management information base) kuvaukset eli jos snmp hakee tietystä tulostimesta tietoa ja tulostimet on wifi kuvaus perusteella sen selkokielisen haettu arvo ja tulostimesta hakea tiedot väriä jäljellä ja onko väriä sini, pun ja jne. sillä on eri mibi, sekä joukon tieto-olioita (SMI, structure of management information)
+
+![Alt text](images/snmp-1.PNG)
 
 SNMP on eri versioita 1-3, erilaisia versioita ja turvalisuus ominaisuuksia protokollia, autentikointia ja yms. normaalisti tietoliikenne laitettaan verkkoon sieltä pääsee snmp pääsee kyseelle läpi juttuja sielä on semmoine joka normaalisti on public ja pääsee snmp pääsee asettaa arvoja. se on normaalisti oletuksena laitteessa vain lukutilassa, community ja public ja pystyy lajittelee ryhmiin ja miten jaotella ja mitä ryhmiä vasten. SNMPv2 & SNMPv3
+
+https://www.netlab.tkk.fi/julkaisut/tyot/diplomityot/611/SNMP.html
+https://www.linux.fi/wiki/Simple_Network_Management_Protocol
+https://oip.manual.canon/USRMA-4164-zz-CS-fiFI/contents/CS1435_network_193monitoringandcontrollingthemachine.html
+https://support.huawei.com/enterprise/en/doc/EDOC1100086963
+
+# DTLS
+
+datagram transport layer security (DTLS) - udp protokolla ssl ja tsl, dtls päällä ja niiden protokollien erona, tcp erona pakettie perille varmenetaan ja client lähettää paketti serverilel serverille paketti tuli ja lähetä lisä. udpssa ei varmenna on kevyempi ja saattaa tulla virhettä koska se ei ole varmennettu kuin tcp paketit on varmennettu.
+
+
+
