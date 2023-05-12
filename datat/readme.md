@@ -8,6 +8,7 @@ Tähän tulee erilliset datat, josta tiedetään kuinka yhteys toimii ja mitä p
   * [NTP](#NTP)
 - [DNS](#DNS)
 - [FTP](#FTP)
+- [SNMP](#SNMP)
 
 <!-- HUOM! noista datojen tekijöistä voisi kirjoittaa 
 DATA X-nimi
@@ -150,9 +151,15 @@ Domain Name System (DNS), mikä tunnetaan parhaiten nimipalvleujärjestelmä, mi
 
 <img src="images/data-dns-2.PNG" width="450">
 
-
-<!-- FTP START HERE -->
+<hr>
+<!-- FTP and other protocol START HERE -->
 
 # FTP
 
-File Transfer Protocol (FTP),
+File Transfer Protocol (FTP)
+
+# SNMP
+
+Simple Network Management Protocol (SNMP) - TPC/IP verkkon hallinnan tietoliikenteen protokolla. protokollaa käytettään esim. laite tietojen hakemiseen esim. kytkin tukee snmp tulostimet ja voi hakea erilaisia tietoja laiteista löytyy semmoisia MIB (management information base) kuvaukset eli jos snmp hakee tietystä tulostimesta tietoa ja tulostimet on wifi kuvaus perusteella sen selkokielisen haettu arvo ja tulostimesta hakea tiedot väriä jäljellä ja onko väriä sini, pun ja jne. sillä on eri mibi.
+
+SNMP on eri versioita 1-3, erilaisia versioita ja turvalisuus ominaisuuksia protokollia, autentikointia ja yms. normaalisti tietoliikenne laitettaan verkkoon sieltä pääsee snmp pääsee kyseelle läpi juttuja sielä on semmoine joka normaalisti on public ja pääsee snmp pääsee asettaa arvoja. se on normaalisti oletuksena laitteessa vain lukutilassa, community ja public ja pystyy lajittelee ryhmiin ja miten jaotella ja mitä ryhmiä vasten. SNMPv2 & SNMPv3
