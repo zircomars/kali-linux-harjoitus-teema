@@ -173,9 +173,9 @@ Protokolla käyttää TCP 21 porttia yhteyden hallintaan ja vastaavasti 20 portt
 
 ![Alt text](images/ftp-2.PNG)
 
-https://www.techtarget.com/searchnetworking/definition/File-Transfer-Protocol-FTP
-https://www.linux.fi/wiki/FTP
-
+https://www.techtarget.com/searchnetworking/definition/File-Transfer-Protocol-FTP <br>
+https://www.linux.fi/wiki/FTP <br>
+https://www.ciscopress.com/articles/article.asp?p=2246945&seqNum=4 <br>
 
 
 
@@ -209,10 +209,10 @@ udp port 161 or udp port 162
 snmp
 ```
 
-https://www.netlab.tkk.fi/julkaisut/tyot/diplomityot/611/SNMP.html
-https://www.linux.fi/wiki/Simple_Network_Management_Protocol
-https://oip.manual.canon/USRMA-4164-zz-CS-fiFI/contents/CS1435_network_193monitoringandcontrollingthemachine.html
-https://support.huawei.com/enterprise/en/doc/EDOC1100086963
+https://www.netlab.tkk.fi/julkaisut/tyot/diplomityot/611/SNMP.html <br>
+https://www.linux.fi/wiki/Simple_Network_Management_Protocol <br>
+https://oip.manual.canon/USRMA-4164-zz-CS-fiFI/contents/CS1435_network_193monitoringandcontrollingthemachine.html <br>
+https://support.huawei.com/enterprise/en/doc/EDOC1100086963 <br>
 
 # DTLS
 
