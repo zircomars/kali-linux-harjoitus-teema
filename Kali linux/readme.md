@@ -36,7 +36,7 @@ http://www.secmeter.com/penetraatiotestaus.html
 muita kyberturvallisuuden työkalui, tai vähä kuin hakkerointia välineitä hyödyntäen työasioissa tai harjoituksissa.
 
 
-
+https://www.shiksha.com/online-courses/articles/top-10-cyber-security-tools/
 
 <hr>
 
