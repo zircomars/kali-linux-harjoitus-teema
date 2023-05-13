@@ -12,6 +12,7 @@ Myös protokollista, standardista ja yms. niiden alle vähä tarkempaa dokumentt
 - [DNS](#DNS)
 - [FTP](#FTP)
   * [active & passive mode](#active--passive-mode)
+  * [ftp haitat, riskit ja edut](#ftp-haitat-riskit-ja-edut)
 - [SNMP](#SNMP)
   * [snmp versio](#snmp-versio)
   * [snmp wireshark](#snmp-wireshark)
@@ -169,20 +170,42 @@ Domain Name System (DNS), mikä tunnetaan parhaiten nimipalvleujärjestelmä, mi
 
 File Transfer Protocol (FTP) - tiedonsiirtoprotokolla
 
-Tiedoston siirto, mikä periaattessa on tietokoneen tiedosto siirto ja tapahtuu kahden tietokoneen välillä esim. A ----- (tiedosto file) ---> B-koneelle. Yleensä käyttäjä (client) lähettää tiedoston niin kulkee yhteyttä ottamalla palvelimeen (server), mikä periaatteesa tarjoaa FTP-palvelun. Palvelin voi olla lähi- tai langaton verko (LAN & WLAN) yhteydessä. 
+Tiedoston siirto, mikä periaattessa on tietokoneen tiedosto siirto ja tapahtuu kahden tietokoneen välillä esim. A <----- (tiedosto file) ---> B-koneelle. Yleensä käyttäjä (client) lähettää tiedoston niin kulkee yhteyttä palvelimeen (server), mikä periaatteesa tarjoaa FTP-palvelun. Palvelin voi olla lähi- tai langaton verko (LAN & WLAN) yhteydessä. 
 
-Protokolla käyttää TCP 21 porttia yhteyden hallintaan ja vastaavasti 20 portti käytetätän datan siirron kautta. FTP client (käyttäjä) voidaan määrittää toiminnaltaan aktiivisen (active) ja passiivisen (passive) moodin. Eli periaatteessa client (käyttäjä) ja palvelimien (server) välisen yhteys tapahtuu aktiivinen ja passivinen moodi.
+Protokolla käyttää TCP 21 porttia yhteyden hallintaan ja vastaavasti 20 portti käytetätän datan siirron kautta. FTP käyttäjä (client) voidaan määrittää toiminnaltaan aktiivisen (active) ja passiivisen (passive) moodin. Eli periaatteessa käyttäjä (client) ja palvelimien (server) välisen yhteys tapahtuu aktiivinen ja passivinen moodi.
+
+FTP:tä käytettään jatkuvasti useissa yrityksissä, että siirrettään paljon suuria tiedostoja mm. asianajaja, lääkärit, veroasiat ja yms päivittäisiä isoja datan siirtoja. Datan lähettämisen eniten työkalu on sähköposti tai on muita vaihtoehtoisia methodi tapoja. FTP:llä on kuitenkin ratkaisuja, haittoja ja etuja, että tärkeänä on tietää ennen päätöksen tekemistä ja pilkoa palan pienemmäksi.
 
 <img src="images/ftp-1.PNG" width="400">
 
 ## active & passive mode
 
-![Alt text](images/ftp-2.PNG)
+aktiivisessa moodissa FTP asiakas/käyttäjä (client) avaa satunnaisen TCP porttin mikä on suurenmpi kuin 1023, läheteltävien FTP-palvelulle (server) satunnaisen portti numeron, jota se kuuntelee ohjausvirran kautta (control stream), ja odottaa yhteyttä FTP palvelimelta (server). Kun FTP palvelin (server) aloittaa data yhteyden FTP asiakkuuteen/käyttäjään (client), nii se sitoo lähdeportin (source port) FTP palvelimen porttiin 20. Aktiivisessa FTP moodissa on vähemmän turvallisuuta kuin passivisessa moodissa, koska FTP palvelin aloittaa datakanavan eli portin 20 avaamista ulkomaailmalle, mikä on vähemmän turvallista kuin portti 21 käyttöä. Aktiivisessa moodissa tilassa FTP-pavelin aloittaa FTP datakanavan.
+
+Passiivisessa moodissa, suoriuttuu kuin aktiivisessa moodissa. Jossakin tilanteessa FTP-asiakas/käyttäjä sitoo yhteyden lähdeportiin satunnaiseen portiin, joka on suurempi kuin 1023.
+
+<img src="images/ftp-2.PNG" width="500">
+
+![Alt text](images/ftp-3.jpg)
+
+## FTP haitat, riskit ja edut
+
+Haittoista/riskei on mm;
+- salasanojen ja läheteltävien datat lähetettään <b>salaamattomana</b>, kehittyyneet FTP palvelin ja asiakasohjelmistot osaavat hyödyntää SSL- tai TSL-salausta kontrollien- ja siirronyhteydessä.
+- Tiedosto läheteltävien protokollat, tiedot, käyttäjätunnus ja salasana jaetaan kaikki pelkinä tekstinä, ja tämä tarkoittaa hakkeri pääse käsiksi näihin tietoihin ilman vaivaa. Tietojen turvamiseen tulee käytettääv FTP päivitettyä versiota kuten FTPS tai SFTP. Hakkeri hyökkäyksestä käyttävät raakoja hyökkäyksiä murtautumiseen käyttämällä tuhansia käyttäjätunnus- ja salasana vaihtoehtoisia sekunnissa., että loppu peleissä löytää oikean salasanan/käyttäjätunnuksen yhdistelmän.
+- Alttina myös huijaushyökkäyksille, joissa hakkeri esiintyy laillisena käyttiksenä ja laitteeena verkossa. Yksi niistä yleisin huijaustaktiikka on "man-in-the-middle". Jos käyttää julkista verkkoa Wi-Fi yhteyttä niin hakkeroi voi esiintyä verkkona ja napata tietoja.
+- Käyttäjä, admin tai yms kuitenkin tulee huolehdittava noudattamisesta, kun käyttää FTP tietojen lähettämistä. FTP itsenänsä tai toimittajan käyttäminen riittämättömällä suojauksella voi aiheuttaa yritykselle rikkomussakoja, riskiä, tietojen levintymistä/vuottamista ja jopa haittaohjelmia. Jos yritykset koskevat vaatimustenmukaisia sääntöjä kuten HIPAA, ITAR, PCI-DSS, SOX  tai GLBA, saataa olla vikea löytää FTP-ratkaisua, joka auttaa käyttäjän pysymään vaatimustenmukaisena.  Salauksen puutteella on suurin rooli noudattamisen jättäminen, ja on välttämätöntä, että löytää ratkaisun joka vastaa noudattamisen tarpeita ja sääntöä.
+- toiminnan seuranta/monitori; monissa FTP-ratkaisussa ei voi seurata tai sen epäjohdonmukaista etäjärjestelmän ladatun sisällön seurantaa. Myös on mietittävä yrityksen raportointivaatimusta. Jos tiedostoja käsitellään väärin tai tapahtunut tietomurtoa niin ongelman lähden jäljittämistä voi olla vaikeeta. Usein FTP-vaihtoehtoista puuttuu päässynhallintaan, joita tarvitaan varmistamaan, että työntekijä noudattavat tiedostojen jakamisen parhaita harjoituksia tai ohjeita.
+- kuitenkin FTP käytön haitat voi ratkaista valitsemalla oikean FTP-palvelutarjoajalta, niin välttää näitä haittoja.
+
+Edut/hyödynnät;
+
+
 
 https://www.techtarget.com/searchnetworking/definition/File-Transfer-Protocol-FTP <br>
 https://www.linux.fi/wiki/FTP <br>
 https://www.ciscopress.com/articles/article.asp?p=2246945&seqNum=4 <br>
-
+https://www.sharetru.com/blog/key-advantages-and-disadvantages-of-ftp <br>
 
 
 # SNMP
