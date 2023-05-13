@@ -5,6 +5,7 @@ Tähän tulee erilliset datat, josta tiedetään kuinka yhteys toimii ja mitä p
 Myös protokollista, standardista ja yms. niiden alle vähä tarkempaa dokumenttia ja näitä löytyy usein jatkuvasti eristä sivustoilta kuitenkin.
 
 - [TCP](#TCP)
+  * [TCP/IP](#tcpip)
 - [UDP](#UDP)
   * [UDP ja TCP erot](#UDP-ja-TCP-erot)
   * [NTP](#NTP)
@@ -58,6 +59,11 @@ Ylemässä kuvassa tulostuu kolme vaihdetta, että kuin lähettäjä lähettää
 1. Ensimmäisenä lähettäjä lähettää datan/viestin kohti yhteyden palvelimeen, josta tämä muodostuu segmenti SYN (Synchronize Sequence Number), joka ilmoittaa palvelimelle, ja asiakas/käyttäjä on mahdollista aloittanut viestinnän ja millä järjesteysnumerolla se alkaa.
 2. SYN + ACK , tarkoittaa palvelin vastaa lähettäjälle/käytäjälle pyyntä asettamalla SYN-ACK-signaali bittit. Acknowledgement (ACK) tarkoitaa sen vastaanottaman segmentin vastausta ja SYN tarkoitaa millä järjestysnumerolla se todennäköisesti aloittaa segmentin.
 3. ACK - viimeisessä osassa käyttäjä/asiakas kuittaa palvelimen vastauksen ja molemmat ovat muodostanneet luotettavan yhteyeden ja ne aloittavat lähettää varsinaisia tiedonsiirtoja.
+
+## TCP/IP 
+Transmission Control Protocol / Internet Protocol - on Internet:in liikenneöivä käytettävyyden tietoliikenneprotokollan tausta ja yhdistelmänä kuin <ins>pino kokoelma</ins>. 
+
+![Alt text](images/tcpip-layer-1.PNG)
 
 <!-- UDP START HERE -->
 # UDP
