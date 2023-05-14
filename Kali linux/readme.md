@@ -9,6 +9,7 @@ Kali linux:sta voi käyttää virtuaalikone pohjaista sovellusta mm. vmware, vir
 - [Penetraatiotestaus](#Penetraatiotestaus)
   * [types testing](#types-testing)
   * [boxes types](#boxes-types)
+- [akkery typpejä (hattu väri)](#hakkery-typpejä-hattu-väri)
 - [muita harjoituksia ja hyviä vinkkejä hakkerointiin:](#muita-harjoituksia-ja-hyviä-vinkkejä-hakkerointiin)
   * [pdf kirjoja](#pdf-kirjoja)
 
@@ -57,9 +58,9 @@ https://purplesec.us/types-penetration-testing/
 
 Jokaisessa testauksessa on jokin tavoite rippuuen penetraatiotestaajasta tai ei ole aiempaa tietoa ympäristöstä ja järjestelmistä, että mihin he yrittävät hakea/rikkoa. Penetraatiosta on myös luokiteltu laatikko väri ja kuvaus mm. värinä musta, valko ja harmaa laatikko.
 
-- Valkoinen laatikkoa - tausta- ja järjestlelmätiedot toimitetaan testaajille etukäteen
+- Valkoinen laatikkoa - tausta- ja järjestelmätiedot toimitetaan testaajille etukäteen myös kutsutaan sisäisen läpäisytestaus (internal penetration testing), ja kaikki tiedot ja pääsyt lähdekoodiin ja ympäristöön. Tämän valkoisen laatikkon tavoitteena on tehdä yrityksen järjestelmien perusteellisen tietoturvatarkastuksen ja tarjota testaajille mahdollisimman paljon yksityiskohtaisia toimintoja. Myös seurauksena testit ovat perusteellisia, koska testauksena on pääsy alueilla, johon musta laatikko testaaja ei pääse, kuten koodin laatua ja sovellussuunnittelua. 
 
-- Musta laatikko - perustietoja, mikä tunnettaan parhaillaan ulkoinen testaus (external penetration testing), joka saa vain vähän tai ei ollenkaan tietoa yrityksen IT-infraskutuurista. Ehkä tärkein etuna on simuloida todellista kyberhyökkäystä, jolloin testaaja ottaa tietämättömän hyökkääjän roolin. Roolina testaus voi kestää jopa muutama viikon, joten se on yksi pisimmistä testauksen tyyppeistä. Yritykset riippuu hinnasta, mitä he odottavat testaajalta raportoivan suunnittellun, suorittamisen, testauksen ja täyttämistä liittyviä tietojen vaivaamista. Mahdollista yksi helpoimmista tavoista testaaja murtautuu järjestelmän testin aikana ottaa käyttöön useita toimivia hyötyjä mm. kerberos (todennusprotokolla ja toimii tietokoneverkossa). Methodin testauksen menetelmänä kutsutaan myös "trial and errors" ()
+- Musta laatikko - perustietoja, mikä tunnettaan parhaillaan ulkoinen testaus (external penetration testing), joka saa vain vähän tai ei ollenkaan tietoa yrityksen IT-infraskutuurista. Ehkä tärkein etuna on simuloida todellista kyberhyökkäystä, jolloin testaaja ottaa tietämättömän hyökkääjän roolin. Roolina testaus voi kestää jopa muutama viikon, joten se on yksi pisimmistä testauksen tyyppeistä. Yritykset riippuu hinnasta, mitä he odottavat testaajalta raportoivan suunnittellun, suorittamisen, testauksen ja täyttämistä liittyviä tietojen vaivaamista. Mahdollista yksi helpoimmista tavoista testaaja murtautuu järjestelmän testin aikana ottaa käyttöön useita toimivia hyötyjä mm. kerberos (todennusprotokolla ja toimii tietokoneverkossa). Methodin testauksen menetelmänä kutsutaan myös "trial and errors" (yritys ja virhe) lähestymistä, mutta löytyy korkea tekninen taito tähän prosessiin.
 
 - Harmaa laatikko - kahden yhdistelmä eli valk ja mustan välillä, jossa on rajallinen tieto kohteesta ja jaettu tarkastajalle.
 Tunkteutumisen tunnistaa järjestelmän haavoittuvuuden hyökkäykseen ja arvioimalla sen haavoittuvuutta.
@@ -87,6 +88,10 @@ muita kyberturvallisuuden työkalui, tai vähä kuin hakkerointia välineitä hy
 
 
 https://www.shiksha.com/online-courses/articles/top-10-cyber-security-tools/
+
+<hr>
+
+# hakkery typpejä (hattu väri)
 
 <hr>
 
