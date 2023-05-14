@@ -6,8 +6,9 @@ Kali linux järjestelmässä on mukana mm. firefox selain, wireshark ja jne. ett
 
 Kali linux:sta voi käyttää virtuaalikone pohjaista sovellusta mm. vmware, virtualbox tai fyysisen WSL (Windows Subsystem for Linux) eli microsoft pohjaan ja jos mac osaan tulee maksulliseksi. Suositeltavina lataa virtuaalikone pohjan, josta upottaa ladatun kali linux tiedoston ja josta sen jälkeen suorittaa/aktivoi sen kali linux ympäristön. Saa mm. usb tikullakin ladatua kali linux:sta, että esim. vähä rikollista ja riskiä käyttäjälle jos suorittaa selaisen prosessin.
 
-  * [Penetraatiotestaus](#Penetraatiotestaus)
-  * [](#)
+- [Penetraatiotestaus](#Penetraatiotestaus)
+  * [types testing](#types-testing)
+  * [boxes types](#boxes-types)
 - [muita harjoituksia ja hyviä vinkkejä hakkerointiin:](#muita-harjoituksia-ja-hyviä-vinkkejä-hakkerointiin)
   * [pdf kirjoja](#pdf-kirjoja)
 
@@ -27,7 +28,7 @@ ensimmäisenä kantsii muuttaa linux:sen näppäimistö asetukset eli riittää 
 
 <hr>
 
-## Penetraatiotestaus
+# Penetraatiotestaus
 
 Penetraatiotestaus eng. penetration testing
 
@@ -39,13 +40,38 @@ Testin tarkoituksena on kertoa yrityksille/organisaatiolle nykyisen kyberturvall
 
 http://www.secmeter.com/penetraatiotestaus.html
 
+Testauken ja sen analysointia:
+Ennen alkavien projektien aikataulutusta ja mitoittamista asiakkuuden kanssa, niin kantsii tutustua tärkeät dokumentteihin. Automaattisen skannausten jälkeen tekee tiedustelutyön ja lopuksi manuaalisen testauksen. Lopputuloksen on löydöksistä koostettun raportti, joka sisältää listauksen havaitujen haavoittuvuksista, sekä asiakkaan ladittujen tehtävälista haavoittuvuuksien mitigoimiseksi (pienentää ja vähentämiseksi), sekä yleisen tietoturvantason parantamista. Jos/Kun testaus on saatu onnistuneeksi päätöksestä ja asiakkuus on suoritanut suosituksen parannustyötä nii voi myöhemmin tulevaisuudessa tehdä uusintatestin.
+
 <img src="images/penetration-testing-1.PNG" width="500">
 
-### methods
+## types testing
 
-penetraatiotestauksessa on useita methodia
+Penetraatiotestauksessa yritettään hyödyntää järjestelmien, verkkojen, henkilöhallinnon tai fyysisien ominaisuuden heikkoutena tai haavoittuvuuksien turvallisuuden valvonnan tehokkuutta stressitestamiseksi. Testauksen tyyppejä on mm. verkkopalvelut, sovellukset, langattomat ja langallliset verkot, käyttäjien/sosiaalisen manipulointi (social engineering) ja fyysinen testaus. Testauksessa voi suorittaa ulkoisen tai sisäisesti erilaisissa hyökkäyksienvektorien simuloimisessa. 
 
 <img src="images/penetration-testing-2.PNG" width="525">
+
+https://purplesec.us/types-penetration-testing/
+
+## boxes types
+
+Jokaisessa testauksessa on jokin tavoite rippuuen penetraatiotestaajasta tai ei ole aiempaa tietoa ympäristöstä ja järjestelmistä, että mihin he yrittävät hakea/rikkoa. Penetraatiosta on myös luokiteltu laatikko väri ja kuvaus mm. värinä musta, valko ja harmaa laatikko.
+
+- Valkoinen laatikkoa - tausta- ja järjestlelmätiedot toimitetaan testaajille etukäteen
+
+- Musta laatikko - perustietoja, mikä tunnettaan parhaillaan ulkoinen testaus (external penetration testing), joka saa vain vähän tai ei ollenkaan tietoa yrityksen IT-infraskutuurista. Ehkä tärkein etuna on simuloida todellista kyberhyökkäystä, jolloin testaaja ottaa tietämättömän hyökkääjän roolin. Roolina testaus voi kestää jopa muutama viikon, joten se on yksi pisimmistä testauksen tyyppeistä. Yritykset riippuu hinnasta, mitä he odottavat testaajalta raportoivan suunnittellun, suorittamisen, testauksen ja täyttämistä liittyviä tietojen vaivaamista. Mahdollista yksi helpoimmista tavoista testaaja murtautuu järjestelmän testin aikana ottaa käyttöön useita toimivia hyötyjä mm. kerberos (todennusprotokolla ja toimii tietokoneverkossa). Methodin testauksen menetelmänä kutsutaan myös "trial and errors" ()
+
+- Harmaa laatikko - kahden yhdistelmä eli valk ja mustan välillä, jossa on rajallinen tieto kohteesta ja jaettu tarkastajalle.
+Tunkteutumisen tunnistaa järjestelmän haavoittuvuuden hyökkäykseen ja arvioimalla sen haavoittuvuutta.
+
+<img src="images/penetration-testing-3box.png" width="550">
+
+<img src="images/penetration-testing-4.PNG" width="550">
+
+https://www.packetlabs.net/posts/types-of-penetration-testing/
+https://www.getastra.com/blog/security-audit/types-of-penetration-testing/
+
+<hr>
 
 ## cyber security tools
 
