@@ -78,6 +78,7 @@ https://purplesec.us/types-penetration-testing/
 
 Ulkoinen vs sisäinen läpäisy testaus
 
+![Alt text](images/penetration-testing-interAndext.PNG)
 
 <hr>
 
