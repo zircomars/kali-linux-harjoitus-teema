@@ -76,7 +76,21 @@ https://purplesec.us/types-penetration-testing/
 
 ### external vs internal
 
-Ulkoinen vs sisäinen läpäisy testaus
+Ulkoinen vs sisäinen läpäisy testaus tekijä
+
+Ulkoinen läpäisy testaus;
+koostuu haavoittuvuuksien testaamisesta, jotta voi tarkistaa mahdollisuudet joutua etähyökkääjän hyökkäykseen. Hyödyntää löydettyjien haavoittuvuksia, että tunnistaa ulkopuolisille lattiina olevia tietoja. Periaatteessa etähallinan kautta kohti johonkin organisaation yritykseen. Tämä testaus päätavoitteena on simuloida hyökkäystä sisäiseen verkkoon matkimalla todellisen uhkatoimijan toimia. 
+
+Tämän tyyppinen testaaja yrittää löytää ja hyödyntää järjestelmän haavoittuvuuksia organisaation tietojen varastamiseksi tai vaarantamista. Tuloksena testi osoittaa, ovatko toteututut turvatoimenpiteitä riittäväst turvaamaan organiasation ja arvioimaan sen kykyä puolustautua ulkopuolisia hyökkäyksiä vastaan. Ulkoisen testausta suorittamisen kestää n. alle kuukauden ja riippumatta kuitenkin järjestelmän monimutkaisuudesta, verkon koosta ja itse testin tavoitteista. 
+
+Esim. ulkoisen testauksen hyökkääjän työkaluja ovat mm.
+- nessus
+- metasploit
+- nikto
+- nmap
+- hydra
+- GHDB (Google Hacking Database)
+
 
 ![Alt text](images/penetration-testing-interAndext.PNG)
 
