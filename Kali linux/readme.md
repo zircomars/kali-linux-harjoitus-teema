@@ -74,6 +74,7 @@ https://www.packetlabs.net/posts/types-of-penetration-testing/ <br>
 https://www.getastra.com/blog/security-audit/types-of-penetration-testing/ <br>
 https://purplesec.us/types-penetration-testing/ <br>
 https://www.intruder.io/blog/types-of-penetration-testing <br>
+https://securityboulevard.com/2022/08/types-of-testing-techniques-black-white-and-grey-box/ <br>
 
 ### external vs internal
 
