@@ -70,9 +70,10 @@ Tunkteutumisen tunnistaa järjestelmän haavoittuvuuden hyökkäykseen ja arvioi
 
 <img src="images/penetration-testing-4.PNG" width="550">
 
-https://www.packetlabs.net/posts/types-of-penetration-testing/
-https://www.getastra.com/blog/security-audit/types-of-penetration-testing/
-https://purplesec.us/types-penetration-testing/
+https://www.packetlabs.net/posts/types-of-penetration-testing/ <br>
+https://www.getastra.com/blog/security-audit/types-of-penetration-testing/ <br>
+https://purplesec.us/types-penetration-testing/ <br>
+https://www.intruder.io/blog/types-of-penetration-testing <br>
 
 ### external vs internal
 
