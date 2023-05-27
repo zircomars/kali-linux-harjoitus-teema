@@ -10,7 +10,7 @@ Kali linux:sta voi käyttää virtuaalikone pohjaista sovellusta mm. vmware, vir
   * [types testing](#types-testing)
   * [color boxes types](#color-boxes-types)
     * [external vs internal](#external-vs-internal)
-- [hakkery typpejä (hattu väri)](#hakkery-typpejä-hattu-väri)
+- [hakkeri typpejä (hattu väri)](#hakkeri-typpejä-hattu-väri)
 - [muita harjoituksia ja hyviä vinkkejä hakkerointiin:](#muita-harjoituksia-ja-hyviä-vinkkejä-hakkerointiin)
   * [pdf kirjoja](#pdf-kirjoja)
 
@@ -117,7 +117,7 @@ https://www.shiksha.com/online-courses/articles/top-10-cyber-security-tools/
 
 <hr>
 
-# hakkery typpejä (hattu väri)
+# hakkeri typpejä (hattu väri)
 
 <hr>
 
