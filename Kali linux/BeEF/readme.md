@@ -44,6 +44,8 @@ Reading state information... Done
 
 Kali linux root:in käyttäjänä lataa ton ylemmän linkin ohjeen mukaan tulee resetoida salasanan, nii katsii antaa joku helppo jotta itse muistaa. Ladatun jälkeen kirjautuu annettun oletus IP-osoitteen mukaan (URL) linkki. 
 
+myös siinä antoi muutama vinkkiä, josta voi olla hyvä aloittaa `Web UI, Hook` ja yksi esimerkki alla
+
 ```
 ┌──(root㉿kali)-[/home/kali]
 └─# beef-xss -h
