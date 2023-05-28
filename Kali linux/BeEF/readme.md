@@ -148,7 +148,7 @@ Nämä kertovat, mitä scriptiä tullaan käyttää, ja miten päästää siihen
 myös vastaavasti, jos ei käytetä enään `BeEF` hakkeri työkalua niin sammuttaminen menee `beef-xss-stop -h`
 ![Alt text](beef-harj/beef-4.PNG)
 
-myös meitä kiinnostaa tämän BeEF käyttöjärjestelmän sen yksittäisen kiinteän IP-osoite, vähä kuin jos ladannut tiettyä palvelinta tai jotakn järjestelmän sovellusta niin tulee mukaan jokin IP-osoite, ja usein oletuksena alkaa aina 192.168.X.Y jotakin. Eli mene `$root`:iin, ja mene polkuun `cd /usr/share/beef` ja toista `$./beef`
+myös meitä kiinnostaa tämän BeEF käyttöjärjestelmän sen yksittäisen kiinteän IP-osoite, vähä kuin jos ladannut tiettyä palvelinta tai jokin järjestelmän sovellusta niin tulee saamaan ikäänkuin jokin IP-osoite, ja usein oletuksena alkaa aina 192.168.X.Y jotakin. Eli mene `$root`:iin, ja polusta `cd /usr/share/beef` ja toista `$./beef`
 
 ```
 ┌──(root㉿kali)-[/usr/share/beef-xss]
@@ -202,7 +202,7 @@ myös meitä kiinnostaa tämän BeEF käyttöjärjestelmän sen yksittäisen kii
 
 <h3>index.html</h3>
 
-luo tyhjä index html sivusto esim. alemman mukaan formaatti, tohon IP-osoite tulee se beef työkalun sen kiinte IP-osoite eli ylemmän `./beef` komennon mukaan mitä se ehdottaa ladatun järjestelmän mukaan, ja oletuksena vähä kuin kali linux lähellä sitä IP-osoitetta.
+luo tyhjä index html sivusto esim. alemman formaattin mukaan ja ei tarvi olla täydellinen HTML sivusto pohja, tohon IP-osoite tulee se beef työkalun sen kiinte IP-osoite eli ylemmän `./beef` komennon mukaan mitä se ehdottaa ladatun järjestelmän mukaan, ja oletuksena vähä kuin kali linux lähellä sitä IP-osoitetta.
 
 ```
 <html>
@@ -217,6 +217,12 @@ luo tyhjä index html sivusto esim. alemman mukaan formaatti, tohon IP-osoite tu
 </html>
 
 ```
+
+![Alt text](beef-harj/beef-6.PNG)
+
+Jonka jälkeen tarkista jostain kali linux firefox selaimesta tyhjän välilehden niin pidä samalla toi beef hakkeri järjestelmä päällä vaikka sivussa välilehdessä niin sieltä pitäisi ponnahtaa käyttäjän oma IP-osoite, että mihin kyseistä tätä sivustoa on käytetty tai ponnahtanut mm. vaikkapa käytetty just Chrome selaimeen, linux työkaluun ja mikä sen kiinteä IP-osoite on.
+
+![Alt text](beef-harj/beef-7.PNG)
 
 <hr>
 
