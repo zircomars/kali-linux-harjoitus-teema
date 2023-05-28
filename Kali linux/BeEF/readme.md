@@ -222,7 +222,32 @@ luo tyhjä index html sivusto esim. alemman formaattin mukaan ja ei tarvi olla t
 
 Jonka jälkeen tarkista jostain kali linux firefox selaimesta tyhjän välilehden niin pidä samalla toi beef hakkeri järjestelmä päällä vaikka sivussa välilehdessä niin sieltä pitäisi ponnahtaa käyttäjän oma IP-osoite, että mihin kyseistä tätä sivustoa on käytetty tai ponnahtanut mm. vaikkapa käytetty just Chrome selaimeen, linux työkaluun ja mikä sen kiinteä IP-osoite on.
 
+![Alt text](beef-harj/beef-10.PNG)
+
+<h3>html huijauksia</h3>
+
+Sitten vaan luomaan kyseiselle index.html:lle jotakn huijaus/kalastelua/päivitystä tai yms, testausta ns. kuin saisi leikisti oikean henkilön klikkamaan tai tekemään jotakin jännää.
+
+Eli toiminnaltaan hakee tämän hetkisen IP-osoite tai (hooked browsers), mitä yritettään kalastella vaikappa just kyseisen index.html sivusta sinne yritettään saada käyttäjän/henkilön huijatuksi. Klikkaa kyseinen IP-osoite, mihin siinä on lisätty scriptaus niin pitäisi tulla näkyviin `Commands` ja alla `module tree` niin sieltä kansion alla on useita vaihtoehtoisia testauksia niin klikkaa niistä jokin vaihtoehto tai näiden alta, miltä ne näyttää kun päivittää sivuston. 
+
 ![Alt text](beef-harj/beef-7.PNG)
+
+![Alt text](beef-harj/beef-8.PNG)
+
+<details>
+Ensimmäinen ensimerkki <br>
+
+![Alt text](beef-harj/beef-11.PNG)
+
+![Alt text](beef-harj/beef-12.PNG)
+
+Toinen esimerkki <br>
+
+![Alt text](beef-harj/beef-13.PNG)
+
+![Alt text](beef-harj/beef-14.PNG)
+
+</details>
 
 <hr>
 
