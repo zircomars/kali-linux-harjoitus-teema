@@ -6,6 +6,12 @@ Penetraatio tarkoittaa läpäisyn tai tunkeutumista johonkin, että tarkoittaa m
 
 ![Alt text](images_beef/beef-1.PNG)
 
+- [eka lataus ohje](#eka-lataus-ohje)
+   * [pieni harjoitus](#pieni-harjoitus)
+
+- [linkkei ja tarkennusta beef hakkeri työkalusta](#linkkei-ja-tarkennusta-beef-hakkeri-työkalusta)
+   * [helpot steppit harjoitukset](#helpot-steppit-harjoitukset)
+
 BeEF antaa ammattimaiselle leviämistestausta arvioidakseen kohdeympäristön todellisen suojausasennon käyttämällä asiakaspuolen hyökkäysvektoria. Toisin/muualle eri tavalla kuin tietoturvakehystä, BeEF tutkii kovetetun verkon kehän ja asiakasjärjestelmän ohi ja tutkii hyödynnettävyyden kuin yhden oven, verkkoselaimen puuteita. BeEF kiinittää yhden tai useamman verkkoselaimen ja käyttää niitä rantapäänä (beachheads) ohjattuihin komento moduulia käynnistämisessä ja lisähyökkäyksien järjestelmää vastaan selainkontekstissa.
 
 Hakkerointivälineenä tehokas työkalu, jota järjestelmän asiantuntijat voivat hyödyntää mm. suunnittellakseen järjestelmiä, erityisesti verkkosovelluksia, jotka ovat turvallisia loppykäyttäjille käyttöön. Hakkeri, jolla on tarvittavia tietoja, voi olla myös lisätä omia muutoksia BeEF järjestelmän hakkerointikehykseen tehdäkseen niitä tehokkaamin. Hakkeri voi jopa esim. suunnitella minkä tahansa verkkosivuston kirjautumisen, joita hakkeri tarvitsee tietoja ja jopa muokkaa tietojenkalastelusivun URL-linkkien osoiteitta ja näyttävät uskottavalta uhrien silmien edessä. Kaikki käyttäjät tulee välttää vierailemasta haitallisia ja turvattomia verkkosivustoja, jotta vältettään BeEF hakkeroinnin uhreilta. Myös kaikki käyttäjät tulee tarkistaa niiden verkkosivujen aitoutta, jotka edellyttävät, että annettaan henlilökohtaisia tietoja.
@@ -24,7 +30,7 @@ BeEF on kuin puhas/ei vuoda tietojen käyttöliittymä järjestelmä hyökkäyks
 
 </details>
 
-## eka lataus ohje
+# eka lataus ohje
 
 lataus ohjeita löytyy monipuolisesti, mutta suosituimmista jos käyttää kali linux pohjaa niin tästä suoraan; <br>
 https://www.kali.org/tools/beef-xss/
@@ -121,6 +127,10 @@ May 27 10:15:33 kali systemd[1]: beef-xss.service: Consumed 2.796s CPU time.
 
 May 27 10:15:52 kali beef[36374]: [10:15:51]    |   Blog: http://blog.beefproject.com
 ```
+
+## pieni harjoitus
+
+
 
 # linkkei ja tarkennusta BeEF hakkeri työkalusta 
 
