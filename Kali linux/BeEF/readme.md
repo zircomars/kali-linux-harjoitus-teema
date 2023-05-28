@@ -130,11 +130,23 @@ May 27 10:15:52 kali beef[36374]: [10:15:51]    |   Blog: http://blog.beefprojec
 
 ## pieni harjoitus
 
+Ylemmässä kappaleessa tapahtui se lataus eli `BeEF` install kohta. Niin siinä menee hetki, kun kali linux ymmärtää ja hakee niitä ladattavia paketteja ja yms.
 
+Ladatun jälkeen kantsii käynnistää/aktivoida sitä eli `$beef-xss -h`, jonka latauksen jälkeen, tulostuu mielenkiintoisia kohtia erityisesti ovat; 
+Nämä kertovat, mitä scriptiä tullaan käyttää, ja miten päästää siihen `BeEF` software järjestelmään, oletuksena jos laittaa url linkin `127.0.0.1` niin päästään siihen sivustolla, ja oletus mennään `beef;beef` ellei install latauksen aikana antanut jotakin muuta salasanaa.. 
+
+```
+[*]  Web UI: http://127.0.0.1:3000/ui/panel
+[*]    Hook: <script src="http://<IP>:3000/hook.js"></script>
+[*] Example: <script src="http://127.0.0.1:3000/hook.js"></script>
+```
 
 # linkkei ja tarkennusta BeEF hakkeri työkalusta 
 
 https://kalilinuxtutorials.com/hacking-with-beef/ <br>
+
+lataus ohje; <br>
+https://www.golinuxcloud.com/beef-hacking-framework-tutorial/ <br>
 
 ## helpot steppit harjoitukset
 
