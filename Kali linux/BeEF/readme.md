@@ -22,13 +22,18 @@ BeEF on kuin puhas/ei vuoda tietojen käyttöliittymä järjestelmä hyökkäyks
 
 <details>
 
+asdf
 ![Alt text](images_beef/beef-2.PNG)
     
+werth
 ![Alt text](images_beef/beef-3.PNG)
 
+vcbn
 ![Alt text](images_beef/beef-4.PNG)
 
 </details>
+
+<hr>
 
 # eka lataus ohje
 
@@ -145,6 +150,9 @@ Nämä kertovat, mitä scriptiä tullaan käyttää, ja miten päästää siihen
 
 myös vastaavasti, jos ei käytetä enään `BeEF` hakkeri työkalua niin sammuttaminen menee `beef-xss-stop -h`
 ![Alt text](beef-harj/beef-4.PNG)
+
+
+<hr>
 
 # linkkei ja tarkennusta BeEF hakkeri työkalusta 
 
