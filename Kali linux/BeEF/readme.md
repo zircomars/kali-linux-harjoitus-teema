@@ -268,9 +268,9 @@ https://www.golinuxcloud.com/beef-hacking-framework-tutorial/ <br>
 
 https://www.golinuxcloud.com/beef-hacking-framework-tutorial/ <br>
 
+http://www.securityhardening.com/library/Article34.pdf <br>
 
-
-
+https://owasp.org/www-chapter-sacramento/assets/slides/20200221-intro-to-beef.pdf <br>
 
 
 
