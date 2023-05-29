@@ -56,6 +56,22 @@ Reading state information... Done
 
 ```
 
+Jos latauksessa tulee ongelmia eli `E: unable to locate package beef-xss` - tarkoittaa ettei ole saatavilla jotakin lataus pakettia, niin mahdollista, että kantsii päivittää kali linuxsta periaatteessa riittää syöttää `sudo apt-get update` nin päivittää kali linux paketti järjestelmän ja jne.
+```
+┌──(root㉿kali)-[/home/kali]
+└─# sudo apt-get update             
+Get:1 http://kali.download/kali kali-rolling InRelease [41.2 kB]
+Get:2 http://kali.download/kali kali-rolling/main amd64 Packages [19.2 MB]
+Get:3 http://kali.download/kali kali-rolling/main amd64 Contents (deb) [44.6 MB]
+Get:4 http://kali.download/kali kali-rolling/contrib amd64 Packages [115 kB]                                   
+Get:5 http://kali.download/kali kali-rolling/contrib amd64 Contents (deb) [172 kB]                             
+Get:6 http://kali.download/kali kali-rolling/non-free amd64 Packages [217 kB]                                  
+Get:7 http://kali.download/kali kali-rolling/non-free amd64 Contents (deb) [928 kB]                            
+Fetched 65.4 MB in 14s (4,618 kB/s)                                                                            
+Reading package lists... Done
+
+```
+
 Kali linux root:in käyttäjänä lataa ton ylemmän linkin ohjeen mukaan tulee resetoida salasanan, nii katsii antaa joku helppo jotta itse muistaa. Ladatun jälkeen kirjautuu annettun oletus IP-osoitteen mukaan (URL) linkki. 
 
 myös siinä antoi muutama vinkkiä, josta voi olla hyvä aloittaa `Web UI, Hook` ja yksi esimerkki alla
