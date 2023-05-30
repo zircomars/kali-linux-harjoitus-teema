@@ -148,7 +148,7 @@ huomiona sitten, `beef-xss-stop -h` tarkoittaa sammutettaan/lopetettaan beef sov
 
 May 27 10:15:33 kali beef[35093]: [10:13:53]    |   Hook URL: http://192.168.240.130:3000/hook.js
 May 27 10:15:33 kali beef[35093]: [10:13:53]    |_  UI URL:   http://192.168.240.130:3000/ui/panel
-May 27 10:15:33 kali beef[35093]: [10:13:53][*] RESTful API key: aec72fa5a59febad99b39d693a981711d24b9a38
+May 27 10:15:33 kali beef[35093]: [10:13:53][*] RESTful API key: LONG_API_KEY-IS-SOMETHING
 May 27 10:15:33 kali beef[35093]: [10:13:53][!] [GeoIP] Could not find MaxMind GeoIP database: '/var/lib/GeoIP/GeoLite2-City.mmdb'
 May 27 10:15:33 kali beef[35093]: [10:13:53]    |_  Run geoipupdate to install
 May 27 10:15:33 kali beef[35093]: [10:13:53][*] HTTP Proxy: http://127.0.0.1:6789
