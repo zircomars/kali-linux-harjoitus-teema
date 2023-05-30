@@ -5,7 +5,7 @@ beef:
   crypto_default_value_length: 80
   credentials:
     user: beef
-    passwd: kali
+    passwd: 
   restrictions:
     permitted_hooking_subnet:
     - 0.0.0.0/0
