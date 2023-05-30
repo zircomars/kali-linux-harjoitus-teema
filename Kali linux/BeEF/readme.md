@@ -238,7 +238,7 @@ myös meitä kiinnostaa tämän BeEF käyttöjärjestelmän sen yksittäisen kii
 [10:48:34][*] running on network interface: 192.168.240.130
 [10:48:34]    |   Hook URL: http://192.168.X.Y:3000/hook.js
 [10:48:34]    |_  UI URL:   http://192.168.X.Y:3000/ui/panel
-[10:48:34][*] RESTful API key: 4543a94b14cbc57e740ace182fcbadef140925c3
+[10:48:34][*] RESTful API key: LONG_API_KEY-IS-SOMETHING
 [10:48:34][!] [GeoIP] Could not find MaxMind GeoIP database: '/var/lib/GeoIP/GeoLite2-City.mmdb'
 [10:48:34]    |_  Run geoipupdate to install
 [10:48:34][*] HTTP Proxy: http://127.0.0.1:6789
