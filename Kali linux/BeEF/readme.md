@@ -257,7 +257,7 @@ myös meitä kiinnostaa tämän BeEF käyttöjärjestelmän sen yksittäisen kii
 
 <h3>Pieni huomio</h3>
 
-Harjoitukseen pieni huomio, kun tässä `BeEF` ladattuna tulee oletuksena mukaan oma erillinsen perus sivusto. Usein erilaisissa hakkeri/monitori tai muissa työkaluissa tulee oletus sivusto tai tietty html sivusto mukana. Syötä tyhjään sivustoon välilehteen oletus linkki; `http://127.0.0.1:3000/demos/basic.html` - tätä ei varsinaisesti toistu siinä kommennossa `./beef` näkyvillä.
+Harjoitukseen pieni huomio, kun tässä `BeEF` ladattuna tulee oletuksena mukaan oma erillinsen perus sivusto. Usein erilaisissa hakkeri/monitori tai muissa työkaluissa tulee oletus sivusto tai tietty html sivusto mukana. Syötä tyhjään sivustoon välilehteen oletus linkki; `http://127.0.0.0:3000/demos/basic.html` - tätä ei varsinaisesti toistu siinä kommennossa `./beef` näkyvillä.
 
 ![Alt text](beef-harj/beef-15.PNG)
 
@@ -269,7 +269,7 @@ Lisä tarkennusta lisää tähän huomio harjoitukseen;
 
 <h2> Ensimmäinen esimerkki; </h2> <br>
 
-Tämä on se polku linkki seuraavista välilehdestä jos avaa just se oletus linkki `http://127.0.0.1:3000/demos/basic.html` ja oletus sivusto, paitsi noi tekstit tuli jälki käteen. niin lisää tuohon tyhjään formaattiin jotakn tekstiä niin ja jos vieressä on se BeEF seuranta järjestelmä niin josta tulostuu `Log` - näkymästä, että mitä käyttäjä on kirjoittanut
+Tämä on se polku linkki seuraavista välilehdestä jos avaa just se oletus linkki `http://127.0.0.0:3000/demos/basic.html` ja oletus sivusto, paitsi noi tekstit tuli jälki käteen. niin lisää tuohon tyhjään formaattiin jotakn tekstiä niin ja jos vieressä on se BeEF seuranta järjestelmä niin josta tulostuu `Log` - näkymästä, että mitä käyttäjä on kirjoittanut
 
 ![Alt text](beef-harj/beef-16-1.PNG)
 
