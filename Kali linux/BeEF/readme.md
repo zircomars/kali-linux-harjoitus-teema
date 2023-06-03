@@ -273,7 +273,9 @@ Tämä on se polku linkki seuraavista välilehdestä jos avaa just se oletus lin
 
 ![Alt text](beef-harj/beef-16-1.PNG)
 
-![Alt text](beef-harj/beef-16-3.PNG)
+![Alt text](beef-harj/beef-16-3.PNG)¨
+
+<hr>
 
 <h2> Toinen esimerkki; </h2> <br>
 Täydennä vaan jokin satunnainen formaatti tilaus, ja klikkaa loppu peleissä "Buy buy" ja jonka jälkeen palaa takaisin BeEF hakkerien `Log`-valikkoon, josta näkee sen ikään kuin, mitä käyttäjä on tilannu, ja näkee jopa luottokorttin.
