@@ -32,7 +32,7 @@ Hooked Browsers
 
 tarkottaa kalastelujen työkaluja, mitä voi esim. saada ponnahtamaan ilmiotusta, päivitystä, evästeet (cookies), html koodia tai yms. periaatteessa kaikki selaimen sisäisen datan työkaluja ja mitä nykyään näkyy maailmassa. Sekä jokaisesta on värikoodi, että mitä jokainen testausta tarkoittaa.
 
-![Alt text](images_beef/beef-5.PNG)
+![Alt text](images_beef/beef-0.PNG)
 
 </details>
 
