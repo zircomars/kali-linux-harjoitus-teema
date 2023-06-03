@@ -328,13 +328,13 @@ Eli toiminnaltaan hakee tämän hetkisen IP-osoite tai (hooked browsers), mitä 
 ![Alt text](beef-harj/beef-8.PNG)
 
 <details>
-Ensimmäinen ensimerkki <br>
+<h2> Ensimmäinen ensimerkki </h2> <br>
 
 ![Alt text](beef-harj/beef-11.PNG)
 
 ![Alt text](beef-harj/beef-12.PNG)
 
-Toinen esimerkki <br>
+<h2> Toinen esimerkki </h2> <br>
 
 ![Alt text](beef-harj/beef-13.PNG)
 
