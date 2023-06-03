@@ -255,6 +255,18 @@ myös meitä kiinnostaa tämän BeEF käyttöjärjestelmän sen yksittäisen kii
 [10:48:34][!] Is BeEF already running? Exiting...
 ```
 
+<h3>Pieni huomio<h3>
+
+Harjoitukseen pieni huomio, kun tässä `BeEF` ladattuna tulee oletuksena mukaan oma erillinsen perus sivusto. Usein erilaisissa hakkeri/monitori tai muissa työkaluissa tulee oletus sivusto tai tietty html sivusto mukana. Syötä tyhjään sivustoon välilehteen oletus linkki; `http://127.0.0.0:3000/demos/basic.html` - tätä ei varsinaisesti toistu siinä kommennossa `./beef` komennossa
+
+![Alt text](beef-harj/beef-15.PNG)
+
+![Alt text](beef-harj/beef-16-1.PNG)
+
+![Alt text](beef-harj/beef-16-2.PNG)
+
+![Alt text](beef-harj/beef-16-3.PNG)
+
 <h3>index.html</h3>
 
 luo tyhjä index html sivusto esim. alemman formaattin mukaan ja ei tarvi olla täydellinen HTML sivusto pohja, tohon IP-osoite tulee se beef työkalun sen kiinte IP-osoite eli ylemmän `./beef` komennon mukaan mitä se ehdottaa ladatun järjestelmän mukaan, ja oletuksena vähä kuin kali linux lähellä sitä IP-osoitetta.
