@@ -257,7 +257,7 @@ myös meitä kiinnostaa tämän BeEF käyttöjärjestelmän sen yksittäisen kii
 
 <h3>Pieni huomio</h3>
 
-Harjoitukseen pieni huomio, kun tässä `BeEF` ladattuna tulee oletuksena mukaan oma erillinsen perus sivusto. Usein erilaisissa hakkeri/monitori tai muissa työkaluissa tulee oletus sivusto tai tietty html sivusto mukana. Syötä tyhjään sivustoon välilehteen oletus linkki; `http://127.0.0.0:3000/demos/basic.html` - tätä ei varsinaisesti toistu siinä kommennossa `./beef` komennossa
+Harjoitukseen pieni huomio, kun tässä `BeEF` ladattuna tulee oletuksena mukaan oma erillinsen perus sivusto. Usein erilaisissa hakkeri/monitori tai muissa työkaluissa tulee oletus sivusto tai tietty html sivusto mukana. Syötä tyhjään sivustoon välilehteen oletus linkki; `http://127.0.0.0:3000/demos/basic.html` - tätä ei varsinaisesti toistu siinä kommennossa `./beef` näkyvillä.
 
 ![Alt text](beef-harj/beef-15.PNG)
 
@@ -266,6 +266,32 @@ Harjoitukseen pieni huomio, kun tässä `BeEF` ladattuna tulee oletuksena mukaan
 ![Alt text](beef-harj/beef-16-2.PNG)
 
 ![Alt text](beef-harj/beef-16-3.PNG)
+
+Lisä tarkennusta lisää tähän huomio harjoitukseen;
+
+<details>
+
+Ensimmäinen esimerkki; 
+Täydennä vaan jokin satunnainen formaatti tilaus, ja klikkaa loppu peleissä "Buy buy" ja jonka jälkeen palaa takaisin BeEF hakkerien `Log`-valikkoon, josta näkee sen ikään kuin, mitä käyttäjä on tilannu, ja näkee jopa luottokorttin.
+
+![Alt text](beef-harj/beef-16-4.PNG)
+
+![Alt text](beef-harj/beef-16-5.PNG)
+
+<hr>
+
+Toinen esimerkki;
+Vaikappa kirjautumisen johonkin, ja kirjoita vaan satunnainen sähköposti ja salsana. Loppu peleissä tässä toistuu sama kuin siinä ensimmäisessä esimerkissä ja tarkista `Log` tiedosto ja jopa näkyy siinä url:in polussakin, että "Hei, tämä on minun käyttis?! miksi se on tässä"
+
+![Alt text](beef-harj/beef-16-6.PNG)
+
+![Alt text](beef-harj/beef-16-7.PNG)
+
+![Alt text](beef-harj/beef-16-8.PNG)
+
+BeEF `online Browsers`ikään kuin seuraa käyttäjän jokaista toimintaa, että missä klikannut, täydentänyt formaattia/kenttää, klikkauksesta lukenut mitä pdf:ää ja jne.
+
+</details>
 
 <h3>index.html</h3>
 
