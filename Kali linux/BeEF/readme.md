@@ -359,5 +359,5 @@ http://www.securityhardening.com/library/Article34.pdf <br>
 
 https://owasp.org/www-chapter-sacramento/assets/slides/20200221-intro-to-beef.pdf <br>
 
-
+https://infosecscout.com/use-beef-on-kali-linux/?utm_content=cmp-true <br>
 
