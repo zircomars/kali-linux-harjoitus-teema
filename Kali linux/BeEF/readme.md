@@ -257,21 +257,25 @@ myös meitä kiinnostaa tämän BeEF käyttöjärjestelmän sen yksittäisen kii
 
 <h3>Pieni huomio</h3>
 
-Harjoitukseen pieni huomio, kun tässä `BeEF` ladattuna tulee oletuksena mukaan oma erillinsen perus sivusto. Usein erilaisissa hakkeri/monitori tai muissa työkaluissa tulee oletus sivusto tai tietty html sivusto mukana. Syötä tyhjään sivustoon välilehteen oletus linkki; `http://127.0.0.0:3000/demos/basic.html` - tätä ei varsinaisesti toistu siinä kommennossa `./beef` näkyvillä.
+Harjoitukseen pieni huomio, kun tässä `BeEF` ladattuna tulee oletuksena mukaan oma erillinsen perus sivusto. Usein erilaisissa hakkeri/monitori tai muissa työkaluissa tulee oletus sivusto tai tietty html sivusto mukana. Syötä tyhjään sivustoon välilehteen oletus linkki; `http://127.0.0.1:3000/demos/basic.html` - tätä ei varsinaisesti toistu siinä kommennossa `./beef` näkyvillä.
 
 ![Alt text](beef-harj/beef-15.PNG)
 
-![Alt text](beef-harj/beef-16-1.PNG)
-
 ![Alt text](beef-harj/beef-16-2.PNG)
-
-![Alt text](beef-harj/beef-16-3.PNG)
 
 Lisä tarkennusta lisää tähän huomio harjoitukseen;
 
 <details>
 
 <h2> Ensimmäinen esimerkki; </h2> <br>
+
+Tämä on se polku linkki seuraavista välilehdestä jos avaa just se oletus linkki `http://127.0.0.1:3000/demos/basic.html` ja oletus sivusto, paitsi noi tekstit tuli jälki käteen. niin lisää tuohon tyhjään formaattiin jotakn tekstiä niin ja jos vieressä on se BeEF seuranta järjestelmä niin josta tulostuu `Log` - näkymästä, että mitä käyttäjä on kirjoittanut
+
+![Alt text](beef-harj/beef-16-1.PNG)
+
+![Alt text](beef-harj/beef-16-3.PNG)
+
+<h2> Toinen esimerkki; </h2> <br>
 Täydennä vaan jokin satunnainen formaatti tilaus, ja klikkaa loppu peleissä "Buy buy" ja jonka jälkeen palaa takaisin BeEF hakkerien `Log`-valikkoon, josta näkee sen ikään kuin, mitä käyttäjä on tilannu, ja näkee jopa luottokorttin.
 
 ![Alt text](beef-harj/beef-16-4.PNG)
@@ -280,8 +284,8 @@ Täydennä vaan jokin satunnainen formaatti tilaus, ja klikkaa loppu peleissä "
 
 <hr>
 
-<h2> Toinen esimerkki; </h2> <br>
-Vaikappa kirjautumisen johonkin, ja kirjoita vaan satunnainen sähköposti ja salsana. Loppu peleissä tässä toistuu sama kuin siinä ensimmäisessä esimerkissä ja tarkista `Log` tiedosto ja jopa näkyy siinä url:in polussakin, että "Hei, tämä on minun käyttis?! miksi se on tässä"
+<h2> Kolmas esimerkki; </h2> <br>
+Vaikappa kirjautumisen johonkin, ja kirjoita vaan satunnainen sähköposti ja salsana. Loppu peleissä tässä toistuu sama kuin siinä ensimämisen ja toisen esimerkissä ja tarkista `Log` tiedosto ja jopa näkyy siinä url:in polussakin, että "Hei, tämä on minun käyttis?! miksi se on tässä"
 
 ![Alt text](beef-harj/beef-16-6.PNG)
 
