@@ -271,7 +271,7 @@ Lisä tarkennusta lisää tähän huomio harjoitukseen;
 
 <details>
 
-Ensimmäinen esimerkki; 
+<h2> Ensimmäinen esimerkki; </h2> <br>
 Täydennä vaan jokin satunnainen formaatti tilaus, ja klikkaa loppu peleissä "Buy buy" ja jonka jälkeen palaa takaisin BeEF hakkerien `Log`-valikkoon, josta näkee sen ikään kuin, mitä käyttäjä on tilannu, ja näkee jopa luottokorttin.
 
 ![Alt text](beef-harj/beef-16-4.PNG)
@@ -280,7 +280,7 @@ Täydennä vaan jokin satunnainen formaatti tilaus, ja klikkaa loppu peleissä "
 
 <hr>
 
-Toinen esimerkki;
+<h2> Toinen esimerkki; </h2> <br>
 Vaikappa kirjautumisen johonkin, ja kirjoita vaan satunnainen sähköposti ja salsana. Loppu peleissä tässä toistuu sama kuin siinä ensimmäisessä esimerkissä ja tarkista `Log` tiedosto ja jopa näkyy siinä url:in polussakin, että "Hei, tämä on minun käyttis?! miksi se on tässä"
 
 ![Alt text](beef-harj/beef-16-6.PNG)
@@ -359,5 +359,5 @@ http://www.securityhardening.com/library/Article34.pdf <br>
 
 https://owasp.org/www-chapter-sacramento/assets/slides/20200221-intro-to-beef.pdf <br>
 
-https://infosecscout.com/use-beef-on-kali-linux/?utm_content=cmp-true <br>
+
 
