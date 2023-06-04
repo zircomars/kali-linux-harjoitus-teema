@@ -9,7 +9,9 @@ https://www.youtube.com/watch?v=Zwwugq4JhMU
 https://www.youtube.com/watch?v=ZrGbQwQmrCQ
 
 
+## Toinen steppi (metasploit)
 
+https://ns2.elhacker.net/descargas/manuales/Hacking%20y%20Seguridad%20informatica/BeEF%20Fake%20Browser%20Update%20Exploitation.pdf
 
 
 

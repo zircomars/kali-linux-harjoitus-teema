@@ -357,13 +357,15 @@ https://kalilinuxtutorials.com/hacking-with-beef/ <br>
 lataus ohje; <br>
 https://www.golinuxcloud.com/beef-hacking-framework-tutorial/ <br>
 
+
 ## helpot steppit harjoitukset
 
+muuta harjoitus steppit, ei ihan mennä näiden mukaan, mutta osasta voi olla hyödyllisiä harjoitus kohtia, ja jotakin ei tässä readme mainita.
+Näitä lisä harjoituksia löytyy kansio polusta `/beef-varsinaiset_harj`
+
 https://www.golinuxcloud.com/beef-hacking-framework-tutorial/ <br>
-
 http://www.securityhardening.com/library/Article34.pdf <br>
-
 https://owasp.org/www-chapter-sacramento/assets/slides/20200221-intro-to-beef.pdf <br>
-
+https://wiki.owasp.org/images/e/e0/Owasp2012-MarkPiper.pdf <br>
 
 
