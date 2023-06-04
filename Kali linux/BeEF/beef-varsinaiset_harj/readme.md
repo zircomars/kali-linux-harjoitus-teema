@@ -2,11 +2,13 @@
 
 harjoitus menetelmä menee sama kuin badstore tai sillä vastaava, niin katsotaan miten tämän kanssa mennään. Sekä tänne kirjataan varsinaiset harjoitukset eli tähän mennässä mitä on tehty ja mitä havaittu ja jne, sekä mahdollista upotettaan jotakin tiedostoja 
 
+- [BeEF harjoitus](#beef-harjoitus)
+    * [Ensimmäinen harjoitus](#ensimmäinen-harjoitus)
+    * [Toinen steppi (metasploit)](#toinen-steppi-metasploit)
 
 ## Ensimmäinen harjoitus
 
-https://www.youtube.com/watch?v=Zwwugq4JhMU
-https://www.youtube.com/watch?v=ZrGbQwQmrCQ
+https://www.youtube.com/watch?v=J2J7uFZnG5E
 
 
 ## Toinen steppi (metasploit)
