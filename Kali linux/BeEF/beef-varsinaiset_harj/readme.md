@@ -8,6 +8,8 @@ harjoitus menetelmä menee sama kuin badstore tai sillä vastaava, niin katsotaa
 
 ## Ensimmäinen harjoitus
 
+![Alt text](../beef-harj/beef-6.PNG)
+
 https://www.youtube.com/watch?v=J2J7uFZnG5E
 
 
