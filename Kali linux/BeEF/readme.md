@@ -190,7 +190,11 @@ May 27 10:15:52 kali beef[36374]: [10:15:51]    |   Blog: http://blog.beefprojec
 Ylemmässä kappaleessa tapahtui se lataus eli `BeEF` install kohta. Niin siinä menee hetki, kun kali linux ymmärtää ja hakee niitä ladattavia paketteja ja yms.
 
 Ladatun jälkeen kantsii käynnistää/aktivoida sitä eli `$beef-xss -h`, jonka latauksen jälkeen, tulostuu mielenkiintoisia kohtia erityisesti ovat; 
-Nämä kertovat, mitä scriptiä tullaan käyttää, ja miten päästää siihen `BeEF` software järjestelmään, oletuksena jos laittaa url linkin `127.0.0.1` niin päästään siihen sivustolla, ja oletus mennään `beef;beef` ellei install latauksen aikana antanut jotakin muuta salasanaa.. 
+Nämä kertovat, mitä scriptiä tullaan käyttää, ja miten päästää siihen `BeEF` software järjestelmään, oletuksena jos laittaa url linkin `127.0.0.1` niin päästään siihen sivustolla, ja oletus mennään `beef;beef` ellei install latauksen aikana antanut jotakin muuta salasanaa.
+
+Pieni kiva pääsy tässä on jos avaa perus selaimen eli <b>fyysisen koneen</b> Windows/Mac vaikappa Edge/Chrome/Safari selaimesta tyhjän välilehden (ei väliä onko incognito/private), josta lisää alemman joko toi `Web UI` tai `Hook` linkin eli ton polun osoitteensa. Ennen sitä tarkista kali linux kommennosta joko `$ip a` tai `$ip add` , niin sieltä tulostuu kyseisen tämän virtuaalikoneen Kali linux hakkeri järjestelmän sen kiinteä IP-osoite, minkä se on ikään kuin saanut DHCP protokolan määritykseltä. Kuitenkin tämä on sen privaatti IP-osoitteen ympäristössä siksi käytettään 192.168.X.Y jotakin ja huomiona tämä IP-osoite toimii vain omassa fyysisen koneen ympäristössä ja jos yrittää jakaa esim. viereiselle kollegalle/kaverille/sisarukselle niin ei ehkä varmasti toimi vaikka oiskin samassa verkon ympäristössä joko yhdisttänyt langattomaan tai langalliseen verkkoon. 
+
+Kuitenkin fyysisen koneessa avaa tyhjä välilehti ja toista `$ip a` ja perään tulee toi `hook.js` --> esim. `http://192.168.X.Y:3000/hooks.js` tai `http://192.168.X.Y:3000/ui/panel` , toi http ei ole pakko olla alussa ja toimii ilmankin niin siinä tapahtuu pieni yllätys. Sekä vastaavsti BeEF hakkeri valvonta työkalu `Hooked Browsers` ponnahtaa/havaitsee, että on kirjautunut/käyttämässä BeEF työkalua ja sama vastaavasti harjoituksen mukaan niin voi kokeilla leikkisti toistaa jotakin huijaus reagointia mm. facebook, adobe, selain ponnahdusta tai yms kalastekua.
 
 ```
 [*]  Web UI: http://127.0.0.1:3000/ui/panel
