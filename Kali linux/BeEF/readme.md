@@ -203,7 +203,7 @@ Nämä kertovat, mitä scriptiä tullaan käyttää, ja miten päästää siihen
 myös vastaavasti, jos ei käytetä enään `BeEF` hakkeri työkalua niin sammuttaminen menee `beef-xss-stop -h`
 ![Alt text](beef-harj/beef-4.PNG)
 
-myös meitä kiinnostaa tämän BeEF käyttöjärjestelmän sen yksittäisen kiinteän IP-osoite, vähä kuin jos ladannut tiettyä palvelinta tai jokin järjestelmän sovellusta niin tulee saamaan ikäänkuin jokin IP-osoite, ja usein oletuksena alkaa aina 192.168.X.Y jotakin. Eli mene `$root`:iin, ja polusta `cd /usr/share/beef` ja toista `$./beef`
+myös meitä kiinnostaa tämän BeEF käyttöjärjestelmän sen yksittäisen kiinteän IP-osoite, vähä kuin jos ladannut tiettyä palvelinta tai jokin järjestelmän sovellusta niin tulee saamaan ikäänkuin jokin IP-osoite, ja usein oletuksena alkaa aina 192.168.X.Y jotakin. Eli mene `$root`:iin, ja polusta `cd /usr/share/beef` ja toista `$./beef` & sekä pieni <b>HUOMIO</b>, että tulostuksena siinä on toi <ins>RESTful API key</ins> eli <b>Representational state transfer</b> ohjelmistorajapinnan API key avainta, eli hyödyntäen tukea HTTP/HTTPS protokollaa.
 
 ```
 ┌──(root㉿kali)-[/usr/share/beef-xss]

@@ -3,6 +3,7 @@ beef:
   debug: false
   client_debug: false
   crypto_default_value_length: 80
+#if user forgot username and password, there can set the new
   credentials:
     user: beef
     passwd: 
@@ -15,6 +16,7 @@ beef:
     - "::/0"
     excluded_hooking_subnet: []
     api_attempt_delay: '0.05'
+#default beef page http://127.0.0.1:3000 /something path like `ui/panel`
   http:
     debug: false
     host: 0.0.0.0
