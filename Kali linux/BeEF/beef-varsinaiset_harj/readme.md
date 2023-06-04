@@ -17,6 +17,11 @@ Harjoitus lähettä sähköpostin esim. itselle ja käyttäen linkkiä (URL) jus
 └─$ sudo python2 -m SimpleHTTPServer 80  
 ```
 
+Sähköpostin lähetyksessä laita BeEF hakkeri/valvonta työkalu sen `UI URL:   http://<IP-add>:3000/ui/panel` sen alku IP-osoite, mikä siellä toistuu Kali Linux kommennossa eli `$./beef` eli riittää kopsaa sen alku http ja IP-osoite `(Http://<ip-add>)`
+
+
+<b>Huomiona tämä on vain harjoitus joten älä käytä tätä lailisesti, koska muuten joutuu linnaan, ja vaikuttaa elämään ja muihin hakkerointiin, sekä tässä on kaapattu käyttäjän sähköposti ja salasanaa</b>
+
 https://www.youtube.com/watch?v=J2J7uFZnG5E
 
 
