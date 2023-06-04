@@ -8,7 +8,14 @@ harjoitus menetelmä menee sama kuin badstore tai sillä vastaava, niin katsotaa
 
 ## Ensimmäinen harjoitus
 
+Harjoitus lähettä sähköpostin esim. itselle ja käyttäen linkkiä (URL) just klikkaa siihen niin mitäköhän tapahtuu seuraavaksi :D
+
 ![Alt text](../beef-harj/beef-6.PNG)
+
+```
+┌──(kali㉿kali)-[~/Downloads]
+└─$ sudo python2 -m SimpleHTTPServer 80  
+```
 
 https://www.youtube.com/watch?v=J2J7uFZnG5E
 
