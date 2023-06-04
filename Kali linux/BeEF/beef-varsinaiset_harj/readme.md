@@ -15,6 +15,9 @@ Harjoitus lähettä sähköpostin esim. itselle ja käyttäen linkkiä (URL) jus
 ```
 ┌──(kali㉿kali)-[~/Downloads]
 └─$ sudo python2 -m SimpleHTTPServer 80  
+192.168.240.130 - - [04/Jun/2023 13:51:00] "GET /favicon.ico HTTP/1.1" 404 -
+192.168.240.1 - - [04/Jun/2023 13:55:03] "GET /index.html HTTP/1.1" 200 -
+192.168.240.130 - - [04/Jun/2023 13:56:44] "GET /index.html HTTP/1.1" 200 -
 ```
 
 Sähköpostin lähetyksessä laita BeEF hakkeri/valvonta työkalu sen `UI URL:   http://<IP-add>:3000/ui/panel` sen alku IP-osoite, mikä siellä toistuu Kali Linux kommennossa eli `$./beef` eli riittää kopsaa sen alku http ja IP-osoite `(Http://<ip-add>)`
