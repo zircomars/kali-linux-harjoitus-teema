@@ -141,3 +141,11 @@ pientä lukemista; <br>
 https://www.edureka.co/blog/ethical-hacking-using-kali-linux/
 
 ## pdf kirjoja <br>
+
+https://www.academia.edu/35034750/Basic_Security_Testing_with_Kali_Linux_PDF <br>
+
+https://digtvbg.com/files/books-for-hacking/Hacking%20With%20Kali%20Linux%20-%20The%20Practical%20Beginner%27s%20Guide%20to%20Learn%20How%20To%20Hack%20With%20Kali%20Linux%20in%20One%20Day%20Step-by-Step%20%28%232020%20Updated%20Version%29%20by%20Steve%20Tudor.pdf <br>
+
+
+
+
