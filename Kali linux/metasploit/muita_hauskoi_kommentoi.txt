@@ -1,0 +1,139 @@
+erilliset hauskat komennot ja harjoituksia;
+
+msf6 > search MS13-069
+
+Matching Modules
+================
+
+   #  Name                                    Disclosure Date  Rank    Check  Description
+   -  ----                                    ---------------  ----    -----  -----------
+   0  exploit/windows/browser/ms13_069_caret  2013-09-10       normal  No     MS13-069 Microsoft Internet Explorer CCaret Use-After-Free
+
+
+Interact with a module by name or index. For example info 0, use 0 or use exploit/windows/browser/ms13_069_caret
+
+
+hakee Microsoftin tietoturvatiedotteen MS13-069 haavoittuvuus
+msf6 > search cve:2013-3660
+
+Matching Modules
+================
+
+   #  Name                                   Disclosure Date  Rank     Check  Description
+   -  ----                                   ---------------  ----     -----  -----------
+   0  exploit/windows/local/ppr_flatten_rec  2013-05-15       average  Yes    Windows EPATHOBJ::pprFlattenRec Local Privilege Escalation
+
+
+Interact with a module by name or index. For example info 0, use 0 or use exploit/windows/local/ppr_flatten_rec
+
+msf6 > search cve:2013
+
+Matching Modules
+================
+
+   #    Name                                                               Disclosure Date  Rank       Check  Description
+   -    ----                                                               ---------------  ----       -----  -----------
+   0    exploit/windows/fileformat/allplayer_m3u_bof                       2013-10-09       normal     No     ALLPlayer M3U Buffer Overflow
+   1    exploit/multi/http/coldfusion_rds_auth_bypass                      2013-08-08       great      Yes    Adobe ColdFusion RDS Authentication Bypass
+   2    exploit/windows/browser/adobe_flash_regex_value                    2013-02-08       normal     No     Adobe Flash Player Regular Expression Heap Overflow
+   3    exploit/windows/browser/adobe_flash_filters_type_confusion         2013-12-10       normal     No     Adobe Flash Player Type Confusion Remote Code Execution
+   4    exploit/windows/browser/adobe_toolbutton                           2013-08-08       normal     No     Adobe Reader ToolButton Use After Free
+   5    exploit/windows/fileformat/adobe_toolbutton                        2013-08-08       normal     No     Adobe Reader 
+
+
+
+msf6 > search cve:2023
+
+Matching Modules
+================
+
+   #  Name                                                     Disclosure Date  Rank       Check  Description
+   -  ----                                                     ---------------  ----       -----  -----------
+   0  exploit/multi/http/fortra_goanywhere_rce_cve_2023_0669   2023-02-01       excellent  No     Fortra GoAnywhere MFT Unsafe Deserialization RCE
+   1  exploit/linux/http/froxlor_log_path_rce                  2023-01-29       excellent  Yes    Froxlor Log Path RCE
+   2  auxiliary/scanner/http/wp_paid_membership_pro_code_sqli  2023-01-12       normal     Yes    Wordpress Paid Membership Pro code Unauthenticated SQLi
+   3  exploit/linux/http/pyload_js2py_exec                     2023-01-13       excellent  Yes    pyLoad js2py Python Execution
+
+###############################################################################################################################################
+
+msf6 > search unreal
+
+Matching Modules
+================
+
+   #  Name                                        Disclosure Date  Rank       Check  Description
+   -  ----                                        ---------------  ----       -----  -----------
+   0  exploit/linux/games/ut2004_secure           2004-06-18       good       Yes    Unreal Tournament 2004 "secure" Overflow (Linux)
+   1  exploit/windows/games/ut2004_secure         2004-06-18       good       Yes    Unreal Tournament 2004 "secure" Overflow (Win32)
+   2  exploit/unix/irc/unreal_ircd_3281_backdoor  2010-06-12       excellent  No     UnrealIRCD 3.2.8.1 Backdoor Command Execution
+
+
+msf6 > search cve: ?
+
+Matching Modules
+================
+
+   #    Name                                                                    Disclosure Date  Rank       Check  Description
+   -    ----                                                                    ---------------  ----       -----  -----------
+   0    exploit/linux/local/abrt_raceabrt_priv_esc                              2015-04-14       excellent  Yes    ABRT raceabrt Privilege Escalation
+   1    exploit/linux/local/abrt_sosreport_priv_esc                             2015-11-23       excellent  Yes    ABRT sosreport Privilege Escalation
+   2    exploit/linux/local/af_packet_chocobo_root_priv_esc                     2016-08-12       good       Yes    AF_PACKET chocobo_root Privilege Escalation
+   3    exploit/aix/rpc_cmsd_opcode21                                           2009-10-07       great      No     AIX Calendar Manager Service Daemon (rpc.cmsd) Opcode 21 Buffer Overflow
+   4    exploit/windows/browser/aim_goaway                   
+
+
+##################################################################################################################################
+msf6 > info exploit/unix/irc/unreal_ircd_3281_backdoor
+
+       Name: UnrealIRCD 3.2.8.1 Backdoor Command Execution
+     Module: exploit/unix/irc/unreal_ircd_3281_backdoor
+   Platform: Unix
+       Arch: cmd
+ Privileged: No
+    License: Metasploit Framework License (BSD)
+       Rank: Excellent
+  Disclosed: 2010-06-12
+
+Provided by:
+  hdm <x@hdm.io>
+
+Available targets:
+      Id  Name
+      --  ----
+  =>  0   Automatic Target
+
+Check supported:
+  No
+
+Basic options:
+  Name    Current Setting  Required  Description
+  ----    ---------------  --------  -----------
+  RHOSTS                   yes       The target host(s), see https://docs.metasploit.com/docs/using-metasploit/basics/using-metas
+                                     ploit.html
+  RPORT   6667             yes       The target port (TCP)
+
+Payload information:
+  Space: 1024
+
+Description:
+  This module exploits a malicious backdoor that was added to the 
+  Unreal IRCD 3.2.8.1 download archive. This backdoor was present in 
+  the Unreal3.2.8.1.tar.gz archive between November 2009 and June 12th 
+  2010.
+
+References:
+  https://nvd.nist.gov/vuln/detail/CVE-2010-2075
+  OSVDB (65445)
+  http://www.unrealircd.com/txt/unrealsecadvisory.20100612.txt
+
+
+View the full module info with the info -d command.
+
+##################################################################################################################################
+
+
+
+
+
+
+

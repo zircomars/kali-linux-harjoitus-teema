@@ -136,4 +136,8 @@ https://geekflare.com/practice-hacking-legally/ <br>
 ladattavia vm; <br>
 https://www.vulnhub.com/ <br>
 
+<br>
+pientä lukemista; <br>
+https://www.edureka.co/blog/ethical-hacking-using-kali-linux/
+
 ## pdf kirjoja <br>
