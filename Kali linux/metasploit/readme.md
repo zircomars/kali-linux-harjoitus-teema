@@ -10,20 +10,19 @@ msfconsole on pelkkä Metasploit Framework:in komentorivien käyttöliittymä. M
   
 
 ## Muutama esimerkki komentoja <br>
-<hr>
+
 ```
 msf6 > version <br> 
 Framework: 6.3.4-dev
 Console  : 6.3.4-dev 
 ```
-<hr>
 
+```
 msf6 > date <br> 
 [*] exec: date <br>
 <br>
 Sun Apr 30 10:22:52 AM EDT 2023
-<hr>
-
+```
 
 perus tallentaminen jostakin projektista tai harjoituiksesta 
 ```
@@ -157,8 +156,8 @@ Matching Modules
 
 
 Interact with a module by name or index. For example info 0, use 0 or use exploit/windows/browser/ms13_069_caret
-
-
+```
+```
 CVE (common vulnerabilities and Exposures) ID number:
 msf6 > search cve:2013-3660
 
