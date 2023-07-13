@@ -11,10 +11,12 @@ msfconsole on pelkkä Metasploit Framework:in komentorivien käyttöliittymä. M
 
 ## Muutama esimerkki komentoja <br>
 <hr>
+```
 msf6 > version <br> 
-Framework: 6.3.4-dev <br>
-Console  : 6.3.4-dev <br>
-<br><hr>
+Framework: 6.3.4-dev
+Console  : 6.3.4-dev 
+```
+<hr>
 
 msf6 > date <br> 
 [*] exec: date <br>
@@ -140,6 +142,32 @@ Matching Modules
    8  exploit/windows/fileformat/videolan_tivo    2008-10-22       good     No     VideoLAN VLC TiVo Buffer Overflow
 
 
+```
+
+```
+hakee Microsoftin tietoturvatiedotteen MS13-069 haavoittuvuus
+msf6 > search MS13-069
+
+Matching Modules
+================
+
+   #  Name                                    Disclosure Date  Rank    Check  Description
+   -  ----                                    ---------------  ----    -----  -----------
+   0  exploit/windows/browser/ms13_069_caret  2013-09-10       normal  No     MS13-069 Microsoft Internet Explorer CCaret Use-After-Free
+
+
+Interact with a module by name or index. For example info 0, use 0 or use exploit/windows/browser/ms13_069_caret
+
+
+CVE (common vulnerabilities and Exposures) ID number:
+msf6 > search cve:2013-3660
+
+Matching Modules
+================
+
+   #  Name                                   Disclosure Date  Rank     Check  Description
+   -  ----                                   ---------------  ----     -----  -----------
+   0  exploit/windows/local/ppr_flatten_rec  2013-05-15       average  Yes    Windows EPATHOBJ::pprFlattenRec Local Privilege Escalation
 ```
 
 ## muuttujat (Variables)
