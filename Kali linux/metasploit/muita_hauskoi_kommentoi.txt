@@ -1,5 +1,8 @@
 erilliset hauskat komennot ja harjoituksia;
 
+
+
+hakee Microsoftin tietoturvatiedotteen MS13-069 haavoittuvuus
 msf6 > search MS13-069
 
 Matching Modules
@@ -13,7 +16,7 @@ Matching Modules
 Interact with a module by name or index. For example info 0, use 0 or use exploit/windows/browser/ms13_069_caret
 
 
-hakee Microsoftin tietoturvatiedotteen MS13-069 haavoittuvuus
+CVE (common vulnerabilities and Exposures) ID number:
 msf6 > search cve:2013-3660
 
 Matching Modules
@@ -26,6 +29,7 @@ Matching Modules
 
 Interact with a module by name or index. For example info 0, use 0 or use exploit/windows/local/ppr_flatten_rec
 
+hakee CVE tältä vuodelta (katkaistu luettelot) eli haavoittuvuudet
 msf6 > search cve:2013
 
 Matching Modules
@@ -41,7 +45,7 @@ Matching Modules
    5    exploit/windows/fileformat/adobe_toolbutton                        2013-08-08       normal     No     Adobe Reader 
 
 
-
+esim. vuoden 2023
 msf6 > search cve:2023
 
 Matching Modules
@@ -56,6 +60,7 @@ Matching Modules
 
 ###############################################################################################################################################
 
+komennolla voi nähdäksesi tietyn ohjelman hyödyntämistiedot, käytä vain sen nimeä:
 msf6 > search unreal
 
 Matching Modules
@@ -83,6 +88,9 @@ Matching Modules
 
 
 ##################################################################################################################################
+
+Kun näet hyväksikäytön, josta haluat tietää lisää, kopioi ja liitä koko polun nimi ja käytä `info`-komentoa
+ja tulostaa täysi tietonäyttö hyväksikäyttöä varten
 msf6 > info exploit/unix/irc/unreal_ircd_3281_backdoor
 
        Name: UnrealIRCD 3.2.8.1 Backdoor Command Execution
