@@ -1,0 +1,178 @@
+nmap -A <ip-add>
+nmap -n -p- -A <ip-add>
+
+nmap -sS -p 1-65536 192.168.240.129 -T4 | tee nmap-port-scan  
+
+sudo nmap -sS -p 1-65536 192.168.240.129 -T4 | tee nmap-port-scan
+
+sudo nmap -sV -O -p 80,443,3306 192.168.240.129 -T4 | tee nmap-service-and-os
+
+jotakin komentoja ja kivoja testauksia (Comptia security+):sta
+
+└─$ nmap -sn 192.168.240.0/24                                   
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-11-01 13:34 EDT
+Nmap scan report for 192.168.240.1          <<< reititin itsensä siksi se on 192.168.240.1
+Host is up (0.025s latency).
+Nmap scan report for 192.168.240.2
+Host is up (0.00083s latency).
+Nmap scan report for 192.168.240.130       <<<< tämän kali linux ip-osoite staatisen dhcp
+Host is up (0.00035s latency).
+Nmap done: 256 IP addresses (3 hosts up) scanned in 3.12 seconds
+
+.2 on ihan muuta palvelinta , mutta sekin yksi ikäänkuin kohde 
+
+##################################################################################
+
+sama voi jopa skannatta url osoiteitta siis sellaisia linkkei vaikappa google
+
+┌──(kali㉿kali)-[~]
+└─$ nmap -sn google.com 
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-11-01 13:57 EDT
+Nmap scan report for google.com (216.58.209.174)
+Host is up (0.023s latency).
+Other addresses for google.com (not scanned): 2a00:1450:4026:803::200e
+rDNS record for 216.58.209.174: bud02s21-in-f14.1e100.net
+Nmap done: 1 IP address (1 host up) scanned in 0.09 seconds
+
+
+##################################################################################
+voihan sitä kokeilla mm. skannatta kotiverkkoa (yleensä se on 192.168.1.0/24)
+
+└─$ nmap -sn 192.168.1.0/24  
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-11-01 13:38 EDT
+Nmap scan report for 192.168.1.1
+Host is up (0.0029s latency).
+Nmap scan report for 192.168.1.103
+Host is up (0.0055s latency).
+Nmap scan report for 192.168.1.104 	<<< henkilökohtainen kone IP-osoite, jos tarkistaa powershell tai cmd:stä $ipconfig /all - niin sieltä se näkee kuin "IPv4 adresss... (preferred)
+Host is up (0.0040s latency).
+Nmap scan report for 192.168.1.255
+Host is up (0.0024s latency).
+Nmap done: 256 IP addresses (4 hosts up) scanned in 2.59 seconds
+                                                                  
+
+192.168.1.104 ja 192.168.1.103 on ihan muuta mm. kone, palvelin, puhelin tai muu elektroniikka laite joka tarvii Wi-Fi yhteytä , mutta sekin yksi ikäänkuin kohde 
+
+myös se tarkoitaa nämä palvelimet/IP-osoitteet ovat toiminnassa ja vastaavat pinggiin, mutta meillä ei ole tarkempaa tietoa.
+
+
+##############################################################################
+
+seuraavaksi jotakin SYN-skannausta, nmap -sS ja IP-osoite, mutta selvitellään portti 80 kautta sitä verkkopalvelinta
+
+kantsi ennen sitä mennä root moodiin, ja tuloksena tulee toi vmware, koska jos tarkitaa kiinteästi virallisen powerrshell kommennosta niin sieltä varmasti toistuu sama mac-osoite ja tämä komento tarkoittaa, että se kannaa koko 254 IP-osoitetteita uudestaan, ja tulostaa verkkopalvelinta
+
+pieni muistutus tämä skannaa kali linux sen "IP-osoiteeen perusteella"
+
+┌──(root㉿kali)-[/home/kali]
+└─# nmap -sS -p80 192.168.240.0/24                               
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-11-01 14:13 EDT
+Nmap scan report for 192.168.240.1
+Host is up (0.00089s latency).
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+MAC Address: 00-01-82-99-B1-15 (VMware)                 <<<<<<<<<<<<<<<<
+
+Nmap scan report for 192.168.240.2
+Host is up (0.00059s latency).
+
+PORT   STATE  SERVICE
+80/tcp closed http
+MAC Address: 00:23:42:C1:BE:B6 (VMware)                 
+
+Nmap scan report for 192.168.240.254
+Host is up (0.00063s latency).
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+MAC Address: 00:23:42:C3:BE:41 (VMware)
+
+Nmap scan report for 192.168.240.130
+Host is up (0.00016s latency).
+
+PORT   STATE  SERVICE
+80/tcp closed http
+
+Nmap done: 256 IP addresses (4 hosts up) scanned in 2.57 seconds
+
+
+####
+
+eli jos tarkistaa oma powershell:istä ($ipconfig /all), ja josta löydetään se verkkokortti mac osoite
+
+Ethernet adapter VMware Network Adapter VMnet8:
+
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : VMware Virtual Ethernet Adapter for VMnet8
+   Physical Address. . . . . . . . . : 00-01-82-99-B1-15        <<<<<<<<<<<<<<<<
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+   Link-local IPv6 Address . . . . . : fe80::ABCD::EFGH::EHJK:LMNO(Preferred)
+   IPv4 Address. . . . . . . . . . . : 192.168.(Preferred)
+   Subnet Mask . . . . . . . . . . . : 255.255.0.0
+
+
+Eli periaatteessa pientä salapoliisityötä, mutta se ei kerro kauheasti mitään ketä tai kennen konetta tämä voi olla, se voi olla x,y,z henkilön kone ja ei voida ekalla yrityksellä todistaa
+
+
+
+
+
+################
+
+toinen esimerkki;
+jos skannaa kodin vaikappa lähistön isäntäkoneita (host) palvelimia niin sieltä toistuu kaikki 254 IP-osoitetta , periaatteessa näkee kaikki host ovat ylhäällä (ehkä on oletuksena päällä)
+
+
+──(root㉿kali)-[/home/kali]
+└─# nmap -sS -p80 192.168.10.0/24  
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-11-01 14:30 EDT
+Nmap scan report for 192.168.10.0
+Host is up (0.00039s latency).
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for 192.168.10.102
+Host is up (0.0011s latency).
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for 192.168.10.103
+Host is up (0.0017s latency).
+
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for 192.168.10.104
+Host is up (0.0029s latency).
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for 192.168.10.105
+Host is up (0.0025s latency).
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for 192.168.1.106
+Host is up (0.0064s latency).
+
+Nmap done: 256 IP addresses (256 hosts up) scanned in 4.42 seconds
+
+
+###################################################################
+
+
+
+
+
+
+
+
+
+
+
