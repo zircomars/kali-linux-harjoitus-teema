@@ -1,0 +1,12 @@
+pikainen lunttilappu
+nmap -A <ip-add>
+nmap -n -p- -A <ip-add>
+
+nmap -sS -p 1-65536 192.168.10.129 -T4 | tee nmap-port-scan  
+
+sudo nmap -sS -p 1-65536 192.168.10.129 -T4 | tee nmap-port-scan
+
+sudo nmap -sV -O -p 80,443,3306 192.168.10.129 -T4 | tee nmap-service-and-os
+
+##################################################################################
+harjoitus linkkit; https://www.stationx.net/how-to-scan-vulnerabilities-with-nmap/
