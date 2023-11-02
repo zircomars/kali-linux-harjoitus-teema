@@ -1,21 +1,23 @@
+oma henk nmap vanhat komennot & muuten hyödyllisiä:
+
 nmap -A <ip-add>
 nmap -n -p- -A <ip-add>
 
-nmap -sS -p 1-65536 192.168.240.129 -T4 | tee nmap-port-scan  
+nmap -sS -p 1-65536 192.168.10.129 -T4 | tee nmap-port-scan  
 
-sudo nmap -sS -p 1-65536 192.168.240.129 -T4 | tee nmap-port-scan
+sudo nmap -sS -p 1-65536 192.168.10.129 -T4 | tee nmap-port-scan
 
-sudo nmap -sV -O -p 80,443,3306 192.168.240.129 -T4 | tee nmap-service-and-os
+sudo nmap -sV -O -p 80,443,3306 192.168.10.129 -T4 | tee nmap-service-and-os
 
-jotakin komentoja ja kivoja testauksia (Comptia security+):sta
+jotakin komentoja ja kivoja testauksia (Comptia security+):sta ja jotakin testattu vmware (Badstore:n knassa) pientä ip-osoitteen muutosta vaan
 
-└─$ nmap -sn 192.168.240.0/24                                   
+└─$ nmap -sn 192.168.10.0/24                                   
 Starting Nmap 7.93 ( https://nmap.org ) at 2023-11-01 13:34 EDT
-Nmap scan report for 192.168.240.1          <<< reititin itsensä siksi se on 192.168.240.1
+Nmap scan report for 192.168.10.1          <<< reititin itsensä siksi se on 192.168.10.1
 Host is up (0.025s latency).
-Nmap scan report for 192.168.240.2
+Nmap scan report for 192.168.10.2
 Host is up (0.00083s latency).
-Nmap scan report for 192.168.240.130       <<<< tämän kali linux ip-osoite staatisen dhcp
+Nmap scan report for 192.168.10.130       <<<< tämän kali linux ip-osoite staatisen dhcp
 Host is up (0.00035s latency).
 Nmap done: 256 IP addresses (3 hosts up) scanned in 3.12 seconds
 
@@ -65,30 +67,30 @@ kantsi ennen sitä mennä root moodiin, ja tuloksena tulee toi vmware, koska jos
 pieni muistutus tämä skannaa kali linux sen "IP-osoiteeen perusteella"
 
 ┌──(root㉿kali)-[/home/kali]
-└─# nmap -sS -p80 192.168.240.0/24                               
+└─# nmap -sS -p80 192.168.10.0/24                               
 Starting Nmap 7.93 ( https://nmap.org ) at 2023-11-01 14:13 EDT
-Nmap scan report for 192.168.240.1
+Nmap scan report for 192.168.10.1
 Host is up (0.00089s latency).
 
 PORT   STATE    SERVICE
 80/tcp filtered http
 MAC Address: 00-01-82-99-B1-15 (VMware)                 <<<<<<<<<<<<<<<<
 
-Nmap scan report for 192.168.240.2
+Nmap scan report for 192.168.10.2
 Host is up (0.00059s latency).
 
 PORT   STATE  SERVICE
 80/tcp closed http
 MAC Address: 00:23:42:C1:BE:B6 (VMware)                 
 
-Nmap scan report for 192.168.240.254
+Nmap scan report for 192.168.10.254
 Host is up (0.00063s latency).
 
 PORT   STATE    SERVICE
 80/tcp filtered http
 MAC Address: 00:23:42:C3:BE:41 (VMware)
 
-Nmap scan report for 192.168.240.130
+Nmap scan report for 192.168.10.130
 Host is up (0.00016s latency).
 
 PORT   STATE  SERVICE
@@ -166,13 +168,127 @@ Nmap done: 256 IP addresses (256 hosts up) scanned in 4.42 seconds
 
 ###################################################################
 
+Badsotre ip 192.168.10.129
+
+-sv tarkoittaa skannaa service/version info
+
+┌──(root㉿kali)-[/home/kali]
+└─# nmap -sV 192.168.10.129                                     
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-11-02 11:27 EDT
+Nmap scan report for 192.168.10.129
+Host is up (0.00024s latency).
+Not shown: 997 closed tcp ports (reset)
+PORT     STATE SERVICE  VERSION
+80/tcp   open  http     Apache httpd 1.3.28 ((Unix) mod_ssl/2.8.15 OpenSSL/0.9.7c)
+443/tcp  open  ssl/http Apache httpd 1.3.28 ((Unix) mod_ssl/2.8.15 OpenSSL/0.9.7c)
+3306/tcp open  mysql    MySQL 4.1.7-standard
+MAC Address: 00:0C:29:33:A0:BB (VMware)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 13.08 seconds
+
+tuossa on Apache httpd 1.3.28 ((Unix)) , mikä tarkoittaa jotakin voisi alkaa yhdistää jotakin liittyvä haavoittuvuuksia ja hyökätä siihen palvelimeen tai sivustoon
 
 
 
+┌──(root㉿kali)-[/home/kali]
+└─# nmap -sS -p80 192.168.10.129
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-11-02 11:42 EDT
+Nmap scan report for 192.168.10.129
+Host is up (0.00083s latency).
+
+PORT   STATE SERVICE
+80/tcp open  http
+MAC Address: 00:0C:29:33:A0:BB (VMware)
+
+Nmap done: 1 IP address (1 host up) scanned in 0.29 seconds
+
+
+tämä kertoo mikä sen haavoittuvuuden käyttöjärjestelmä on eli tuossa Running: Linux, OS details ja jne
+
+┌──(root㉿kali)-[/home/kali]
+└─# nmap -O 192.168.10.129   
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-11-02 12:55 EDT
+Nmap scan report for 192.168.10.129
+Host is up (0.0015s latency).
+Not shown: 997 closed tcp ports (reset)
+PORT     STATE SERVICE
+80/tcp   open  http
+443/tcp  open  https
+3306/tcp open  mysql
+MAC Address: 00:0C:29:33:A0:BB (VMware)
+Device type: general purpose
+Running: Linux 2.4.X
+OS CPE: cpe:/o:linux:linux_kernel:2.4
+OS details: Linux 2.4.18 - 2.4.35 (likely embedded)
+Network Distance: 1 hop
+
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 2.17 seconds
+
+######
+komennon yhdistämisiä
+nmap -ss (skannausta), -sv (versiointi), -O (saadakseen käyttöjärjestelmää), <ip-add range> [10.10.10.10-12]
+
+ja tuossa tuloksena raprtoi 192.168.10.129 osoitteen tietoja mm. portti 80 http, 443 https ja 3306 mysql ja versio standardi, mutta jos skannaa jotakin muutta niin saattaa tulostua paljon enemmin verrattuna näihin kolmeen tyyppiin.  kuitenkin se antaa tietoja, eviätkä ne olleet varmoja siitä, mikä se oli, koska siinä ei vältämättä ole kelvollisia tunnisteitta ja lähettää nmpalle.
+
+┌──(root㉿kali)-[/home/kali]
+└─# nmap -sS -sV -O 192.168.10.127-130
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-11-02 13:04 EDT
+Nmap scan report for 192.168.10.129
+Host is up (0.0013s latency).
+Not shown: 997 closed tcp ports (reset)
+PORT     STATE SERVICE  VERSION
+80/tcp   open  http     Apache httpd 1.3.28 ((Unix) mod_ssl/2.8.15 OpenSSL/0.9.7c)
+443/tcp  open  ssl/http Apache httpd 1.3.28 ((Unix) mod_ssl/2.8.15 OpenSSL/0.9.7c)
+3306/tcp open  mysql    MySQL 4.1.7-standard
+MAC Address: 00:0C:29:33:A0:BB (VMware)
+Device type: general purpose
+Running: Linux 2.4.X
+OS CPE: cpe:/o:linux:linux_kernel:2.4
+OS details: Linux 2.4.18 - 2.4.35 (likely embedded)
+Network Distance: 1 hop
+
+Nmap scan report for 192.168.10.130
+Host is up (0.000085s latency).
+All 1000 scanned ports on 192.168.10.130 are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 0 hops
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 4 IP addresses (2 hosts up) scanned in 17.44 seconds
+                                                                 
+
+############################################################################################
+TOINEN ESIM:
+─$ nmap -sV caleo-rm.com                                       
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-11-02 11:28 EDT
+Nmap scan report for caleo-rm.com (34.88.246.40)
+Host is up (0.098s latency).
+rDNS record for 34.88.246.40: 40.246.88.34.bc.googleusercontent.com
+Not shown: 994 filtered tcp ports (no-response), 4 filtered tcp ports (host-unreach)
+PORT    STATE SERVICE  VERSION
+80/tcp  open  http     nginx (reverse proxy)
+443/tcp open  ssl/http nginx (reverse proxy)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 103.01 seconds
+
+-tässä meni n. 10s (kait) tai sitä enemmän (scanned in 103.01)
 
 
 
+┌──(root㉿kali)-[/home/kali]
+└─# nmap -sS -p80 caleo-rm.com   
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-11-02 11:43 EDT
+Nmap scan report for caleo-rm.com (34.88.246.40)
+Host is up (0.014s latency).
+rDNS record for 34.88.246.40: 40.246.88.34.bc.googleusercontent.com
 
+PORT   STATE SERVICE
+80/tcp open  http
 
-
+Nmap done: 1 IP address (1 host up) scanned in 0.51 seconds
+                                                           
 
