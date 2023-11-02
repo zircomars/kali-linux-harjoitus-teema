@@ -138,6 +138,59 @@ SEE THE MAN PAGE (https://nmap.org/book/man.html) FOR MORE OPTIONS AND EXAMPLES
 
 ```
 
+### komentojen esim
+
+```
+- tulostaa koko listan (-sl simple list) & varsinaisesti tämä ei tee mitään kuin skannaa ton /24 maskin kaikki IP-osoitteet ulos, periaatteessa järjestelmä hallitsee porttien scannausta verkkojen liikenteessä
+
+nmap -sL 192.168.240.0/24                                   
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-11-02 14:15 EDT
+Nmap scan report for 192.168.240.0
+Nmap scan report for 192.168.240.1
+Nmap scan report for 192.168.240.2
+```
+
+
+```
+- tämä tulostaa tämän ip-osoitteen maski alueen, mitkä ovat varattu tai ns. pinggaa yhteyttä, vähä kuin hakee/metsästää laiteitta. Se palauttaa mahdollisen host koneiden skannattaviksi, "-sn" poistaa kyseisen käytöstä nmap-oletusyhdyskäyttävän (gateway), ja kuitenkin toistaa/yrittää pinggata host koneita 
+
+┌──(kali㉿kali)-[~]
+└─$ nmap -sn 192.168.240.0/24
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-11-02 14:16 EDT
+Nmap scan report for 192.168.240.1
+Host is up (0.0041s latency).
+Nmap scan report for 192.168.240.2
+Host is up (0.0022s latency).
+Nmap scan report for 192.168.240.129
+Host is up (0.0053s latency).
+Nmap scan report for 192.168.240.130
+Host is up (0.0052s latency).
+Nmap done: 256 IP addresses (4 hosts up) scanned in 2.72 seconds
+```
+
+```
+https://www.tecmint.com/nmap-network-security-scanner-in-kali-linux/
+- nmap porttien skannausta näiden tiettyjen IP-osoite alueesta just tämä 192.168.56.59 ja .102 väliltä, ja havaitseeko mm mitään protokollaa.
+tämä tarkoittaa se ikään kuin löysi kullan/bingo osuman tämän host verkko alueelta avoimia verkkportteja.
+tässä esimerkissä on 192.168.56.102 osoite on joku määritettyjen metasploitable haavoittuvuuden kone (katso linkki), minkä vuoksi tässä host-isäntä koneella on monta haavoittuvuutta porttia.
+┌──(kali㉿kali)-[~]
+└─$ nmap 192.168.56.1,50-102
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-11-02 14:41 EDT
+Nmap scan report for 192.168.56.1
+Host is up (0.0043s latency).
+Not shown: 993 filtered tcp ports (no-response)
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+443/tcp  open  https
+445/tcp  open  microsoft-ds
+902/tcp  open  iss-realsecure
+912/tcp  open  apex-mesh
+5357/tcp open  wsdapi
+
+Nmap done: 54 IP addresses (1 host up) scanned in 25.22 seconds
+```
+
 # lisätieoriaa mikä on nmap
 
 https://www.topsevenreviews.com/fi/nmap-review/ <br>
