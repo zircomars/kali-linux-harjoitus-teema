@@ -119,6 +119,47 @@ https://www.shiksha.com/online-courses/articles/top-10-cyber-security-tools/
 
 # hakkeri typpejä (hattu väri)
 
+- WHITE HAT HACKERS
+
+These are the good guys because they do not have evil intentions. Perhaps
+they are named “white-hat” hackers because the color white signifies
+purity and cleanliness. They hack into a system to eliminate its
+vulnerabilities or as a means of carrying out research for companies or
+schools that focus on computer security. They are also known as ethical
+hackers. They perform penetration testing and assess the vulnerabilities of
+computer systems.
+
+- BLACK HAT HACKERS
+
+Black hat hackers hack with a malicious intention of breaking every rule
+in the book. They hack for personal gain, as well as for monetary reasons.
+They are known to be from illegal communities that perfectly fit the
+stereotype of computer criminals. Black hat hackers use a network’s weak
+spots to render the system useless. These hackers will also destroy your
+data and information if they are given the chance to do so. When these
+hackers get into your system, they will threaten to expose your private
+information to the public with the goal of getting you to do whatever they
+want. Needless to say, black hat hackers will not fix vulnerabilities in your
+computer system or network, but will use them against you
+
+- GREY HAT HACKERS
+
+The intentions of grey hat hackers cannot be compared to those of the
+hackers mentioned earlier. These hackers will trawl the internet and look
+for weaknesses in a computer system or network and hack into it. They
+may do this to show loopholes in the network to the network administrator
+and suggest ways of rectifying those loopholes for a given price.
+
+
+- BLUE HAT HACKERS
+- 
+It is said that the color blue represents a member of law enforcement,
+although this is just a convention. These hackers are freelancers who sell
+their hacking skills as a service. Computer security firms hire hacking
+experts to test their networks so that they can be checked for weaknesses,
+vulnerabilities and loopholes before they are released to the public. Blue
+hat hackers are “good guys” and are different from grey hat hackers,
+whose intentions may be unpredictable. 
 <hr>
 
 # muita harjoituksia ja hyviä vinkkejä hakkerointiin: <br>
