@@ -10,6 +10,7 @@ Kali linux:sta voi käyttää virtuaalikone pohjaista sovellusta mm. vmware, vir
   * [types testing](#types-testing)
   * [color boxes types](#color-boxes-types)
     * [external vs internal](#external-vs-internal)
+  * [cyber security tools)[#cyber-security-tools)
 - [hakkeri typpejä (hattu väri)](#hakkeri-typpejä-hattu-väri)
 - [muita harjoituksia ja hyviä vinkkejä hakkerointiin:](#muita-harjoituksia-ja-hyviä-vinkkejä-hakkerointiin)
   * [pdf kirjoja](#pdf-kirjoja)
@@ -99,6 +100,7 @@ https://purplesec.us/external-vs-internal-network-penetration-tests/
 https://www.imperva.com/learn/application-security/penetration-testing/
 
 <hr>
+
 
 ## cyber security tools
 
