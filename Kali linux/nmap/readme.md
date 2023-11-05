@@ -12,7 +12,7 @@ Se käyttää räätälöitäviä porttiskannausmenetelmiä verkkolaitteissa kä
 
 - [lisätieoriaa mikä on nmap](#lisätieoriaa-mikä-on-nmap)
     * [huomiota skannauksessa](#huomiota-skannauksessa)
-    * [huonoja puoleja](#huonoja-puoleja)
+    * [pohdinta](#pohdinta)
     * [komentoja linkit](#komentoja-linkit)
     * [hyödyllisiä harjoituksia](#hyödyllisiä-harjoituksia)
 
@@ -210,7 +210,7 @@ Onhan se laitonta eli siis kyllä, ilman omistajan lupaa voi olla laitonta. Siit
 
 Jos käyttäjä on tietoturvatutkija, tietoturva-ammattilainen tai eettinen hakkeri, joka suorittaa valtuutetun penetraationtestauksen, verkon skannaus saattaa olla lailista. Parasta on kuitenkin ensin skannauksen tai testin parametrin ennen skannauksen suorittamista.
 
-## huonoja puolia
+## pohdinta
 
 Nmap on tehokas työkalu verkon haavoittuvuuden etimisessä, verkkokartan ymmärtämistä ja siinä käynnissä olevien palveluiden arvioimista. Nmap toiminnnalle on kuitenkin rajaa.
 
