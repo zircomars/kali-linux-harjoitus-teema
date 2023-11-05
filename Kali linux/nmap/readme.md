@@ -12,6 +12,7 @@ Se käyttää räätälöitäviä porttiskannausmenetelmiä verkkolaitteissa kä
 
 - [lisätieoriaa mikä on nmap](#lisätieoriaa-mikä-on-nmap)
     * [huomiota skannauksessa](#huomiota-skannauksessa)
+    * [huonoja puoleja](#huonoja-puoleja)
     * [komentoja linkit](#komentoja-linkit)
     * [hyödyllisiä harjoituksia](#hyödyllisiä-harjoituksia)
 
@@ -199,6 +200,25 @@ https://www.topsevenreviews.com/fi/nmap-review/ <br>
 https://www.trucoteca.com/fi/mik%C3%A4-on-nmap/ <br>
 
 ## huomiota skannauksessa
+
+Vaikka jos avoimet portit eivät välttämättä itsessään ole haavoittuvuus, ne sisältävät mahdollisen haavoittuvuuden, joita voidaan hyödyntää. Muistutus, jos portti on viestintäkanava kahden järjestelmien välillä ja voi olla ilmeinen hyökkäys vektori. joten haitallisen toimija voi hyldyntää avointa porttia, jossa on haavoittuvia palveluita ja käyttää sitä koodin suorittamiseen.
+
+Jos on tiedossa mikä porti on auki niin kantsii suorittaa tarkistuksen kautta, voit määrittää, onko portin oltava auki ja jos on, niin kyseisiin palveluihin liittyvien haavoittuvuus vähentäimiseksi. Jos on epävarma, pitäisikö portin olla auki tai et pysty korjaamaan tai vähentämään haavoittuvuutta tyydyttävästi, on parasta sulkea ja tutkia portia. 
+
+<b> onko haavoittuvuuden skannaus lailista? </b>
+Onhan se laitonta eli siis kyllä, ilman omistajan lupaa voi olla laitonta. Siitä voi seurata jopa tiukoi laillisien rangaistusta sijainnista riippumatta. 
+
+Jos käyttäjä on tietoturvatutkija, tietoturva-ammattilainen tai eettinen hakkeri, joka suorittaa valtuutetun penetraationtestauksen, verkon skannaus saattaa olla lailista. Parasta on kuitenkin ensin skannauksen tai testin parametrin ennen skannauksen suorittamista.
+
+## huonoja puolia
+
+Nmap on tehokas työkalu verkon haavoittuvuuden etimisessä, verkkokartan ymmärtämistä ja siinä käynnissä olevien palveluiden arvioimista. Nmap toiminnnalle on kuitenkin rajaa.
+
+Se ei pysty yksinään hyödyntämään verkosta löydettyjä haavoittuvuutta. Vaikka se voi tarjota paljon tietoa, jonka avulla käyttäjä svoi suunnitella hyökkäyksiä hyökkääjän simuloimisessa ja suorittaa hyväksikäytön muiden työkalujen kautta.
+
+Nmap ei ole myöskään idioottivarma (foolproof, erehtymätön) menetelmä haaavoittuvuuksien tunnistaminen. Vaikka komento scriptiä kuten <b>vuln</b>, <b>vulners</b>, <b>vulscan</b>, käyttö antaa paljon tietoa haavoittuvista palveluista, se ei voi taatata, että kaikki haavoittuvuudet on löydetty. Periaatteessa vaattii lisätutkimista saaattaa silti tarvita.
+
+Muut verkkoelementit kuten palomuurit ja IDS, voivat estää haavoittuvuuden tarkistamisen onnistumista. Tärkeänä on tarkistaa huolellisesti skannauksen saamasta tietoa ja harkita epäonnistuneita portteja tai palveluita ja niiden merkistystä verkossa.
 
 ## komentoja linkit
 
