@@ -1,0 +1,39 @@
+pikainen lunttilappu
+nmap -A <ip-add>
+nmap -n -p- -A <ip-add>
+
+nmap -sS -p 1-65536 192.168.10.129 -T4 | tee nmap-port-scan  
+
+sudo nmap -sS -p 1-65536 192.168.10.129 -T4 | tee nmap-port-scan
+
+sudo nmap -sV -O -p 80,443,3306 192.168.10.129 -T4 | tee nmap-service-and-os
+
+To scan a single port use the flag -p followed by the specific port number.
+map -p 80 <target>
+
+To scan multiple ports use the -p followed by the numbers or range.
+nmap -p 80,443,8080 <target>
+nmap -p 80-443 <target>
+
+To scan all ports (all 65,535) use the -p- flag.
+<nmap -p- <target>>
+jotakin komentoja ja kivoja testauksia (Comptia security+):sta
+
+└─$ nmap -sn 192.168.10.0/24                                   
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-11-01 13:34 EDT
+Nmap scan report for 192.168.10.1          <<< reititin itsensä siksi se on 192.168.10.1
+Host is up (0.025s latency).
+Nmap scan report for 192.168.10.2
+Host is up (0.00083s latency).
+Nmap scan report for 192.168.10.130       <<<< tämän kali linux ip-osoite staatisen dhcp
+Host is up (0.00035s latency).
+Nmap done: 256 IP addresses (3 hosts up) scanned in 3.12 seconds
+
+.2 on ihan muuta palvelinta , mutta sekin yksi ikäänkuin kohde 
+
+
+lunttilappu linkkei;
+shodan.io
+
+esimerkki linkkei josta voi suorittaa ja tarkistaa niiden haavoittuvuudet
+http://www.vulnweb.com/
