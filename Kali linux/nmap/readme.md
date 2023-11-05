@@ -194,6 +194,78 @@ PORT     STATE SERVICE
 Nmap done: 54 IP addresses (1 host up) scanned in 25.22 seconds
 ```
 
+<detail>
+  
+```
+  ┌──(kali㉿kali)-[~]
+└─$ nmap -v -A scanme.nmap.org                                      
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-11-05 19:43 EET
+NSE: Loaded 155 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 19:43
+Completed NSE at 19:43, 0.00s elapsed
+Initiating NSE at 19:43
+Completed NSE at 19:43, 0.00s elapsed
+Initiating NSE at 19:43
+Completed NSE at 19:43, 0.00s elapsed
+Initiating Ping Scan at 19:43
+Scanning scanme.nmap.org (45.33.32.156) [2 ports]
+Completed Ping Scan at 19:43, 0.19s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 19:43
+Completed Parallel DNS resolution of 1 host. at 19:43, 0.15s elapsed
+Initiating Connect Scan at 19:43
+Scanning scanme.nmap.org (45.33.32.156) [1000 ports]
+Discovered open port 22/tcp on 45.33.32.156
+Discovered open port 80/tcp on 45.33.32.156
+Discovered open port 9929/tcp on 45.33.32.156
+Discovered open port 31337/tcp on 45.33.32.156
+Completed Connect Scan at 19:44, 39.80s elapsed (1000 total ports)
+Initiating Service scan at 19:44
+Scanning 4 services on scanme.nmap.org (45.33.32.156)
+Completed Service scan at 19:44, 6.80s elapsed (4 services on 1 host)
+NSE: Script scanning 45.33.32.156.
+Initiating NSE at 19:44
+Completed NSE at 19:44, 10.47s elapsed
+Initiating NSE at 19:44
+Completed NSE at 19:44, 0.81s elapsed
+Initiating NSE at 19:44
+Completed NSE at 19:44, 0.00s elapsed
+Nmap scan report for scanme.nmap.org (45.33.32.156)
+Host is up (0.19s latency).
+Other addresses for scanme.nmap.org (not scanned): 2600:3c01::f03c:91ff:fe18:bb2f
+Not shown: 996 filtered tcp ports (no-response)
+PORT      STATE SERVICE    VERSION
+22/tcp    open  ssh        OpenSSH 6.6.1p1 Ubuntu 2ubuntu2.13 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   1024 ac00a01a82ffcc5599dc672b34976b75 (DSA)
+|   2048 203d2d44622ab05a9db5b30514c2a6b2 (RSA)
+|   256 9602bb5e57541c4e452f564c4a24b257 (ECDSA)
+|_  256 33fa910fe0e17b1f6d05a2b0f1544156 (ED25519)
+80/tcp    open  http       Apache httpd 2.4.7 ((Ubuntu))
+|_http-server-header: Apache/2.4.7 (Ubuntu)
+|_http-title: Go ahead and ScanMe!
+|_http-favicon: Nmap Project
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+9929/tcp  open  nping-echo Nping echo
+31337/tcp open  tcpwrapped
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+NSE: Script Post-scanning.
+Initiating NSE at 19:44
+Completed NSE at 19:44, 0.00s elapsed
+Initiating NSE at 19:44
+Completed NSE at 19:44, 0.00s elapsed
+Initiating NSE at 19:44
+Completed NSE at 19:44, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 59.31 seconds
+
+```
+
+</detail>
+
 # lisätieoriaa mikä on nmap
 
 https://www.topsevenreviews.com/fi/nmap-review/ <br>
