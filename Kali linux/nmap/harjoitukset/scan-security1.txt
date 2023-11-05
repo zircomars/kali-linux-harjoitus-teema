@@ -1,0 +1,173 @@
+harjoitus linkkit; https://www.tecmint.com/nmap-network-security-scanner-in-kali-linux/
+tässä harjoitus linkissä, siinä on asennettu lisä vehke kuin "Metasploiable machine" vähä kuin badstore kone, mutta siinä skannaa ja löytää tämän kyseisen koneen haavoittuvuutta ja muita backdoor toimintoja. Periaatteessa hyvä tutkimiseen, sekä ei tarkota se kone olisi vaarantunut ja sitä käytetään kauheiisiin/kauheissa asioissa, mutta tätä pitäisi kuitenkin huoltaa sellaisille kokeneelle verkko- ja tieotturvatiimille.
+
+
+tässä jotakin harjoitusta komento scriptissä toistuu sellaisia ikään kuin aggressivisiä skannausta, ja voi käynnistää tunkeutumisen havaitsemisen-/estojärjestelmiä
+
+- tulostaa koko listan (-sl simple list) & varsinaisesti tämä ei tee mitään kuin skannaa ton /24 maskin kaikki IP-osoitteet ulos, periaatteessa järjestelmä hallitsee porttien scannausta verkkojen liikenteessä
+
+nmap -sL 192.168.240.0/24                                   
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-11-02 14:15 EDT
+Nmap scan report for 192.168.240.0
+Nmap scan report for 192.168.240.1
+Nmap scan report for 192.168.240.2
+
+
+- tämä tulostaa tämän ip-osoitteen maski alueen, mitkä ovat varattu tai ns. pinggaa yhteyttä, vähä kuin hakee/metsästää laiteitta. Se palauttaa mahdollisen host koneiden skannattaviksi, "-sn" poistaa kyseisen käytöstä nmap-oletusyhdyskäyttävän (gateway), ja kuitenkin toistaa/yrittää pinggata host koneita 
+
+┌──(kali㉿kali)-[~]
+└─$ nmap -sn 192.168.240.0/24
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-11-02 14:16 EDT
+Nmap scan report for 192.168.240.1
+Host is up (0.0041s latency).
+Nmap scan report for 192.168.240.2
+Host is up (0.0022s latency).
+Nmap scan report for 192.168.240.129
+Host is up (0.0053s latency).
+Nmap scan report for 192.168.240.130
+Host is up (0.0052s latency).
+Nmap done: 256 IP addresses (4 hosts up) scanned in 2.72 seconds
+
+- mennään rooti käyttäjään ja katsotaan vähä tarkempaa lisätietoa ja ehkä mahdolliset yksityiskohdat:
+┌──(root㉿kali)-[/home/kali]
+└─# nmap -sN 192.168.240.0/24                
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-11-05 19:28 EET
+Nmap scan report for 192.168.240.1
+Host is up (0.0036s latency).
+All 1000 scanned ports on 192.168.240.1 are in ignored states.
+Not shown: 1000 open|filtered tcp ports (no-response)
+MAC Address: 00:50:56:C0:00:08 (VMware)
+
+Nmap scan report for 192.168.240.2
+Host is up (0.00018s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE         SERVICE
+53/tcp open|filtered domain
+MAC Address: 00:50:56:E1:9E:B6 (VMware)
+
+Nmap scan report for 192.168.240.129
+Host is up (0.0019s latency).
+Not shown: 997 closed tcp ports (reset)
+PORT     STATE         SERVICE
+80/tcp   open|filtered http
+443/tcp  open|filtered https
+3306/tcp open|filtered mysql
+MAC Address: 00:0C:29:33:A0:BB (VMware)
+
+Nmap scan report for 192.168.240.254
+Host is up (0.00034s latency).
+All 1000 scanned ports on 192.168.240.254 are in ignored states.
+Not shown: 1000 open|filtered tcp ports (no-response)
+MAC Address: 00:50:56:ED:AA:41 (VMware)
+
+Nmap scan report for 192.168.240.130
+Host is up (0.000012s latency).
+All 1000 scanned ports on 192.168.240.130 are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+
+Nmap done: 256 IP addresses (5 hosts up) scanned in 8.30 seconds
+
+
+- Anonyyminen FTP login on hosts
+- skannaataan, default script (-sc), porttin ip-osoite ja protokolla 21 (FTP), file transfer protocol ja tarkistellaan tietyllä palvelimella
+
+┌──(kali㉿kali)-[~]
+└─$ nmap -sC 192.168.240.129 -p 21
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-11-05 15:34 EET
+Nmap scan report for 192.168.240.129
+Host is up (0.00059s latency).
+
+PORT   STATE  SERVICE
+21/tcp closed ftp
+
+Nmap done: 1 IP address (1 host up) scanned in 0.69 seconds
+
+
+- tarkistellaan haavoittuvuutta hosts:ista 
+Tämän on yksi aiemmista tiedon kanssa VSftd:n vanhasta haavoittuvuudesta pitäisi kuitenkin herättää huolta. Katsotaan, onko nmapissa skriptejä, jotka yrittävät tarkistaa VSftpd-haavoittuvuuden.
+
+┌──(kali㉿kali)-[~]
+└─$ locate .nse | grep ftp
+/usr/share/nmap/scripts/ftp-anon.nse
+/usr/share/nmap/scripts/ftp-bounce.nse
+/usr/share/nmap/scripts/ftp-brute.nse
+/usr/share/nmap/scripts/ftp-libopie.nse
+/usr/share/nmap/scripts/ftp-proftpd-backdoor.nse
+/usr/share/nmap/scripts/ftp-syst.nse
+/usr/share/nmap/scripts/ftp-vsftpd-backdoor.nse    <<<<<<<<<<
+/usr/share/nmap/scripts/ftp-vuln-cve2010-4221.nse
+/usr/share/nmap/scripts/tftp-enum.nse
+
+Huomaa, että nmapissa on jo rakennettu NSE-skripti VSftpd-takaovi-ongelmaa varten! Yritetään ajaa tämä komentosarja tätä isäntäkonetta vastaan ja katsotaan mitä tapahtuu, mutta ensin saattaa olla tärkeää tietää kuinka komentosarjaa käytetään.
+
+
+
+┌──(kali㉿kali)-[~]
+└─$ nmap --script-help=ftp-vsftpd-backdoor.nse              
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-11-05 16:14 EET
+
+ftp-vsftpd-backdoor
+Categories: exploit intrusive malware vuln
+https://nmap.org/nsedoc/scripts/ftp-vsftpd-backdoor.html
+  Tests for the presence of the vsFTPd 2.3.4 backdoor reported on 2011-07-04
+  (CVE-2011-2523). This script attempts to exploit the backdoor using the
+  innocuous <code>id</code> command by default, but that can be changed with
+  the <code>exploit.cmd</code> or <code>ftp-vsftpd-backdoor.cmd</code> script
+  arguments.
+
+  References:
+
+  * http://scarybeastsecurity.blogspot.com/2011/07/alert-vsftpd-download-backdoored.html
+  * https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/unix/ftp/vsftpd_234_backdoor.rb
+  * http://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=CVE-2011-2523
+ 
+
+TOINEN ESIM,
+eli periaateessa voi lisätä help jälkeen noita grep ftp parametriä tai niitä funktioita perään ja katsoa mitä ne toistaa
+eli $nmap --script-help= <type-locale-nse>
+┌──(kali㉿kali)-[~]
+└─$ nmap --script-help=ftp-vuln-cve2010-4221.nse
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-11-05 19:25 EET
+
+ftp-vuln-cve2010-4221
+Categories: intrusive vuln
+https://nmap.org/nsedoc/scripts/ftp-vuln-cve2010-4221.html
+  Checks for a stack-based buffer overflow in the ProFTPD server, version
+  between 1.3.2rc3 and 1.3.3b. By sending a large number of TELNET_IAC escape
+  sequence, the proftpd process miscalculates the buffer length, and a remote
+  attacker will be able to corrupt the stack and execute arbitrary code within
+  the context of the proftpd process (CVE-2010-4221). Authentication is not
+  required to exploit this vulnerability.
+
+  Reference:
+  * https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-4221
+  * http://www.exploit-db.com/exploits/15449/
+  * http://www.metasploit.com/modules/exploit/freebsd/ftp/proftp_telnet_iac
+ 
+
+
+┌──(kali㉿kali)-[~]
+└─$ nmap --script-help=ftp-vsftpd-backdoor.nse 192.168.240.129 -p 21
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-11-05 19:27 EET
+
+ftp-vsftpd-backdoor
+Categories: exploit intrusive malware vuln
+https://nmap.org/nsedoc/scripts/ftp-vsftpd-backdoor.html
+  Tests for the presence of the vsFTPd 2.3.4 backdoor reported on 2011-07-04
+  (CVE-2011-2523). This script attempts to exploit the backdoor using the
+  innocuous <code>id</code> command by default, but that can be changed with
+  the <code>exploit.cmd</code> or <code>ftp-vsftpd-backdoor.cmd</code> script
+  arguments.
+
+  References:
+
+  * http://scarybeastsecurity.blogspot.com/2011/07/alert-vsftpd-download-backdoored.html
+  * https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/unix/ftp/vsftpd_234_backdoor.rb
+  * http://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=CVE-2011-2523
+
+
+
+
+
+
+
