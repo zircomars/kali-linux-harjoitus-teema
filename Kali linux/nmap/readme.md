@@ -11,9 +11,9 @@ Se käyttää räätälöitäviä porttiskannausmenetelmiä verkkolaitteissa kä
    * [komentoja esim](#komentoja-esim)
 
 - [lisätieoriaa mikä on nmap](#lisätieoriaa-mikä-on-nmap)
+    * [huomiota skannauksessa](#huomiota-skannauksessa)
     * [komentoja linkit](#komentoja-linkit)
     * [hyödyllisiä harjoituksia](#hyödyllisiä-harjoituksia)
-    * [huomiota skannauksessa]
 
 ![Alt text](images/nmap-1.PNG)
 
@@ -197,6 +197,8 @@ Nmap done: 54 IP addresses (1 host up) scanned in 25.22 seconds
 
 https://www.topsevenreviews.com/fi/nmap-review/ <br>
 https://www.trucoteca.com/fi/mik%C3%A4-on-nmap/ <br>
+
+## huomiota skannauksessa
 
 ## komentoja linkit
 
