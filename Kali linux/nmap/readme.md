@@ -8,7 +8,7 @@ Se luo yksityiskohtaisia ​​karttoja verkosta, jotka sisältävät olennaista
 Se käyttää räätälöitäviä porttiskannausmenetelmiä verkkolaitteissa käynnissä olevien eri palveluiden tunnistamiseen.
 
 * [komentoja](#komentoja)
-   * [komentoja esim](#komentoja-esim)
+   * [komentojen esim](#komentojen-esim)
 
 - [lisätieoriaa mikä on nmap](#lisätieoriaa-mikä-on-nmap)
     * [huomiota skannauksessa](#huomiota-skannauksessa)
