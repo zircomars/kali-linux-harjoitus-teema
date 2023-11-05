@@ -10,7 +10,7 @@ Kali linux:sta voi käyttää virtuaalikone pohjaista sovellusta mm. vmware, vir
   * [types testing](#types-testing)
   * [color boxes types](#color-boxes-types)
     * [external vs internal](#external-vs-internal)
-  * [cyber security tools)[#cyber-security-tools)
+- [cyber security tools)[#cyber-security-tools)
 - [hakkeri typpejä (hattu väri)](#hakkeri-typpejä-hattu-väri)
 - [muita harjoituksia ja hyviä vinkkejä hakkerointiin:](#muita-harjoituksia-ja-hyviä-vinkkejä-hakkerointiin)
   * [pdf kirjoja](#pdf-kirjoja)
@@ -154,7 +154,7 @@ and suggest ways of rectifying those loopholes for a given price.
 
 
 - BLUE HAT HACKERS
-- 
+  
 It is said that the color blue represents a member of law enforcement,
 although this is just a convention. These hackers are freelancers who sell
 their hacking skills as a service. Computer security firms hire hacking
