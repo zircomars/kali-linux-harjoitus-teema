@@ -8,10 +8,10 @@ Se luo yksityiskohtaisia ​​karttoja verkosta, jotka sisältävät olennaista
 Se käyttää räätälöitäviä porttiskannausmenetelmiä verkkolaitteissa käynnissä olevien eri palveluiden tunnistamiseen.
 
 * [komentoja](#komentoja)
-   * [komentoja esim](#komentoja 
+   * [komentoja esim](#komentoja-esim)
 
 - [lisätieoriaa mikä on nmap](#lisätieoriaa-mikä-on-nmap)
-    * [komentoja](#komentoja)
+    * [komentoja linkit](#komentoja-linkit)
     * [hyödyllisiä harjoituksia](#hyödyllisiä-harjoituksia)
     * [huomiota skannauksessa]
 
@@ -198,7 +198,7 @@ Nmap done: 54 IP addresses (1 host up) scanned in 25.22 seconds
 https://www.topsevenreviews.com/fi/nmap-review/ <br>
 https://www.trucoteca.com/fi/mik%C3%A4-on-nmap/ <br>
 
-## komentoja 
+## komentoja linkit
 
 https://www.linuxadictos.com/fi/nmap.html#Escaner_Xmas
 https://kulonpaa.com/?p=259
