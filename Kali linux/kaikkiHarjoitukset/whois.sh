@@ -1,7 +1,7 @@
 # whois - luettelo (kuka on...) & whois - command
 # nimi TCP-palvelulle, työkalulle ja tietokantatyypille. Whois-tietokannat sisältää nimipalvelimen, rekisterinpitäjän ja joissakin tapauksissa täydelliset yhteystiedot a.:sta verkkotunnus (domain name). Jokaisen rekisterinpitäjän on ylläpidettävä Whois-tietokantaa, joka sisältää kaikki yhteystiedot tietoja verkkotunnuksista, joita he isännöivät. Ylläpidetään keskitettyä rekisterin Whois-tietokantaa InterNIC24:n toimesta.
 
-# nämä tietokannat julkaistaan yleensä Whois-palvelimella TCP:n kautta portti 43 ja ne ovat käytettävissä whois-asiakasohjelmalla
+# nämä tietokannat julkaistaan yleensä Whois-palvelimella TCP:n kautta portti 43 ja ne ovat käytettävissä whois- on periaatteess client program
 # https://en.wikipedia.org/wiki/WHOIS
 
 ┌──(kali㉿kali)-[~]
