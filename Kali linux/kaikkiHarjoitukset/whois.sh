@@ -140,3 +140,162 @@ Personal data access and use are governed by French law, any use for the purpose
 A dispute over the ownership of a domain name may be subject to the alternate procedure established by the Registry in question or brought before the courts.
 For additional information, please contact us via the following form:
  https://www.gandi.net/support/contacter/mail/
+
+####################################################
+
+# whois - komentoa voi suorittaa käänteisiä hakuja. Sen sijaan, että syötät verkkotunnuksen (domain name), voit antaa IP-osoitteen alla olevan kuvan mukaisesti. Jos IP-osoite on tiedossa.
+
+┌──(kali㉿kali)-[~]
+└─$ whois 50.7.67.186    
+
+#
+# ARIN WHOIS data and services are subject to the Terms of Use
+# available at: https://www.arin.net/resources/registry/whois/tou/
+#
+# If you see inaccuracies in the results, please report at
+# https://www.arin.net/resources/registry/whois/inaccuracy_reporting/
+#
+# Copyright 1997-2023, American Registry for Internet Numbers, Ltd.
+#
+
+
+
+# start
+
+NetRange:       50.7.0.0 - 50.7.255.255
+CIDR:           50.7.0.0/16
+NetName:        FDCSERVERS
+NetHandle:      NET-50-7-0-0-1
+Parent:         NET50 (NET-50-0-0-0-0)
+NetType:        Direct Allocation
+OriginAS:       AS174, AS30058
+Organization:   FDCservers.net (FDCSE)
+RegDate:        2010-10-18
+Updated:        2018-10-12
+Ref:            https://rdap.arin.net/registry/ip/50.7.0.0
+
+
+OrgName:        FDCservers.net
+OrgId:          FDCSE
+Address:        175 Main St. #1363
+City:           Destin
+StateProv:      FL
+PostalCode:     32540
+Country:        US
+RegDate:        2003-05-20
+Updated:        2021-06-09
+Ref:            https://rdap.arin.net/registry/entity/FDCSE
+
+ReferralServer:  rwhois://rwhois.fdcservers.net:4321
+
+OrgAbuseHandle: ABUSE438-ARIN
+OrgAbuseName:   ABUSE department
+OrgAbusePhone:  +1-312-423-6675 
+OrgAbuseEmail:  abuse@fdcservers.net
+OrgAbuseRef:    https://rdap.arin.net/registry/entity/ABUSE438-ARIN
+
+OrgTechHandle: ABUSE438-ARIN
+OrgTechName:   ABUSE department
+OrgTechPhone:  +1-312-423-6675 
+OrgTechEmail:  abuse@fdcservers.net
+OrgTechRef:    https://rdap.arin.net/registry/entity/ABUSE438-ARIN
+
+OrgNOCHandle: ABUSE438-ARIN
+OrgNOCName:   ABUSE department
+OrgNOCPhone:  +1-312-423-6675 
+OrgNOCEmail:  abuse@fdcservers.net
+OrgNOCRef:    https://rdap.arin.net/registry/entity/ABUSE438-ARIN
+
+# end
+
+
+# start
+
+NetRange:       50.7.64.0 - 50.7.67.255
+CIDR:           50.7.64.0/22
+NetName:        FDCSERVERS-MIAMI
+NetHandle:      NET-50-7-64-0-1
+Parent:         FDCSERVERS (NET-50-7-0-0-1)
+NetType:        Reallocated
+OriginAS:       AS174, AS30058
+Organization:   FDCservers.net (FDCSE-8)
+RegDate:        2013-05-05
+Updated:        2019-05-23
+Ref:            https://rdap.arin.net/registry/ip/50.7.64.0
+
+
+OrgName:        FDCservers.net
+OrgId:          FDCSE-8
+Address:        200 SE 1st St
+City:           Miami
+StateProv:      FL
+PostalCode:     33131
+Country:        US
+RegDate:        2013-05-05
+Updated:        2013-05-05
+Ref:            https://rdap.arin.net/registry/entity/FDCSE-8
+
+ReferralServer:  rwhois://rwhois.fdcservers.net:4321
+
+OrgAbuseHandle: ABUSE438-ARIN
+OrgAbuseName:   ABUSE department
+OrgAbusePhone:  +1-312-423-6675 
+OrgAbuseEmail:  abuse@fdcservers.net
+OrgAbuseRef:    https://rdap.arin.net/registry/entity/ABUSE438-ARIN
+
+OrgTechHandle: ABUSE438-ARIN
+OrgTechName:   ABUSE department
+OrgTechPhone:  +1-312-423-6675 
+OrgTechEmail:  abuse@fdcservers.net
+OrgTechRef:    https://rdap.arin.net/registry/entity/ABUSE438-ARIN
+
+# end
+
+
+
+#
+# ARIN WHOIS data and services are subject to the Terms of Use
+# available at: https://www.arin.net/resources/registry/whois/tou/
+#
+# If you see inaccuracies in the results, please report at
+# https://www.arin.net/resources/registry/whois/inaccuracy_reporting/
+#
+# Copyright 1997-2023, American Registry for Internet Numbers, Ltd.
+#
+
+
+
+Found a referral to rwhois.fdcservers.net:4321.
+
+%rwhois V-1.5:003fff:00 rwhois.fdcservers.net (by Network Solutions, Inc. V-1.5.9.6)
+network:Auth-Area:50.7.0.0/16
+network:Class-Name:network
+network:OrgName:FDCservers.net
+network:OrgID;I:FDCSE
+network:Address:141 W Jackson Blvd. #1135
+network:City:Chicago
+network:StateProv:IL
+network:PostalCode:60604
+network:Country:US
+network:NetRange:50.7.0.0 - 50.7.255.255
+network:CIDR:50.7.0.0/16
+network:NetName:FDCSERVERS
+network:OrgAbuseHandle:ABUSE438-ARIN
+network:OrgAbuseName:Abuse Department
+network:OrgAbusePhone:+1-312-423-6675
+network:OrgAbuseEmail:abuse@fdcservers.net
+network:OrgNOCHandle:ABUSE438-ARIN
+network:OrgNOCName:Tech Support
+network:OrgNOCPhone:+1-312-423-6675
+network:OrgNOCEmail:abuse@fdcservers.net
+network:OrgTechHandle:ABUSE438-ARIN
+network:OrgTechName:Tech Support
+network:OrgTechPhone:+1-312-423-6675
+network:OrgTechEmail:abuse@fdcservers.net
+
+%ok
+
+
+
+
+
