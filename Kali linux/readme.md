@@ -99,6 +99,7 @@ Esim. ulkoisen testauksen hyökkääjän työkaluja ja komentojen scriptiä ovat
 
 webbi sivustoja ja/tai open source työkalua
 - GHDB (Google Hacking Database)
+  - https://www.exploit-db.com/google-hacking-database
 - Nessus
 - netcraft
 
