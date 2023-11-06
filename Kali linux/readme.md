@@ -7,6 +7,7 @@ Kali linux järjestelmässä on mukana mm. firefox selain, wireshark ja jne. ett
 Kali linux:sta voi käyttää virtuaalikone pohjaista sovellusta mm. vmware, virtualbox tai fyysisen WSL (Windows Subsystem for Linux) eli microsoft pohjaan ja jos mac osaan tulee maksulliseksi. Suositeltavina lataa virtuaalikone pohjan, josta upottaa ladatun kali linux tiedoston ja josta sen jälkeen suorittaa/aktivoi sen kali linux ympäristön. Saa mm. usb tikullakin ladatua kali linux:sta, että esim. vähä rikollista ja riskiä käyttäjälle jos suorittaa selaisen prosessin.
 
 - [Penetraatiotestaus](#Penetraatiotestaus)
+  * [työkalut](#työkalut)
   * [types testing](#types-testing)
   * [color boxes types](#color-boxes-types)
     * [external vs internal](#external-vs-internal)
@@ -48,6 +49,10 @@ Testauken ja sen analysointia:
 Ennen alkavien projektien aikataulutusta ja mitoittamista asiakkuuden kanssa, niin kantsii tutustua tärkeät dokumentteihin. Automaattisen skannausten jälkeen tekee tiedustelutyön ja lopuksi manuaalisen testauksen. Lopputuloksen on löydöksistä koostettun raportti, joka sisältää listauksen havaitujen haavoittuvuksista, sekä asiakkaan ladittujen tehtävälista haavoittuvuuksien mitigoimiseksi (pienentää ja vähentämiseksi), sekä yleisen tietoturvantason parantamista. Jos/Kun testaus on saatu onnistuneeksi päätöksestä ja asiakkuus on suoritanut suosituksen parannustyötä nii voi myöhemmin tulevaisuudessa tehdä uusintatestin.
 
 <img src="images/penetration-testing-1.PNG" width="500">
+
+## työkalut
+
+työkaluja voi olla komentosarja tyyppiä ja tunnetuimista ovat mm. nmap, nikto ja jne, sekä työkaluista voi olla open source sovellusta, josta pitää suorittaa sen ohjelmiston latausta.
 
 ## types testing
 
