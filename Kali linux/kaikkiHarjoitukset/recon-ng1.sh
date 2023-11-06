@@ -5,6 +5,9 @@
 # Recon-ng has a look and feel similar to the Metasploit Framework, reducing the learning curve for leveraging the framework”. 
 # huom. kali linux sovelluksen pohjaan (sisällä) on rakennettu "Recon-ng" niin sitä löytyy sieltä vasemman yläkulmasta haulla "recon-ng" sillä on erillinen komentosarja, toki tätä voi suorittaa perus kali linux terminaalin alla
 
+# lisää harjoituksia; https://hackertarget.com/recon-ng-tutorial/
+
+
 ┌──(kali㉿kali)-[~]
 └─$ recon-ng
 [*] Version check disabled.
