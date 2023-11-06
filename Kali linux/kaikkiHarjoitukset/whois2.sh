@@ -57,3 +57,5 @@ www................: www.gandi.net
 
 
 Copyright (c) Finnish Transport and Communications Agency Traficom
+
+# https://www.baeldung.com/linux/whois-command
