@@ -7,7 +7,6 @@ Kali linux järjestelmässä on mukana mm. firefox selain, wireshark ja jne. ett
 Kali linux:sta voi käyttää virtuaalikone pohjaista sovellusta mm. vmware, virtualbox tai fyysisen WSL (Windows Subsystem for Linux) eli microsoft pohjaan ja jos mac osaan tulee maksulliseksi. Suositeltavina lataa virtuaalikone pohjan, josta upottaa ladatun kali linux tiedoston ja josta sen jälkeen suorittaa/aktivoi sen kali linux ympäristön. Saa mm. usb tikullakin ladatua kali linux:sta, että esim. vähä rikollista ja riskiä käyttäjälle jos suorittaa selaisen prosessin.
 
 - [Penetraatiotestaus](#Penetraatiotestaus)
-  * [työkalut](#työkalut)
   * [types testing](#types-testing)
   * [color boxes types](#color-boxes-types)
     * [external vs internal](#external-vs-internal)
@@ -50,10 +49,6 @@ Ennen alkavien projektien aikataulutusta ja mitoittamista asiakkuuden kanssa, ni
 
 <img src="images/penetration-testing-1.PNG" width="500">
 
-## työkalut
-
-työkaluja voi olla komentosarja tyyppiä ja tunnetuimista ovat mm. nmap, nikto ja jne, sekä työkaluista voi olla open source sovellusta, josta pitää suorittaa sen ohjelmiston latausta.
-
 ## types testing
 
 Penetraatiotestauksessa yritettään hyödyntää järjestelmien, verkkojen, henkilöhallinnon tai fyysisien ominaisuuden heikkoutena tai haavoittuvuuksien turvallisuuden valvonnan tehokkuutta stressitestamiseksi. Testauksen tyyppejä on mm. verkkopalvelut, sovellukset, langattomat ja langallliset verkot, käyttäjien/sosiaalisen manipulointi (social engineering) ja fyysinen testaus. Testauksessa voi suorittaa ulkoisen tai sisäisesti erilaisissa hyökkäyksienvektorien simuloimisessa. 
@@ -94,13 +89,18 @@ koostuu haavoittuvuuksien testaamisesta, jotta voi tarkistaa mahdollisuudet jout
 
 Tämän tyyppinen testaaja yrittää löytää ja hyödyntää järjestelmän haavoittuvuuksia organisaation tietojen varastamiseksi tai vaarantamista. Tuloksena testi osoittaa, ovatko toteututut turvatoimenpiteitä riittäväst turvaamaan organiasation ja arvioimaan sen kykyä puolustautua ulkopuolisia hyökkäyksiä vastaan. Ulkoisen testausta suorittamisen kestää n. alle kuukauden ja riippumatta kuitenkin järjestelmän monimutkaisuudesta, verkon koosta ja itse testin tavoitteista. 
 
-Esim. ulkoisen testauksen hyökkääjän työkaluja ovat mm.
+Esim. ulkoisen testauksen hyökkääjän työkaluja ja komentojen scriptiä ovat mm.
 - nessus
 - metasploit
 - nikto
 - nmap
 - hydra
+- whois
+
+webbi sivustoja ja/tai open source työkalua
 - GHDB (Google Hacking Database)
+- Nessus
+- netcraft
 
 https://purplesec.us/external-vs-internal-network-penetration-tests/
 https://www.imperva.com/learn/application-security/penetration-testing/
