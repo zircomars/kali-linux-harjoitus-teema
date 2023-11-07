@@ -135,18 +135,69 @@ Host api.megacorpone.com not found: 3(NXDOMAIN)
 ┌──(kali㉿kali)-[~]
 └─$
 
+########################################################################
+# DNS Zone transfer
+
+#zone transfer on samanalinen kuin tietokannan replikonti toiminta toisiinsa liittyviä DNS-palvelimien välillä
+# tämä prosessisisältää zone tiedoston kopioimisen NDS pää palvelimeltao orjapalvelimelle (slave/primary server)
+# zone tiedosto sisältää luettelon kaikista tälle zone konfattuile määritetyistä DNS-nimeistä.Zone transfers tulisi yleensä rajoittaa valtuutettuihin (authorized) primary DNS:ään.
+
+# tämä komento muistuu siinä kohdassa kuin; "$host -t ns megacorpone.com" & kun siinä tulostuksessa näkyy tämä "ns1.megacorpone.com" ja se toinen, ja kolmas niin 
+┌──(kali㉿kali)-[~]
+└─$ host -l megacorpone.com ns1.megacorpone.com
+Using domain server:
+Name: ns1.megacorpone.com
+Address: 51.79.37.18#53
+Aliases: 
+
+Host megacorpone.com not found: 5(REFUSED)
+; Transfer failed.
+
+# kokeillaan toinen-kolmas zone transfer DNS-nimi
+┌──(kali㉿kali)-[~]
+└─$ host -l megacorpone.com ns2.megacorpone.com
+Using domain server:
+Name: ns2.megacorpone.com
+Address: 51.222.39.63#53
+Aliases: 
+
+megacorpone.com name server ns1.megacorpone.com.
+megacorpone.com name server ns2.megacorpone.com.
+megacorpone.com name server ns3.megacorpone.com.
+admin.megacorpone.com has address 51.222.169.208
+beta.megacorpone.com has address 51.222.169.209
+fs1.megacorpone.com has address 51.222.169.210
+intranet.megacorpone.com has address 51.222.169.211
+mail.megacorpone.com has address 51.222.169.212
+mail2.megacorpone.com has address 51.222.169.213
+ns1.megacorpone.com has address 51.79.37.18
+ns2.megacorpone.com has address 51.222.39.63
+ns3.megacorpone.com has address 66.70.207.180
+router.megacorpone.com has address 51.222.169.214
+siem.megacorpone.com has address 51.222.169.215
+snmp.megacorpone.com has address 51.222.169.216
+support.megacorpone.com has address 51.222.169.218
+syslog.megacorpone.com has address 51.222.169.217
+test.megacorpone.com has address 51.222.169.219
+vpn.megacorpone.com has address 51.222.169.220
+www.megacorpone.com has address 149.56.244.87
+www2.megacorpone.com has address 149.56.244.87
+                                                                                   
+┌──(kali㉿kali)-[~]
+└─$ host -l megacorpone.com ns3.megacorpone.com
+Using domain server:
+Name: ns3.megacorpone.com
+Address: 66.70.207.180#53
+Aliases: 
+
+Host megacorpone.com not found: 5(REFUSED)
+; Transfer failed.
+
+########
+# lisäharjoituksena, tätä voisi jopa kokeilla muita domain nimejä (verkkotunnuksia domain.fi), ja tarkistaa mitä zone transferiä se tulostaa ja jne.
 
 
-
-
-
-
-
-
-
-
-
-
+########
 
 
 
