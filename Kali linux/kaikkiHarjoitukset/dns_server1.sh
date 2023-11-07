@@ -89,6 +89,7 @@ router
 
 # tässä periaatteessa for looppin kautta, että käytettän list.txt sisäisiä objektia, että tarkistellaan tämän domain.com (megacorpone.com) verkkotunnus prosessi
 # eli tässä tarkistettiin host nimi, www, routeri ja sähköposti, jotka löydettiin näiden raa'an voiman hyökkäyksen avulla, joten host nimet owa, ftp ja proxy, niistä ei löytynyt mitään tietoa
+# NXDOMAIN - saattaa tarkoittaa ettei sillä löydy mitään jos tarkistellaan muita esimerkkejä
 ┌──(kali㉿kali)-[~]
 └─$ for ip in $(cat list.txt);do host $ip.megacorpone.com;done
 www.megacorpone.com has address 149.56.244.87
