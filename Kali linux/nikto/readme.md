@@ -119,3 +119,7 @@ esim. nikto voi skannata IP-osoitteen tai url linkin vaikappa ($nikto -h example
 └─$ nikto -h <IP-add | host>
 
 ```
+
+
+# harjoitus sivustoja: <br>
+https://securitytrails.com/blog/nikto-website-vulnerability-scanner 
