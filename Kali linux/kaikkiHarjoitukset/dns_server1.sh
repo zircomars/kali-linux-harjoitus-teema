@@ -83,6 +83,7 @@ owa
 proxy
 router
 
+# lisäksi tuohon listaan voisi lisätä kaikki protokollat eli tärkeimmistä TCP/UDP protokollat, ja ehkä mahdollista toimiakin mm. lisäisi http 80, https 443, ja jne, mutta tietty protokollat kuitenkin pitää tarkista mitä lisätään list.txt alle, google ja wikipedia on paras haku työkalu
 
 #### step 2
 # In this simplified example, we notice that the hostnames www, router, and mail have been discovered through this brute-force attack. The hostnames owa, ftp and proxy, however, were not found.
