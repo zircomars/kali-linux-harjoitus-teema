@@ -23,3 +23,4 @@
 + OPTIONS: Allowed HTTP Methods: GET, HEAD, POST, OPTIONS .
 ^
 ┌──(kali㉿kali)-[~]
+└─$ nikto -h <IP-add | host name>
