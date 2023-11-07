@@ -1,6 +1,6 @@
 # nikto
 
-Tämmöinen OPen Source webbien serverin/verkkopalvelin skanneri, joka suorittaa kattavia testejä web-palvelimia vastaan useille kohteelle mm. mahdollisia n. yli 6700 mahdollista vaarallista tiedostoa/ohjelmaa, tarkstaa yli 125 palvelimien vanhtunutta versiota varalta ja versiokohtaisia ongelmia n. yli 270 palvelinta
+Tämmöinen open Source webbien serverin/verkkopalvelin skanneri, joka suorittaa kattavia testejä web-palvelimia vastaan useille kohteelle mm. mahdollisia n. yli 6700 mahdollista vaarallista tiedostoa/ohjelmaa, tarkstaa yli 125 palvelimien vanhtunutta versiota varalta ja versiokohtaisia ongelmia n. yli 270 palvelinta
 
 ```
 $ nikto -h
