@@ -73,15 +73,20 @@ Host idontexist.megacorpone.com not found: 3(NXDOMAIN)
 ┌──(kali㉿kali)-[~]
 └─$ echo router >> list.txt 
 
+┌──(kali㉿kali)-[~]
+└─$ echo api >> list.txt   
+
 # jos tarkistettaan list.txt                                                                                   
 ┌──(kali㉿kali)-[~]
-└─$ cat list.txt
+└─$ cat list.txt 
 www
 ftp
 mail
 owa
 proxy
 router
+api
+
 
 # lisäksi tuohon listaan voisi lisätä kaikki protokollat eli tärkeimmistä TCP/UDP protokollat, ja ehkä mahdollista toimiakin mm. lisäisi http 80, https 443, ja jne, mutta tietty protokollat kuitenkin pitää tarkista mitä lisätään list.txt alle, google ja wikipedia on paras haku työkalu & ja ottaa muilta github tekijältä vähä esimerkkiä mallia
 
@@ -94,12 +99,60 @@ router
 ┌──(kali㉿kali)-[~]
 └─$ for ip in $(cat list.txt);do host $ip.megacorpone.com;done
 www.megacorpone.com has address 149.56.244.87
-;; communications error to 192.168.153.2#53: timed out
 Host ftp.megacorpone.com not found: 3(NXDOMAIN)
 mail.megacorpone.com has address 51.222.169.212
 Host owa.megacorpone.com not found: 3(NXDOMAIN)
 Host proxy.megacorpone.com not found: 3(NXDOMAIN)
 router.megacorpone.com has address 51.222.169.214
+Host api.megacorpone.com not found: 3(NXDOMAIN)
+
+##### toinen esim
+# Reverse lookup brute force
+
+# tässä esimerkissä DNS forward brute-force luetto paljasti joukon hajaamia olevia IP-osoiteitta. Jos megacorpone-com sivuston DNS ylläpitäjä (administrator) määritti verkkotunukselle (domain) PTR-recordin, niin saatamme hakkeri/penetraatio testaaja löytää lisää verkkotunnisteen nimeitä (domain name), niin saatetaan löytää lisäää domain nimejä, jotka jäivät huomioimatta "forward look up brute-force" vaiheessa.
+
+#pieni huomiona, toi host IP-osoite (50.7.76.$ip;done) saattaa tuottaa hämäystä penetraatio testaajille & hakkerille, mutta harjoituksen kirjan mukaan niin kantsii kokeilla ja katsoa mitä se oikein tulostaa ja näyttääkin vähä eri osoitteelta verrattuna ylempi komento scripti.
+
+┌──(kali㉿kali)-[~]
+└─$ for ip in $(seq 155 190);do host 50.7.67.$ip;done | grep -v "not found"
+155.67.7.50.in-addr.arpa domain name pointer mail.megacorpone.com.
+162.67.7.50.in-addr.arpa domain name pointer www.megacorpone.com.
+163.67.7.50.in-addr.arpa domain name pointer mail2.megacorpone.com.
+164.67.7.50.in-addr.arpa domain name pointer www2.megacorpone.com.
+165.67.7.50.in-addr.arpa domain name pointer beta.megacorpone.com.
+170.67.7.50.in-addr.arpa domain name pointer ns3.megacorpone.com.
+178.67.7.50.in-addr.arpa domain name pointer syslog.megacorpone.com.
+179.67.7.50.in-addr.arpa domain name pointer mgmt.megacorpone.com.
+180.67.7.50.in-addr.arpa domain name pointer siem.megacorpone.com.
+181.67.7.50.in-addr.arpa domain name pointer snmp.megacorpone.com.
+182.67.7.50.in-addr.arpa domain name pointer test.megacorpone.com.
+186.67.7.50.in-addr.arpa domain name pointer ns1.megacorpone.com.
+187.67.7.50.in-addr.arpa domain name pointer admin.megacorpone.com.
+188.67.7.50.in-addr.arpa domain name pointer intranet.megacorpone.com.
+189.67.7.50.in-addr.arpa domain name pointer vpn.megacorpone.com.
+190.67.7.50.in-addr.arpa domain name pointer router.megacorpone.com.
+                                                                   
+┌──(kali㉿kali)-[~]
+└─$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
