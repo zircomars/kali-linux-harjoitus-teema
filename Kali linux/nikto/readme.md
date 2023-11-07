@@ -123,3 +123,10 @@ esim. nikto voi skannata IP-osoitteen tai url linkin vaikappa ($nikto -h example
 
 # harjoitus sivustoja: <br>
 https://securitytrails.com/blog/nikto-website-vulnerability-scanner 
+https://null-byte.wonderhowto.com/how-to/scan-for-vulnerabilities-any-website-using-nikto-0151729/
+
+## cheat sheets
+https://highon.coffee/blog/nikto-cheat-sheet/
+
+
+
