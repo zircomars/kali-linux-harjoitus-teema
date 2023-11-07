@@ -109,3 +109,13 @@ Option host requires an argument
                 + requires a value
 
 ``` 
+
+## esim komentoja
+
+```
+esim. nikto voi skannata IP-osoitteen tai url linkin vaikappa ($nikto -h example.com) & (nikto -h 192.168.123.9)
+
+┌──(kali㉿kali)-[~]
+└─$ nikto -h <IP-add | host>
+
+```
