@@ -212,7 +212,7 @@ ns2.megacorpone.com.
 └─$ nano dns-axfr.sh
 
 # kopsaa alempi scripti ja tässä scriptissä joka automatisoi jokaisen löydetyn DNS-palvelimien löytämisen ja zone transfer jokaisesta yrittämisestä eli vähä kuin skannaa domain nimen ja löydetyistä dns palvelimesta
-
+## HUOM! kun kopsaa ton scriptin niin pitää tarkista jopa useamman kerran, että miksi toistuu jatkuvasti ongelmia, kun scriptissä on jotakin häikkää 8joko ylimääräinen välilyönti ja jne)
 # /bin/bash
 # Simple Zone Transfer Bash Script
 # $1 is the first argument given after the bash script
@@ -230,9 +230,30 @@ host -l $1 $server | grep "has address"
 done
 
 ###### jatkuu
-# määrittä chmod 755 oikeudet
+# määrittä chmod 755 oikeudet ja suoritettaan scripti komnnenon kautta 
 ┌──(kali㉿kali)-[~]
 └─$ chmod 755 dns-axfr.sh 
+
+┌──(kali㉿kali)-[~]
+└─$ ./dns-axfr.sh megacorpone.com
+admin.megacorpone.com has address 51.222.169.208
+beta.megacorpone.com has address 51.222.169.209
+fs1.megacorpone.com has address 51.222.169.210
+intranet.megacorpone.com has address 51.222.169.211
+mail.megacorpone.com has address 51.222.169.212
+mail2.megacorpone.com has address 51.222.169.213
+ns1.megacorpone.com has address 51.79.37.18
+ns2.megacorpone.com has address 51.222.39.63
+ns3.megacorpone.com has address 66.70.207.180
+router.megacorpone.com has address 51.222.169.214
+siem.megacorpone.com has address 51.222.169.215
+snmp.megacorpone.com has address 51.222.169.216
+support.megacorpone.com has address 51.222.169.218
+syslog.megacorpone.com has address 51.222.169.217
+test.megacorpone.com has address 51.222.169.219
+vpn.megacorpone.com has address 51.222.169.220
+www.megacorpone.com has address 149.56.244.87
+www2.megacorpone.com has address 149.56.244.87
 
 
 ######## valinnainen ########
