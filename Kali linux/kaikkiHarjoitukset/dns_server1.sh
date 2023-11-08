@@ -193,7 +193,10 @@ Aliases:
 Host megacorpone.com not found: 5(REFUSED)
 ; Transfer failed.
 
-########
+# pieni yhteenveto tuosta edellisestä kaksi komennon scriptiä, josta tässä tapauksessa ns1 ja ns3 ovat hylkäneet zone transfer pyynnön ja vain ns3:ssa sallii sen.
+# tuloksena megacorpone.com domain nimessä zone transfer:issä tiedoston täydellisen vedos, joka tarjoaa penetraatios testaajille kätevän luettelon listan megacorpone.com domain nimestä IP- ja DNS nimejä
+
+######## valinnainen ########
 # lisäharjoituksena, tätä voisi jopa kokeilla muita domain nimejä (verkkotunnuksia domain.fi), ja tarkistaa mitä zone transferiä se tulostaa ja jne.
 
 
