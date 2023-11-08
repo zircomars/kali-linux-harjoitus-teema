@@ -119,6 +119,8 @@ Host api.megacorpone.com not found: 3(NXDOMAIN)
 
 #pieni huomiona, toi host IP-osoite (50.7.76.$ip;done) saattaa tuottaa hämäystä penetraatio testaajille & hakkerille, mutta harjoituksen kirjan mukaan niin kantsii kokeilla ja katsoa mitä se oikein tulostaa ja näyttääkin vähä eri osoitteelta verrattuna ylempi komento scripti.
 
+# alemman komentojen merkitykset;
+# grep -v :: --invert-match
 ┌──(kali㉿kali)-[~]
 └─$ for ip in $(seq 155 190);do host 50.7.67.$ip;done | grep -v "not found"
 155.67.7.50.in-addr.arpa domain name pointer mail.megacorpone.com.
@@ -207,6 +209,9 @@ Host megacorpone.com not found: 5(REFUSED)
 # seuraavassa Bash scriptissä tulee peliin, jossa suoritettaan zone transfer host-komentoa tarvisemalla kaksi parametriä;
 # analysoitava domain nimi ja nimipalvelimen osoite (name server address), jonka saadakseen tietyn toimialueen nimi palvelimen puhtaan formaattin eli..
 
+# alemman komentojen merkitykset;
+# -d :: --delimiter=DELIM ;
+# -f ::  --fields=LIST select only these fields on each line;
 └─$ host -t ns megacorpone.com | cut -d " " -f 4
 ns3.megacorpone.com.
 ns1.megacorpone.com.
@@ -270,6 +275,11 @@ www2.megacorpone.com has address 149.56.244.87
 ### DNSRecon
 # DNSRecon on edistyksellinen, moderni Pythonilla kirjoitettu DNS luettelo scripti. DNSrecord komennon scriptin suorittamisen "megacorpone.com" domain vastaan tuottaa seuraava tulokset:
 
+# alemman komentojen merkitykset; -d , -t , axfr
+# -d :: domain
+# -t :: type of Enumeration to perform
+# axfr :: test all ns servers for zone transfer
+
 ┌──(kali㉿kali)-[~]
 └─$  dnsrecon -d megacorpone.com -t axfr
 [*] Checking for Zone Transfer for megacorpone.com name servers
@@ -329,7 +339,8 @@ www2.megacorpone.com has address 149.56.244.87
 # lisäharjoituksena, tätä voisi jopa kokeilla muita domain nimejä (verkkotunnuksia domain.fi), ja tarkistaa mitä se tulostaa mm. dns palvelin, ip-sooite, zone transfer, mac osoite ja jne.
 # sekä mitä yksityiskohtaisia tietoja se saattaa tulostaa ja hertaja
 
-
+##################################
+### DNSRecon
 
 
 
