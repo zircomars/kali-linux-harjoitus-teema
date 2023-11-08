@@ -196,11 +196,51 @@ Host megacorpone.com not found: 5(REFUSED)
 # pieni yhteenveto tuosta edellisestä kaksi komennon scriptiä, josta tässä tapauksessa ns1 ja ns3 ovat hylkäneet zone transfer pyynnön ja vain ns3:ssa sallii sen.
 # tuloksena megacorpone.com domain nimessä zone transfer:issä tiedoston täydellisen vedos, joka tarjoaa penetraatios testaajille kätevän luettelon listan megacorpone.com domain nimestä IP- ja DNS nimejä
 
+#### jatkuu
+# domain nimi (verkkosivu) megacorpone.com:lla on kolme DNS serveriä tarkisteltavinna palvelinta. Joissakn suuressa organisaatiossa saattaaa olla useita DNS-apvelimia, tai penetraatiotestaaja/hakkeri saattaa haluta yrittää zone transfer pyyntöjä tiettyihin toimialuetta vastaan
+# seuraavassa Bash scriptissä tulee peliin, jossa suoritettaan zone transfer host-komentoa tarvisemalla kaksi parametriä;
+# analysoitava domain nimi ja nimipalvelimen osoite (name server address), jonka saadakseen tietyn toimialueen nimi palvelimen puhtaan formaattin eli..
+
+└─$ host -t ns megacorpone.com | cut -d " " -f 4
+ns3.megacorpone.com.
+ns1.megacorpone.com.
+ns2.megacorpone.com.
+
+###### bash script malli
+# jos ei muista miten luotiin joku tiedosto niin...
+┌──(kali㉿kali)-[~]
+└─$ nano dns-axfr.sh
+
+# kopsaa alempi scripti ja tässä scriptissä joka automatisoi jokaisen löydetyn DNS-palvelimien löytämisen ja zone transfer jokaisesta yrittämisestä eli vähä kuin skannaa domain nimen ja löydetyistä dns palvelimesta
+
+# /bin/bash
+# Simple Zone Transfer Bash Script
+# $1 is the first argument given after the bash script
+# Check if argument was given, if not, print usage
+if  [-z "$1" ]; then
+echo "[-] Simple Zone transfer script"
+echo "[-] Usage : $0 <domain name> "
+exit 0
+fi
+
+# if argument was given, identify the DNS servers for the domain
+for server in $(host ­-t ns $1 | cut ­-d" " ­-f4);do
+# For each of these servers, attempt a zone transfer
+host -l $1 $server | grep "has address"
+done
+
+###### jatkuu
+# määrittä chmod 755 oikeudet
+┌──(kali㉿kali)-[~]
+└─$ chmod 755 dns-axfr.sh 
+
+
 ######## valinnainen ########
 # lisäharjoituksena, tätä voisi jopa kokeilla muita domain nimejä (verkkotunnuksia domain.fi), ja tarkistaa mitä zone transferiä se tulostaa ja jne.
+# ja jos saisi niiden IP-osoitteet ja siitä metsätää niiden dns-nimi palvelimet
 
+#########
 
-########
 
 
 
