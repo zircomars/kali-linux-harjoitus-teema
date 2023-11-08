@@ -5,6 +5,6 @@ monipuolisien penetraati testauksiin, haavoittuvuudet ja TCP/UDP porttien skanna
 <!-- tämä on kopsattu toisesta versiosta, mutta poistettu turhia kuvia ja muita ohjeita (niiden kanssa ei ole tekemistä tämän "harjoitus teeman" kanssa -->
 
 ## muitah harjoituksia
-Muita open source harjoituksia 
-Hack the box
+Muita open source harjoituksia; <br>
+Hack the box <br>
 Try Hack me
