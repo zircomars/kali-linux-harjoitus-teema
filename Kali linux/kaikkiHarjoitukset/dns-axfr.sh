@@ -16,3 +16,7 @@ for server in $(host -t ns $1 |cut -d" " -f4);do
 # For each of these servers, attempt a zone transfer
 host -l $1 $server | grep "has address"
 done
+
+#
+┌──(kali㉿kali)-[~]
+└─$ chmod 755 dns-axfr.sh 
