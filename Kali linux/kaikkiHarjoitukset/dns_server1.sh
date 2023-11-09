@@ -12,7 +12,7 @@
 #############
 # harjoitus; https://edu.anarcho-copy.org/Against%20Security%20-%20Self%20Security/Offensive%20Security%20-%20Pentesting%20with%20Kali%20(PWK).pdf
 # chapter 4. active information gathering
-# sivu start here: 98-
+# sivu start here: 98-106
 
 # samat harjoitukset ja scriptit: https://github.com/muckitymuck/OSCP-Study-Guide/blob/master/enumeration/active_information_gathering.md 
 
@@ -414,6 +414,87 @@ ____________________________
                                                                                       
 done.
       
+#########
+# toinen esim. josta katsotaan "megacorpone.com"
+
+──(kali㉿kali)-[~]
+└─$ dnsenum megacorpone.com
+dnsenum VERSION:1.2.6
+
+-----   megacorpone.com   -----
+
+
+Host's addresses:
+__________________
 
 
 
+Name Servers:
+______________
+
+ns1.megacorpone.com.                     5        IN    A        51.79.37.18
+ns2.megacorpone.com.                     5        IN    A        51.222.39.63
+ns3.megacorpone.com.                     5        IN    A        66.70.207.180
+
+
+Mail (MX) Servers:
+___________________
+
+mail.megacorpone.com.                    5        IN    A        51.222.169.212
+spool.mail.gandi.net.                    5        IN    A        217.70.178.1
+mail2.megacorpone.com.                   5        IN    A        51.222.169.213
+fb.mail.gandi.net.                       5        IN    A        217.70.178.215
+fb.mail.gandi.net.                       5        IN    A        217.70.178.216
+fb.mail.gandi.net.                       5        IN    A        217.70.178.217
+
+
+Trying Zone Transfers and getting Bind Versions:
+_________________________________________________
+
+
+Trying Zone Transfer for megacorpone.com on ns1.megacorpone.com ... 
+AXFR record query failed: REFUSED
+
+Trying Zone Transfer for megacorpone.com on ns3.megacorpone.com ... 
+AXFR record query failed: REFUSED
+
+Trying Zone Transfer for megacorpone.com on ns2.megacorpone.com ... 
+megacorpone.com.                         300      IN    SOA               (
+megacorpone.com.                         300      IN    TXT            "Try
+megacorpone.com.                         300      IN    TXT               (
+megacorpone.com.                         300      IN    MX               10
+megacorpone.com.                         300      IN    MX               20
+megacorpone.com.                         300      IN    MX               50
+megacorpone.com.                         300      IN    MX               60
+megacorpone.com.                         300      IN    NS       ns1.megacorpone.com.
+megacorpone.com.                         300      IN    NS       ns2.megacorpone.com.
+megacorpone.com.                         300      IN    NS       ns3.megacorpone.com.
+admin.megacorpone.com.                   300      IN    A        51.222.169.208
+beta.megacorpone.com.                    300      IN    A        51.222.169.209
+fs1.megacorpone.com.                     300      IN    A        51.222.169.210
+intranet.megacorpone.com.                300      IN    A        51.222.169.211
+mail.megacorpone.com.                    300      IN    A        51.222.169.212
+mail2.megacorpone.com.                   300      IN    A        51.222.169.213
+ns1.megacorpone.com.                     300      IN    A        51.79.37.18
+ns2.megacorpone.com.                     300      IN    A        51.222.39.63
+ns3.megacorpone.com.                     300      IN    A        66.70.207.180
+router.megacorpone.com.                  300      IN    A        51.222.169.214
+siem.megacorpone.com.                    300      IN    A        51.222.169.215
+snmp.megacorpone.com.                    300      IN    A        51.222.169.216
+support.megacorpone.com.                 300      IN    A        51.222.169.218
+syslog.megacorpone.com.                  300      IN    A        51.222.169.217
+test.megacorpone.com.                    300      IN    A        51.222.169.219
+vpn.megacorpone.com.                     300      IN    A        51.222.169.220
+www.megacorpone.com.                     300      IN    A        149.56.244.87
+www2.megacorpone.com.                    300      IN    A        149.56.244.87
+
+                                                                                          
+Brute forcing with /usr/share/dnsenum/dns.txt:                                            
+_______________________________________________                                           
+                                                                                          
+                                                                                          
+^C                                                                                        
+# tuossa tulostuksessa ei tullut enempään.. mutta siinä tulostuu jossain myöhemmin (lisää), kuitenkin katkaisin yhteyden
+
+┌──(kali㉿kali)-[~]
+└─$ 
