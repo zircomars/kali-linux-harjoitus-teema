@@ -340,13 +340,80 @@ www2.megacorpone.com has address 149.56.244.87
 # sekä mitä yksityiskohtaisia tietoja se saattaa tulostaa ja hertaja
 
 ##################################
-### DNSRecon
+### DNSenum
+# DNSenum on toinen suosittu DNS-luettelotyökalu. Tämän komento scriptti suorittaminen zonetransfer.me-verkkotunnuksessa (domain nimessä), joka erityisesti sallii zone transfer siirron, tuottaa seuraavan tulosteen;;
 
 
+┌──(kali㉿kali)-[~]
+└─$ dnsenum zonetransfer.com           
+dnsenum VERSION:1.2.6
 
+-----   zonetransfer.com   -----                                                      
+                                                                                      
+                                                                                      
+Host's addresses:                                                                     
+__________________                                                                    
+                                                                                      
+zonetransfer.com.                        5        IN    A        67.227.156.96        
 
+                                                                                      
+Name Servers:                                                                         
+______________                                                                        
+                                                                                      
+ns1.zonetransfer.com.                    5        IN    A        67.227.156.96        
+ns2.zonetransfer.com.                    5        IN    A        67.227.212.64
 
+                                                                                      
+Mail (MX) Servers:                                                                    
+___________________                                                                   
+                                                                                      
+mail.zonetransfer.com.                   5        IN    A        67.227.156.96        
 
+                                                                                      
+Trying Zone Transfers and getting Bind Versions:                                      
+_________________________________________________                                     
+                                                                                      
+                                                                                      
+Trying Zone Transfer for zonetransfer.com on ns2.zonetransfer.com ... 
+AXFR record query failed: REFUSED
+
+Trying Zone Transfer for zonetransfer.com on ns1.zonetransfer.com ... 
+AXFR record query failed: REFUSED
+
+                                                                                      
+Brute forcing with /usr/share/dnsenum/dns.txt:                                        
+_______________________________________________                                       
+                                                                                      
+mail.zonetransfer.com.                   5        IN    A        67.227.156.96        
+ns1.zonetransfer.com.                    5        IN    A        67.227.156.96
+ns2.zonetransfer.com.                    5        IN    A        67.227.212.64
+server.zonetransfer.com.                 5        IN    A        67.227.156.96
+webmail.zonetransfer.com.                5        IN    CNAME    zonetransfer.com.
+zonetransfer.com.                        5        IN    A        67.227.156.96
+www.zonetransfer.com.                    5        IN    CNAME    zonetransfer.com.
+zonetransfer.com.                        5        IN    A        67.227.156.96
+
+                                                                                      
+zonetransfer.com class C netranges:                                                   
+____________________________________                                                  
+                                                                                      
+ 67.227.156.0/24                                                                      
+ 67.227.212.0/24
+
+                                                                                      
+Performing reverse lookup on 512 ip addresses:                                        
+_______________________________________________                                       
+                                                                                      
+                                                                                      
+0 results out of 512 IP addresses.
+
+                                                                                      
+zonetransfer.com ip blocks:                                                           
+____________________________                                                          
+                                                                                      
+                                                                                      
+done.
+      
 
 
 
