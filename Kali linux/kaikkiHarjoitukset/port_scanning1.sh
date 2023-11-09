@@ -302,6 +302,44 @@ Chain OUTPUT (policy ACCEPT 0 packets, 0 bytes)
 ##################################################
 ## Network Sweeping 
 
+# tätä voidaakseen käsitellä suuria host:in koneiden määriä tai muuten yrittää säästää verkkoliikennettä, ja voidaan tutkia näitä koneiden käyttämälllä network sweeping-tekniikkaa
+# koneet, jotka suodattavat (filter) tai estävät ICMP-pyyntöä, johon voivat vaikuttaa ping:in sweep:iin ja se ei ole lopullinen tapa tunnistaa, mitkä koneet ovat up tai down
+# se tarjoaa hyvän vertailunkohteen kohdeverkosta ymmärtämisellä ja mahdollisten pakettien suodatus laitteiden tunnistamalla olemalla olevassa oloa (eli jos laite on olemassa)
+
+┌──(root㉿kali)-[/home/kali]
+└─# nmap -sn 193.16.18.1-254
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-11-09 20:20 EET
+Nmap scan report for 193.16.18.1
+Host is up (0.00073s latency).
+MAC Address: A0:FE:FC:CE:62:7A (VMware)
+Nmap scan report for 193.16.18.2
+Host is up (0.00060s latency).
+MAC Address: E7:41:63:AA:FE:92 (VMware)
+Nmap scan report for 193.16.18.129
+Host is up (0.00098s latency).
+MAC Address: D7:4D:D3:C4:EB:4D (VMware)
+Nmap scan report for 193.16.18.254
+Host is up (0.00076s latency).
+MAC Address: 4A:8B:AC:97:B4:9F (VMware)
+Nmap scan report for 193.16.18.130
+Host is up.
+Nmap done: 254 IP addresses (5 hosts up) scanned in 2.14 seconds
+
+
+
+# toinen esim. josta skannaa kaikki 254 porttia, jotka ovat ylhäällä
+──(root㉿kali)-[/home/kali]
+└─# nmap -sn 193.170.10.1-254  
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-11-09 20:22 EET
+Nmap scan report for 193.170.10.1
+Host is up (0.067s latency).
+Nmap scan report for 193.170.10.2
+Host is up (0.0018s latency).
+Nmap scan report for 193.170.10.3
+....
+Host is up (0.0018s latency).
+Nmap scan report for 193.170.10.254
+
 
 
 
