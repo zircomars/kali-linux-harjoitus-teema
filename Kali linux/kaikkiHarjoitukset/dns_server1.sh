@@ -417,47 +417,41 @@ done.
 #########
 # toinen esim. josta katsotaan "megacorpone.com"
 
-──(kali㉿kali)-[~]
+┌──(kali㉿kali)-[~]
 └─$ dnsenum megacorpone.com
 dnsenum VERSION:1.2.6
 
------   megacorpone.com   -----
-
-
-Host's addresses:
-__________________
-
-
-
-Name Servers:
-______________
-
-ns1.megacorpone.com.                     5        IN    A        51.79.37.18
+-----   megacorpone.com   -----                                                           
+                                                                                          
+                                                                                          
+Host's addresses:                                                                         
+__________________                                                                        
+                                                                                          
+                                                                                          
+                                                                                          
+Name Servers:                                                                             
+______________                                                                            
+                                                                                          
+ns1.megacorpone.com.                     5        IN    A        51.79.37.18              
 ns2.megacorpone.com.                     5        IN    A        51.222.39.63
 ns3.megacorpone.com.                     5        IN    A        66.70.207.180
 
-
-Mail (MX) Servers:
-___________________
-
-mail.megacorpone.com.                    5        IN    A        51.222.169.212
-spool.mail.gandi.net.                    5        IN    A        217.70.178.1
+                                                                                          
+Mail (MX) Servers:                                                                        
+___________________                                                                       
+                                                                                          
+mail.megacorpone.com.                    5        IN    A        51.222.169.212           
 mail2.megacorpone.com.                   5        IN    A        51.222.169.213
-fb.mail.gandi.net.                       5        IN    A        217.70.178.215
+spool.mail.gandi.NET.                    5        IN    A        217.70.178.1
 fb.mail.gandi.net.                       5        IN    A        217.70.178.216
 fb.mail.gandi.net.                       5        IN    A        217.70.178.217
+fb.mail.gandi.net.                       5        IN    A        217.70.178.215
 
-
-Trying Zone Transfers and getting Bind Versions:
-_________________________________________________
-
-
-Trying Zone Transfer for megacorpone.com on ns1.megacorpone.com ... 
-AXFR record query failed: REFUSED
-
-Trying Zone Transfer for megacorpone.com on ns3.megacorpone.com ... 
-AXFR record query failed: REFUSED
-
+                                                                                          
+Trying Zone Transfers and getting Bind Versions:                                          
+_________________________________________________                                         
+                                                                                          
+                                                                                          
 Trying Zone Transfer for megacorpone.com on ns2.megacorpone.com ... 
 megacorpone.com.                         300      IN    SOA               (
 megacorpone.com.                         300      IN    TXT            "Try
@@ -488,13 +482,40 @@ vpn.megacorpone.com.                     300      IN    A        51.222.169.220
 www.megacorpone.com.                     300      IN    A        149.56.244.87
 www2.megacorpone.com.                    300      IN    A        149.56.244.87
 
+Trying Zone Transfer for megacorpone.com on ns3.megacorpone.com ... 
+AXFR record query failed: REFUSED
+
+Trying Zone Transfer for megacorpone.com on ns1.megacorpone.com ... 
+AXFR record query failed: REFUSED
+
                                                                                           
 Brute forcing with /usr/share/dnsenum/dns.txt:                                            
 _______________________________________________                                           
                                                                                           
                                                                                           
-^C                                                                                        
-# tuossa tulostuksessa ei tullut enempään.. mutta siinä tulostuu jossain myöhemmin (lisää), kuitenkin katkaisin yhteyden
+                                                                                          
+megacorpone.com class C netranges:                                                        
+___________________________________                                                       
+                                                                                          
+ 51.79.37.0/24                                                                            
+ 51.222.39.0/24
+ 51.222.169.0/24
+ 66.70.207.0/24
+ 149.56.244.0/24
 
+                                                                                          
+Performing reverse lookup on 1280 ip addresses:                                           
+________________________________________________                                          
+                                                                                          
+                                                                                          
+0 results out of 1280 IP addresses.
+
+                                                                                          
+megacorpone.com ip blocks:                                                                
+___________________________                                                               
+                                                                                          
+                                                                                          
+done.
+                                                                                          
 ┌──(kali㉿kali)-[~]
-└─$ 
+└─$
