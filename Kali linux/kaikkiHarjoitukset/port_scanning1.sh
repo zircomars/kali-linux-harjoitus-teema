@@ -73,7 +73,7 @@ sent 0, rcvd 0
 # ennen kuin alaa suorittaa mitään NMAP-tarkistusta sokeasti, kantsii tarkistaa tällaisia tarkistuksen lähettämän liikenteen määärää.
 # tässä esim/realistisessa tarkistuksessa on yksi paikallisisten koneista ja tarkkastellaan tiettyyn host iptables:in avulal lähetettyn liikenteen määrää
 
-##########
+#########
 # esim. skannaus
 # We’ll scan one of my local machines while monitoring the amount
 # of traffic sent to the specific host using iptables.
@@ -186,9 +186,114 @@ root@kali:~#
 #####
 ##### oma skannaus (badastore) vmware
 
+┌──(kali㉿kali)-[~]
+└─$  nc -nvv -w 1 -z 192.168.240.129 3000-3390
+(UNKNOWN) [192.168.240.129] 3390 (?) : Connection refused
+(UNKNOWN) [192.168.240.129] 3389 (ms-wbt-server) : Connection refused
+(UNKNOWN) [192.168.240.129] 3388 (?) : Connection refused
+(UNKNOWN) [192.168.240.129] 3387 (?) : Connection refused
+.
+..
+...
+(UNKNOWN) [192.168.240.129] 3308 (?) : Connection refused
+(UNKNOWN) [192.168.240.129] 3307 (?) : Connection refused
+(UNKNOWN) [192.168.240.129] 3306 (mysql) open
+(UNKNOWN) [192.168.240.129] 3305 (?) : Connection refused
+(UNKNOWN) [192.168.240.129] 3304 (?) : Connection refused
+.
+..
+...
+(UNKNOWN) [192.168.240.129] 3262 (?) : Connection refused
+(UNKNOWN) [192.168.240.129] 3261 (?) : Connection refused
+(UNKNOWN) [192.168.240.129] 3260 (iscsi-target) : Connection refused
+(UNKNOWN) [192.168.240.129] 3259 (?) : Connection refused
+(UNKNOWN) [192.168.240.129] 3258 (?) : Connection refused
+
+# tässä badstoressa saattaa olla muita portteja, mutta rajoitin itse ton komenon scriptin mukaan, mitä oikein tulostaa ja löytääkään mm. 3000 - 3390  väliltä
+
+# seuraavasti tässä ei tulostunut mitään, mahtako olla jokin muu udp porttit käytössä
+┌──(kali㉿kali)-[~]
+└─$ nc -nv -u -z -w 1 192.168.240.129 160-162 
+                                                                              
+┌──(kali㉿kali)-[~]
+└─$ nc -nv -u -z -w 1 192.168.240.129 100-150
+                                                                              
+┌──(kali㉿kali)-[~]
+└─$ nc -nv -u -z -w 1 192.168.240.129 100-150
+^[[A^[[A^[[A^C
+                                                                              
+┌──(kali㉿kali)-[~]
+└─$ nc -nv -u -z -w 1 192.168.240.129 3390-3392
 
 
+┌──(kali㉿kali)-[~]
+└─$ sudo su                      
+[sudo] password for kali: 
+┌──(root㉿kali)-[/home/kali]
+└─# iptables -I INPUT 1 -s 192.168.240.129 -j ACCEPT
+                                                                              
+┌──(root㉿kali)-[/home/kali]
+└─# iptables -I INPUT 1 -d 192.168.240.129 -j ACCEPT
+                                                                              
+┌──(root㉿kali)-[/home/kali]
+└─# iptables -Z                                     
 
+
+#### nmap iptables scanning START HERE
+
+┌──(root㉿kali)-[/home/kali]
+└─# nmap -sT 192.168.240.129                  
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-11-09 20:05 EET
+Nmap scan report for 192.168.240.129
+Host is up (0.0018s latency).
+Not shown: 997 closed tcp ports (conn-refused)
+PORT     STATE SERVICE
+80/tcp   open  http
+443/tcp  open  https
+3306/tcp open  mysql
+MAC Address: 00:0C:29:33:A0:BB (VMware)
+
+Nmap done: 1 IP address (1 host up) scanned in 0.37 seconds
+
+┌──(root㉿kali)-[/home/kali]
+└─# iptables -vn -L
+Chain INPUT (policy ACCEPT 69 packets, 4452 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+    0     0 ACCEPT     0    --  *      *       0.0.0.0/0            192.168.240.129     
+ 1000 40060 ACCEPT     0    --  *      *       192.168.240.129      0.0.0.0/0           
+
+Chain FORWARD (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+
+Chain OUTPUT (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+
+                                                                                                                       
+┌──(root㉿kali)-[/home/kali]
+└─# iptables -Z    
+
+┌──(root㉿kali)-[/home/kali]
+└─# nmap -sT -p 1-65635 192.168.240.129
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-11-09 20:07 EET
+Ports specified must be between 0 and 65535 inclusive
+QUITTING!
+                                                                                                                        
+┌──(root㉿kali)-[/home/kali]
+└─# iptables -vn -L
+Chain INPUT (policy ACCEPT 50 packets, 2519 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+    0     0 ACCEPT     0    --  *      *       0.0.0.0/0            192.168.240.129     
+    0     0 ACCEPT     0    --  *      *       192.168.240.129      0.0.0.0/0           
+
+Chain FORWARD (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+
+Chain OUTPUT (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+                                                                                                                        
+┌──(root㉿kali)-[/home/kali]
+
+#### nmap iptables scanning ENDS HERE
 
 
 
