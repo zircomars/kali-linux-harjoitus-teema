@@ -340,13 +340,185 @@ Nmap scan report for 193.170.10.3
 Host is up (0.0018s latency).
 Nmap scan report for 193.170.10.254
 
+## seuraavat esim.
+# Live-koneiden etsimisen grep-komennolla voi antaa käyttäjälle vaikeasti hallittavan tuloksensa.
+# Komennolla Nmap:in "greppable" tulostusparametri (-oG) näiden tulosten tallentamisten muotoa, jota on helpompi hallita.
+
+┌──(kali㉿kali)-[~]
+└─$ nmap -sn 194.17.34.1-254 
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-11-10 12:45 EET
+Nmap scan report for 194.17.34.171
+Host is up (0.013s latency).
+Nmap done: 254 IP addresses (1 host up) scanned in 44.11 seconds
+
+# periaatteessa tämä komento tulostuksesta kirjoitettaan ping-sweep.txt tiedoston sisään
+┌──(kali㉿kali)-[~]
+└─$ nmap -sn 194.17.34.1-254 -oG ping-sweep.txt
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-11-10 12:47 EET
+Nmap scan report for 194.17.34.1
+Host is up (0.0033s latency).
+Nmap scan report for 194.17.34.171
+Host is up (0.0031s latency).
+Nmap done: 254 IP addresses (2 hosts up) scanned in 64.80 seconds
+                                                                                                               
+
+# ja specialsempi komento, josta katsotaan se toiminnan tulostus                                                                            
+┌──(kali㉿kali)-[~]
+└─$ grep Up ping-sweep.txt | cut -d " " -f 2
+194.17.34.1
+194.17.34.171
+
+# cat luetaan toi ping-sweep.txt tiedosto sisältö tausta
+┌──(kali㉿kali)-[~]
+└─$ cat ping-sweep.txt 
+# Nmap 7.93 scan initiated Fri Nov 10 12:47:14 2023 as: nmap -sn -oG ping-sweep.txt 194.17.34.1-254
+Host: 194.17.34.1 ()   Status: Up
+Host: 194.17.34.171 () Status: Up
+# Nmap done at Fri Nov 10 12:48:19 2023 -- 254 IP addresses (2 hosts up) scanned in 64.80 seconds
+
+##################
+## jos mennään eteenpäin, voidaan pyyhkäistä tiettyjä TCP ja/tai UDP-portteja (-p) komennon verkon ylitse
+# HUOM. tuossa päättyessä on eri tiedosto
+└─$ nmap -p 80 194.17.34.1-254 -oG web-sweep.txt
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-11-10 13:02 EET
+Nmap scan report for 194.17.34.1
+Host is up (0.0048s latency).
+
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for 194.17.34.171
+Host is up (0.0031s latency).
+
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap done: 254 IP addresses (2 hosts up) scanned in 25.55 seconds
+                                                                                          
+┌──(kali㉿kali)-[~]
+└─$ grep open web-sweep.txt | cut -d " " -f 2 
+194.17.34.1
+194.17.34.171
+                                                                                          
+# cat luetaan toi web-sweep.txt tiedosto sisältö tausta
+┌──(kali㉿kali)-[~]
+└─$ cat web-sweep.txt 
+# Nmap 7.93 scan initiated Fri Nov 10 13:02:39 2023 as: nmap -p 80 -oG web-sweep.txt 194.17.34.1-254
+Host: 194.17.34.1 ()   Status: Up
+Host: 194.17.34.1 ()   Ports: 80/open/tcp//http///
+Host: 194.17.34.171 () Status: Up
+Host: 194.17.34.171 () Ports: 80/open/tcp//http///
+# Nmap done at Fri Nov 10 13:03:05 2023 -- 254 IP addresses (2 hosts up) scanned in 25.55 seconds
 
 
+### seuraavaksi, komennossa voidaan skannata useiden IP-osoiteiden välillä ja etsiä vain muutamista yleisiä portteja, johon komennossa suoritettaan 20 parhaan TCP-portin skannausta ja uutteen txt tiedostoon
 
+┌──(kali㉿kali)-[~]
+└─$ nmap -sT -A --top-ports=20 194.17.34.1-254 -oG top-port-sweep.txt   
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-11-10 13:15 EET
+Nmap scan report for 194.17.34.1
+Host is up (0.0040s latency).
 
+PORT     STATE    SERVICE       VERSION
+21/tcp   filtered ftp
+22/tcp   open     ssh           OpenSSH 7.5 (protocol 2.0)
+23/tcp   filtered telnet
+25/tcp   filtered smtp
+53/tcp   filtered domain
+80/tcp   open     http          nginx
+|_http-title: Did not follow redirect to https://194.17.34.1:8443/
+110/tcp  filtered pop3
+111/tcp  filtered rpcbind
+135/tcp  filtered msrpc
+139/tcp  filtered netbios-ssn
+143/tcp  filtered imap
+443/tcp  open     https?
+445/tcp  filtered microsoft-ds
+993/tcp  filtered imaps
+995/tcp  filtered pop3s
+1723/tcp filtered pptp
+3306/tcp filtered mysql
+3389/tcp filtered ms-wbt-server
+5900/tcp filtered vnc
+8080/tcp filtered http-proxy
 
+Nmap scan report for 194.17.34.171
+Host is up (0.15s latency).
 
+PORT     STATE    SERVICE       VERSION
+21/tcp   filtered ftp
+22/tcp   filtered ssh
+23/tcp   filtered telnet
+25/tcp   filtered smtp
+53/tcp   filtered domain
+80/tcp   open     http          Apache httpd
+|_ms-sql-info: ERROR: Script execution failed (use -d to debug)
+|_http-server-header: Apache
+|_http-title: TopAccess
+|_ms-sql-ntlm-info: ERROR: Script execution failed (use -d to debug)
+110/tcp  filtered pop3
+111/tcp  filtered rpcbind
+135/tcp  filtered msrpc
+139/tcp  open     netbios-ssn?
+|_ms-sql-info: ERROR: Script execution failed (use -d to debug)
+|_ms-sql-ntlm-info: ERROR: Script execution failed (use -d to debug)
+143/tcp  filtered imap
+443/tcp  filtered https
+445/tcp  open     microsoft-ds
+|_ms-sql-ntlm-info: ERROR: Script execution failed (use -d to debug)
+|_ms-sql-info: ERROR: Script execution failed (use -d to debug)
+| fingerprint-strings: 
+|   SMBProgNeg: 
+|_    SMBr
+993/tcp  filtered imaps
+995/tcp  filtered pop3s
+1723/tcp filtered pptp
+3306/tcp filtered mysql
+3389/tcp filtered ms-wbt-server
+5900/tcp filtered vnc
+8080/tcp open     http          Apache httpd
+|_http-open-proxy: Proxy might be redirecting requests
+|_http-server-header: Apache
+|_http-title: TopAccess
+|_ms-sql-info: ERROR: Script execution failed (use -d to debug)
+|_ms-sql-ntlm-info: ERROR: Script execution failed (use -d to debug)
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port445-TCP:V=7.93%I=7%D=11/10%Time=654E111C%P=x86_64-pc-linux-gnu%r(SM
+SF:BProgNeg,51,"\0\0\0M\xffSMBr\0\0\0\0\x88\x01H\0\0\0\0\0\0\0\0\0\0\0\0\0
+SF:\0@\x06\0\0\x01\0\x11\x07\0\x07\n\0\x01\0\0\0\x01\0\0\0\x01\0\0\0\0\0\|
+SF:\xe0\0\0P\xf9\xef\x0c\xca\x13\xda\x01\x88\xff\x08\x08\0\xf7\xb0\x8f\xe8
+SF:\x87\|\0a");
 
+Host script results:
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: supported
+|_nbstat: NetBIOS name: MFP12339215, NetBIOS user: <unknown>, NetBIOS MAC: 000000000000 (Xerox)
+| smb2-security-mode: 
+|   311: 
+|_    Message signing enabled but not required
+|_clock-skew: mean: 19m07s, deviation: 0s, median: 19m07s
+|_ms-sql-info: ERROR: Script execution failed (use -d to debug)
+| smb2-time: 
+|   date: 2023-11-10T11:36:14
+|_  start_date: 2023-11-03T20:51:28
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 254 IP addresses (2 hosts up) scanned in 174.20 seconds
+                                                                   
+# cat luetaan toi top-port-sweep.txt tiedosto sisältö tausta
+┌──(kali㉿kali)-[~]
+└─$ cat top-port-sweep.txt 
+# Nmap 7.93 scan initiated Fri Nov 10 13:15:58 2023 as: nmap -sT -A --top-ports=20 -oG top-port-sweep.txt 194.17.34.1-254
+Host: 194.17.34.1 ()   Status: Up
+Host: 194.17.34.1 ()   Ports: 21/filtered/tcp//ftp///, 22/open/tcp//ssh//OpenSSH 7.5 (protocol 2.0)/, 23/filtered/tcp//telnet///, 25/filtered/tcp//smtp///, 53/filtered/tcp//domain///, 80/open/tcp//http//nginx/, 110/filtered/tcp//pop3///, 111/filtered/tcp//rpcbind///, 135/filtered/tcp//msrpc///, 139/filtered/tcp//netbios-ssn///, 143/filtered/tcp//imap///, 443/open/tcp//https?///, 445/filtered/tcp//microsoft-ds///, 993/filtered/tcp//imaps///, 995/filtered/tcp//pop3s///, 1723/filtered/tcp//pptp///, 3306/filtered/tcp//mysql///, 3389/filtered/tcp//ms-wbt-server///, 5900/filtered/tcp//vnc///, 8080/filtered/tcp//http-proxy///
+Host: 194.17.34.171 () Status: Up
+Host: 194.17.34.171 () Ports: 21/filtered/tcp//ftp///, 22/filtered/tcp//ssh///, 23/filtered/tcp//telnet///, 25/filtered/tcp//smtp///, 53/filtered/tcp//domain///, 80/open/tcp//http//Apache httpd/, 110/filtered/tcp//pop3///, 111/filtered/tcp//rpcbind///, 135/filtered/tcp//msrpc///, 139/open/tcp//netbios-ssn?///, 143/filtered/tcp//imap///, 443/filtered/tcp//https///, 445/open/tcp//microsoft-ds///, 993/filtered/tcp//imaps///, 995/filtered/tcp//pop3s///, 1723/filtered/tcp//pptp///, 3306/filtered/tcp//mysql///, 3389/filtered/tcp//ms-wbt-server///, 5900/filtered/tcp//vnc///, 8080/open/tcp//http//Apache httpd/
+# Nmap done at Fri Nov 10 13:18:53 2023 -- 254 IP addresses (2 hosts up) scanned in 174.20 seconds
+                                                                             
+# koneita, jotka voidaaan osoittautua palvelurikkaaksi (rich in services) tai muuten vaan mielenkiintoiseksi, porttitarkistuksessa yksittelen käyttämällä kattavampaa porttiuluetteloa
 
 
 
