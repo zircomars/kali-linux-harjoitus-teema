@@ -187,53 +187,53 @@ root@kali:~#
 ##### oma skannaus (badastore) vmware
 
 ┌──(kali㉿kali)-[~]
-└─$  nc -nvv -w 1 -z 192.168.240.129 3000-3390
-(UNKNOWN) [192.168.240.129] 3390 (?) : Connection refused
-(UNKNOWN) [192.168.240.129] 3389 (ms-wbt-server) : Connection refused
-(UNKNOWN) [192.168.240.129] 3388 (?) : Connection refused
-(UNKNOWN) [192.168.240.129] 3387 (?) : Connection refused
+└─$  nc -nvv -w 1 -z 138.46.185.29 3000-3390
+(UNKNOWN) [138.46.185.29] 3390 (?) : Connection refused
+(UNKNOWN) [138.46.185.29] 3389 (ms-wbt-server) : Connection refused
+(UNKNOWN) [138.46.185.29] 3388 (?) : Connection refused
+(UNKNOWN) [138.46.185.29] 3387 (?) : Connection refused
 .
 ..
 ...
-(UNKNOWN) [192.168.240.129] 3308 (?) : Connection refused
-(UNKNOWN) [192.168.240.129] 3307 (?) : Connection refused
-(UNKNOWN) [192.168.240.129] 3306 (mysql) open
-(UNKNOWN) [192.168.240.129] 3305 (?) : Connection refused
-(UNKNOWN) [192.168.240.129] 3304 (?) : Connection refused
+(UNKNOWN) [138.46.185.29] 3308 (?) : Connection refused
+(UNKNOWN) [138.46.185.29] 3307 (?) : Connection refused
+(UNKNOWN) [138.46.185.29] 3306 (mysql) open
+(UNKNOWN) [138.46.185.29] 3305 (?) : Connection refused
+(UNKNOWN) [138.46.185.29] 3304 (?) : Connection refused
 .
 ..
 ...
-(UNKNOWN) [192.168.240.129] 3262 (?) : Connection refused
-(UNKNOWN) [192.168.240.129] 3261 (?) : Connection refused
-(UNKNOWN) [192.168.240.129] 3260 (iscsi-target) : Connection refused
-(UNKNOWN) [192.168.240.129] 3259 (?) : Connection refused
-(UNKNOWN) [192.168.240.129] 3258 (?) : Connection refused
+(UNKNOWN) [138.46.185.29] 3262 (?) : Connection refused
+(UNKNOWN) [138.46.185.29] 3261 (?) : Connection refused
+(UNKNOWN) [138.46.185.29] 3260 (iscsi-target) : Connection refused
+(UNKNOWN) [138.46.185.29] 3259 (?) : Connection refused
+(UNKNOWN) [138.46.185.29] 3258 (?) : Connection refused
 
 # tässä badstoressa saattaa olla muita portteja, mutta rajoitin itse ton komenon scriptin mukaan, mitä oikein tulostaa ja löytääkään mm. 3000 - 3390  väliltä
 
 # seuraavasti tässä ei tulostunut mitään, mahtako olla jokin muu udp porttit käytössä
 ┌──(kali㉿kali)-[~]
-└─$ nc -nv -u -z -w 1 192.168.240.129 160-162 
+└─$ nc -nv -u -z -w 1 138.46.185.29 160-162 
                                                                               
 ┌──(kali㉿kali)-[~]
-└─$ nc -nv -u -z -w 1 192.168.240.129 100-150
+└─$ nc -nv -u -z -w 1 138.46.185.29 100-150
                                                                               
 ┌──(kali㉿kali)-[~]
-└─$ nc -nv -u -z -w 1 192.168.240.129 100-150
+└─$ nc -nv -u -z -w 1 138.46.185.29 100-150
 ^[[A^[[A^[[A^C
                                                                               
 ┌──(kali㉿kali)-[~]
-└─$ nc -nv -u -z -w 1 192.168.240.129 3390-3392
+└─$ nc -nv -u -z -w 1 138.46.185.29 3390-3392
 
 
 ┌──(kali㉿kali)-[~]
 └─$ sudo su                      
 [sudo] password for kali: 
 ┌──(root㉿kali)-[/home/kali]
-└─# iptables -I INPUT 1 -s 192.168.240.129 -j ACCEPT
+└─# iptables -I INPUT 1 -s 138.46.185.29 -j ACCEPT
                                                                               
 ┌──(root㉿kali)-[/home/kali]
-└─# iptables -I INPUT 1 -d 192.168.240.129 -j ACCEPT
+└─# iptables -I INPUT 1 -d 138.46.185.29 -j ACCEPT
                                                                               
 ┌──(root㉿kali)-[/home/kali]
 └─# iptables -Z                                     
@@ -242,9 +242,9 @@ root@kali:~#
 #### nmap iptables scanning START HERE
 
 ┌──(root㉿kali)-[/home/kali]
-└─# nmap -sT 192.168.240.129                  
+└─# nmap -sT 138.46.185.29                  
 Starting Nmap 7.93 ( https://nmap.org ) at 2023-11-09 20:05 EET
-Nmap scan report for 192.168.240.129
+Nmap scan report for 138.46.185.29
 Host is up (0.0018s latency).
 Not shown: 997 closed tcp ports (conn-refused)
 PORT     STATE SERVICE
@@ -259,8 +259,8 @@ Nmap done: 1 IP address (1 host up) scanned in 0.37 seconds
 └─# iptables -vn -L
 Chain INPUT (policy ACCEPT 69 packets, 4452 bytes)
  pkts bytes target     prot opt in     out     source               destination         
-    0     0 ACCEPT     0    --  *      *       0.0.0.0/0            192.168.240.129     
- 1000 40060 ACCEPT     0    --  *      *       192.168.240.129      0.0.0.0/0           
+    0     0 ACCEPT     0    --  *      *       0.0.0.0/0            138.46.185.29     
+ 1000 40060 ACCEPT     0    --  *      *       138.46.185.29      0.0.0.0/0           
 
 Chain FORWARD (policy ACCEPT 0 packets, 0 bytes)
  pkts bytes target     prot opt in     out     source               destination         
@@ -273,7 +273,7 @@ Chain OUTPUT (policy ACCEPT 0 packets, 0 bytes)
 └─# iptables -Z    
 
 ┌──(root㉿kali)-[/home/kali]
-└─# nmap -sT -p 1-65635 192.168.240.129
+└─# nmap -sT -p 1-65635 138.46.185.29
 Starting Nmap 7.93 ( https://nmap.org ) at 2023-11-09 20:07 EET
 Ports specified must be between 0 and 65535 inclusive
 QUITTING!
@@ -282,8 +282,8 @@ QUITTING!
 └─# iptables -vn -L
 Chain INPUT (policy ACCEPT 50 packets, 2519 bytes)
  pkts bytes target     prot opt in     out     source               destination         
-    0     0 ACCEPT     0    --  *      *       0.0.0.0/0            192.168.240.129     
-    0     0 ACCEPT     0    --  *      *       192.168.240.129      0.0.0.0/0           
+    0     0 ACCEPT     0    --  *      *       0.0.0.0/0            138.46.185.29     
+    0     0 ACCEPT     0    --  *      *       138.46.185.29      0.0.0.0/0           
 
 Chain FORWARD (policy ACCEPT 0 packets, 0 bytes)
  pkts bytes target     prot opt in     out     source               destination         
@@ -327,7 +327,8 @@ Nmap done: 254 IP addresses (5 hosts up) scanned in 2.14 seconds
 
 
 
-# toinen esim. josta skannaa kaikki 254 porttia, jotka ovat ylhäällä
+# toinen esim. josta skannaa kaikki 254 porttia, jotka ovat ylhäällä, huomiona, tässä voi välissä on muutama piste (....) turha lisätä kaikki portit mitkä ovat ylhäällä.
+# mutta tällä methodilal voidaan leikkisti niin kuin rajoittaa ja nähdä mitkä portit ovat ylhäällä, toki se jos kaikki portit on ylhäällä niin se tulostaa koko listan portin
 ──(root㉿kali)-[/home/kali]
 └─# nmap -sn 193.170.10.1-254  
 Starting Nmap 7.93 ( https://nmap.org ) at 2023-11-09 20:22 EET
@@ -520,6 +521,184 @@ Host: 194.17.34.171 () Ports: 21/filtered/tcp//ftp///, 22/filtered/tcp//ssh///, 
                                                                              
 # koneita, jotka voidaaan osoittautua palvelurikkaaksi (rich in services) tai muuten vaan mielenkiintoiseksi, porttitarkistuksessa yksittelen käyttämällä kattavampaa porttiuluetteloa
 
+####### vmware (badstore) sweeping (START HERE) ##########
+
+┌──(kali㉿kali)-[~]
+└─$ nmap -sn 138.46.185.29  
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-11-10 19:12 EET
+Nmap scan report for 138.46.185.29
+Host is up (0.0020s latency).
+Nmap done: 1 IP address (1 host up) scanned in 0.05 seconds
+############################### 
+######## sweep tulostusparametri (-oG) 
+┌──(kali㉿kali)-[~]
+└─$ nmap -sn 138.46.185.30100-135 -oG ping-sweep.txt
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-11-10 19:30 EET
+Nmap scan report for 138.46.185.29
+Host is up (0.0011s latency).
+Nmap scan report for 138.46.185.30
+Host is up (0.00055s latency).
+Nmap done: 36 IP addresses (2 hosts up) scanned in 4.33 seconds
+                                                                           # grep up the ping-sweep file        
+┌──(kali㉿kali)-[~]
+└─$ grep Up ping-sweep.txt | cut -d " " -f 2
+138.46.185.29
+138.46.185.30
+
+┌──(kali㉿kali)-[~]
+└─$ cat ping-sweep.txt
+# Nmap 7.93 scan initiated Fri Nov 10 19:30:00 2023 as: nmap -sn -oG ping-sweep.txt 138.46.185.30100-135
+Host: 138.46.185.29 ()        Status: Up
+Host: 138.46.185.30 ()        Status: Up
+# Nmap done at Fri Nov 10 19:30:05 2023 -- 36 IP addresses (2 hosts up) scanned in 4.33 seconds
+
+###############################
+
+# check TCP ja/tai UDP portteja (-p) portti 80 ja sama komentoa ja erilliseen tiedostoon
+
+┌──(kali㉿kali)-[~]
+└─$ nmap -p 80 138.46.185.30120-135 -oG web-sweep.txt
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-11-10 19:44 EET
+Nmap scan report for 138.46.185.29
+Host is up (0.00070s latency).
+
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for 138.46.185.30
+Host is up (0.00025s latency).
+
+PORT   STATE  SERVICE
+80/tcp closed http
+
+Nmap done: 16 IP addresses (2 hosts up) scanned in 1.62 seconds
+
+# grep the web-sweep file
+┌──(kali㉿kali)-[~]
+└─$ grep open web-sweep.txt | cut -d " " -f 2 
+138.46.185.29
 
 
+# check the web-sweep.txt
 
+┌──(kali㉿kali)-[~]
+└─$ cat web-sweep.txt 
+# Nmap 7.93 scan initiated Fri Nov 10 19:44:22 2023 as: nmap -p 80 -oG web-sweep.txt 138.46.185.30120-135
+Host: 138.46.185.29 ()        Status: Up
+Host: 138.46.185.29 ()        Ports: 80/open/tcp//http///
+Host: 138.46.185.30 ()        Status: Up
+Host: 138.46.185.30 ()        Ports: 80/closed/tcp//http///
+# Nmap done at Fri Nov 10 19:44:23 2023 -- 16 IP addresses (2 hosts up) scanned in 1.62 seconds
+
+###############################
+
+# scannataan ja tarkistellaan top 20 porttei ja tulostukset tonne toiseen tiedostoon
+
+┌──(kali㉿kali)-[~]
+└─$ nmap -sT -A --top-ports=20 138.46.185.30120-135 -oG top-port-sweep.txt
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-11-10 19:50 EET
+Nmap scan report for 138.46.185.29
+Host is up (0.0012s latency).
+
+PORT     STATE  SERVICE       VERSION
+21/tcp   closed ftp
+22/tcp   closed ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+53/tcp   closed domain
+80/tcp   open   http          Apache httpd 1.3.28 ((Unix) mod_ssl/2.8.15 OpenSSL/0.9.7c)
+| http-robots.txt: 5 disallowed entries 
+|_/cgi-bin /scanbot /backup /supplier /upload
+|_http-server-header: Apache/1.3.28 (Unix) mod_ssl/2.8.15 OpenSSL/0.9.7c
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-title: Welcome to BadStore.net v1.2.3s
+110/tcp  closed pop3
+111/tcp  closed rpcbind
+135/tcp  closed msrpc
+139/tcp  closed netbios-ssn
+143/tcp  closed imap
+443/tcp  open   ssl/http      Apache httpd 1.3.28 ((Unix) mod_ssl/2.8.15 OpenSSL/0.9.7c)
+|_ssl-date: 2023-11-09T03:04:47+00:00; -1d14h46m23s from scanner time.
+|_http-server-header: Apache/1.3.28 (Unix) mod_ssl/2.8.15 OpenSSL/0.9.7c
+|_http-title: Welcome to BadStore.net v1.2.3s
+| ssl-cert: Subject: commonName=www.badstore.net/organizationName=BadStore.net/stateOrProvinceName=Illinois/countryName=US
+| Subject Alternative Name: email:root@badstore.net
+| Not valid before: 2006-05-10T12:52:53
+|_Not valid after:  2009-02-02T12:52:53
+| http-robots.txt: 5 disallowed entries 
+|_/cgi-bin /scanbot /backup /supplier /upload
+| sslv2: 
+|   SSLv2 supported
+|   ciphers: 
+|     SSL2_IDEA_128_CBC_WITH_MD5
+|     SSL2_RC2_128_CBC_EXPORT40_WITH_MD5
+|     SSL2_RC4_128_WITH_MD5
+|     SSL2_RC2_128_CBC_WITH_MD5
+|     SSL2_RC4_64_WITH_MD5
+|     SSL2_RC4_128_EXPORT40_WITH_MD5
+|     SSL2_DES_64_CBC_WITH_MD5
+|_    SSL2_DES_192_EDE3_CBC_WITH_MD5
+| http-methods: 
+|_  Potentially risky methods: TRACE
+445/tcp  closed microsoft-ds
+993/tcp  closed imaps
+995/tcp  closed pop3s
+1723/tcp closed pptp
+3306/tcp open   mysql         MySQL 4.1.7-standard
+| mysql-info: 
+|   Protocol: 10
+|   Version: 4.1.7-standard
+|   Thread ID: 10
+|   Capabilities flags: 33324
+|   Some Capabilities: ConnectWithDatabase, Support41Auth, SupportsCompression, Speaks41ProtocolNew, LongColumnFlag
+|   Status: Autocommit
+|_  Salt: _OKkZ_NKk[dgW\KDO@5'
+3389/tcp closed ms-wbt-server
+5900/tcp closed vnc
+8080/tcp closed http-proxy
+
+Host script results:
+|_clock-skew: -1d14h46m23s
+
+Nmap scan report for 138.46.185.30
+Host is up (0.0013s latency).
+
+PORT     STATE  SERVICE       VERSION
+21/tcp   closed ftp
+22/tcp   closed ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+53/tcp   closed domain
+80/tcp   closed http
+110/tcp  closed pop3
+111/tcp  closed rpcbind
+135/tcp  closed msrpc
+139/tcp  closed netbios-ssn
+143/tcp  closed imap
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+993/tcp  closed imaps
+995/tcp  closed pop3s
+1723/tcp closed pptp
+3306/tcp closed mysql
+3389/tcp closed ms-wbt-server
+5900/tcp closed vnc
+8080/tcp closed http-proxy
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 16 IP addresses (2 hosts up) scanned in 16.46 seconds
+
+
+┌──(kali㉿kali)-[~]
+└─$ cat top-port-sweep.txt 
+# Nmap 7.93 scan initiated Fri Nov 10 19:50:53 2023 as: nmap -sT -A --top-ports=20 -oG top-port-sweep.txt 138.46.185.30120-135
+Host: 138.46.185.29 ()        Status: Up
+Host: 138.46.185.29 ()        Ports: 21/closed/tcp//ftp///, 22/closed/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 53/closed/tcp//domain///, 80/open/tcp//http//Apache httpd 1.3.28 ((Unix) mod_ssl|2.8.15 OpenSSL|0.9.7c)/, 110/closed/tcp//pop3///, 111/closed/tcp//rpcbind///, 135/closed/tcp//msrpc///, 139/closed/tcp//netbios-ssn///, 143/closed/tcp//imap///, 443/open/tcp//ssl|http//Apache httpd 1.3.28 ((Unix) mod_ssl|2.8.15 OpenSSL|0.9.7c)/, 445/closed/tcp//microsoft-ds///, 993/closed/tcp//imaps///, 995/closed/tcp//pop3s///, 1723/closed/tcp//pptp///, 3306/open/tcp//mysql//MySQL 4.1.7-standard/, 3389/closed/tcp//ms-wbt-server///, 5900/closed/tcp//vnc///, 8080/closed/tcp//http-proxy///
+Host: 138.46.185.30 ()        Status: Up
+Host: 138.46.185.30 ()        Ports: 21/closed/tcp//ftp///, 22/closed/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 53/closed/tcp//domain///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 111/closed/tcp//rpcbind///, 135/closed/tcp//msrpc///, 139/closed/tcp//netbios-ssn///, 143/closed/tcp//imap///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 993/closed/tcp//imaps///, 995/closed/tcp//pop3s///, 1723/closed/tcp//pptp///, 3306/closed/tcp//mysql///, 3389/closed/tcp//ms-wbt-server///, 5900/closed/tcp//vnc///, 8080/closed/tcp//http-proxy///
+# Nmap done at Fri Nov 10 19:51:10 2023 -- 16 IP addresses (2 hosts up) scanned in 16.46 seconds
+                                                                         
+┌──(kali㉿kali)-[~]
+
+####### vmware (badstore) sweeping (ENDS HERE) ##########
