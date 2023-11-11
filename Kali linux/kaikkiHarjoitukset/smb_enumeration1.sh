@@ -210,11 +210,12 @@ No reply from 140.238.50.129
                                                                                    
 [E] Server doesn't allow session using username '', password ''.  Aborting remainder of tests.                                                                        
 
-############################
+##########################################
 ## Nmap SMB NSE Scripts ####
 
 # Nmap sisältää monia hyödyllisiä NSE-komento tiedostoja, joihin voidaan käyttää SMB-palvelua löytämiseen ja luetteloimiseen
 # tätä scripti luetteloa/hakemistoa löytyy polusta kuin; /usr/share/nmap/scripts
+> ls -l /usr/share/nmap/scripts/smb-
 
 ┌──(kali㉿kali)-[~]
 └─$  ls -l /usr/share/nmap/scripts/smb*
@@ -256,7 +257,12 @@ No reply from 140.238.50.129
                                                                                              
 ┌──(kali㉿kali)-[~]
 
+##############
 # sitten voidaan nähdä, että onko olemassa useita muita mielenkiintoisia Nmap SMB NSE-komento scriptissä, kuten käyttöjärjestelmien etsinässä ja erilisten tietojen luettelointia protokollassa 
+
+# We can see that several interesting Nmap SMB NSE scripts exist,, such as OS discovery
+# and enumeration of various pieces of information from the protocol
+> nmap -v -p 139, 445 --script=smb-os-discovery 192.168.11.227
 
 root@kali:~# nmap -v -p 139, 445 --script=smb-os-discovery 10.11.1.227
 ...
@@ -307,6 +313,89 @@ Read data files from: /usr/bin/../share/nmap
 Nmap done: 2 IP addresses (1 host up) scanned in 1.61 seconds
                                                                                              
 ┌──(kali㉿kali)-[~]
+
+
+#######
+# seuraavaksi voidaan tarkistaa tunnetut SMB-protokollan haavoittuvuudet käynnistämällä jokin "nmap smb-vuln" scriptin
+# To check for known SMB protocol vulnerabilities,
+# you can invoke the nmap smb-check-vulns script
+
+> nmap -v -p 139,445 --script=smb-check-vulns --script-args=unsafe=1 192.168.11.201
+
+root@kali:~# nmap -v -p 139,445 --script=smb-vuln-ms08-067 --script-args=unsafe=1 10.11.1.201
+Starting Nmap 7.01 ( https://nmap.org ) at 2016-03-20 00:04 EDT
+NSE: Loaded 1 scripts for scanning.
+NSE: Script Pre-scanning.
+...
+Scanning 10.11.1.201 [2 ports]
+...
+Completed NSE at 00:04, 17.39s elapsed
+Nmap scan report for 10.11.1.201
+Host is up (0.17s latency).
+PORT STATE SERVICE
+139/tcp open netbios-ssn
+445/tcp open microsoft-ds
+MAC Address: 00:50:56:AF:02:91 (VMware)
+Host script results:
+| smb-vuln-ms08-067:
+| VULNERABLE:
+| Microsoft Windows system vulnerable to remote code execution (MS08-067)
+| State: VULNERABLE
+| IDs: CVE:CVE-2008-4250
+| The Server service in Microsoft Windows 2000 SP4, XP SP2 and SP3, Server 2003 SP1
+and SP2,
+| Vista Gold and SP1, Server 2008, and 7 Pre-Beta allows remote attackers to execute
+arbitrary
+| code via a crafted RPC request that triggers the overflow during path
+canonicalization.
+|
+| Disclosure date: 2008-10-23
+| References:
+| https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-4250
+|_ https://technet.microsoft.com/en-us/library/security/ms08-067.aspx
+...
+root@kali:~# 
+
+
+## oma badstore skannaus
+┌──(kali㉿kali)-[~]
+└─$ nmap -v -p 139,445 --script=smb-vuln-ms08-067 --script-args=unsafe=1 140.238.50.129
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-11-11 18:05 EET
+NSE: Loaded 1 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 18:05
+Completed NSE at 18:05, 0.00s elapsed
+Initiating Ping Scan at 18:05
+Scanning 140.238.50.129 [2 ports]
+Completed Ping Scan at 18:05, 0.00s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 18:05
+Completed Parallel DNS resolution of 1 host. at 18:05, 0.07s elapsed
+Initiating Connect Scan at 18:05
+Scanning 140.238.50.129 [2 ports]
+Completed Connect Scan at 18:05, 0.00s elapsed (2 total ports)
+NSE: Script scanning 140.238.50.129.
+Initiating NSE at 18:05
+Completed NSE at 18:05, 0.00s elapsed
+Nmap scan report for 140.238.50.129
+Host is up (0.0010s latency).
+
+PORT    STATE  SERVICE
+139/tcp closed netbios-ssn
+445/tcp closed microsoft-ds
+
+NSE: Script Post-scanning.
+Initiating NSE at 18:05
+Completed NSE at 18:05, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 0.46 seconds
+
+
+
+
+
+
+
+
 
 
 
