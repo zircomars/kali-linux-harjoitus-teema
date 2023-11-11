@@ -1,7 +1,7 @@
 #############
 # harjoitus; https://edu.anarcho-copy.org/Against%20Security%20-%20Self%20Security/Offensive%20Security%20-%20Pentesting%20with%20Kali%20(PWK).pdf
 # chapter 4. active information gathering
-# sivu START HERE: 118 - 
+# sivu START HERE: 118 - 121
 
 # samat harjoitukset ja scriptit: https://github.com/muckitymuck/OSCP-Study-Guide/blob/master/enumeration/active_information_gathering.md 
 
@@ -113,6 +113,8 @@ Nmap done: 1 IP address (1 host up) scanned in 12.24 seconds
 # nmap voi myös suorittaa tunnistamaan palveluita tietyissä portteissa bannereiden sieppaamista ja useiden luetteloiden komento scriptiä ("-sV" ja "-A" parametriä)
 
 ## esim.
+# -sV :: probe open ports to determine service / version info
+
 root@kali:~# nmap -sV -sT 10.0.0.19
 Starting Nmap 6.25 ( http://nmap.org ) at 2013-04-20 07:35 EDT
 Nmap scan report for 10.0.0.19
@@ -138,9 +140,10 @@ Nmap done: 1 IP address (1 host up) scanned in 55.67 seconds
 
 root@kali:~#
 
-###### badstore
+###### oma badstore
+$nmap -sV -sT <IP-add | domain.name>
 ┌──(root㉿kali)-[/home/kali]
-└─# nmap -sV -sT 172.51.81.130
+└─# nmap -sV -sT 172.51.81.129
 Starting Nmap 7.93 ( https://nmap.org ) at 2023-11-11 13:22 EET
 Nmap scan report for 192.168.240.129
 Host is up (0.0064s latency).
@@ -154,6 +157,93 @@ MAC Address: f5:49:c3:b0:8a:a5 (VMware)
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 13.22 seconds
                                                                            
+#################
+###  Nmap scripting engine (NSE)  ####
+# Nmap scripting engine (NSE) 
+
+# scripti sisältyvät laajan valikoman apuohjelmia DNS-luettelo scriptiä (enumeration scripts), brute forece attacks, ja jopa haavoittuvuutta tunnistuskomento scriptiä
+# Kaikki NSE scriptit sijaitse hakemistossa/polussa kuin; /usr/share/nmap/scripts
+
+
+# pikaisella omalla haulla ja löytyi lista (huom, tässä on enemmänkin)
+┌──(kali㉿kali)-[/usr/share/nmap/scripts]
+└─$ ls
+acarsd-info.nse                       hostmap-crtsh.nse                       ip-geolocation-map-bing.nse    rsync-brute.nse
+address-info.nse                      hostmap-robtex.nse                      ip-geolocation-map-google.nse  rsync-list-modules.nse
+afp-brute.nse                         http-adobe-coldfusion-apsa1301.nse      ip-geolocation-map-kml.nse     rtsp-methods.nse
+afp-ls.nse                            http-affiliate-id.nse                   ip-geolocation-maxmind.nse     rtsp-url-brute.nse
+afp-path-vuln.nse                     http-apache-negotiation.nse             ip-https-discover.nse          rusers.nse
+
+# Yksi komento scripti kuin "smb-os-discovery" joka yrittää muodostaa yhteyden kohdejärjestelmän (target system) SMB-palveluun ja määrittää sen käyttöjärjestelmän version
+# esim. komento scripti
+
+root@kali:~# nmap 10.0.0.19 --script smb-os-discovery.nse
+...
+Host script results:
+| smb-os-discovery:
+| OS: Windows 7 Ultimate 7600 (Windows 7 Ultimate 6.1)
+| OS CPE: cpe:/o:microsoft:windows_7::-
+| Computer name: lab
+| NetBIOS computer name: LAB
+| Workgroup: WORKGROUP
+|_ System time: 2013-04-20T04:41:43-07:00
+Nmap done: 1 IP address (1 host up) scanned in 5.85 seconds
+root@kali:~#
+
+#### oma badstore
+
+┌──(kali㉿kali)-[~]
+└─$ nmap 172.51.81.129 --script smb-os-discovery.nse
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-11-11 15:29 EET
+Nmap scan report for 172.51.81.129 
+Host is up (0.0050s latency).
+Not shown: 997 closed tcp ports (conn-refused)
+PORT     STATE SERVICE
+80/tcp   open  http
+443/tcp  open  https
+3306/tcp open  mysql
+
+Nmap done: 1 IP address (1 host up) scanned in 0.55 seconds
+
+
+                                                                          
+#### oma kiinteä kone (ip-osoite)
+
+┌──(kali㉿kali)-[~]
+└─$ nmap 133.223.217.104 --script smb-os-discovery.nse
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-11-11 15:33 EET
+Nmap scan report for 133.223.217.104
+Host is up (0.0074s latency).
+Not shown: 993 filtered tcp ports (no-response)
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+443/tcp  open  https
+445/tcp  open  microsoft-ds
+902/tcp  open  iss-realsecure
+912/tcp  open  apex-mesh
+5357/tcp open  wsdapi
+
+Nmap done: 1 IP address (1 host up) scanned in 14.09 seconds
+
+### toinen esim. josta voi hyödyllistää komento scriptin DNS zone transfer, NSE scriptin, joka voidaan kutsua seuraaville komennolla (megacorpone.com)
+root@kali:~# nmap --script=dns-zone-transfer -p 53 ns2.megacorpone.com
+
+┌──(kali㉿kali)-[~]
+└─$ nmap --script=dns-zone-transfer -p 53 ns2.megacorpone.com
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-11-11 15:36 EET
+Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
+Nmap done: 1 IP address (0 hosts up) scanned in 3.53 seconds
+                                                                           
+
+
+
+
+
+
+
+
+
 
 
 
