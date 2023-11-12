@@ -63,6 +63,99 @@ print result
 # Close the socket
 s.close()
 
+#######################################################################################################
+###### SNMP Enumeration ######
+
+# SNMP = simple network management , protocol
+
+# Tätä protokolalan usein SNMP-virheitä (misconfigurations), joka voi johtaa dramaattisen tietovuotoa
+
+# SNMP perustuu UDP:hen, yksinkertaisen, tilattomaan protkollaan ja siksi alttiina IP-huijauksiin (IP-spoofing) ja toistohyökkäystä.
+# SNMP protokollan versioita on mm. 1,2 ja 2c jotka eivät tarjoa tietoliikenteen salausta, joten SNMP-tiedot ja valtuustiedot voiat helposti siepatta paikallisen verkon kautta.
+
+# SNMP protkolla on myös heikot todennusjärjestelmät (authentication schemes) ja ne jätetään yleensä oletusarvoisesti julkisiin aj yksityisiin yhteisön merkkijonoihin.
+
+
+#################
+#### MIB Tree (SNMP Management Information Base) ######
+# MIB tree , on tietokanta, joka sisältää yleensä verkonhallinnan liittyviä tietoja. Tietokanta on järjestetty kuin tree muodossa, missä sivuliikkeet edustavat erilaisia organisaatioita tai verkoston toimistoja. 
+
+# Tree, tai se puu, jossa on puu lehdet joka edustaa loppulliset päätepisteet, vastaavat tiettyjä muuttuja arvoja, joita ulkopuolinen käyttäjä voi sitten käyttää ja tutkia. 
+
+# Lisää lukemista linkistä; http://publib.boulder.ibm.com/infocenter/pseries/v5r3/index.jsp?topic=/com.ibm
+
+########################
+## scanning for SNMP
+# jos skannaa avoimen SNMP portin, josta voidaan hyödyntää nmap syntaksin scriptin komennon;
+
+root@kali:~# nmap -sU --open -p 161 10.11.1.1-254 -oG mega-snmp.txt
+
+## oma skannaus osoite
+┌──(root㉿kali)-[/home/kali]
+└─# nmap -sU --open -p 161 192.168.240.120-135 -oG mega-snmp.txt
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-11-12 14:49 EET
+Nmap done: 16 IP addresses (2 hosts up) scanned in 2.15 seconds
+
+# ylemmän komenon tulokset menee mega-snmp txt tiedoston sisäään
+┌──(kali㉿kali)-[~]
+└─$ cat mega-snmp.txt 
+# Nmap 7.93 scan initiated Sun Nov 12 14:49:51 2023 as: nmap -sU --open -p 161 -oG mega-snmp.txt 192.168.240.120-135
+# Nmap done at Sun Nov 12 14:49:53 2023 -- 16 IP addresses (2 hosts up) scanned in 2.15 seconds
+
+## toinen työkalua voidaan käyttää kuten 161 (onesixtyone), joka tarkistaa tietyn yhteisön merkkijonot IP-luettelosta, jolloin voidaan pakottaa erilisia yhteisön stringiä
+
+┌──(kali㉿kali)-[~]
+└─$ echo public > community     
+                                                                                             
+┌──(kali㉿kali)-[~]
+└─$ echo private >> community 
+                                                                                             
+┌──(kali㉿kali)-[~]
+└─$ echo manager >> community 
+                                                                                             
+┌──(kali㉿kali)-[~]
+└─$ for ip in $(seq 1 254);do echo 192.168.240.$ip;done > ips              
+                                                                                             
+┌──(kali㉿kali)-[~]
+└─$ onesixtyone -c community -i ips
+Scanning 254 hosts, 3 communities
+                                                                                             
+┌──(kali㉿kali)-[~]
+└─$ cat community    
+public
+private
+manager
+ 
+# kun tätä komentoa eli for loop scripti on suoritettu, niin se löytää SNMP palvelut josta voidaan kysellä nittä tiettyjä MIB-tietoja jotta hakkeri/penetraatio testaaja kiinnostaa
+
+########################
+## Windows SNMP Enumeration Example
+
+# Voidaan tutkia SNMP-arvoja (query) ja SNMP lukemia stringiä, käyttämällä työkalua "snmpwalk" , joka  on useimmissa keisissä "public"
+
+# käyttämällä jotaikin annetuista MIB-arvoa voidaan yrittää luetella vastaavia arvoja. Esim. kokeilee tällä scriptiä ja katsoa mitä tuloksia se antaa 
+
+# Enumerating the Entire MIB Tree
+root@kali:~# snmpwalk -c public -v1 10.11.1.219
+iso.3.6.1.2.1.1.1.0 = STRING: "Linux ubuntu 3.2.0-23-generic #36-Ubuntu SMP "
+iso.3.6.1.2.1.1.2.0 = OID: iso.3.6.1.4.1.8072.3.2.10
+iso.3.6.1.2.1.1.3.0 = Timeticks: (66160) 0:11:01.60
+...
+
+# Enumerating Windows Users:
+root@kali:~# snmpwalk -c public -v1 10.11.1.204 1.3.6.1.4.1.77.1.2.25
+
+# Enumerating Running Windows Processes:
+root@kali:~# snmpwalk -c public -v1 10.11.1.204 1.3.6.1.2.1.25.4.2.1.2
+
+# Enumerating Open TCP Ports:
+root@kali:~# snmpwalk -c public -v1 10.11.1.204 1.3.6.1.2.1.6.13.1.3
+
+# Enumerating Installed Software:
+root@kali:~# snmpwalk -c public -v1 10.11.1.204 1.3.6.1.2.1.25.6.3.1.2 
+
+
+
 
 
 
