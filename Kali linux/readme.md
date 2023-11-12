@@ -191,9 +191,12 @@ https://www.kali.org/tools/ <br>
 
 <br>
 pientä lukemista; <br>
-https://www.edureka.co/blog/ethical-hacking-using-kali-linux/
+https://www.edureka.co/blog/ethical-hacking-using-kali-linux/ <br>
 
-## pdf kirjoja <br>
+TCP/UDP portti tietokanta ja näitä löytyy mm. wikipediastakin <br>
+https://www.speedguide.net/ports.php
+
+## pdf kirjoja
 
 https://www.academia.edu/35034750/Basic_Security_Testing_with_Kali_Linux_PDF <br>
 
