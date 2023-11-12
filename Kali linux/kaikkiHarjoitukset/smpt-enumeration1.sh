@@ -89,6 +89,7 @@ s.close()
 # jos skannaa avoimen SNMP portin, josta voidaan hyödyntää nmap syntaksin scriptin komennon;
 
 root@kali:~# nmap -sU --open -p 161 10.11.1.1-254 -oG mega-snmp.txt
+# -sU :: UDP scan
 
 ## oma skannaus osoite
 ┌──(root㉿kali)-[/home/kali]
