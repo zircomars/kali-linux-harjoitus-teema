@@ -6,13 +6,19 @@ Rapid7 omistamaa Metasploit Framework joka on edistynyt avoimen lähdekoodi ja k
 
 Metasploit Framework voi olla hyödyllinen työkalu lähes kaikissa penetraatio testauksessa vaiheissa passiivisen ja aktiivisen tiedonkeruussa haavoittuvuuksitne tutkimuksien ja -kehityksen ja asiakaspuolen hyökkäyksiinsä ja jälkikäteen tekniikoissa.
 
-
+* [Metasploit user interfaces](#metasploit-user-interfaces)
 * [Muutama esimerkki komentoja](#muutama-esimerkki-komentoja)
 * [muuttujat variables](#muuttujat-variables)
   * [päivitys](#päivitys)
 - [linkkei harjoitukseen ja komentoja, että kirjoja](#linkkei-harjoitukseen-ja-komentoja-että-kirjoja)
  * [pdf kirjoja](#pdf-kirjoja)
-  
+
+## Metasploit user interfaces
+
+Kaksi tärkeimistä on käyttöliittymä, johon käytettään MSF käyttämiseen;
+
+- msfconsole - joka on interaktiivinen konsoliiittymä, jota käytetään yleisimmissä tavallisten tehtävien suorittamisessa
+- armitage - kolmannen osapuolen lisäosan MSF:ää, joka tarjoaa graafisen käyttöliittymän MSF:lle 
 
 ## Muutama esimerkki komentoja <br>
 
