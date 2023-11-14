@@ -4,6 +4,9 @@ msfconsole on pelkkä Metasploit Framework:in komentorivien käyttöliittymä. M
 
 Rapid7 omistamaa Metasploit Framework joka on edistynyt avoimen lähdekoodi ja kirjoitettu Ruby koodilla hyväksikäyttöön kehittämiseen, testaamiseen ja käyttämiseen. Framework on/oli hitaasti, mutta tullut ykkösen jokaisen turvatarkistuksen keruu- ja kehitys frameworkiä. Sitä päivitettään usein uusissa hyödykkeissä, ja Rapid7 ja tietoturvayhteisön parantavaksi ja kehittävät sitä jatkuvasti.
 
+Metasploit Framework voi olla hyödyllinen työkalu lähes kaikissa penetraatio testauksessa vaiheissa passiivisen ja aktiivisen tiedonkeruussa haavoittuvuuksitne tutkimuksien ja -kehityksen ja asiakaspuolen hyökkäyksiinsä ja jälkikäteen tekniikoissa.
+
+
 * [Muutama esimerkki komentoja](#muutama-esimerkki-komentoja)
 * [muuttujat variables](#muuttujat-variables)
   * [päivitys](#päivitys)
