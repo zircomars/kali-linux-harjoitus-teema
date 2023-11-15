@@ -180,6 +180,35 @@ Matching Modules
    0  exploit/windows/local/ppr_flatten_rec  2013-05-15       average  Yes    Windows EPATHOBJ::pprFlattenRec Local Privilege Escalation
 ```
 
+```
+# esim. jos avaa yleisen terminaalista siirtyy Metasploit järjestelmään, jos Kali Linux:sessa on oletuksena valmiina mukana siinä järjestelmässä mm. vmware / virtualbox ja jne.
+                                                                          
+┌──(kali㉿kali)-[~]
+└─$ msfconsole -q
+msf6 > banner
+ _                                                    _
+/ \    /\         __                         _   __  /_/ __
+| |\  / | _____   \ \           ___   _____ | | /  \ _   \ \
+| | \/| | | ___\ |- -|   /\    / __\ | -__/ | || | || | |- -|
+|_|   | | | _|__  | |_  / -\ __\ \   | |    | | \__/| |  | |_
+      |/  |____/  \___\/ /\ \\___/   \/     \__|    |_\  \___\
+
+
+       =[ metasploit v6.3.4-dev                           ]
++ -- --=[ 2294 exploits - 1201 auxiliary - 409 post       ]
++ -- --=[ 968 payloads - 45 encoders - 11 nops            ]
++ -- --=[ 9 evasion                                       ]
+
+Metasploit tip: Use the edit command to open the 
+currently active module in your editor
+Metasploit Documentation: https://docs.metasploit.com/
+
+msf6 > 
+
+
+```
+
+
 ## muuttujat (Variables)
 
 Muuttujia metasploit:ssa, useissa on käyttämiä hyväksikäyttöinen johon on asetettava arvo joillekin muuttujille. Alemmassa taulukossa on yleisiä ja tärkeimpiä muuttujia Metasploit framework toiminnassa.
