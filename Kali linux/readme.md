@@ -178,6 +178,8 @@ https://tryhackme.com/resources/blog/free_path <br>
 https://tryhackme.com/room/tutorial <br>
 https://www.hackthebox.com/ <br>
 
+https://geekflare.com/practice-hacking-legally/ <br>
+
 <br>
 https://resources.infosecinstitute.com/topic/top-5-deliberately-vulnerable-web-applications-to-practice-your-skills-on/
 https://geekflare.com/practice-hacking-legally/ <br>
@@ -200,7 +202,7 @@ https://www.speedguide.net/ports.php
 
 https://www.academia.edu/35034750/Basic_Security_Testing_with_Kali_Linux_PDF <br>
 
-https://digtvbg.com/files/books-for-hacking/Hacking%20With%20Kali%20Linux%20-%20The%20Practical%20Beginner%27s%20Guide%20to%20Learn%20How%20To%20Hack%20With%20Kali%20Linux%20in%20One%20Day%20Step-by-Step%20%28%232020%20Updated%20Version%29%20by%20Steve%20Tudor.pdf <br>
+ <br>
 
 
 
