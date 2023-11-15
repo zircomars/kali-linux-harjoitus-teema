@@ -43,6 +43,7 @@ Auxiliary
    1199  auxiliary/vsploit/pii/email_pii                                                           normal  No     VSploit Email PII
    1200  auxiliary/vsploit/pii/web_pii                                                             normal  No     VSploit Web PII
 
+####  seuraava harjoitus; #####
 # seuraavaksi jos käytettäisi jotakin apumoduulia (auxiliary modules) luodakseen uudelleen joitakin aiempaa suorittujen luettelointi toimenpiteitä. Jos aikoo käyttäää mitä tahansa auxiliary module, exploit tai plugins niin anna komento "use" saadakseen liitettynä siihen moduuliin nimi.
 
 # Sitten voi käyttää "info" - komentoa saadakseen lisätietoja tiettyyn moduuliin.
