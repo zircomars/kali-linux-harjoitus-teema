@@ -53,13 +53,47 @@ Auxiliary
 # esim. komennossa suoritettaan yksinkertaisella SNMP enumeration moduulia ja tarkistmalla sen tietoa;
 
 msf> use auxiliary/scanner/snmp/snmp_enum
-msf auxiliary(snmp_enum) > info
- Name: SNMP Enumeration Module
- Module: auxiliary/scanner/snmp/snmp_enum
- Version: 0
- License: Metasploit Framework License (BSD)
- Rank: Normal
-...
+msf6 auxiliary(scanner/snmp/snmp_enum) > info
+
+       Name: SNMP Enumeration Module
+     Module: auxiliary/scanner/snmp/snmp_enum
+    License: Metasploit Framework License (BSD)
+       Rank: Normal
+
+Provided by:
+  Matteo Cantoni <goony@nothink.org>
+
+Check supported:
+  No
+
+Basic options:
+  Name       Current Setting  Required  Description
+  ----       ---------------  --------  -----------
+  COMMUNITY  public           yes       SNMP Community String
+  RETRIES    1                yes       SNMP Retries
+  RHOSTS                      yes       The target host(s), see https://docs.metasploit
+                                        .com/docs/using-metasploit/basics/using-metaspl
+                                        oit.html
+  RPORT      161              yes       The target port (UDP)
+  THREADS    1                yes       The number of concurrent threads (max one per h
+                                        ost)
+  TIMEOUT    1                yes       SNMP Timeout
+  VERSION    1                yes       SNMP Version <1/2c>
+
+Description:
+  This module allows enumeration of any devices with SNMP protocol 
+  support. It supports hardware, software, and network information. 
+  The default community used is "public".
+
+References:
+  https://en.wikipedia.org/wiki/Simple_Network_Management_Protocol
+  https://net-snmp.sourceforge.io/docs/man/snmpwalk.html
+  http://www.nothink.org/codes/snmpcheck/index.php
+
+
+View the full module info with the info -d command.
+
+# RHOSTS - kohdassa tyhjä siksi otettaan pieni huomio siihen melkein kuin kohde ja siihen kohdenneettaan kyseinen IP-osoite tai voidaan tarkistaa $show options - kommennon kauttakin
 
 # seuraavaksi, tarkistettaan/selvitettään kuinka auxiliary moduuli käytetään "show options" komennolla näyttää kaikki tämän kyseisen moduulien suorittamisen tarvittavat parametrit
 
@@ -81,9 +115,11 @@ Module options (auxiliary/scanner/snmp/snmp_enum):
 
 View the full module info with the info, or info -d command.
 
+# RHOSTS - kohdassa tyhjä siksi otettaan pieni huomio siihen melkein kuin kohde ja siihen kohdenneettaan kyseinen IP-osoite
+
 ##################
-# en tiedä toimiiko tästä jos määrittää tommoisen IP-osoite rajan/alueen kuin 10.11.1.1-254 , harjoituksen kannalta ehkä voi toimia..
-# ja tämä on joku yksityinen IP-osoite 
+
+# en tiedä toimiiko tästä jos määrittää tommoisen IP-osoite rajan/alueen kuin 10.11.1.1-254 , mutta harjoituksen kannalta käytettään toi "Badstore" iso tiedostoa tähän projektiin
 
 ┌──(kali㉿kali)-[~]
 └─$ whois 10.11.1.1
@@ -114,57 +150,62 @@ Organization:   Internet Assigned Numbers Authority (IANA)
 
 # eli jotkin parametrit ovat pakollisia, ennen kuin moduuli voidaan suorittaa onnistuneeksi. Tässä keissisä käytetään lisättävinä kuin "RHOTS"-arvoa tai IP-osoiteen aluetta, jonka haluttaisi skannata. Kun asetukset on määritetty, niin voidaan ajaa moduuli "run"-komentoa. Sitten voidaan asettaa "THREADS" - määritelmän arvoon 10 nopeuttakseen skannausta.
 
-msf6 auxiliary(scanner/snmp/snmp_enum) > 
-msf6 auxiliary(scanner/snmp/snmp_enum) > set RHOSTS 10.11.1.1-254
-RHOSTS => 10.11.1.1-254
+msf6 auxiliary(scanner/snmp/snmp_enum) > set RHOSTS 192.168.240.120-129
+RHOSTS => 192.168.240.120-129
 msf6 auxiliary(scanner/snmp/snmp_enum) > set THREADS 10
 THREADS => 10
 msf6 auxiliary(scanner/snmp/snmp_enum) > show options 
 
 Module options (auxiliary/scanner/snmp/snmp_enum):
 
-   Name       Current Setting  Required  Description
-   ----       ---------------  --------  -----------
-   COMMUNITY  public           yes       SNMP Community String
-   RETRIES    1                yes       SNMP Retries
-   RHOSTS     10.11.1.1-254    yes       The target host(s), see https://docs.metasploit.com/docs/using-metaspl
-                                         oit/basics/using-metasploit.html
-   RPORT      161              yes       The target port (UDP)
-   THREADS    10               yes       The number of concurrent threads (max one per host)
-   TIMEOUT    1                yes       SNMP Timeout
-   VERSION    1                yes       SNMP Version <1/2c>
+   Name       Current Setting      Required  Description
+   ----       ---------------      --------  -----------
+   COMMUNITY  public               yes       SNMP Community String
+   RETRIES    1                    yes       SNMP Retries
+   RHOSTS     192.168.240.120-129  yes       The target host(s), see https://docs.metasploit.c
+                                             om/docs/using-metasploit/basics/using-metasploit.
+                                             html
+   RPORT      161                  yes       The target port (UDP)
+   THREADS    10                   yes       The number of concurrent threads (max one per hos
+                                             t)
+   TIMEOUT    1                    yes       SNMP Timeout
+   VERSION    1                    yes       SNMP Version <1/2c>
 
 
 View the full module info with the info, or info -d command.
 
+
 # tässä alkaa skannata ja suorittaa jokaisen IP-osoitteen aluetta eli kaikki ja välissä on tietty prosentti, etät paljon se on skannanut
 msf6 auxiliary(scanner/snmp/snmp_enum) > run
 
-[-] 10.11.1.6 SNMP request timeout.
-[-] 10.11.1.2 SNMP request timeout.
-[-] 10.11.1.7 SNMP request timeout.
-[-] 10.11.1.5 SNMP request timeout.
-...
-[-] 10.11.1.27 SNMP request timeout.
-[-] 10.11.1.30 SNMP request timeout.
-[*] Scanned  26 of 254 hosts (10% complete)
-[-] 10.11.1.31 SNMP request timeout.
-[-] 10.11.1.32 SNMP request timeout.
-...
-[-] 10.11.1.254 SNMP request timeout.
-[*] Scanned 254 of 254 hosts (100% complete)
+msf6 auxiliary(scanner/snmp/snmp_enum) > run
+
+[-] Unknown error: Errno::ECONNREFUSED Connection refused - recvfrom(2)
+[*] Scanned  1 of 10 hosts (10% complete)
+[-] 192.168.240.122 SNMP request timeout.
+[-] 192.168.240.120 SNMP request timeout.
+[-] 192.168.240.128 SNMP request timeout.
+[-] 192.168.240.123 SNMP request timeout.
+[-] 192.168.240.124 SNMP request timeout.
+[-] 192.168.240.121 SNMP request timeout.
+[-] 192.168.240.127 SNMP request timeout.
+[-] 192.168.240.125 SNMP request timeout.
+[-] 192.168.240.126 SNMP request timeout.
+[*] Scanned  9 of 10 hosts (90% complete)
+[*] Scanned 10 of 10 hosts (100% complete)
 [*] Auxiliary module execution completed
+
 msf6 auxiliary(scanner/snmp/snmp_enum) > 
 
 msf6 auxiliary(scanner/snmp/snmp_enum) > use auxiliary/scanner/smb/smb_version 
-msf6 auxiliary(scanner/smb/smb_version) > show options
+msf6 auxiliary(scanner/smb/smb_version) > show options 
 
 Module options (auxiliary/scanner/smb/smb_version):
 
    Name     Current Setting  Required  Description
    ----     ---------------  --------  -----------
-   RHOSTS                    yes       The target host(s), see https://docs.metasploit.com/docs/using-metasploi
-                                       t/basics/using-metasploit.html
+   RHOSTS                    yes       The target host(s), see https://docs.metasploit.com/doc
+                                       s/using-metasploit/basics/using-metasploit.html
    THREADS  1                yes       The number of concurrent threads (max one per host)
 
 
@@ -174,42 +215,134 @@ msf6 auxiliary(scanner/smb/smb_version) >
 
 # MSF ei kuljeta määritettyjiä muuttujia moduulien välillä. RHOSTS ja THREADS arvot ovat tyhjät "smb_version" tarkistus moduulia . Joten voidaan muuttaa tätä käyttämistä käyttämällä yleisiä istuntoarvoja käyttämällä "setg" -komentoa
 
-msf6 auxiliary(scanner/smb/smb_version) > setg RHOSTS 10.11.1.1-254
-RHOSTS => 10.11.1.1-254
+msf6 auxiliary(scanner/smb/smb_version) > 
+msf6 auxiliary(scanner/smb/smb_version) > setg RHOSTS 192.168.240.120-129
+RHOSTS => 192.168.240.120-129
 msf6 auxiliary(scanner/smb/smb_version) > setg THREADS 10
 THREADS => 10
 msf6 auxiliary(scanner/smb/smb_version) > run
 
-[*] 10.11.1.1-254:        - Scanned  29 of 254 hosts (11% complete)
-[*] 10.11.1.1-254:        - Scanned  51 of 254 hosts (20% complete)
-[*] 10.11.1.1-254:        - Scanned  77 of 254 hosts (30% complete)
-[*] 10.11.1.1-254:        - Scanned 102 of 254 hosts (40% complete)
-[*] 10.11.1.1-254:        - Scanned 127 of 254 hosts (50% complete)
-[*] 10.11.1.1-254:        - Scanned 153 of 254 hosts (60% complete)
-[*] 10.11.1.1-254:        - Scanned 179 of 254 hosts (70% complete)
-[*] 10.11.1.1-254:        - Scanned 204 of 254 hosts (80% complete)
-[*] 10.11.1.1-254:        - Scanned 230 of 254 hosts (90% complete)
-[*] 10.11.1.1-254:        - Scanned 254 of 254 hosts (100% complete)
+[*] 192.168.240.120-129:  - Scanned  1 of 10 hosts (10% complete)
+[*] 192.168.240.120-129:  - Scanned 10 of 10 hosts (100% complete)
 [*] Auxiliary module execution completed
+msf6 auxiliary(scanner/smb/smb_version) > 
 
+msf6 auxiliary(scanner/smb/smb_version) > show options 
 
-msf6 auxiliary(scanner/http/webdav_scanner) > show options
+Module options (auxiliary/scanner/smb/smb_version):
 
-Module options (auxiliary/scanner/http/webdav_scanner):
-
-   Name     Current Setting  Required  Description
-   ----     ---------------  --------  -----------
-   PATH     /                yes       Path to use
-   Proxies                   no        A proxy chain of format type:host:port[,type:host:port][...]
-   RHOSTS   10.11.1.1-254    yes       The target host(s), see https://docs.metasploit.com/docs/using-metasploi
-                                       t/basics/using-metasploit.html
-   RPORT    80               yes       The target port (TCP)
-   SSL      false            no        Negotiate SSL/TLS for outgoing connections
-   THREADS  10               yes       The number of concurrent threads (max one per host)
-   VHOST                     no        HTTP server virtual host
+   Name     Current Setting      Required  Description
+   ----     ---------------      --------  -----------
+   RHOSTS   192.168.240.120-129  yes       The target host(s), see https://docs.metasploit.com
+                                           /docs/using-metasploit/basics/using-metasploit.html
+   THREADS  10                   yes       The number of concurrent threads (max one per host)
 
 
 View the full module info with the info, or info -d command.
+
+msf6 auxiliary(scanner/smb/smb_version) > 
+
+######
+
+# Seuraavassa lataamassa moduulissa pitäisi olla RHOSTS- ja THREADS-arvot säilytettynä
+
+# Tarkistettaan varmuuden vuoksi käyttämällä tätä yhtä lisäskanneria, WebDAV-palvelun skanneri. 
+# WebDAV-palvelin on usein huonosti määritettyjä/konfiguroituja, ja ne voivat usein johtaa nopeaan ja helppoon uhriin käsiksi.
+
+msf6 auxiliary(scanner/smb/smb_version) > use auxiliary/scanner/http/webdav_scanner 
+msf6 auxiliary(scanner/http/webdav_scanner) > show options 
+
+Module options (auxiliary/scanner/http/webdav_scanner):
+
+   Name     Current Setting      Required  Description
+   ----     ---------------      --------  -----------
+   PATH     /                    yes       Path to use
+   Proxies                       no        A proxy chain of format type:host:port[,type:host:p
+                                           ort][...]
+   RHOSTS   192.168.240.120-129  yes       The target host(s), see https://docs.metasploit.com
+                                           /docs/using-metasploit/basics/using-metasploit.html
+   RPORT    80                   yes       The target port (TCP)
+   SSL      false                no        Negotiate SSL/TLS for outgoing connections
+   THREADS  10                   yes       The number of concurrent threads (max one per host)
+   VHOST                         no        HTTP server virtual host
+
+
+View the full module info with the info, or info -d command.
+
+msf6 auxiliary(scanner/http/webdav_scanner) > 
+
+msf6 auxiliary(scanner/http/webdav_scanner) > run
+
+[*] 192.168.240.129 (Apache/1.3.28 (Unix) mod_ssl/2.8.15 OpenSSL/0.9.7c) WebDAV disabled.
+[*] Scanned  3 of 10 hosts (30% complete)
+[*] Scanned  8 of 10 hosts (80% complete)
+[*] Scanned 10 of 10 hosts (100% complete)
+[*] Auxiliary module execution completed
+
+###########################
+### FTP Brute Force #####
+
+# Useat Metasploitin lisälaajennukset sisältävät raa'an voiman vaihtoehtoja tässä esimerkissä ja harjoituksesa;
+# eli mennään takaisin msf alkuun tai avaa uusi metasploit komentorivi
+
+┌──(kali㉿kali)-[~]
+└─$ msfconsole -q
+msf6 > search type:auxiliary login
+
+Matching Modules
+================
+
+   #    Name                                                              Disclosure Date  Rank    Check  Description
+   -    ----                                                              ---------------  ----    -----  -----------
+   0    auxiliary/scanner/http/advantech_webaccess_login                                   normal  No     Advantech WebAccess Login
+   1    auxiliary/scanner/http/axis_login                                                  normal  No     Apache Axis2 Brute Force Utility
+   2    auxiliary/scanner/ssh/apache_karaf_command_execution              2016-02-09       normal  No     Apache Karaf Default Credentials Command Execution
+   3    auxiliary/scanner/ssh/karaf_login                                                  normal  No     Apache Karaf Login Utility
+   4    auxiliary/scanner/acpp/login                                                       normal  No     Apple Airport ACPP Authentication Scanner
+   5    auxiliary/scanner/afp/afp_login                                                    normal  No     Apple Filing Protocol Login Utility
+....
+
+msf6 > use auxiliary/scanner/ftp/ftp_login 
+msf6 auxiliary(scanner/ftp/ftp_login) > show options 
+
+Module options (auxiliary/scanner/ftp/ftp_login):
+
+   Name              Current Setting  Required  Description
+   ----              ---------------  --------  -----------
+   BLANK_PASSWORDS   false            no        Try blank passwords for all users
+   BRUTEFORCE_SPEED  5                yes       How fast to bruteforce, from 0 to 5
+   DB_ALL_CREDS      false            no        Try each user/password couple stored in the current database
+   DB_ALL_PASS       false            no        Add all passwords in the current database to the list
+   DB_ALL_USERS      false            no        Add all users in the current database to the list
+   DB_SKIP_EXISTING  none             no        Skip existing credentials stored in the current database (Accepted: none, user, user&realm)
+   PASSWORD                           no        A specific password to authenticate with
+   PASS_FILE                          no        File containing passwords, one per line
+   Proxies                            no        A proxy chain of format type:host:port[,type:host:port][...]
+   RECORD_GUEST      false            no        Record anonymous/guest logins to the database
+   RHOSTS                             yes       The target host(s), see https://docs.metasploit.com/docs/using-metasploit/basics/using-metasploit.ht
+                                                ml
+   RPORT             21               yes       The target port (TCP)
+   STOP_ON_SUCCESS   false            yes       Stop guessing when a credential works for a host
+   THREADS           1                yes       The number of concurrent threads (max one per host)
+   USERNAME                           no        A specific username to authenticate as
+   USERPASS_FILE                      no        File containing users and passwords separated by space, one pair per line
+   USER_AS_PASS      false            no        Try the username as the password for all users
+   USER_FILE                          no        File containing usernames, one per line
+   VERBOSE           true             yes       Whether to print output for all attempts
+
+
+View the full module info with the info, or info -d command.
+
+
+
+msf6 auxiliary(scanner/ftp/ftp_login) > 
+msf6 auxiliary(scanner/ftp/ftp_login) > set PASS_FILE /root/password-file.txt
+PASS_FILE => /root/password-file.txt
+msf6 auxiliary(scanner/ftp/ftp_login) > set USERPASS_FILE /root/users.txt
+USERPASS_FILE => /root/users.txt
+msf6 auxiliary(scanner/ftp/ftp_login) > set RHOSTS 192.168.240.120-129
+RHOSTS => 192.168.240.120-129
+msf6 auxiliary(scanner/ftp/ftp_login) > run
 
 
 
