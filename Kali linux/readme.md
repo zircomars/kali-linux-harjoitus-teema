@@ -27,10 +27,23 @@ Ladattavina kali linux; https://www.kali.org/get-kali/#kali-platforms <br>
 Kali linux sisäiset työkalut; https://www.kali.org/tools/ <br><br>
 
 ensimmäisenä kantsii muuttaa linux:sen näppäimistö asetukset eli riittää avaa komentorivin ja syöttää;; <br> 
+```
 ┌──(kali㉿kali)-[~] <br> 
 └─$ setxkbmap fi <br>  
+```
 
 <hr>
+<br>
+Kali linux / Linux tiedoston järjestelmän poku, joka noudattaa <b>filesystem hierachy standard (FHS) </b>, johon ollaan usein tottuttu siihen rakenteeseen ja yleisen asteltujen Linux järjestelmään eli tiedostojen polkua ja jne.
+
+```
+• /bin - basic programs (ls, cd, cat, etc.)
+• /sbin - system programs (fdisk, mkfs, sysctl, etc)
+• /etc - configuration files
+• /tmp - temporary files (typically deleted on boot)
+• /usr/bin - applications (apt, ncat, nmap, etc.)
+• /usr/share - application support and data files
+```
 
 # Penetraatiotestaus
 
