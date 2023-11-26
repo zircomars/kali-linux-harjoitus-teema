@@ -4,6 +4,8 @@ Perus shell-skripti eli komentotulki & vähä kuin odottaa käyttäjä antaa jot
 Myös sitä voi tallentaa usein käytettyihin komentosarjoihin tiedostoon ja tallennus muoto on .sh
 Kun antaa komentotulkissa skriptin nimen, se suorittaa siinä olevat komennot. Joissain komentotulkeissa on ohjausrakenteita joilla voi ohjelmoida näitä skriptejä.
 
+Bourne-Again Shell (Bash) lyhenne, joka on tehokas työympäristö ja komentosarja scripttaus moottori. Toimii pätevänä tietoturva-ammattilaisen hyödyntäen taitaviin Bash-komentosarjaan ja automatisoidakseen monia Linux tehtäviä ja menettelyihin. 
+
 Bash voidaan mieltää ohjelmointikieleksi, ja sitä toteutetaan csh-komentotulkin tyylisen komentohistorialla.
 
 Bash skription ohjelmointia toimii kuin kerran, että toistetaan vain kerran sisäisen ohjelman komennon/käskyn
