@@ -13,3 +13,19 @@ Bash skription ohjelmointia toimii kuin kerran, että toistetaan vain kerran sis
 $sudo su - mennään root käyttäjään, kun ollaan linux tai ubuntu komento cli:ssä
 
 ![Alt text](images/scripti.png?raw=true "None")
+
+## Bash variable types
+
+```
+Variable Name | Description
+$0              The name of the Bash script
+$1 - $9         The first 9 arguments to the Bash script
+$#              Number of arguments passed to the Bash script
+$@              All arguments passed to the Bash script
+$?              The exit status of the most recently run process
+$$              The process ID of the current script
+$USER           The username of the user running the script
+$HOSTNAME       The hostname of the machine
+$RANDOM         A random number
+$LINENO         The current line number in the script
+```
