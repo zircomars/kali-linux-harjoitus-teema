@@ -66,7 +66,21 @@ Software testing: 16592
 zxcv: 
 Total Number of Parameters : 0
 
+##############################################
 
+~/variables-muuttujat$ chmod +x ./main.sh 
+~/variables-muuttujat$ ./main.sh hello there
+File Name: ./main.sh
+First Parameter : hello
+Toinen Parameter : there
+Quoted Values: hello there
+Quoted Values: hello there
+asdf: 0
+Software testing: 17634
+zxcv: 
+Total Number of Parameters : 2
+The first two arguments are hello and there
+~/variables-muuttujat$ 
 
-
+# toistaa tuon "hello there" ennen sitä scriptiä
 
