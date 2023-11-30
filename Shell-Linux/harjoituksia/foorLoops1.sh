@@ -13,7 +13,7 @@ done
 
 # ICMP = Internet Control Message Protocol
 
-#esim. jos shellissä suoritettaan jotakin pinggausta, ip-osoitteeseen nin se tekee sen 10.11.1.1 - 10.11.1.10 asti
+#esim1. jos shellissä suoritettaan jotakin pinggausta, ip-osoitteeseen nin se tekee sen 10.11.1.1 - 10.11.1.10 asti
 #siksi siinä on alkaminen 10.11.1.X jotakin
 $for ip in $(seq 1 10); do echo 10.11.1.$ip; done
 10.11.1.1
@@ -44,12 +44,16 @@ kali@kali:~$ for i in {1..10}; do echo 10.11.1.$i;done
 
 # while loops
 
+# tämä on melko sama tai yleiseinen suoritettava koodi, kun lauseke on tosi. eli periaateessa suorittaa niin kauan on tosi/täsmää jokin toiminta.
+
 while [ <some test> ]
 do
  <perform an action>
 done
 
-#esim. scriptti
+# esim1. scripti tämä on sama idea kuin suorittaisi shell komennossa ja while on [ jotakin ] eli laatikko
+# tässä esimerkissä tuli yleinen virhse, jota kutsutaan "off by one" virheeksi. Siinä on "-lt" (pienempi kuin / less than), "-le" (pienempi tai yhtä suuri) sijaista, joten laskurin sai vain 9 IP-osoitetta eli 10.11.1.1 - 10.11.1.9 , eli puuttuu yksi vielä 
+
 #!/bin/bash
 # while loop example
 counter=1
@@ -60,6 +64,19 @@ do
 done
 
 
+# esim2.
+# eli tässä käytettään c++ methodia ja jossa on tupla sulkun rakenteen ariteettin laajennusta ja arvioinnin suorittamista samanaikaisesti. Tässä just tapauksessa käytettään laskurina lisäämistä yhden muuttujan arvoon. ja tässä toistuu just sitä tasan tarkalleen 10 IP-osoitetta shellistä eli 10.11.1.1 - 10.11.1.10
+
+#!/bin/bash
+# while loop example 2
+counter=1
+while [ $counter -le 10 ]
+do
+ echo "10.11.1.$counter"
+ ((counter++))
+done
+
+#################################################
 
 
 
