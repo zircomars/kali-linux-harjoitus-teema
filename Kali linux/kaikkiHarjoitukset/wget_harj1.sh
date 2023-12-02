@@ -175,3 +175,39 @@ www.megacorpone.com
 # '[^/]*\.<domain>\.com' -- tämä periaatteessa ei salli muuttujan laajennusta ja se käsitttelee kaikkia suljettuja merkkiä kirjaimellisesti. Se skannaa, erottaa pilkujen erottamista luetteloa ja löydetäkseen <domain> eli sivuston nimi ja päätteen (domain.com), johon erottaa velvollisuudentuntoisen URL-osoitteesta viittavaviin aliverkotunnukseen (subdomain).
 
 # tätä voi periaatteessa voi hyödyntää useilla tän kaltaisille säännölliselle lausekkeelle, hyvä esimerkki.
+
+
+#######################
+
+# Now we have a nice, clean list of domain names linked from the front page of megacorpone.com. 
+# Next, we will use host to discover the corresponding IP address of each domain name in our text file. We can use a Bash one-liner loop for this:
+
+~/CircularFocusedProfiles$ for url in $(cat list.txt); do host $url; done
+admin.megacorpone.com name server 51.222.169.208
+beta.megacorpone.com name server 51.222.169.209
+intranet.megacorpone.com name server 51.222.169.211
+mail2.megacorpone.com name server 51.222.169.213
+mail.megacorpone.com name server 51.222.169.212
+siem.megacorpone.com name server 51.222.169.215
+support.megacorpone.com name server 51.222.169.218
+syslog.megacorpone.com name server 51.222.169.217
+test.megacorpone.com name server 51.222.169.219
+vpn.megacorpone.com name server 51.222.169.220
+www2.megacorpone.com name server 149.56.244.87
+www.megacorpone.com name server 149.56.244.87
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
