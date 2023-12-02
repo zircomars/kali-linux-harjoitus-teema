@@ -167,3 +167,11 @@ test.megacorpone.com
 vpn.megacorpone.com
 www2.megacorpone.com
 www.megacorpone.com
+
+###########
+# pieni teoria ($grep -o '[^/]*\.megacorpone\.com' index.html) komennosta
+# lyhennettynä periaatteessa "grep -o" , joka palauttaa vain säännöllisen lausekkeessa määritetyn merkkijonon. Jos siihen muotoiltu ilmaisussa huolellisesti, tämän yksinkertaisen koemnto käsittelee osan aikaisempien tietojen kaivamista. Ilmaisussa on itsessään monimutkainen, mutta ns. suoraviivainen
+
+# '[^/]*\.<domain>\.com' -- tämä periaatteessa ei salli muuttujan laajennusta ja se käsitttelee kaikkia suljettuja merkkiä kirjaimellisesti. Se skannaa, erottaa pilkujen erottamista luetteloa ja löydetäkseen <domain> eli sivuston nimi ja päätteen (domain.com), johon erottaa velvollisuudentuntoisen URL-osoitteesta viittavaviin aliverkotunnukseen (subdomain).
+
+# tätä voi periaatteessa voi hyödyntää useilla tän kaltaisille säännölliselle lausekkeelle, hyvä esimerkki.
