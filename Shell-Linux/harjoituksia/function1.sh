@@ -75,6 +75,34 @@ The previous function returned a value of 154
 Oh hello there, I'm returning a random value!
 The previous function returned a value of 229
 
+# Notice that a random number is returned every time we run the script, because we returned the
+special global variable $RANDOM (into $?). If we used the return statement without the $RANDOM
+argument, the exit status of the function (0 in this case) would be returned instead.
+
+# Now that we have a basic understanding of variables and functions, we can dig deeper and discuss variable scope.
+
+# The scope of a variable is simply the context in which it has meaning. By default, a variable has a global scope, meaning it can be accessed throughout the entire script. In contrast, a local variable can only be seen within the function, block of code, or subshell in which it is defined. We can “overlay” a global variable, giving it a local context, by preceding the declaration with the local keyword, leaving the global variable untouched. The general syntax is:
+
+# periaatteessa toi name_change() funktio toistuu siinä välissä
+#!/bin/bash
+# var scope example
+name1="John"
+name2="Jason"
+
+name_change() {
+ local name1="Edward"
+ echo "Inside of this function, name1 is $name1 and name2 is $name2"
+ name2="Lucas"
+}
+
+echo "Before the function call, name1 is $name1 and name2 is $name2"
+name_change
+echo "After the function call, name1 is $name1 and name2 is $name2"
+
+# output:
+Before the function call, name1 is John and name2 is Jason
+Inside of this function, name1 is Edward and name2 is Jason
+After the function call, name1 is John and name2 is Lucas
 
 
 
