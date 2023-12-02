@@ -148,3 +148,22 @@ admin.megacorpone.com
 beta.megacorpone.com
 beta.megacorpone.com
 
+###################
+# tuossa edellisessä komennossa on käytety paljon aikaa ja energiaa tulostuksen etimisessä ja poimimiseen aliverkkojen nimien (subdomain names) etsimiseen. Kuitenkin tulostuksea meni vähä monimutkaisen ja mutkan kautta, tätä voi periaatteessa käsitellä tämän helposti..
+
+# tässä seuraavassa esimerkissä käytettään yksinkertaisemmalla säännöllistä lauseketta ".megacorpone" aliverkkontunnistamista luomiseen (subdomains out of our file)
+
+grep -o '[^/]*\.megacorpone\.com' index.html | sort -u > list.txt
+~/CircularFocusedProfiles$ cat list.txt 
+admin.megacorpone.com
+beta.megacorpone.com
+intranet.megacorpone.com
+mail2.megacorpone.com
+mail.megacorpone.com
+siem.megacorpone.com
+support.megacorpone.com
+syslog.megacorpone.com
+test.megacorpone.com
+vpn.megacorpone.com
+www2.megacorpone.com
+www.megacorpone.com
