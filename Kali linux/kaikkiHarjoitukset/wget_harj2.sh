@@ -106,19 +106,39 @@ Adding toybox to replit.nix
 success
 
 # ainakin pari tiedostoa saattiin, sekä noissa tiedostjen sisällä on suuri data 
-~/penetrationpracticeexample2$ ls
+~/penetrationpracticeexample2$ ls 
 18755  40564
 
+# kun on ladannut niin voidaan tarkistaa ja varmistakseen, että todella ladatin. Tiedoston varmistamista toistetaan "file" komentoa ja se on tekstiä
 
+# jokaisesta voidaan tarkistaa hyväksikäytön ja nähdä sen, että käyttäjä teki oikean ja raa'an hyödynsä, eli löysi tiedostonsa 
 
+~/penetrationpracticeexample2$ ls -l
+total 60
+-rw-r--r-- 1 runner runner  9698 Dec  3 14:29 18755
+-rw-r--r-- 1 runner runner 32674 Dec  3 14:29 40564
+-rw-r--r-- 1 runner runner  7964 Dec  3 14:54 harjoitus.txt
+-rw-r--r-- 1 runner runner    16 Apr  7  2023 main.sh
+-rw-r--r-- 1 runner runner   159 Dec  3 14:29 replit.nix
+~/penetrationpracticeexample2$ file 40564 
+40564: ASCII text
 
+#######################################
 
+## seuraavaksi, (kirjan ohjeen mukaan), josta joudutaan copy-paste yhden scriptin, josta suoritettaan/puhdistettaan tietty toiminta (ohjeen mukaan ei ole helppoa käyttää uudelleen..)
 
+# ehkä tässä ongelmana, kun on suoritettu jo pari tai muutaman kerramn saman komennon , niin sieltä toistu sitä "wget: unknown option 'q'" blah blah paskaa.. joten epäonnistui, mutta periaatteessa alussa (yks kohta) niistä tapahtui se lataa niitä URL linkkien exploits tyyppiä 
 
+#!/bin/bash
+# Bash script to search for a given exploit and download all matches.
+for e in $(searchsploit afd windows -w -t | grep http | cut -f 2 -d "|")
+do
+ exp_name=$(echo $e | cut -d "/" -f 5)
+ url=$(echo $e | sed 's/exploits/raw/')
+ wget -q --no-check-certificate $url -O $exp_name
+done
 
-
-
-
+# kirja; tätä voi periaatteessa tarkastaa hyökkäystä, jotta ne löytää, joihin voidaan kiinnostaa, ja kokeilla niitä testikoneella ja lopulta suoirtettua oikean hyökkäyksen kohteelta, koska satunnaisien hyökkäyksiä ammuttaan elävältä kohdelta on huono prosessi ja tämä ns. kuin tuhoaa täydellisen katastrofin
 
 
 
