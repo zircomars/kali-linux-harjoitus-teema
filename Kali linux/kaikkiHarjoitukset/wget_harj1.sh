@@ -177,10 +177,12 @@ www.megacorpone.com
 # tätä voi periaatteessa voi hyödyntää useilla tän kaltaisille säännölliselle lausekkeelle, hyvä esimerkki.
 
 
-#######################
+###############################
 
 # Now we have a nice, clean list of domain names linked from the front page of megacorpone.com. 
 # Next, we will use host to discover the corresponding IP address of each domain name in our text file. We can use a Bash one-liner loop for this:
+
+# tässä periaatteessa tulostuu selkosempi luettelo domain nimet, john linkitetty ja osoitettu megacorpone serverit ja niiden IP-osoitteet.
 
 ~/CircularFocusedProfiles$ for url in $(cat list.txt); do host $url; done
 admin.megacorpone.com name server 51.222.169.208
@@ -195,6 +197,26 @@ test.megacorpone.com name server 51.222.169.219
 vpn.megacorpone.com name server 51.222.169.220
 www2.megacorpone.com name server 149.56.244.87
 www.megacorpone.com name server 149.56.244.87
+
+
+##################
+#The host command gives us all sorts of output and not all of it is relevant. We will extract the IP addresses by piping the output into a grep for “has address”, then cut the results and sort them
+
+# seuraavassa kommennossa tulostetaan kaikenlaista tuloksia, johon ei kaikkissa ei ole relevanttia. Poimittaan IP-osoitteet putkella | tuotakseen greppin osoitetta, ja rajoitettaan tulosta
+
+~/CircularFocusedProfiles$ for url in $(cat list.txt); do host $url; done | grep "has address" | cut -d " " -f 4 | sort -u
+173.246.47.170
+38.100.193.66
+38.100.193.67
+38.100.193.73
+38.100.193.76
+38.100.193.77
+38.100.193.79
+38.100.193.83
+38.100.193.84
+38.100.193.87
+38.100.193.88
+38.100.193.89
 
 
 
