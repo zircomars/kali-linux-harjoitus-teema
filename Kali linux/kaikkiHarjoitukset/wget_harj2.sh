@@ -6,7 +6,10 @@
 
 # PAGE START 125 - 129 (EXAMPLE 2)
 
-# penetraatiotestauksessa yritettään usein löytää tehokkuutta minimoidakseen datan analysointia kuluvien ajan, josta erityisesti erilaisten skannausten aikana palutettavien datamäärää.
+# Esim. kun ollaan keskellä penetraation testausta ja käyttäjällä on etuoikeus pääsy (unpriviledge access) Windows koneeseen. 
+
+#  As we continue to collect information, we realize it may be
+vulnerable to an exploit that we read about that began with the letters a, f, and d but we can’tremember the full name of the exploit. In an attempt to escalate our privileges, we want to search for that specific exploit.
 
 # esim. kun suooritettaan verkkossa mm. C -luokkan (192.0.0.0 to 223.255.255.0) aliverkkoa tunnistakseen verkkopalvelimen ja määrittäkseen tulevia "attack surface".
 
@@ -138,7 +141,7 @@ do
  wget -q --no-check-certificate $url -O $exp_name
 done
 
-# kirja; tätä voi periaatteessa tarkastaa hyökkäystä, jotta ne löytää, joihin voidaan kiinnostaa, ja kokeilla niitä testikoneella ja lopulta suoirtettua oikean hyökkäyksen kohteelta, koska satunnaisien hyökkäyksiä ammuttaan elävältä kohdelta on huono prosessi ja tämä ns. kuin tuhoaa täydellisen katastrofin
+# kirja; tätä voi periaatteessa tarkastaa hyökkäystä, jotta ne löytää, joihin voidaan kiinnostaa, ja kokeilla niitä testikoneella ja lopulta suoirtettua oikean hyökkäyksen kohteelta, koska satunnaisien hyökkäyksiä ammuttaan elävältä kohdelta on huono prosessi ja tämä ns. kuin tuhoaa täydellisen katastrofin.
 
 
 
