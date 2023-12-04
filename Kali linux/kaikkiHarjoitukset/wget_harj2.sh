@@ -11,11 +11,8 @@
 #  As we continue to collect information, we realize it may be
 vulnerable to an exploit that we read about that began with the letters a, f, and d but we can’tremember the full name of the exploit. In an attempt to escalate our privileges, we want to search for that specific exploit.
 
-# esim. kun suooritettaan verkkossa mm. C -luokkan (192.0.0.0 to 223.255.255.0) aliverkkoa tunnistakseen verkkopalvelimen ja määrittäkseen tulevia "attack surface".
-
-# porttien skannaus on prosessi johon tarkastetaan etäkoneen TCP- tai UDP porttien tarkotuksena on havaita mitkä palveluiden kohteet ovat käynnissä ja mitä hyökkäysvektoria mahdollisesti on olemassa.
-
-# eli suoritettaan porttiskannausta ensin koko aliverkon löydetäkseen mahdolliset avoimet verkkopalvelut
+# harjoituksen kannalta etsitään "https://www.exploit-db.com" hakusanalla "afd windows", jolla ladataan hakuehtoja vastaavat exploitit ja tarkstettavien niitä, kunnes löydetäkseen oikea tieto. 
+# voidaan tehdä tätä manuaalisesti verkkosivustojn kautta, mutta (kirjan ohje) ei pitäisi mennä kauaan, mutta jos käyttää paljon aikaa bash -scriptin kirjoittamiseen, johon voi helposti käyttää hakua ja lataa automaattisesti hyväksikäyttöjä myöhemmin
 
 ##########
 # eli aloitettaan "searchsploit32"- apuohjelelmalla Kali linuxsessa. (tämä virallisesti suoritettu repl.it harjoituskena)
