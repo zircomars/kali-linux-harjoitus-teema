@@ -207,7 +207,7 @@ https://www.kali.org/tools/ <br>
 <br>
 pientä lukemista; <br>
 https://www.edureka.co/blog/ethical-hacking-using-kali-linux/ <br>
-
+https://ntedu.top/wp-content/uploads/2018/11/Learning-Kali-Linux.pdf (vuodelta 2018) <br>
 TCP/UDP portti tietokanta ja näitä löytyy mm. wikipediastakin <br>
 https://www.speedguide.net/ports.php
 
