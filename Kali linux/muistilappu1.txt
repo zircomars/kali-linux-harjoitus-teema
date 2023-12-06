@@ -46,4 +46,4 @@ www.megacorpone.com
 
 
 muita linkkejä/työkaluja;
-https://searchdns.netcraft.com/  (Britti internet-apveluyritys, joka tarjoaa ilmaisia verkkoportaalia, ja suorittaa erilaisia tiedon funktioita. Tämän työkalu voi skannata ja etsiä DNS hakua sivustoja kerätkseen tietoja mm. megacorpone.com domain:ia)
+https://searchdns.netcraft.com/  (Britti internet-apveluyritys, joka tarjoaa ilmaisia verkkoportaalia, ja suorittaa erilaisia tiedon funktioita. Tämän työkalu voi skannata ja etsiä DNS hakua sivustoja kerätkseen tietoja mm. megacorpone.com domain:ia) & siihen hakuun voi laittaa (*.domain.fi) niin hakee etuliitteen subdomain toimintoja esim. "tuki.domain.fi" 
