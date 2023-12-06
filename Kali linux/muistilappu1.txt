@@ -43,3 +43,7 @@ https://hackthissite.org/
 
 pientä sivustojen linkkiä, mitä voisi esim suorittaa pien penetraatio testauksia
 www.megacorpone.com
+
+
+muita linkkejä/työkaluja;
+https://searchdns.netcraft.com/  (Britti internet-apveluyritys, joka tarjoaa ilmaisia verkkoportaalia, ja suorittaa erilaisia tiedon funktioita. Tämän työkalu voi skannata ja etsiä DNS hakua sivustoja kerätkseen tietoja mm. megacorpone.com domain:ia)
