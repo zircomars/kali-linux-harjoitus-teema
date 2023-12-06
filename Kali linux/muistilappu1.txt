@@ -39,3 +39,6 @@ https://geonode.com/free-proxy-list
 esimerkki linkkei josta voi suorittaa ja tarkistaa niiden haavoittuvuudet ja muita tukevia linkkejä kali linux harjoitukseen
 http://www.vulnweb.com/
 https://hackthissite.org/
+
+pientä sivustojen linkkiä, mitä voisi esim suorittaa pien penetraatio testauksia
+www.megacorpone.com
