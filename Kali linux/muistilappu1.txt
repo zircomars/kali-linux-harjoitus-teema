@@ -35,6 +35,7 @@ Nmap done: 256 IP addresses (3 hosts up) scanned in 3.12 seconds
 lunttilappu linkkei;
 shodan.io
 https://geonode.com/free-proxy-list
+https://www.exploit-db.com/google-hacking-database
 
 esimerkki linkkei josta voi suorittaa ja tarkistaa niiden haavoittuvuudet ja muita tukevia linkkejä kali linux harjoitukseen
 http://www.vulnweb.com/
