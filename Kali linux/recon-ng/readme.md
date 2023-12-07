@@ -31,6 +31,9 @@ _/    _/  _/_/_/_/    _/_/_/    _/_/_/    _/      _/            _/      _/    _/
 [recon-ng][default] >
 ```
 
+* [tutoriaalit ja käyttöohjeita](#tutoriaalit-ja-käyttöohjeita)
+
+
 reco-ng on moduulipohjainen framework verkkopohjaisen tiedon keräykseen ja OSINT (open source intelligence) työkalu, ja tulostaa/näyttää moduulien päätelaitteelle että tallentaa niitä tietokantaan. Suurin osat recon-ng tehostaa moduulien tulostuksien syöttämistä toiseen, jolla voidaan nopeasti laajentaa tiedon keräystä laajuutta.
 
 Recon-ng mmuistuttaa sama kuin Metasploit Framework:iä, mikä vähentää framework hyödyntämistä oppimiskäyrää, mutta se on kuitenkin aivan erilainen. Recon-ng ei ole tarkoitus kilpailla olemassa/muita framework:ien kanssa, koska se on suunniteltu yksinomaisen verkkopohjaisen avoimen lähdenkoodin tutkimiseen. 
@@ -61,9 +64,36 @@ spool           Spools output to a file
 workspaces      Manages workspaces
 ```
 
+## marketplace and modules
 
+```
+[recon-ng][default] > marketplace help
+Interfaces with the module marketplace
+
+Usage: marketplace <info|install|refresh|remove|search> [...]
+
+```
+
+### modules
+
+moduulit, joka on ryhmitelty eri luokkiin ja niitä löytyy "marketplace" hakemistolla
+
+`- discovery`
+`- exploitation`
+`- import`
+`- recon`
+`- reporting`
 
 
 
 ## tutoriaalit ja käyttöohjeita
 https://hackertarget.com/recon-ng-tutorial/
+https://www.kali.org/tools/recon-ng/
+https://holisticinfosec.io/toolsmith/pdf/may2013.pdf
+
+https://techyrick.com/recon-ng/
+
+
+
+
+
