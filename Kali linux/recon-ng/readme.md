@@ -65,5 +65,5 @@ workspaces      Manages workspaces
 
 
 
-## muita linkkejä
+## tutoriaalit ja käyttöohjeita
 https://hackertarget.com/recon-ng-tutorial/
