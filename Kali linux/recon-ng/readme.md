@@ -30,3 +30,16 @@ _/    _/  _/_/_/_/    _/_/_/    _/_/_/    _/      _/            _/      _/    _/
 
 [recon-ng][default] >
 ```
+
+reco-ng on moduulipohjainen framework verkkopohjaisen tiedon keräykseen, ja tulostaa/näyttää moduulien päätelaitteelle että tallentaa niitä tietokantaan. Suurin osat recon-ng tehostaa moduulien tulostuksien syöttämistä toiseen, jolla voidaan nopeasti laajentaa tiedon keräystä laajuutta.
+
+Recon-ng mmuistuttaa sama kuin Metasploit Framework:iä, mikä vähentää framework hyödyntämistä oppimiskäyrää, mutta se on kuitenkin aivan erilainen. Recon-ng ei ole tarkoitus kilpailla olemassa/muita framework:ien kanssa, koska se on suunniteltu yksinomaisen verkkopohjaisen avoimen lähdenkoodin tutkimiseen. 
+
+
+
+
+
+
+
+
+
