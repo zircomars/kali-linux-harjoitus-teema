@@ -66,6 +66,14 @@ workspaces      Manages workspaces
 
 `back` - komennolla menee yhden polun takaisin taakse päin , kuin linux `cd ..`
 
+```
+[recon-ng][default] > show
+Shows various framework items
+
+Usage: show <companies|contacts|credentials|domains|hosts|leaks|locations|netblocks|ports|profiles|pushpins|repositories|vulnerabilities>
+
+```
+
 ## marketplace and modules
 
 ```
