@@ -278,10 +278,18 @@ MEGACORPONE.COM
 [!] Google CAPTCHA triggered. No bypass available.
 
 # hmm.. ei ihan kaikki mene kirjan mukan, mutta jotakn heijasti tai tapahtui.. "recon-ng" kuitenkin tallentaa tuloksia paikallisen tietokantaan ja tulostukset syötetään muihin recon-ng moduuleihin
+# tarkistellaan se "hosts" seuraavaksi, eli komennolla "back" menee ton polun yksi sivun taaemmaksi kuin linux "cd .."
 
+[recon-ng][default][google_site_web] > back
+[recon-ng][default] > show
+Shows various framework items
 
+Usage: show <companies|contacts|credentials|domains|hosts|leaks|locations|netblocks|ports|profiles|pushpins|repositories|vulnerabilities>
 
+[recon-ng][default] > show hosts
+[*] No data returned.
 
+# tässä meni fail, koska se "run" komennon jälkeen se data megacorpone.com ei suoriuttunut..
+# tästä on testattu korvattavaksi tohon SOURCE:een eli mm. cisco ja muita sivustoja..
 
-
-
+# tähän voi vaikuttaa mm. päivitiykseenkin, mutta osat työkalut eivät vain mne tarpeettomiksi (ellei vaihda/päivitetä). Niihin kuintekin kaikilla on paikka laajemmassa metodologiassa, minkä vuoksi se on PWK-materiaalit.
