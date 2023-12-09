@@ -47,3 +47,17 @@
 
 #####################
 # db (esim2)
+# Usage: db <delete|insert|notes|query|schema> [...]
+# db insert porttia (jotakin)
+
+[recon-ng][default] > db insert ports
+
+# poistaminen (delete)
+[recon-ng][default] > db delete hosts
+
+# notes 
+[recon-ng][default] > db notes ports
+
+
+
+
