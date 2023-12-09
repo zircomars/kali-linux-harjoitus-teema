@@ -229,8 +229,39 @@ info     install  refresh  remove   search
 
 ########
 # toinen esim. josta install - tuota google path moduulia
+# tuolla edellisessä komennossa josta tarkistettiin se marketplace info ($ marketplace info recon/domains-hosts/google_site_web) kohdassa / kuvauksessa mukaan tässä moduulissa hakee googlesta "site"-operaattorilla, eikä se vaadi API-avainta
+# ( Harvests hosts from Google.com by using the 'site' search operator. Updates the 'hosts' table with the results)
 
+[recon-ng][default] > marketplace install recon/domains-hosts/google_site_web
+[*] Module installed: recon/domains-hosts/google_site_web
+[*] Reloading modules...
 
+####
+# seuraavaksi;
+# latauksen jälkeen niin ladataan (load) käyttämällä komentoa "module load" ja tarkistellaan sen "info" komennolla mitä sisällä on ladattu niin kuin checkkausta
+
+[recon-ng][default] > modules load recon/domains-hosts/google_site_web
+
+[recon-ng][default][google_site_web] > info
+
+      Name: Google Hostname Enumerator
+    Author: Tim Tomes (@lanmaster53)
+   Version: 1.0
+
+Description:
+  Harvests hosts from Google.com by using the 'site' search operator. Updates the 'hosts' table with
+  the results.
+
+Options:
+  Name    Current Value  Required  Description
+  ------  -------------  --------  -----------
+  SOURCE  default        yes       source of input (see 'info' for details)
+
+Source Options:
+  default        SELECT DISTINCT domain FROM domains WHERE domain IS NOT NULL
+  <string>       string representing a single input
+  <path>         path to a file containing a list of inputs
+  query <sql>    database query returning one column of inputs
 
 
 
