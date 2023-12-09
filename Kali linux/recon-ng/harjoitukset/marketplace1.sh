@@ -1,6 +1,9 @@
 # marketplace
 # kuin sovelluksien kauppa, josta voi; "install", "remove", "search", "info", "refresh" ja jne
-#
+# 
+
+# Offensive-Security-OSCP-by-Offensive-Security_2020.pdf
+# konffauksen ohje sivut (148-154)
 
 [recon-ng][default] > marketplace 
 info     install  refresh  remove   search   
@@ -288,8 +291,70 @@ Usage: show <companies|contacts|credentials|domains|hosts|leaks|locations|netblo
 
 [recon-ng][default] > show hosts
 [*] No data returned.
-
+#############################################
 # tässä meni fail, koska se "run" komennon jälkeen se data megacorpone.com ei suoriuttunut..
 # tästä on testattu korvattavaksi tohon SOURCE:een eli mm. cisco ja muita sivustoja..
 
 # tähän voi vaikuttaa mm. päivitiykseenkin, mutta osat työkalut eivät vain mne tarpeettomiksi (ellei vaihda/päivitetä). Niihin kuintekin kaikilla on paikka laajemmassa metodologiassa, minkä vuoksi se on PWK-materiaalit.
+# miten tätä saisi korjattua?? noh menee taas ikuisuus tietjen etsimiseen ja testaamiseen
+#############################################
+
+# mennään eteenpäin kuitenkin
+
+[recon-ng][default] > marketplace info recon/hosts-hosts/resolve
+
+  +-------------------------------------------------------------------------------------------------+
+  | path          | recon/hosts-hosts/resolve                                                       |
+  | name          | Hostname Resolver                                                               |
+  | author        | Tim Tomes (@lanmaster53)                                                        |
+  | version       | 1.0                                                                             |
+  | last_updated  | 2019-06-24                                                                      |
+  | description   | Resolves the IP address for a host. Updates the 'hosts' table with the results. |
+  | required_keys | []                                                                              |
+  | dependencies  | []                                                                              |
+  | files         | []                                                                              |
+  | status        | not installed                                                                   |
+  +-------------------------------------------------------------------------------------------------+
+
+# moduuli installi steppi
+[recon-ng][default] > marketplace install recon/hosts-hosts/resolve
+[*] Module installed: recon/hosts-hosts/resolve
+[*] Reloading modules...
+
+[recon-ng][default] >  modules load recon/hosts-hosts/resolve
+[recon-ng][default][resolve] > info
+
+      Name: Hostname Resolver
+    Author: Tim Tomes (@lanmaster53)
+   Version: 1.0
+
+Description:
+  Resolves the IP address for a host. Updates the 'hosts' table with the results.
+
+Options:
+  Name    Current Value  Required  Description
+  ------  -------------  --------  -----------
+  SOURCE  default        yes       source of input (see 'info' for details)
+
+Source Options:
+  default        SELECT DISTINCT host FROM hosts WHERE host IS NOT NULL AND ip_address IS NULL
+  <string>       string representing a single input
+  <path>         path to a file containing a list of inputs
+  query <sql>    database query returning one column of inputs
+
+Comments:
+  * Note: Nameserver must be in IP form.
+
+# periaatteessa oma steppi päättyy tähän, koska tuolta "run" operaattorit toiminnat päättyi siihen, ja tässä puuttuu konffauksia ja määrityksiä
+
+
+
+
+
+
+
+
+
+
+
+
