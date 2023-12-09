@@ -38,7 +38,7 @@ reco-ng on moduulipohjainen framework verkkopohjaisen tiedon keräykseen ja OSIN
 
 Recon-ng mmuistuttaa sama kuin Metasploit Framework:iä, mikä vähentää framework hyödyntämistä oppimiskäyrää, mutta se on kuitenkin aivan erilainen. Recon-ng ei ole tarkoitus kilpailla olemassa/muita framework:ien kanssa, koska se on suunniteltu yksinomaisen verkkopohjaisen avoimen lähdenkoodin tutkimiseen. 
 
-Pien huom, jos käyttää kali linux:sta niin tätä on asennettu siihen pohjaan, että riittää syöttää komennon `$recon-ng`
+Pien huom, jos käyttää kali linux:sta niin tätä on asennettu siihen pohjaan, että riittää syöttää komennon `$recon-ng` ja harjoituksissa osat on suoraan kirjasta, mutta osat on liitetty esim. vähä muiden linkkeiden kautta (vähä ristiin), mutta samaa harjoitusta ja sen ideaa
 
 ```
 [recon-ng][default] > help
