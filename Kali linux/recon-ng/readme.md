@@ -86,12 +86,12 @@ moduulit, joka on ryhmitelty eri luokkiin ja niitä löytyy "marketplace" hakemi
 
 
 
-## tutoriaalit ja käyttöohjeita
-https://hackertarget.com/recon-ng-tutorial/
-https://www.kali.org/tools/recon-ng/
-https://holisticinfosec.io/toolsmith/pdf/may2013.pdf
-
-https://techyrick.com/recon-ng/
+## tutoriaalit ja käyttöohjeita <br>
+https://hackertarget.com/recon-ng-tutorial/ <br>
+https://www.kali.org/tools/recon-ng/ <br> 
+https://holisticinfosec.io/toolsmith/pdf/may2013.pdf <br>
+<br>
+https://techyrick.com/recon-ng/ <br>
 
 
 
