@@ -239,7 +239,7 @@ info     install  refresh  remove   search
 ####
 # seuraavaksi;
 # latauksen jälkeen niin ladataan (load) käyttämällä komentoa "module load" ja tarkistellaan sen "info" komennolla mitä sisällä on ladattu niin kuin checkkausta
-
+# info - tarkistuksessa tullostettaan periaatteessa moduuli ja parametrit (eli toi > SOURCE) value
 [recon-ng][default] > modules load recon/domains-hosts/google_site_web
 
 [recon-ng][default][google_site_web] > info
@@ -263,8 +263,21 @@ Source Options:
   <path>         path to a file containing a list of inputs
   query <sql>    database query returning one column of inputs
 
+# tuossa SOURCE - kohassa on jokin sisältävä lisätietoja moduulista ja kun nyt ollaan asentanut ja ladannut. Moduuli vaatii lähteen käyttöä, ja kohteesta halutaa ns. kuin kerätä lisätietoa.
 
+# source kohtaan käytettään tuttu "megacorpone.com" kohteen domainia ja suorittaminen tapahtuu "run"
 
+[recon-ng][default][google_site_web] > options set SOURCE megacorpone.com
+SOURCE => megacorpone.com
+[recon-ng][default][google_site_web] > run
+
+---------------
+MEGACORPONE.COM
+---------------
+[*] Searching Google for: site:megacorpone.com
+[!] Google CAPTCHA triggered. No bypass available.
+
+# hmm.. ei ihan kaikki mene kirjan mukan, mutta jotakn heijasti tai tapahtui.. "recon-ng" kuitenkin tallentaa tuloksia paikallisen tietokantaan ja tulostukset syötetään muihin recon-ng moduuleihin
 
 
 
