@@ -64,6 +64,8 @@ spool           Spools output to a file
 workspaces      Manages workspaces
 ```
 
+`back` - komennolla menee yhden polun takaisin taakse päin , kuin linux `cd ..`
+
 ## marketplace and modules
 
 ```
