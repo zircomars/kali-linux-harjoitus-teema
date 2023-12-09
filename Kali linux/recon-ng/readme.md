@@ -102,7 +102,7 @@ https://www.kali.org/tools/recon-ng/ <br>
 https://holisticinfosec.io/toolsmith/pdf/may2013.pdf <br>
 <br>
 https://techyrick.com/recon-ng/ <br>
-
+https://www.trickster.dev/post/recon-ng-modular-framework-for-osint-automation/ <br>
 
 
 
