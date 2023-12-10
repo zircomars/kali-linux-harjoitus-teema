@@ -22,4 +22,20 @@
 
 #################################
 # demo (HARJOITUS) START HERE
+# haetaan kyseisen sivuston serverin IP-osoite ja sen paikannuksen kohde (geo location) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
