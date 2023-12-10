@@ -31,9 +31,10 @@ _/    _/  _/_/_/_/    _/_/_/    _/_/_/    _/      _/            _/      _/    _/
 [recon-ng][default] >
 ```
 
-* [tutoriaalit ja käyttöohjeita](#tutoriaalit-ja-käyttöohjeita)
 * [marketplace and modules](#marketplace-and-modules)
   * [modules](#modules)
+
+* [tutoriaalit ja käyttöohjeita](#tutoriaalit-ja-käyttöohjeita)
 
 reco-ng on moduulipohjainen framework verkkopohjaisen tiedon keräykseen ja OSINT (open source intelligence) työkalu, ja tulostaa/näyttää moduulien päätelaitteelle että tallentaa niitä tietokantaan. Suurin osat recon-ng tehostaa moduulien tulostuksien syöttämistä toiseen, jolla voidaan nopeasti laajentaa tiedon keräystä laajuutta.
 
