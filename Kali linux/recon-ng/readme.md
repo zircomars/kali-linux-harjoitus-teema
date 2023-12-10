@@ -86,6 +86,20 @@ Usage: marketplace <info|install|refresh|remove|search> [...]
 
 ```
 
+jos on puuttuvia "marketplace" työkaluja/moduulia niin kantsii tarvittaessa ladata niitä eli..
+```
+[recon-ng][default] > marketplace install all    
+[*] Module installed: discovery/info_disclosure/cache_snoop    
+[*] Module installed: discovery/info_disclosure/interesting_files
+[*] Module installed: exploitation/injection/command_injector    
+[*] Module installed: exploitation/injection/xpath_bruter
+[*] Module installed: import/csv_file
+[*] Module installed: import/list
+[*] Module installed: import/masscan
+[*] Module installed: import/nmap
+....
+```
+
 ### modules
 
 moduulit, joka on ryhmitelty eri luokkiin ja niitä löytyy "marketplace" hakemistolla
