@@ -6,6 +6,10 @@
 -> pdb.set_trace()
 (Pdb) 
 
+#db module (database module)
+[recon-ng][ipgeo] > db 
+delete  insert  notes   query   schema  
+
 #####################
 # db (esim1)
 # esim. jostain liitännän työ tietokannasta suoritettaan; "schema", "insert", "delete", "query", "notes" ja jne.
@@ -57,6 +61,45 @@
 
 # notes 
 [recon-ng][default] > db notes ports
+
+#####################
+# esim. 3 esim. datan lisääminen esim. jotakin sivustoa ja huom. ennen sitä luodaan joku workspaces (kuin tietokanta)
+# vaikappa autot
+
+[recon-ng][default] > workspaces create autocars
+[recon-ng][autocars] > workspaces list
+
+  +----------------------------------+
+  | Workspaces |       Modified      |
+  +----------------------------------+
+  | autocars   | 2023-12-10 19:48:39 |
+  | default    | 2023-12-09 20:56:31 |
+  +----------------------------------+
+
+# katsotaan mitä db tarjoakaan.. 
+[recon-ng][autocars] > db 
+delete  insert  notes   query   schema  
+
+# kokeillaan esim. lisätä sivusto tai joku domain ja tarkistellaan "insert":iä
+[recon-ng][autocars] > db insert 
+companies        credentials      hosts            locations        ports            pushpins         vulnerabilities  
+contacts         domains          leaks            netblocks        profiles         repositories     
+
+[recon-ng][autocars] > db insert domains 
+domain (TEXT): toyota.com
+notes (TEXT): 
+[*] 1 rows affected.
+
+# tuossa notes , löin vain ENTER, koska ei ole mitään muistiota tai vastaaaa
+
+
+
+
+
+
+
+
+
 
 
 
