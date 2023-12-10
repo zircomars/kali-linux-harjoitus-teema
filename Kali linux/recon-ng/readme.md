@@ -106,6 +106,7 @@ https://holisticinfosec.io/toolsmith/pdf/may2013.pdf <br>
 https://techyrick.com/recon-ng/ <br>
 https://www.trickster.dev/post/recon-ng-modular-framework-for-osint-automation/ <br>
 
-
-
+### cheat sheet
+https://www.blackhillsinfosec.com/wp-content/uploads/2019/11/recon-ng-5.x-cheat-sheet-Sheet1-1.pdf
+https://medium.com/hacker-toolbelt/my-recon-ng-cheat-sheet-efdfebb82929
 
