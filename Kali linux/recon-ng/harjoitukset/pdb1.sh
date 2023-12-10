@@ -89,11 +89,27 @@ contacts         domains          leaks            netblocks        profiles    
 domain (TEXT): toyota.com
 notes (TEXT): 
 [*] 1 rows affected.
+[recon-ng][autocars] > db insert domains 
+domain (TEXT): tesla.com
+notes (TEXT): 
+[*] 1 rows affected.
 
-# tuossa notes , löin vain ENTER, koska ei ole mitään muistiota tai vastaaaa
+# tuossa notes kohassa, löin vain ENTER, koska ei ole mitään muistiota tai vastaavaa
+# sitten kun tarkistellaan domainia
 
+[recon-ng][autocars] > show domains
 
+  +-------------------------------------------+
+  | rowid |   domain   | notes |    module    |
+  +-------------------------------------------+
+  | 1     | toyota.com |       | user_defined |
+  | 2     | tesla.com  |       | user_defined |
+  +-------------------------------------------+
 
+[*] 2 rows returned
+
+###############################
+# seuraavaksi alettaan kohteen domainia, käyttämällä domainien varsiseen polkuun /reconnainssance/information gathering prosessiin
 
 
 
