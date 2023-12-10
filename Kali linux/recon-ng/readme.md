@@ -119,6 +119,14 @@ https://holisticinfosec.io/toolsmith/pdf/may2013.pdf <br>
 <br>
 https://techyrick.com/recon-ng/ <br>
 https://www.trickster.dev/post/recon-ng-modular-framework-for-osint-automation/ <br>
+https://medium.com/@bibinrajbs/using-recon-ng-in-kali-2020-cc76aa3a4a6d  <br>
+
+
+
+
+
+
+
 
 ### cheat sheet
 https://www.blackhillsinfosec.com/wp-content/uploads/2019/11/recon-ng-5.x-cheat-sheet-Sheet1-1.pdf
