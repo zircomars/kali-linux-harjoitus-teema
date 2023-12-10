@@ -116,16 +116,13 @@ moduulit, joka on ryhmitelty eri luokkiin ja niitä löytyy "marketplace" hakemi
 https://hackertarget.com/recon-ng-tutorial/ <br>
 https://www.kali.org/tools/recon-ng/ <br> 
 https://holisticinfosec.io/toolsmith/pdf/may2013.pdf <br>
+https://securitytrails.com/blog/recon-ng <br>
 <br>
 https://techyrick.com/recon-ng/ <br>
 https://www.trickster.dev/post/recon-ng-modular-framework-for-osint-automation/ <br>
 https://medium.com/@bibinrajbs/using-recon-ng-in-kali-2020-cc76aa3a4a6d  <br>
-
-
-
-
-
-
+https://techradix.in/recon-ng-tutorial/ <br>
+https://medium.com/hacker-toolbelt/recon-ng-how-to-ii-986a82d47dc3 <br>
 
 
 ### cheat sheet
