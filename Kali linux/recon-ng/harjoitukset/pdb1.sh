@@ -174,7 +174,23 @@ Source Options:
 # tärkeimistä kohteesta on "descriptions" , "source options --> default kohta"
 
 ###########################
-#
+# options command
+
+
+[recon-ng][autocars][hackertarget] > options 
+list   set    unset  
+[recon-ng][autocars][hackertarget] > options list
+
+  Name    Current Value  Required  Description
+  ------  -------------  --------  -----------
+  SOURCE  default        yes       source of input (see 'info' for details)
+
+# määritettään joku value tuohon "option" määritykseen, josta se "source Options -> default" kohta
+
+###########
+
+
+
 
 
 
