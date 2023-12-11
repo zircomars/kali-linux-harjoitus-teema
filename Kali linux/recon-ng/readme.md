@@ -89,16 +89,51 @@ Usage: marketplace <info|install|refresh|remove|search> [...]
 jos on puuttuvia "marketplace" työkaluja/moduulia niin kantsii tarvittaessa ladata niitä eli..
 ja jossakin moduulissa vaadittaan API-avainta lisäämistä toimiakseen oikein
 ```
-[recon-ng][default] > marketplace install all    
-[*] Module installed: discovery/info_disclosure/cache_snoop    
+[recon-ng][default] > marketplace install all
+[*] Module installed: discovery/info_disclosure/cache_snoop
 [*] Module installed: discovery/info_disclosure/interesting_files
-[*] Module installed: exploitation/injection/command_injector    
+[*] Module installed: exploitation/injection/command_injector
 [*] Module installed: exploitation/injection/xpath_bruter
 [*] Module installed: import/csv_file
 [*] Module installed: import/list
 [*] Module installed: import/masscan
 [*] Module installed: import/nmap
-....
+[*] Module installed: recon/companies-contacts/bing_linkedin_cache
+[*] Module installed: recon/companies-contacts/censys_email_address
+[*] Module installed: recon/companies-contacts/pen
+[*] Module installed: recon/companies-domains/censys_subdomains
+[*] Module installed: recon/companies-domains/pen
+[*] Module installed: recon/companies-domains/viewdns_reverse_whois
+[*] Module installed: recon/companies-domains/whoxy_dns
+[*] Module installed: recon/companies-hosts/censys_org
+[*] Module installed: recon/companies-hosts/censys_tls_subjects
+[*] Module installed: recon/companies-multi/github_miner
+[*] Module installed: recon/companies-multi/shodan_org
+[*] Module installed: recon/companies-multi/whois_miner
+.........
+
+[*] Module installed: recon/repositories-vulnerabilities/gists_search
+[*] Module installed: recon/repositories-vulnerabilities/github_dorks
+[*] Module installed: reporting/csv
+[*] Module installed: reporting/html
+[*] Module installed: reporting/json
+[*] Module installed: reporting/list
+[*] Module installed: reporting/proxifier
+[*] Module installed: reporting/pushpin
+[*] Module installed: reporting/xlsx
+[*] Module installed: reporting/xml
+[*] Reloading modules...
+[!] 'whoxy_api' key not set. whoxy_whois module will likely fail at runtime. See 'keys add'.
+[!] Module 'recon/domains-companies/censys_companies' disabled. Dependency required: 'me 'CensysIPv4' from 'censys.search' (/usr/lib/python3/dist-packages/censys/search/__init__.py)'.                                                                                                                             
+[!] 'hibp_api' key not set. hibp_breach module will likely fail at runtime. See 'keys add'.
+[!] 'hibp_api' key not set. hibp_paste module will likely fail at runtime. See 'keys add'.
+[!] Module 'recon/hosts-hosts/censys_query' disabled. Dependency required: 'me 'CensysIPv4' from 'censys.search' (/usr/lib/python3/dist-packages/censys/search/__init__.py)'.                                                                                                                                       
+[!] 'ipinfodb_api' key not set. ipinfodb module will likely fail at runtime. See 'keys add'.
+[!] 'bing_api' key not set. bing_ip module will likely fail at runtime. See 'keys add'.
+[!] Module 'recon/hosts-hosts/censys_ip' disabled. Dependency required: 'me 'CensysIPv4' from 'censys.search' (/usr/lib/python3/dist-packages/censys/search/__init__.py)'.                                                                                                                                          
+[!] 'virustotal_api' key not set. virustotal module will likely fail at runtime. See 'keys add'.
+
+
 ```
 
 ### modules
