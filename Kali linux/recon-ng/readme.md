@@ -87,6 +87,7 @@ Usage: marketplace <info|install|refresh|remove|search> [...]
 ```
 
 jos on puuttuvia "marketplace" työkaluja/moduulia niin kantsii tarvittaessa ladata niitä eli..
+ja jossakin moduulissa vaadittaan API-avainta lisäämistä toimiakseen oikein
 ```
 [recon-ng][default] > marketplace install all    
 [*] Module installed: discovery/info_disclosure/cache_snoop    
