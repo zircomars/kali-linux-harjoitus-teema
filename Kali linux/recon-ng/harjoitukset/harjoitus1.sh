@@ -1,5 +1,5 @@
 # virallinen harjoitus; https://medium.com/@bibinrajbs/using-recon-ng-in-kali-2020-cc76aa3a4a6d
-
+#
 #####################
 # esim. datan lisääminen esim. jotakin sivustoa ja huom. ennen sitä luodaan joku workspaces (kuin tietokanta)
 # vaikappa autot
