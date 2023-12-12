@@ -14,7 +14,7 @@
   +----------------------------------+
 
 # workspace <jotakin> niin mennään takaisin polkuun (default) on aina mukana jos halutaan ikään kuin peruuttaa taaksepäin sitä polkua
-# ja sama kun on luotu "datakanta" niin load <nimi> niin sillä päästään sinne datan (kansion) sisälle
+# ja sama kun on luotu "datakanta" niin load <nimi> , joka tarkoittaa mennään kuin siihen database:sin (tietokannan) joku projektien kansion polun sisään ja suoritettaan prosessi ja muita toimintoja
 [recon-ng][datakanta] > workspaces load default
 
 # poistaminen?
