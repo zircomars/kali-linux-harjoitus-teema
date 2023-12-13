@@ -254,8 +254,8 @@ SUMMARY
 # näin voidaan luetella hostnimiä (hostname) ja keskityä toiseksi SOURCE vaihtoehtojen käyttöä
 
 # Unsetting the existing value
-
-
+# ennen suorittamista, tarkistellaan ja poistetaan nykyisiä arvoja
+# käyttäen; options unset <option>
 
 
 
