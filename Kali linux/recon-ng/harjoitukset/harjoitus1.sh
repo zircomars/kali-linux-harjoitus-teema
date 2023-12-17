@@ -448,10 +448,32 @@ SUMMARY
 [*] 548 total (1 new) hosts found.
 
 # yhteen vetona muodostoi ton verran 548 hostnimiä
+# ennen sitä vähä vilkaistaan "info" "Current value" kategoriaa ja sen polua ja sitä SOURCE:a
+
+[recon-ng][autocars][hackertarget] > info
+
+      Name: HackerTarget Lookup
+    Author: Michael Henriksen (@michenriksen)
+   Version: 1.1
+
+Description:
+  Uses the HackerTarget.com API to find host names. Updates the 'hosts' table with the results.
+
+Options:
+  Name    Current Value                     Required  Description
+  ------  -------------                     --------  -----------
+  SOURCE  /home/kali/Downloads/targets.txt  yes       source of input (see 'info' for details)
+
+Source Options:
+  default        SELECT DISTINCT domain FROM domains WHERE domain IS NOT NULL
+  <string>       string representing a single input
+  <path>         path to a file containing a list of inputs
+  query <sql>    database query returning one column of inputs
+
 
 ##################
 # method 4 using sql query
-
+# käytettään SQL-queriers ja voidaan asettaa SOURCE-arvoon
 
 
 
