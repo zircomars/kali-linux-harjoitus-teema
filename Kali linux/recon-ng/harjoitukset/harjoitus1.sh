@@ -253,7 +253,10 @@ SUMMARY
 # kokonais summaltaan molemmista (Toyota & Tesla) löytyi noin paljon eli 500 päälle
 # näin voidaan luetella hostnimiä (hostname) ja keskityä toiseksi SOURCE vaihtoehtojen käyttöä
 
-# Unsetting the existing value
+########################################################################
+
+# Unsetting the existing value 
+# huom tähän tulostuu neljä eri methodia, mutta kaikki on yhtä hyviä ja riippuu mikä voisi olla helppompi tulostuksena
 
 ##################
 # method 1 default 
@@ -474,9 +477,100 @@ Source Options:
 ##################
 # method 4 using sql query
 # käytettään SQL-queriers ja voidaan asettaa SOURCE-arvoon
+# käyttäen malli komentoa ja samassa polussa eli hackertarget; options set <option> query <sql-query>
 
+# esim, [recon-ng][recon-cars][hackertarget] > options set SOURCE query select domain from domains where rowid=2
 
+[recon-ng][autocars][hackertarget] > options set SOURCE query select domain from domains where rowid=2
+SOURCE => query select domain from domains where rowid=2
 
+# pien huomio, rowid = 2 vastaa verkkotunnusta tesla.com
+# ja tämän jäölkeen voi suorittaa "run" komennon, johon vastaa domainia "tesla.com"
+
+[recon-ng][autocars][hackertarget] > run
+
+---------
+TESLA.COM
+---------
+[*] Country: None
+[*] Host: tesla.com
+[*] Ip_Address: 104.85.4.91
+[*] Latitude: None
+[*] Longitude: None
+[*] Notes: None
+[*] Region: None
+[*] --------------------------------------------------
+[*] Country: None
+[*] Host: o7.ptr6980.tesla.com
+[*] Ip_Address: 149.72.144.42
+[*] Latitude: None
+[*] Longitude: None
+[*] Notes: None
+[*] Region: None
+[*] --------------------------------------------------
+[*] Country: None
+[*] Host: email1.tesla.com
+[*] Ip_Address: 192.28.144.15
+[*] Latitude: None
+[*] Longitude: None
+[*] Notes: None
+[*] Region: None
+..............
+[*] --------------------------------------------------
+[*] Country: None
+[*] Host: apacvpn.tesla.com
+[*] Ip_Address: 8.244.67.215
+[*] Latitude: None
+[*] Longitude: None
+[*] Notes: None
+[*] Region: None
+[*] --------------------------------------------------
+
+-------
+SUMMARY
+-------
+[*] 47 total (1 new) hosts found.
+
+########################################################################
+
+# Viewing the results
+# tarkistellaan tuloksia, ja recon-ng käytettään db-moduulia erilaisissa taulukoissa ja hostia jotka ovat yksi niistä. tarkistellaan mennessä löydettyistä host nimia (hostnames) ja show komennolla
+
+[recon-ng][recon-cars][hackertarget] > show hosts
+[recon-ng][autocars][hackertarget] > show hosts
+
+  +-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+  | rowid |                               host                               |    ip_address   | region | country | latitude | longitude | notes |    module    |
+  +-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+  | 1     | toyota.com                                                       | 45.154.183.183  |        |         |          |           |       | hackertarget |
+  | 2     | wave5000.toyota.com                                              | 162.246.76.160  |        |         |          |           |       | hackertarget |
+  | 3     | telematicsservice-dc2-10.toyota.com                              | 69.25.174.204   |        |         |          |           |       | hackertarget |
+  | 4     | ssologin-dc2-10.toyota.com                                       | 69.25.174.214   |        |         |          |           |       | hackertarget |
+  | 5     | origin.auth10.toyota.com                                         | 69.25.174.1     |        |         |          |           |       | hackertarget |
+  | 6     | mail10.toyota.com                                                | 148.163.159.204 |        |         |          |           |       | hackertarget |
+  | 7     | mail20.toyota.com                                                | 148.163.157.204 |        |         |          |           |       | hackertarget |
+  | 8     | mail30.toyota.com                                                | 148.163.159.204 |        |         |          |           |       | hackertarget |
+  | 9     | mail40.toyota.com                                                | 148.163.157.204 |        |         |          |           |       | hackertarget |
+  | 10    | corolla50.toyota.com                                             | 162.209.75.141  |        |         |          |           |       | hackertarget |
+  | 11    | c360.toyota.com                                                  | 162.246.78.88   |        |         |          |           |       | hackertarget |
+  | 12    | q360.toyota.com                                                  | 150.45.13.43    |        |         |          |           |       | hack
+......
+ertarget |
+  | 500   | dev.nonprod.engage.toyota.com                                    | 18.65.25.18     |        |         |          |           |       | hackertarget |
+  | 501   | staging.explore.engage.toyota.com                                | 65.8.158.123    |        |         |          |           |       | hackertarget |
+  | 502   | tesla.com                                                        | 104.89.118.48   |        |         |          |           |       | hackertarget |
+  | 503   | o7.ptr6980.tesla.com                                             | 149.72.144.42   |        |         |          |           |       | hackertarget |
+  | 504   | email1.tesla.com                                                 | 192.28.144.15   |        |         |          |           |       | hackertarget |
+  | 505   | apacvpn1.tesla.com                                               | 8.244.131.215   |        |         |          |           |       | hackertarget |
+  | 506   | cnvpn1.tesla.com                                                 | 114.141.176.215 |        |         |          |           |       | hackertarget |
+  | 507   | ptr1.tesla.com                                                   | 117.50.35.199   |        |         |          |           |       | hackertarget |
+  | 550   | tesla.com                                                        | 104.85.4.91     |        |         |          |           |       | hackertarget |
+  +-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+[*] 550 rows returned
+
+###############################################################
+# raportti 
 
 
 
