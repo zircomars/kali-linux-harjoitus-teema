@@ -254,17 +254,197 @@ SUMMARY
 # näin voidaan luetella hostnimiä (hostname) ja keskityä toiseksi SOURCE vaihtoehtojen käyttöä
 
 # Unsetting the existing value
+
+##################
+# method 1 default 
 # ennen suorittamista, tarkistellaan ja poistetaan nykyisiä arvoja
-# käyttäen; options unset <option>
+# käyttäen; options unset <option> & sekä Current value:sta tulostuksena on tyhjä kenttä
+# ja samalla tarkistellaa "info" tietoja
 
+[recon-ng][autocars][hackertarget] > options unset SOURCE
+SOURCE => None
+[recon-ng][autocars][hackertarget] > info
 
+      Name: HackerTarget Lookup
+    Author: Michael Henriksen (@michenriksen)
+   Version: 1.1
 
+Description:
+  Uses the HackerTarget.com API to find host names. Updates the 'hosts' table with the results.
 
+Options:
+  Name    Current Value  Required  Description
+  ------  -------------  --------  -----------
+  SOURCE                 yes       source of input (see 'info' for details)
 
+Source Options:
+  default        SELECT DISTINCT domain FROM domains WHERE domain IS NOT NULL
+  <string>       string representing a single input
+  <path>         path to a file containing a list of inputs
+  query <sql>    database query returning one column of inputs
 
+##################
+# method 2 using a string value
+# method 2 voidaan määrittää verkkotunnuksien domain nimeä ja tässä esimerkissä haetaan kohteen domain (toyota / tesla)
+# $[recon-ng][recon-cars][hackertarget] > options set SOURCE tesla.com
 
+[recon-ng][autocars][hackertarget] > options set SOURCE toyota.com
+SOURCE => toyota.com
+[recon-ng][autocars][hackertarget] > run
 
+----------
+TOYOTA.COM
+----------
+[*] Country: None
+[*] Host: toyota.com
+[*] Ip_Address: 45.154.183.183
+[*] Latitude: None
+[*] Longitude: None
+[*] Notes: None
+[*] Region: None
+[*] --------------------------------------------------
+[*] Country: None
+[*] Host: wave5000.toyota.com
+[*] Ip_Address: 162.246.76.160
+[*] Latitude: None
+[*] Longitude: None
+[*] Notes: None
+[*] Region: None
+[*] --------------------------------------------------
+............
+[*] --------------------------------------------------
+[*] Country: None
+[*] Host: dev.nonprod.engage.toyota.com
+[*] Ip_Address: 18.65.25.18
+[*] Latitude: None
+[*] Longitude: None
+[*] Notes: None
+[*] Region: None
 
+[*] --------------------------------------------------
+[*] Country: None
+[*] Host: staging.explore.engage.toyota.com
+[*] Ip_Address: 65.8.158.123
+[*] Latitude: None
+[*] Longitude: None
+[*] Notes: None
+[*] Region: None
+[*] --------------------------------------------------
 
+-------
+SUMMARY
+-------
+[*] 501 total (0 new) hosts found.
+[recon-ng][autocars][hackertarget] > 
 
+##################
+# method 3 using a file that contains a list of domains
+# luodaan joku file tiedosto, johon tulostettaan noita nimejä vaikappa polkuu eli joku target.txt tiedosto jossa on pari domain sivuston linkkiä
+# txt luominen tapahtuu $touch file.txt
+# vaikappa Download tiedostoon 
+┌──(kali㉿kali)-[~/Downloads]
+└─$ pwd
+/home/kali/Downloads
+
+┌──(kali㉿kali)-[~/Downloads]
+└─$ cat targets.txt 
+toyota.com
+tesla.com
+
+# eli jos palataa recon-ng cli liittymäänsä ja SOURCE polun tiedostoon eli targets.txt
+# jonka jälkeen suoritettaan moduuli "run" komennolla ja nähdään tulostuksen kohteen toyota ja tesla.com sivustot targets.txt tiedoston sisään
+
+[recon-ng][autocars][hackertarget] > options set SOURCE /home/kali/Downloads/targets.txt
+SOURCE => /home/kali/Downloads/targets.txt
+[recon-ng][autocars][hackertarget] > run
+
+----------
+TOYOTA.COM
+----------
+[*] Country: None
+[*] Host: toyota.com
+[*] Ip_Address: 45.154.183.183
+[*] Latitude: None
+[*] Longitude: None
+[*] Notes: None
+[*] Region: None
+[*] --------------------------------------------------
+[*] Country: None
+[*] Host: wave5000.toyota.com
+[*] Ip_Address: 162.246.76.160
+[*] Latitude: None
+[*] Longitude: None
+[*] Notes: None
+[*] Region: None
+[*] --------------------------------------------------
+[*] Country: None
+[*] Host: telematicsservice-dc2-10.toyota.com
+[*] Ip_Address: 69.25.174.204
+[*] Latitude: None
+[*] Longitude: None
+[*] Notes: None
+[*] Region: None
+......................
+[*] --------------------------------------------------
+[*] Country: None
+[*] Host: staging.explore.engage.toyota.com
+[*] Ip_Address: 65.8.158.123
+[*] Latitude: None
+[*] Longitude: None
+[*] Notes: None
+[*] Region: None
+[*] --------------------------------------------------
+
+---------
+TESLA.COM
+---------
+[*] Country: None
+[*] Host: tesla.com
+[*] Ip_Address: 23.218.192.46
+[*] Latitude: None
+[*] Longitude: None
+[*] Notes: None
+[*] Region: None
+[*] --------------------------------------------------
+[*] Country: None
+[*] Host: o7.ptr6980.tesla.com
+[*] Ip_Address: 149.72.144.42
+[*] Latitude: None
+[*] Longitude: None
+[*] Notes: None
+[*] Region: None
+[*] --------------------------------------------------
+..........................................
+[*] --------------------------------------------------
+[*] Country: None
+[*] Host: email1.tesla.com
+[*] Ip_Address: 192.28.144.15
+[*] Latitude: None
+[*] Longitude: None
+[*] Notes: None
+[*] Region: None
+[*] --------------------------------------------------
+[*] Country: None
+[*] Host: testnotify.tesla.com
+[*] Ip_Address: 205.234.27.221
+[*] Latitude: None
+[*] Longitude: None
+[*] Notes: None
+[*] Region: None
+[*] --------------------------------------------------
+[*] Country: None
+[*] Host: apacvpn.tesla.com
+[*] Ip_Address: 8.244.67.215
+[*] Latitude: None
+[*] Longitude: None
+[*] Notes: None
+[*] Region: None
+[*] --------------------------------------------------
+
+-------
+SUMMARY
+-------
+[*] 548 total (1 new) hosts found.
+
+# yhteen vetona muodostoi ton verran 548 hostnimiä
 
