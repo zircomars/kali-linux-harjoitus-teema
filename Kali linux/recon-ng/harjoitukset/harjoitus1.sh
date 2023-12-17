@@ -339,7 +339,8 @@ SUMMARY
 
 ##################
 # method 3 using a file that contains a list of domains
-# luodaan joku file tiedosto, johon tulostettaan noita nimejä vaikappa polkuu eli joku target.txt tiedosto jossa on pari domain sivuston linkkiä
+# luodaan joku file tiedosto, johon tulostettaan noita nimejä vaikappa polkuu eli joku target.txt tiedosto jossa on pari domain sivuston linkkiä & periaatteessa ikään kuin hakee noita "workspace autocars" lisättyä dataa ja skannaa jotakin jännästi 
+
 # txt luominen tapahtuu $touch file.txt
 # vaikappa Download tiedostoon 
 ┌──(kali㉿kali)-[~/Downloads]
@@ -447,4 +448,15 @@ SUMMARY
 [*] 548 total (1 new) hosts found.
 
 # yhteen vetona muodostoi ton verran 548 hostnimiä
+
+##################
+# method 4 using sql query
+
+
+
+
+
+
+
+
 
