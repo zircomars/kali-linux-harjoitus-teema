@@ -656,6 +656,38 @@ FILENAME => /home/kali/Downloads/recon-cars-results.html
 recon-cars-results.html
 command.txt      file1.txt     images.jpeg  targets.txt
 
+################################
+# toinen raportointi , kokeillaan json
+[recon-ng][autocars] > modules load reporting/json
+[recon-ng][autocars][json] > info
+
+      Name: JSON Report Generator
+    Author: Paul (@PaulWebSec)
+   Version: 1.0
+
+Description:
+  Creates a JSON report.
+
+Options:
+  Name      Current Value                                          Required  Description
+  --------  -------------                                          --------  -----------
+  FILENAME  /home/kali/.recon-ng/workspaces/autocars/results.json  yes       path and filename for report output
+  TABLES    hosts, contacts, credentials                           yes       comma delineated list of tables
+
+
+# tässä tiedostossa näyttää paljon vähemmän ja määrityksiäkin on vähemmän, ja noin helppoa?
+# sitten "run" komentoa ja suorittamaan json
+[recon-ng][autocars][json] > options set FILENAME /home/kali/Downloads/autocar-result.json
+FILENAME => /home/kali/Downloads/autocar-result.json
+[recon-ng][autocars][json] > run
+[*] 550 records added to '/home/kali/Downloads/autocar-result.json'.
+
+
+# siinä se tiedosto
+┌──(kali㉿kali)-[~/Downloads]
+└─$ ls
+recon-cars-results.html
+autocar-result.json      file1.txt     images.jpeg  targets.txt
 
 
 
