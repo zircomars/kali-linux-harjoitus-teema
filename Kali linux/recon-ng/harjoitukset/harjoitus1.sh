@@ -572,6 +572,94 @@ ertarget |
 ###############################################################
 # raportti 
 
+# kun löydetiin jotakin (method 4) yksi niistä tulostuksena niin halutaan niitä ulos mekanisemeina
+# tulostuksien komennossa pitää ladata ja käyttäen komentoa $modules search reporting
+
+# mikäli jos ei ole ladannut sellaista pakettia niin pitää ladatta, jota saa raportien tulostukset ulos
+# $marketplaces install reporting
+
+# raportien tulostuksena tulee eri tyyppisiä formaatteja joko excel, html, json, list ja jne. 
+[recon-ng][autocars] > marketplace install reporting
+[*] Module installed: reporting/csv
+[*] Module installed: reporting/html
+[*] Module installed: reporting/json
+[*] Module installed: reporting/list
+[*] Module installed: reporting/proxifier
+[*] Module installed: reporting/pushpin
+[*] Module installed: reporting/xlsx
+[*] Module installed: reporting/xml
+[*] Reloading modules...
+[!] 'whoxy_api' key not set. whoxy_whois module will likely fail at runtime. See 'keys add'.
+[!] Module 'recon/domains-companies/censys_companies' disabled. Dependency required: 'me 'CensysIPv4' from 'censys.search' (/usr/lib/python3/dist-packages/censys/search/__init__.py)'.                                                                                                                         
+[!] 'hibp_api' key not set. hibp_breach module will likely fail at runtime. See 'keys add'.
+[!] 'hibp_api' key not set. hibp_paste module will likely fail at runtime. See 'keys add'.
+[!] Module 'recon/hosts-hosts/censys_query' disabled. Dependency required: 'me 'CensysIPv4' from 'censys.search' (/usr/lib/python3/dist-packages/censys/search/__init__.py)'.                                                                                                                                   
+
+# periaatteessa komennolla $back - joka mnee yhden polun taakse päin 
+
+# using the reporting html and json module
+# kokeilaan ensin ensimmäisenä html moduulia ja jonka jälkeen json moduulia
+
+# eli komennolla ladataan moduuli ladaa ja huom pitää olla siinä workspace polussa (autocars)
+# komennolla tab kaks kertaa nii tulostaa vaihtoehtoisia raportia ulos
+[recon-ng][autocars] > modules load reporting/
+reporting/csv        reporting/json       reporting/proxifier  reporting/xlsx       
+reporting/html       reporting/list       reporting/pushpin    reporting/xml        
+
+# tulos löytyy polusta FILENAME /home/kali...../results.html
+# kuvauksen mukaan on ainakin HTML on raportti ja SANITIZE tuloksena on tosi
+[recon-ng][autocars] > modules load reporting/html
+[recon-ng][autocars][html] > info
+
+      Name: HTML Report Generator
+    Author: Tim Tomes (@lanmaster53)
+   Version: 1.0
+
+Description:
+  Creates an HTML report.
+
+Options:
+  Name      Current Value                                          Required  Description
+  --------  -------------                                          --------  -----------
+  CREATOR                                                          yes       use creator name in the report footer
+  CUSTOMER                                                         yes       use customer name in the report header
+  FILENAME  /home/kali/.recon-ng/workspaces/autocars/results.html  yes       path and filename for report output
+  SANITIZE  True                                                   yes       mask sensitive data in the report
+
+# ehkä vähä turha panikoida ja avaa toisesta cmd ikkunaa ja tarkistaa, kun siellä puuttuu jotaikn komentoa ja määritystä eli konnfaukset niin tulostuksena näyttää tältä
+
+┌──(kali㉿kali)-[~/.recon-ng/workspaces/autocars]
+└─$ pwd
+/home/kali/.recon-ng/workspaces/autocars
+
+┌──(kali㉿kali)-[~/.recon-ng/workspaces/autocars]
+└─$ ls
+config.dat  data.db
+
+# seuraavaksi, asetettaan value options saataviksi
+# sekä määritettään se html johonkin sopivaan paikkaan vaikapa helppoiten Download polkuun ja anna sopivan nimi, joka tulee html:ksi
+# huom kantsii olla tarkana onko siellä useampi kansio ja jne
+# sitten "run" suorittamaan toimintaa
+
+[recon-ng][autocars][html] > options set CREATOR kali
+CREATOR => kali
+[recon-ng][autocars][html] > options set CUSTOMER CAR WORLD
+CUSTOMER => CAR WORLD
+[recon-ng][autocars][html] > options set FILENAME /home/kali/Downloads/recon-cars-results.html
+FILENAME => /home/kali/Downloads/recon-cars-results.html
+[recon-ng][autocars][html] > run
+[*] Report generated at '/home/kali/Downloads/recon-cars-results.html'.
+
+# siinä se tiedosto
+┌──(kali㉿kali)-[~/Downloads]
+└─$ ls
+recon-cars-results.html
+command.txt      file1.txt     images.jpeg  targets.txt
+
+
+
+
+
 
 
 
