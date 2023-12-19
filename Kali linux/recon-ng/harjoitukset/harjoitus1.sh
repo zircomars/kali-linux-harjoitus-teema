@@ -684,7 +684,7 @@ FILENAME => /home/kali/Downloads/autocar-result.json
 [*] 550 records added to '/home/kali/Downloads/autocar-result.json'.
 
 
-# siinä se tiedosto
+# siinä se tiedosto json tiedosto löytyy Downloads tiedoston alta
 ┌──(kali㉿kali)-[~/Downloads]
 └─$ ls
 recon-cars-results.html
