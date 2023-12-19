@@ -33,6 +33,7 @@ _/    _/  _/_/_/_/    _/_/_/    _/_/_/    _/      _/            _/      _/    _/
 
 * [marketplace and modules](#marketplace-and-modules)
   * [modules](#modules)
+  * [reports](#reports)
 
 * [tutoriaalit ja käyttöohjeita](#tutoriaalit-ja-käyttöohjeita)
 
@@ -146,7 +147,29 @@ moduulit, joka on ryhmitelty eri luokkiin ja niitä löytyy "marketplace" hakemi
 `- recon`
 `- reporting`
 
+### reports
 
+oletuksena kun aloittaa tyhjästä Kali Linux virtuaalikone ympäristöstä niin siinä raportti moduuli ei tule mukana, jos aikoo suorittaa jotakin tietojen etsimistä vaikappa domain sivustoa (domain.com), niin haetuista tulostuksesta joko tulostettaan excel taulukkona, html, json ja jne.
+
+Tätä raportti moduulia työkalua saa ladattua marketplace:istä ja komennolla;
+
+```
+[recon-ng][autocars] > marketplace install reporting
+[*] Module installed: reporting/csv
+[*] Module installed: reporting/html
+[*] Module installed: reporting/json
+[*] Module installed: reporting/list
+[*] Module installed: reporting/proxifier
+[*] Module installed: reporting/pushpin
+[*] Module installed: reporting/xlsx
+[*] Module installed: reporting/xml
+[*] Reloading modules...
+[!] 'whoxy_api' key not set. whoxy_whois module will likely fail at runtime. See 'keys add'.
+[!] Module 'recon/domains-companies/censys_companies' disabled. Dependency required: 'me 'CensysIPv4' from 'censys.search' (/usr/lib/python3/dist-packages/censys/search/__init__.py)'.                                                                                                                         
+[!] 'hibp_api' key not set. hibp_breach module will likely fail at runtime. See 'keys add'.
+[!] 'hibp_api' key not set. hibp_paste module will likely fail at runtime. See 'keys add'.
+[!] Module 'recon/hosts-hosts/censys_query' disabled. Dependency required: 'me 'CensysIPv4' from 'censys.search' (/usr/lib/python3/dist-packages/censys/search/__init__.py)'. 
+```
 
 ## tutoriaalit ja käyttöohjeita <br>
 https://hackertarget.com/recon-ng-tutorial/ <br>
