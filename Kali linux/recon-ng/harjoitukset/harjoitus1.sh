@@ -2,6 +2,7 @@
 #
 #####################
 # esim. datan lisääminen esim. jotakin sivustoa ja huom. ennen sitä luodaan joku workspaces (kuin tietokanta)
+# tässä harjoitessa tapahtuu tietojen kerrämistä vaikappa sivustojen kautta kerrätyjä IP-osoiteitta, host:ia ja jne
 # vaikappa autot
 
 [recon-ng][default] > workspaces create autocars
