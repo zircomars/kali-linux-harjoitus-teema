@@ -217,7 +217,7 @@ https://www.academia.edu/35034750/Basic_Security_Testing_with_Kali_Linux_PDF <br
 
 https://f0.holisticinfosecforwebdevelopers.com/chap06.html <br>
  <br>
-
+https://f0.holisticinfosecforwebdevelopers.com/toc.html <br>
 
 
 
