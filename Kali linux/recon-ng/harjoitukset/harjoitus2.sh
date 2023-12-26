@@ -48,7 +48,7 @@ create  list    load    remove
 
 ##########################
 # HARJOITUS START HERE
-
+# lisätään joku sivuston nimi "domainit-listan alle", just tämä "medium.com" sivusto ja tarkistellaan
 
 
 
