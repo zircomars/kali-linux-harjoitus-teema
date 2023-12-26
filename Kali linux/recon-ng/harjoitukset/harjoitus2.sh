@@ -46,12 +46,46 @@ create  list    load    remove
   | domainit   | 2023-12-26 11:02:34 |
   +----------------------------------+
 
+# modules - moduuli haettaan tai jotakin mennään siihen polkuun esim. suoritettaan hostnimien verkkotunnuksien hakemistoa
+[recon-ng][domainit] > modules load
+Loads a module
+
+Usage: modules load <path>
+
 ##########################
 # HARJOITUS START HERE
 # lisätään joku sivuston nimi "domainit-listan alle", just tämä "medium.com" sivusto ja tarkistellaan
 # db = database
 # $db insert domain.com - listään "sivuston nimi" alle
 
+[recon-ng][domainit] > db insert medium.com
+[*] Invalid table name.
+[recon-ng][domainit] > db insert domains
+domain (TEXT): medium.com
+notes (TEXT): 
+[*] 1 rows affected.
+[recon-ng][domainit] > show domains
+
+  +-------------------------------------------+
+  | rowid |   domain   | notes |    module    |
+  +-------------------------------------------+
+  | 1     | medium.com |       | user_defined |
+  +-------------------------------------------+
+
+##############################
+##### hosts #####
+# tähän verkkosivustoon "medium.com" tarkistellaan sitä hostia käyttämällä; Google hostname enumerator
+# mene siihen polkuun ja suorita "run"
+[*] 1 rows returned
+[recon-ng][domainit] > 
+[recon-ng][domainit] > modules load recon/domains-hosts/google_site_web
+[recon-ng][domainit][google_site_web] > run
+
+----------
+MEDIUM.COM
+----------
+[*] Searching Google for: site:medium.com
+[!] Google CAPTCHA triggered. No bypass available.
 
 
 
