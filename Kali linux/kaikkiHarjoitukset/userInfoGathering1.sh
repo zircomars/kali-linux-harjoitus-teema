@@ -68,4 +68,124 @@ options:
                         threatcrowd, threatminer, urlscan, virustotal, yahoo, zoomeye
 
 
+# esim $theHarvester -d <DOMAIN> -b all
+# huom. tämä ei toimi ja mahdollista suurin osa on poistettu googlesta? $theHarvester -d <DOMAIN> -b google
+
+┌──(root㉿kali)-[/home/kali]
+└─# theHarvester -d medium.com -b all       
+*******************************************************************
+*  _   _                                            _             *
+* | |_| |__   ___    /\  /\__ _ _ ____   _____  ___| |_ ___ _ __  *
+* | __|  _ \ / _ \  / /_/ / _` | '__\ \ / / _ \/ __| __/ _ \ '__| *
+* | |_| | | |  __/ / __  / (_| | |   \ V /  __/\__ \ ||  __/ |    *
+*  \__|_| |_|\___| \/ /_/ \__,_|_|    \_/ \___||___/\__\___|_|    *
+*                                                                 *
+* theHarvester 4.2.0                                              *
+* Coded by Christian Martorella                                   *
+* Edge-Security Research                                          *
+* cmartorella@edge-security.com                                   *
+*                                                                 *
+*******************************************************************
+
+[*] Target: medium.com 
+
+
+[!] Missing API key for binaryedge. 
+
+[!] Missing API key for Censys ID and/or Secret. 
+
+[!] Missing API key for fullhunt. 
+
+[!] Missing API key for Github. 
+
+[!] Missing API key for Hunter. 
+
+[!] Missing API key for Intelx. 
+
+[!] Missing API key for PentestTools. 
+
+[!] Missing API key for ProjectDiscovery. 
+
+[!] Missing API key for RocketReach. 
+
+[!] Missing API key for Securitytrail. 
+
+[!] Missing API key for virustotal. 
+
+[!] Missing API key for zoomeye. 
+An exception has occurred: Cannot serialize non-str key None
+[*] Searching Anubis. 
+An exception has occurred: Cannot connect to host dns.bufferover.run:443 ssl:<ssl.SSLContext object at 0x7f16b4921490> [Name or service not known]                   
+        Searching 0 results.                                                                                                                                         
+[*] Searching Bing.                                                                                                                                                  
+        Searching results.                                                                                                                                           
+[*] Searching Certspotter.                                                                                                                                           
+[*] Searching Baidu.                                                                                                                                                 
+[*] Searching CRTsh.                                                                                                                                                 
+[*] Searching Dnsdumpster.                                                                                                                                           
+[*] Searching Hackertarget.                                                                                                                                          
+[*] Searching Duckduckgo.                                                                                                                                            
+[*] Searching Otx.                                                                                                                                                   
+[*] Searching Qwant.                                                                                                                                                 
+An exception has occurred: Cannot connect to host api.sublist3r.com:443 ssl:<ssl.SSLContext object at 0x7f16b6fef380> [[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:992)]                                                                                                                                                     
+[*] Searching Sublist3r.                                                                                                                                             
+An exception has occurred: Cannot connect to host www.threatcrowd.org:443 ssl:True [SSLCertVerificationError: (1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.threatcrowd.org'. (_ssl.c:992)")]                                                                     
+string indices must be integers, not 'str'                                                                                                                           
+[*] Searching Threatcrowd.                                                                                                                                           
+[*] Searching Rapiddns.                                                                                                                                              
+[*] Searching Threatminer.                                                                                                                                           
+[*] Searching Urlscan.                                                                                                                                               
+An exception has occurred: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://sonar.omnisint.io/all/medium.com?page=1')                                                                                                                                                             
+[*] Searching Omnisint.                                                                                                                                              
+                                                                                                                                                                     
+[*] ASNS found: 17                                                                                                                                                   
+--------------------                                                                                                                                                 
+AS132203                                                                                                                                                             
+AS13335                 
+......
+AS54825                                                                                                                                                              
+AS57724                                                                                                                                                              
+                                                                                                                                                                     
+[*] LinkedIn Links found: 0                                                                                                                                          
+---------------------                                                                                                                                                
+                                                                                                                                                                     
+[*] IPs found: 534                                                                                                                                                   
+-------------------                                                                                                                                                  
+1.1.1.1                                                                                                                                                              
+222.186.50.3                                                                                                                                                         
+222.186.130.211                                                                                                                                                      
+222.186.130.217                                                                                                                                                      
+223.4.246.38                                                                                                                                                         
+2606:4700:3032::ac43:c667                                                                                                                                            
+2606:4700:3033::ac43:c54f                                                                                                                                            
+2606:4700:3108::ac42:2b50                                                                                                                                            
+2606:4700:310c::ac42:2c3c                                                                                                                                            
+2606:4700:310c::ac42:2c78   
+........
+2a06:98c1:3120::3                                                                                                                                                    
+2a06:98c1:3121::9                                                                                                                                                    
+                                                                                                                                                                     
+[*] No emails found.                                                                                                                                                 
+                                                                                                                                                                     
+[*] Hosts found: 10970                                                                                                                                               
+---------------------                                                                                                                                                
+000000000.medium.com:162.159.152.4, 162.159.153.4                                                                                                                    
+000000000.medium.com:162.159.153.4                                                                                                                                   
+0x000000000.medium.com:162.159.153.4, 162.159.152.4                                                                                                                  
+0x000000000.medium.com:162.159.152.4
+0xaniket.medium.com:162.159.153.4, 162.159.152.4                                                                                                                     
+1998design.medium.com:2606:4700:7::a29f:9904                                                                                                                         
+1998design.medium.com:2606:4700:7::a29f:9804                                                                                                                         
+1cyb3rs3curity1.medium.com:2606:4700:7::a29f:9804                                                                                                                    
+....
+zvuk71.medium.com:2606:4700:7::a29f:9904                                                                                                                             
+zyfangx.medium.com:2606:4700:7::a29f:9804                                                                                                                            
+zyfangx.medium.com:2606:4700:7::a29f:9904                                                                                                                            
+
+##################################################################
+
+
+
+
+
 
