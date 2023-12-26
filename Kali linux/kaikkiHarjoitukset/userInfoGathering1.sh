@@ -269,11 +269,7 @@ http://admin.megacorpone.com/
 http://admin.megacorpone.com/admin/index.html                                    
 http://intranet.megacorpone.com/                                                 
 http://mail.megacorpone.com                                                      
-http://siem.megacorpone.com                                                      
-http://www.megacorpone.com./                                                     
-http://www.megacorpone.com/                                                      
-http://www.megacorpone.com/index.html                                            
-http://www.megacorpone.com/nanites.txt                                           
+...........                                          
 https://www.megacorpone.com/                                                     
                                                                                  
 [*] LinkedIn Links found: 0                                                      
@@ -281,10 +277,8 @@ https://www.megacorpone.com/
                                                                                  
 [*] IPs found: 8                                                                 
 -------------------                                                              
-3.220.87.155                                                                     
-38.100.193.76                                                                    
-38.100.193.89                                                                    
-51.222.169.208                                                                   
+3.220.87.155
+.....
 149.56.244.87                                                                    
                                                                                  
 [*] No emails found.                                                             
@@ -294,17 +288,7 @@ https://www.megacorpone.com/
 admin.megacorpone.com:51.222.169.208                                             
 admin.megacorpone.com:50.7.20.244                                                
 beta.megacorpone.com:50.7.67.165                                                 
-beta.megacorpone.com:51.222.169.209                                              
-fs1.megacorpone.com:51.222.169.210                                               
-intranet.megacorpone.com:50.7.20.246                                             
-intranet.megacorpone.com:51.222.169.211                                          
-mail.megacorpone.com:51.222.169.212                                              
-mail.megacorpone.com:50.7.20.250                                                 
-mail2.megacorpone.com:50.7.67.163                                                
-mail2.megacorpone.com:51.222.169.213                                             
-manager.megacorpone.com                                                          
-manager.megacorpone.com:50.7.20.243                                              
-megacorpone.com:mail.megacorpone.com.                                            
+.....                                         
 megacorpone.com:mail.megacorpone.com                                             
 megacorpone.com:mail2.megacorpone.com.                                           
 megacorpone.com:mail2.megacorpone.com                                            
@@ -315,23 +299,7 @@ ns1.megacorpone.com:51.79.37.18
 ns2.megacorpone.com:50.7.20.242                                                  
 ns2.megacorpone.com:51.222.39.63                                                 
 ns3.megacorpone.com:66.70.207.180                                                
-router.megacorpone.com:50.7.20.254                                               
-router.megacorpone.com:51.222.169.214                                            
-siem.megacorpone.com:51.222.169.215                                              
-siem.megacorpone.com:50.7.67.180                                                 
-snmp.megacorpone.com:50.7.67.181                                                 
-snmp.megacorpone.com:51.222.169.216                                              
-support.megacorpone.com:51.222.169.218                                           
-svn.megacorpone.com                                                              
-svn.megacorpone.com:50.7.20.252                                                  
-syslog.megacorpone.com:50.7.20.245                                               
-syslog.megacorpone.com:51.222.169.217                                            
-test.megacorpone.com:51.222.169.219                                              
-test.megacorpone.com:50.7.67.182                                                 
-vpn.megacorpone.com:51.222.169.220                                               
-vpn.megacorpone.com:50.7.20.253                                                  
-webmail.megacorpone.com:50.7.20.251                                              
-webmail.megacorpone.com                                                          
+........                                               
 www.megacorpone.com:149.56.244.87                                                
 www.megacorpone.com:50.7.67.162                                                  
 www2.megacorpone.com:50.7.67.164                                                 
