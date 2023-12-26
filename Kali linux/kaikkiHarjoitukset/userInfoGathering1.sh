@@ -305,7 +305,9 @@ www.megacorpone.com:50.7.67.162
 www2.megacorpone.com:50.7.67.164                                                 
 www2.megacorpone.com:149.56.244.87      
 
+#####################################################################
+# Password Dumps
+# haitalliset/rikolliset hakkerit jättävät usein rikotut kirjautumistiedotteet "Pastebin" sivustolle tai muihin vähempien arvostettuihin verkkosivustoille
+# näiden salasanavedokset voivat olla erittäin arvokkaita sanalistoja luomisessa (generating wordlists), esim. kali linux on "rockyou" jossa on sanaluettelo monipuolisista ja yleisestä salasanasta esim. jos käyttää salasanaa "Dog" , joka on kuitenkkin luetu tietomurron seurauksena vuonna 2009.
 
-
-
-
+# käyttäjien luettelon ajalla löydetäkseen sähköpostiluetteloa tarkistamisessa salasanojen kirjaamisen varalta voi palajstua salasanoja, joihin voidaan käyttää tunnistetietoja täyttämishyökkäykseen (credential stuffing attacks)
