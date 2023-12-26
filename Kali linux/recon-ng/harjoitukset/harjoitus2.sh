@@ -57,6 +57,7 @@ Usage: modules load <path>
 # lisätään joku sivuston nimi "domainit-listan alle", just tämä "medium.com" sivusto ja tarkistellaan
 # db = database
 # $db insert domain.com - listään "sivuston nimi" alle
+# harjoituksen linkissä on lisätty yks, mutta lisätään toinen ja tarkistellaan toimiiko vai ei seuraavat toiminnat
 
 [recon-ng][domainit] > db insert medium.com
 [*] Invalid table name.
@@ -64,13 +65,19 @@ Usage: modules load <path>
 domain (TEXT): medium.com
 notes (TEXT): 
 [*] 1 rows affected.
+[recon-ng][domainit] > db insert domains
+domain (TEXT): megacorpone.com
+notes (TEXT): 
+[*] 1 rows affected.
 [recon-ng][domainit] > show domains
 
-  +-------------------------------------------+
-  | rowid |   domain   | notes |    module    |
-  +-------------------------------------------+
-  | 1     | medium.com |       | user_defined |
-  +-------------------------------------------+
+  +------------------------------------------------+
+  | rowid |      domain     | notes |    module    |
+  +------------------------------------------------+
+  | 1     | medium.com      |       | user_defined |
+  | 2     | megacorpone.com |       | user_defined |
+  +------------------------------------------------+
+
 
 ##############################
 ##### hosts #####
@@ -87,6 +94,14 @@ MEDIUM.COM
 [*] Searching Google for: site:medium.com
 [!] Google CAPTCHA triggered. No bypass available.
 
+---------------
+MEGACORPONE.COM
+---------------
+[*] Searching Google for: site:megacorpone.com
+[!] Google CAPTCHA triggered. No bypass available.
+
+# FAIl, tämä ehkä tehtävä päättyy tähän, koska tämä "Google CAPTCHA triggered. No bypass available" - prosessi tarkoittaa jonkilaisen evästeet tai tämmöisen kuvion purkamista mm. kysyy oletko robotti? jos et ole valitse kuvasta "auto" ja siinä esiintyy 9 eri kuvaa.
+# kuitenkin useimmat työkalut eivät vain mene tarpeettomiksi ellei niitä vaihda tai päivitä. Kuitenkin kaikilla on paikka laajentaa metodologiaa, mutta minkä vuosi se on PWK materiaali
 
 
 
