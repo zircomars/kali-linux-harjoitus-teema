@@ -70,6 +70,7 @@ options:
 
 # esim $theHarvester -d <DOMAIN> -b all
 # huom. tämä ei toimi ja mahdollista suurin osa on poistettu googlesta? $theHarvester -d <DOMAIN> -b google
+# ei tarvitse mennä ihan kirjan mukaan (offensive security oscp by offensive security 2020) teorian mukaan ja kantsii googlettaa mitä voisi esim. testata
 
 ┌──(root㉿kali)-[/home/kali]
 └─# theHarvester -d medium.com -b all       
@@ -181,6 +182,9 @@ AS57724
 zvuk71.medium.com:2606:4700:7::a29f:9904                                                                                                                             
 zyfangx.medium.com:2606:4700:7::a29f:9804                                                                                                                            
 zyfangx.medium.com:2606:4700:7::a29f:9904                                                                                                                            
+
+# tulostuksena ei löytynyt yhtäkään sähköpostia (No emails found) outoa?
+# tietojen keräämisessä ei ole aina siistiä, lineaarisessa prosessissa. Tietojen etsimisessä kuitenkin käyttäjistä ja löytäää jotakin muuta kohteesta.
 
 ##################################################################
 
