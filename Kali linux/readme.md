@@ -114,7 +114,7 @@ webbi sivustoja ja/tai open source työkalua
 - GHDB (Google Hacking Database)
   - https://www.exploit-db.com/google-hacking-database
 - Nessus
-- netcraft
+- netcraft (https://searchdns.netcraft.com/)
 
 https://purplesec.us/external-vs-internal-network-penetration-tests/
 https://www.imperva.com/learn/application-security/penetration-testing/
