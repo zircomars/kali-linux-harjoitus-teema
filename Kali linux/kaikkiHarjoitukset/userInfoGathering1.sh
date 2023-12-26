@@ -187,7 +187,155 @@ zyfangx.medium.com:2606:4700:7::a29f:9904
 # tietojen keräämisessä ei ole aina siistiä, lineaarisessa prosessissa. Tietojen etsimisessä kuitenkin käyttäjistä ja löytäää jotakin muuta kohteesta.
 
 ##################################################################
+# toinen esim, josta haettaan "megacorpone.com" :sta tietoa
 
+┌──(kali㉿kali)-[~]
+└─$ theHarvester -d megacorpone.com -b all
+*******************************************************************
+*  _   _                                            _             *
+* | |_| |__   ___    /\  /\__ _ _ ____   _____  ___| |_ ___ _ __  *
+* | __|  _ \ / _ \  / /_/ / _` | '__\ \ / / _ \/ __| __/ _ \ '__| *
+* | |_| | | |  __/ / __  / (_| | |   \ V /  __/\__ \ ||  __/ |    *
+*  \__|_| |_|\___| \/ /_/ \__,_|_|    \_/ \___||___/\__\___|_|    *
+*                                                                 *
+* theHarvester 4.2.0                                              *
+* Coded by Christian Martorella                                   *
+* Edge-Security Research                                          *
+* cmartorella@edge-security.com                                   *
+*                                                                 *
+*******************************************************************
+
+[*] Target: megacorpone.com 
+
+
+[!] Missing API key for binaryedge. 
+
+[!] Missing API key for Censys ID and/or Secret. 
+
+[!] Missing API key for fullhunt. 
+
+[!] Missing API key for Github. 
+
+[!] Missing API key for Hunter. 
+
+[!] Missing API key for Intelx. 
+
+[!] Missing API key for PentestTools. 
+
+[!] Missing API key for ProjectDiscovery. 
+
+[!] Missing API key for RocketReach. 
+
+[!] Missing API key for Securitytrail. 
+
+[!] Missing API key for virustotal. 
+
+[!] Missing API key for zoomeye. 
+An exception has occurred: Cannot serialize non-str key None
+[*] Searching Anubis. 
+        Searching 0 results.                                                     
+[*] Searching Bing.                                                              
+An exception has occurred: Cannot connect to host dns.bufferover.run:443 ssl:<ssl.SSLContext object at 0x7f24517b24e0> [Name or service not known]                
+        Searching results.                                                       
+[*] Searching Certspotter.                                                       
+[*] Searching Baidu.                                                             
+[*] Searching CRTsh.                                                             
+[*] Searching Duckduckgo.                                                        
+[*] Searching Hackertarget.                                                      
+[*] Searching Dnsdumpster.                                                       
+[*] Searching Otx.                                                               
+[*] Searching Qwant.                                                             
+An exception has occurred: Cannot connect to host api.sublist3r.com:443 ssl:<ssl.SSLContext object at 0x7f2453d9eba0> [[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:992)]                                                              
+[*] Searching Sublist3r.                                                         
+[*] Searching Rapiddns.                                                          
+An exception has occurred: Cannot connect to host www.threatcrowd.org:443 ssl:True [SSLCertVerificationError: (1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.threatcrowd.org'. (_ssl.c:992)")]                                                               
+string indices must be integers, not 'str'                                       
+[*] Searching Threatcrowd.                                                       
+[*] Searching Urlscan.                                                           
+[*] Searching Threatminer.                                                       
+An exception has occurred: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://sonar.omnisint.io/all/megacorpone.com?page=1')                                                                 
+[*] Searching Omnisint.                                                          
+                                                                                 
+[*] ASNS found: 3                                                                
+--------------------                                                             
+AS14618                                                                          
+AS16276                                                                          
+AS33724                                                                          
+                                                                                 
+[*] Interesting Urls found: 11                                                   
+--------------------                                                             
+http://admin.megacorpone.com                                                     
+http://admin.megacorpone.com/                                                    
+http://admin.megacorpone.com/admin/index.html                                    
+http://intranet.megacorpone.com/                                                 
+http://mail.megacorpone.com                                                      
+http://siem.megacorpone.com                                                      
+http://www.megacorpone.com./                                                     
+http://www.megacorpone.com/                                                      
+http://www.megacorpone.com/index.html                                            
+http://www.megacorpone.com/nanites.txt                                           
+https://www.megacorpone.com/                                                     
+                                                                                 
+[*] LinkedIn Links found: 0                                                      
+---------------------                                                            
+                                                                                 
+[*] IPs found: 8                                                                 
+-------------------                                                              
+3.220.87.155                                                                     
+38.100.193.76                                                                    
+38.100.193.89                                                                    
+51.222.169.208                                                                   
+149.56.244.87                                                                    
+                                                                                 
+[*] No emails found.                                                             
+                                                                                 
+[*] Hosts found: 103                                                             
+---------------------                                                            
+admin.megacorpone.com:51.222.169.208                                             
+admin.megacorpone.com:50.7.20.244                                                
+beta.megacorpone.com:50.7.67.165                                                 
+beta.megacorpone.com:51.222.169.209                                              
+fs1.megacorpone.com:51.222.169.210                                               
+intranet.megacorpone.com:50.7.20.246                                             
+intranet.megacorpone.com:51.222.169.211                                          
+mail.megacorpone.com:51.222.169.212                                              
+mail.megacorpone.com:50.7.20.250                                                 
+mail2.megacorpone.com:50.7.67.163                                                
+mail2.megacorpone.com:51.222.169.213                                             
+manager.megacorpone.com                                                          
+manager.megacorpone.com:50.7.20.243                                              
+megacorpone.com:mail.megacorpone.com.                                            
+megacorpone.com:mail.megacorpone.com                                             
+megacorpone.com:mail2.megacorpone.com.                                           
+megacorpone.com:mail2.megacorpone.com                                            
+mgmt.megacorpone.com                                                             
+mgmt.megacorpone.com:50.7.67.179                                                 
+ns1.megacorpone.com:50.7.67.186                                                  
+ns1.megacorpone.com:51.79.37.18                                                  
+ns2.megacorpone.com:50.7.20.242                                                  
+ns2.megacorpone.com:51.222.39.63                                                 
+ns3.megacorpone.com:66.70.207.180                                                
+router.megacorpone.com:50.7.20.254                                               
+router.megacorpone.com:51.222.169.214                                            
+siem.megacorpone.com:51.222.169.215                                              
+siem.megacorpone.com:50.7.67.180                                                 
+snmp.megacorpone.com:50.7.67.181                                                 
+snmp.megacorpone.com:51.222.169.216                                              
+support.megacorpone.com:51.222.169.218                                           
+svn.megacorpone.com                                                              
+svn.megacorpone.com:50.7.20.252                                                  
+syslog.megacorpone.com:50.7.20.245                                               
+syslog.megacorpone.com:51.222.169.217                                            
+test.megacorpone.com:51.222.169.219                                              
+test.megacorpone.com:50.7.67.182                                                 
+vpn.megacorpone.com:51.222.169.220                                               
+vpn.megacorpone.com:50.7.20.253                                                  
+webmail.megacorpone.com:50.7.20.251                                              
+webmail.megacorpone.com                                                          
+www.megacorpone.com:149.56.244.87                                                
+www.megacorpone.com:50.7.67.162                                                  
+www2.megacorpone.com:50.7.67.164                                                 
+www2.megacorpone.com:149.56.244.87      
 
 
 
