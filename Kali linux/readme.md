@@ -116,9 +116,12 @@ webbi sivustoja ja/tai open source työkalua
 - Nessus
 - netcraft (https://searchdns.netcraft.com/)
 - shodan.io
-- https://securityheaders.com/
-
-https://purplesec.us/external-vs-internal-network-penetration-tests/
+- DNS lookup; https://www.robtex.com/dns-lookup/medium.com
+- sandbox scanning; https://urlscan.io/
+- Security Headers Scanner; https://securityheaders.com/
+- SSL Server testaus; https://www.ssllabs.com/ssltest/
+<br> <br>
+https://purplesec.us/external-vs-internal-network-penetration-tests/  <br>
 https://www.imperva.com/learn/application-security/penetration-testing/
 
 <hr>
