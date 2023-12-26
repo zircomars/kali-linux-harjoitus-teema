@@ -1,0 +1,11 @@
+[!] Google CAPTCHA triggered. No bypass available.
+
+# FAIl, tämä ehkä tehtävä päättyy tähän, koska tämä "Google CAPTCHA triggered. No bypass available" - prosessi tarkoittaa jonkilaisen evästeet tai tämmöisen kuvion purkamista mm. kysyy oletko robotti? jos et ole valitse kuvasta "auto" ja siinä esiintyy 9 eri kuvaa.
+# kuitenkin useimmat työkalut eivät vain mene tarpeettomiksi ellei niitä vaihda tai päivitä. Kuitenkin kaikilla on paikka laajentaa metodologiaa, mutta minkä vuosi se on PWK materiaali
+
+https://privateproxy.me/blog/10-best-ways-of-how-to-avoid-captcha-and-recaptcha/
+https://security.stackexchange.com/questions/244108/is-recon-ng-still-relevant
+https://www.trickster.dev/post/recon-ng-modular-framework-for-osint-automation/
+
+
+
