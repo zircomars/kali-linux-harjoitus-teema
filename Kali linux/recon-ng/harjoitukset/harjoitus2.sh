@@ -102,9 +102,23 @@ MEGACORPONE.COM
 
 # FAIl, tämä ehkä tehtävä päättyy tähän, koska tämä "Google CAPTCHA triggered. No bypass available" - prosessi tarkoittaa jonkilaisen evästeet tai tämmöisen kuvion purkamista mm. kysyy oletko robotti? jos et ole valitse kuvasta "auto" ja siinä esiintyy 9 eri kuvaa.
 # kuitenkin useimmat työkalut eivät vain mene tarpeettomiksi ellei niitä vaihda tai päivitä. Kuitenkin kaikilla on paikka laajentaa metodologiaa, mutta minkä vuosi se on PWK materiaali
+# tai toinen mahdollisuus voi olla tämmöinen moduuli puuttuu ja kantsii tarkistaa komennolla onko ladattu tai puuttuuko semmoinen moduuli
 
+# hmm.. näyttää ainakin ladattu, koska status - installed - ja tämä pitäisi toimia.. harjoitus kuitenkin päättyy tähän?
+[recon-ng][default] > marketplace info recon/domains-hosts/google_site_web
 
-
+  +---------------------------------------------------------------------------------------------------------------------------------+
+  | path          | recon/domains-hosts/google_site_web                                                                             |
+  | name          | Google Hostname Enumerator                                                                                      |
+  | author        | Tim Tomes (@lanmaster53)                                                                                        |
+  | version       | 1.0                                                                                                             |
+  | last_updated  | 2019-06-24                                                                                                      |
+  | description   | Harvests hosts from Google.com by using the 'site' search operator. Updates the 'hosts' table with the results. |
+  | required_keys | []                                                                                                              |
+  | dependencies  | []                                                                                                              |
+  | files         | []                                                                                                              |
+  | status        | installed                                                                                                       |
+  +---------------------------------------------------------------------------------------------------------------------------------+
 
 
 
