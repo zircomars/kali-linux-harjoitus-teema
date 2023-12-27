@@ -134,6 +134,42 @@ ja jossakin moduulissa vaadittaan API-avainta lisäämistä toimiakseen oikein
 [!] Module 'recon/hosts-hosts/censys_ip' disabled. Dependency required: 'me 'CensysIPv4' from 'censys.search' (/usr/lib/python3/dist-packages/censys/search/__init__.py)'.                                                                                                                                          
 [!] 'virustotal_api' key not set. virustotal module will likely fail at runtime. See 'keys add'.
 
+```
+
+```
+[recon-ng][default] > marketplace search
+
+  +-----------------------------------------------------------------------------------------------+
+  |                        Path                        | Version |   Status  |  Updated   | D | K |
+  +-----------------------------------------------------------------------------------------------+
+  | discovery/info_disclosure/cache_snoop              | 1.1     | installed | 2020-10-13 |   |   |
+  | discovery/info_disclosure/interesting_files        | 1.2     | installed | 2021-10-04 |   |   |
+  | exploitation/injection/command_injector            | 1.0     | installed | 2019-06-24 |   |   |
+  | exploitation/injection/xpath_bruter                | 1.2     | installed | 2019-10-08 |   |   |
+  | import/csv_file                                    | 1.1     | installed | 2019-08-09 |   |   |
+  | import/list                                        | 1.1     | installed | 2019-06-24 |   |   |
+  | import/masscan                                     | 1.0     | installed | 2020-04-07 |   |   |
+  | import/nmap                                        | 1.1     | installed | 2020-10-06 |   |   |
+  | recon/companies-contacts/bing_linkedin_cache       | 1.0     | installed | 2019-06-24 |   | * |
+  | recon/companies-contacts/censys_email_address      | 2.0     | disabled  | 2021-05-11 | * | * |
+  | recon/companies-contacts/pen                       | 1.1     | installed | 2019-10-15 |   |   |
+  | recon/companies-domains/censys_subdomains          | 2.0     | installed | 2021-05-10 | * | * |
+  | recon/companies-domains/pen                        | 1.1     | installed | 2019-10-15 |   |   |
+  | recon/companies-domains/viewdns_reverse_whois      | 1.1     | installed | 2021-08-24 |   |   |
+  | recon/companies-domains/whoxy_dns                  | 1.1     | installed | 2020-06-17 |   | * |
+  | recon/companies-hosts/censys_org                   | 2.0     | disabled  | 2021-05-11 | * | * |
+  | recon/profiles-repositories/github_repos           | 1.1     | installed | 2020-05-15 |   | * |
+  | recon/repositories-profiles/github_commits         | 1.0     | installed | 2019-06-24 |   | * |
+    .......
+  | recon/repositories-vulnerabilities/gists_search    | 1.0     | installed | 2019-06-24 |   |   |
+  | recon/repositories-vulnerabilities/github_dorks    | 1.0     | installed | 2019-06-24 |   | * |
+  | reporting/csv                                      | 1.0     | installed | 2019-06-24 |   |   |
+  | reporting/html                                     | 1.0     | installed | 2019-06-24 |   |   |
+  | reporting/json                                     | 1.0     | installed | 2019-06-24 |   |   |
+  +-----------------------------------------------------------------------------------------------+
+
+  D = Has dependencies. See info for details.
+  K = Requires keys. See info for details.
 
 ```
 
