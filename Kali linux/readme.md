@@ -110,7 +110,7 @@ Esim. ulkoisen testauksen hyökkääjän työkaluja ja komentojen scriptiä ovat
 - hydra
 - whois
 
-webbi sivustoja ja/tai open source työkalua
+webbi sivustoja ja/tai haku dns ja jne työkaluja
 - GHDB (Google Hacking Database)
   - https://www.exploit-db.com/google-hacking-database
 - Nessus
@@ -122,7 +122,8 @@ webbi sivustoja ja/tai open source työkalua
 - SSL Server testaus; https://www.ssllabs.com/ssltest/
 <br> <br>
 https://purplesec.us/external-vs-internal-network-penetration-tests/  <br>
-https://www.imperva.com/learn/application-security/penetration-testing/
+https://www.imperva.com/learn/application-security/penetration-testing/ <br>
+https://www.social-searcher.com/ <br>
 
 <hr>
 
