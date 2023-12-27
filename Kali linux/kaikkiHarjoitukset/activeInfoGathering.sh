@@ -20,7 +20,7 @@
 
 # DNS:n suorituskyvyn ja luettavuuden (performance and reability) parantamisessa DNS välimuisti (DNS cache) käytetään DNS-tietueiden (DNS records) paikallisten kopioiden talllentamista hakuprosessine eri vaiheissa. Siksi nykyään ja tulevaisuudessakin useissa sovelluksissa kuten selaimissa pitävät erillisiä DNS-välimuistia (DNS cache)
 
-#
+# Paikallisen DNS-client voi myös operoida oma DNS-välimuistia (DNS-cache) jokaiseen hakuprosessiin DNS-palvelimen kanssa (DNS-server). Domain omistaja voi hallinoida kuinka pitkään palvelin tai asiakas säilytää DNS-tietuetta välimuistissa (DNS-record) kulkemalla TTL (time-to-live) kautta.
 
 
 
