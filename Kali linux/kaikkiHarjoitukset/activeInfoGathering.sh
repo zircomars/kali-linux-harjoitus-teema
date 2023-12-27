@@ -3,7 +3,7 @@
 
 # tässä sisältyy Active Directory, ja erillisiä moduulia (module). Yleisimpiä aktiivisia tiedonkeräämisen tekniikassa on mm. lukien porttien skannaus ja DNS, SMB, NFS- SMTP JA SNMP -luettelot
 
-##############
+################################
 # DNS Enumeration
 # DNS = (domain name system), on yksi internetin kriittisimmistä järjestelmistä, ja se on hajautettu tietokantaanm joka vastaa käyttäjäystävällisten verkkotunnusten kääntämisestä IP-osoitteeksi.
 
@@ -22,14 +22,21 @@
 
 # Paikallisen DNS-client voi myös operoida oma DNS-välimuistia (DNS-cache) jokaiseen hakuprosessiin DNS-palvelimen kanssa (DNS-server). Domain omistaja voi hallinoida kuinka pitkään palvelin tai asiakas säilytää DNS-tietuetta välimuistissa (DNS-record) kulkemalla TTL (time-to-live) kautta.
 
+################################
+# Interacting with a DNS server(s)
+# jokaisessa domain:issa voi käyttää eri tyyppistä DNS record:ia. Yleisimpiä DNS-recordia ovat mm..
 
-
-
-
-
-
-
-
+# - NS - nameserver records - sisältyvät toimialueen DNS record domain:ia valtuutettujen palvelimien nimiä
+# - A -tunettaan myös host record (record), sisältää hostname IP-osoitteen
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
 
 
 
