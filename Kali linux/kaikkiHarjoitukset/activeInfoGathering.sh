@@ -75,21 +75,35 @@ Host idontexist.megacorpone.com not found: 3(NXDOMAIN)
 
 
 ########################################################
-
 # Forward Lookup Brute Force
 
 # Brute force on trial-and-error tekniikka, joka pyrki löydetäkseen informaatiota, mukaan lukin webserver hakemistot, käyttäjätunnus ja salsayhdistelmiä tai kelvollisisa DNS-record:ia. Käyttämällä sanaluetteloa (wordlist), joka sisältyy yleisiä hostname, johon voidaan yrittää arvata DNS-record:in ja tarkistaa vastauksia kelvollisia hostname:ä varalta.
 
+# eli esim. tarkistaa mm. olevai "forward lookups", which request the IP address of a hostname, to query both a valid and an invalid hostname. If host successfully resolves a name to an IP, this could be an indication of a functional server.
+
+# automate the forward DNS loookup of the common hostnames using by the host commands, this work basic linux and bash lines.
+# tähän voisi mm. lisätä muita tcp/upd protokollia eli nimeämisiä listan alle
+┌──(kali㉿kali)-[~/Downloads]
+└─$ cat list.txt
+www
+ftp
+mail
+owa
+proxy
+router
 
 
+┌──(kali㉿kali)-[~/Downloads]
+└─$ for ip in $(cat list.txt); do host $ip.megacorpone.com; done
+www.megacorpone.com has address 149.56.244.87
+Host ftp.megacorpone.com not found: 3(NXDOMAIN)
+mail.megacorpone.com has address 51.222.169.212
+Host owa.megacorpone.com not found: 3(NXDOMAIN)
+Host proxy.megacorpone.com not found: 3(NXDOMAIN)
+router.megacorpone.com has address 51.222.169.214
 
-
-
-
-
-
-
-
+########################################################
+# Reverse Lookup Brute Force
 
 
 
