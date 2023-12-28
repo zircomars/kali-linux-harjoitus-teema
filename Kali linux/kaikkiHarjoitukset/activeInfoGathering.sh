@@ -22,7 +22,7 @@
 
 # Paikallisen DNS-client voi myös operoida oma DNS-välimuistia (DNS-cache) jokaiseen hakuprosessiin DNS-palvelimen kanssa (DNS-server). Domain omistaja voi hallinoida kuinka pitkään palvelin tai asiakas säilytää DNS-tietuetta välimuistissa (DNS-record) kulkemalla TTL (time-to-live) kautta.
 
-################################
+############################################################
 # Interacting with a DNS server(s)
 # jokaisessa domain:issa voi käyttää eri tyyppistä DNS record:ia. Yleisimpiä DNS-recordia ovat mm..
 
@@ -60,7 +60,7 @@ megacorpone.com mail is handled by 10 fb.mail.gandi.net.
 megacorpone.com descriptive text "Try Harder"
 megacorpone.com descriptive text "google-site-verification=U7B_b0HNeBtY4qYGQZNsEYXfCJ32hMNV3GtC0wWq5pA"
 
-############################
+########################################################
 # Automating Lookups
 
 # lisää DNS kysellyä ja löydetäkseen samoja hostname, ja IP-osoiteittaa, johon kuuluviin sama domain, ja seuraavaksi tarkistellaan domainin web server.
@@ -72,6 +72,18 @@ www.megacorpone.com has address 149.56.244.87
 ┌──(kali㉿kali)-[~]
 └─$ host idontexist.megacorpone.com
 Host idontexist.megacorpone.com not found: 3(NXDOMAIN)
+
+
+########################################################
+
+# Forward Lookup Brute Force
+
+# Brute force on trial-and-error tekniikka, joka pyrki löydetäkseen informaatiota, mukaan lukin webserver hakemistot, käyttäjätunnus ja salsayhdistelmiä tai kelvollisisa DNS-record:ia. Käyttämällä sanaluetteloa (wordlist), joka sisältyy yleisiä hostname, johon voidaan yrittää arvata DNS-record:in ja tarkistaa vastauksia kelvollisia hostname:ä varalta.
+
+
+
+
+
 
 
 
