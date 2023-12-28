@@ -27,16 +27,58 @@
 # jokaisessa domain:issa voi käyttää eri tyyppistä DNS record:ia. Yleisimpiä DNS-recordia ovat mm..
 
 # - NS - nameserver records - sisältyvät toimialueen DNS record domain:ia valtuutettujen palvelimien nimiä
-# - A -tunettaan myös host record (record), sisältää hostname IP-osoitteen
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
+# - A -tunnettaan myös host record (record), sisältää hostname IP-osoitteen hostnimi (kuten www.megacorpone.com)
+# - MX - mail exchange record, sisältyvät toimialueen sähköpostien käsittelystä vastaavien palvelimien domaini. Domain voi sisältää useita MX-record:ia.
+# - PTR - pointer records , joka käytetään käänteishaun (lookup zones) ja niitä käytetään IP-osoitteeseen liittyviä record:in etsimistä.
+# - CNAME - canonical name records , joka käytetään aliaksen luomisessa toisen/muihin host record:iin
+# - TXT - text records, voi sisältää mitä tahansa mielivaltaisia tietoja ja niitä voidaan käyttää eri tarkoituksiinsa, kuten domain (verkkotunnusten) omistajuuden vahvistamista.
+
+# pieni demo (start here) ja kokeillaan esim. tätä linkkiä (host) www.megacorpone.com
+
+# tätä voi testata ilman www 
+└─$ host www.megacorpone.com
+www.megacorpone.com has address 149.56.244.87
+
+──(kali㉿kali)-[~]
+└─$ host megacorpone.com 
+megacorpone.com mail is handled by 10 fb.mail.gandi.net.
+megacorpone.com mail is handled by 50 mail.megacorpone.com.
+megacorpone.com mail is handled by 60 mail2.megacorpone.com.
+megacorpone.com mail is handled by 20 spool.mail.gandi.net.
+
+# oletuksena host komentoa etsii A-record:in, mutta voidaan tarkistella ja kysellä muita kentiä mm. MX tai TXT-record:ia. Tätä voidaan periaatteessa käyttää ja lisätä -t vaihtoehdon määrittäkseen etsimällä tyyppin
+──(kali㉿kali)-[~]
+└─$ host -t mx megacorpone.com
+megacorpone.com mail is handled by 60 mail2.megacorpone.com.
+megacorpone.com mail is handled by 50 mail.megacorpone.com.
+megacorpone.com mail is handled by 20 spool.mail.gandi.net.
+megacorpone.com mail is handled by 10 fb.mail.gandi.net.
+
+
+┌──(kali㉿kali)-[~]
+└─$ host -t txt  megacorpone.com
+megacorpone.com descriptive text "Try Harder"
+megacorpone.com descriptive text "google-site-verification=U7B_b0HNeBtY4qYGQZNsEYXfCJ32hMNV3GtC0wWq5pA"
+
+############################
+# Automating Lookups
+
+# lisää DNS kysellyä ja löydetäkseen samoja hostname, ja IP-osoiteittaa, johon kuuluviin sama domain, ja seuraavaksi tarkistellaan domainin web server.
+└─$ host www.megacorpone.com
+www.megacorpone.com has address 149.56.244.87
+
+
+# idontexist - tarkistellaan sen serveriä
+┌──(kali㉿kali)-[~]
+└─$ host idontexist.megacorpone.com
+Host idontexist.megacorpone.com not found: 3(NXDOMAIN)
+
+
+
+
+
+
+
 
 
 
