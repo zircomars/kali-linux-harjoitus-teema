@@ -124,7 +124,7 @@ webbi sivustoja ja/tai haku dns ja jne työkaluja
 https://purplesec.us/external-vs-internal-network-penetration-tests/  <br>
 https://www.imperva.com/learn/application-security/penetration-testing/ <br>
 https://www.social-searcher.com/ <br>
-
+https://osintframework.com/ <br>
 <hr>
 
 
