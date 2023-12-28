@@ -108,7 +108,7 @@ router.megacorpone.com has address 51.222.169.214
 # DNS  forward brute force enumeration revealed a set of scattered IP addresses same the approximate range (149.56.244.X) something. If the DNS administrator of megacorpone.com configured PTR191 records for the domain, then can scan the approximate range with reverse lookups to request the hostname for each IP.
 
 # so, let's use loop scan IP-addressses 149.56.244.87 to 149.56.244.100 (some IP-range). This will filter out invalid results by showing only entries that do not contain "not found" within (grep-v)
-
+# if for loop commnad change host ip-address to (149.56.244.87) it will may give other dns records , so check the book (Offensive-Security-OSCP-by-Offensive-Security_2020.pdf)
 ┌──(kali㉿kali)-[~]
 └─$  for ip in $(seq 50 100); do host 38.100.193.$ip; done | grep -v "not fou
 nd"
