@@ -121,8 +121,8 @@ router.megacorpone.com has address 51.222.169.214
 # so, let's use loop scan IP-addressses 149.56.244.87 to 149.56.244.100 (some IP-range). This will filter out invalid results by showing only entries that do not contain "not found" within (grep-v)
 # if for loop commnad change host ip-address to (149.56.244.87) it will may give other dns records , so check the book (Offensive-Security-OSCP-by-Offensive-Security_2020.pdf)
 ┌──(kali㉿kali)-[~]
-└─$  for ip in $(seq 50 100); do host 38.100.193.$ip; done | grep -v "not fou
-nd"
+└─$  for ip in $(seq 50 100); do host 38.100.193.$ip; done | grep -v "not found"
+
 66.193.100.38.in-addr.arpa domain name pointer syslog.megacorpone.com.
 69.193.100.38.in-addr.arpa domain name pointer beta.megacorpone.com.
 70.193.100.38.in-addr.arpa domain name pointer ns1.megacorpone.com.
@@ -441,7 +441,34 @@ ________________________________________________
 # DNS record and nameserver both is different thing.
 
 #####################################################################
-# some exercises , small repeat
+### some exercises , small repeat ###
 
+# Find the DNS servers for the megacorpone.com domain.
+# this may "dnsrecon" easy way find out the megacorpone.com dns server (ns1, ns2 and 3), but if going to step by step as beginner, it will be complicated and at the result can not find the megacorpone(s) dns server. there is options like `$dig <domain_name>` or third options is kali linux tools `$dnsenum <domain-name>`
 
-
+┌──(kali㉿kali)-[~]
+└─$ dnsrecon -d megacorpone.com        
+[*] std: Performing General Enumeration against: megacorpone.com...
+[-] DNSSEC is not configured for megacorpone.com
+[*]      SOA ns1.megacorpone.com 51.79.37.18
+[*]      NS ns3.megacorpone.com 66.70.207.180
+[*]      Bind Version for 66.70.207.180 "9.11.5-P4-5.1+deb10u2-Debian"
+[*]      NS ns2.megacorpone.com 51.222.39.63
+[*]      Bind Version for 51.222.39.63 "9.11.5-P4-5.1+deb10u2-Debian"
+[*]      NS ns1.megacorpone.com 51.79.37.18
+[*]      Bind Version for 51.79.37.18 "9.11.5-P4-5.1+deb10u2-Debian"
+[*]      MX spool.mail.gandi.net 217.70.178.1
+[*]      MX mail2.megacorpone.com 51.222.169.213
+[*]      MX fb.mail.gandi.net 217.70.178.216
+[*]      MX fb.mail.gandi.net 217.70.178.217
+[*]      MX fb.mail.gandi.net 217.70.178.215
+[*]      MX mail.megacorpone.com 51.222.169.212
+[*]      MX spool.mail.gandi.net 2001:4b98:e00::1
+[*]      MX fb.mail.gandi.net 2001:4b98:dc4:8::217
+[*]      MX fb.mail.gandi.net 2001:4b98:dc4:8::215
+[*]      MX fb.mail.gandi.net 2001:4b98:dc4:8::216
+[*]      TXT megacorpone.com google-site-verification=U7B_b0HNeBtY4qYGQZNsEYXfCJ32hMNV3GtC0wWq5pA
+[*]      TXT megacorpone.com Try Harder
+[*] Enumerating SRV Records
+[+] 0 Records Found
+   
