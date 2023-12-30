@@ -445,6 +445,7 @@ ________________________________________________
 
 # Find the DNS servers for the megacorpone.com domain.
 # this may "dnsrecon" easy way find out the megacorpone.com dns server (ns1, ns2 and 3), but if going to step by step as beginner, it will be complicated and at the result can not find the megacorpone(s) dns server. there is options like `$dig <domain_name>` or third options is kali linux tools `$dnsenum <domain-name>`
+# like former command where already did so; $dnsrecon -d <domainName> -t axfr
 
 ┌──(kali㉿kali)-[~]
 └─$ dnsrecon -d megacorpone.com        
@@ -471,4 +472,14 @@ ________________________________________________
 [*]      TXT megacorpone.com Try Harder
 [*] Enumerating SRV Records
 [+] 0 Records Found
-   
+
+##############
+┌──(kali㉿kali)-[~/Downloads]
+└─$ dnsrecon -d megacorpone.com -D ~/list.txt -t brt 
+[*] Using the dictionary file: /home/kali/list.txt (provided by user)
+[*] brt: Performing host and subdomain brute force against megacorpone.com...
+[+]      A www.megacorpone.com 149.56.244.87
+[+]      A mail.megacorpone.com 51.222.169.212
+[+]      A router.megacorpone.com 51.222.169.214
+[+] 3 Records Found
+                    
