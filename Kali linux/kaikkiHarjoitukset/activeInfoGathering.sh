@@ -440,7 +440,8 @@ ________________________________________________
                                                                               
 # DNS record and nameserver both is different thing.
 
-
+#####################################################################
+# some exercises , small repeat
 
 
 
