@@ -1,0 +1,17 @@
+www
+www2
+ftp
+sftp
+pubs
+root
+admin
+mail
+owa
+mx
+ns
+router
+proxy
+cisco
+dns
+sql
+mysql
