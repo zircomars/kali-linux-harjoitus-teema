@@ -22,6 +22,10 @@ Nessus asennusohjeesta löytyy pientä tarkennusta, että kuinka asentuu. Pieni 
 
 Nessusta asennettaan virtualikoneen vmware:n sisäisen kali linux ympäristön sisään eli kantsii ensimmäisenä kirjautua kali linux:sen sisään, niin sieltä lataa sitä nessus sovellusta.
 
+## komennot
+
+`systemctl <start|stop> nessusd`
+
 
 ## scannaus
 
