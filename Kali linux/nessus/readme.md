@@ -24,6 +24,7 @@ Nessusta asennettaan virtualikoneen vmware:n sisäisen kali linux ympäristön s
 
 ## komennot
 
+Debian, Kali, and Ubuntu
 `systemctl <start|stop> nessusd`
 
 
