@@ -25,7 +25,25 @@ Nessusta asennettaan virtualikoneen vmware:n sisäisen kali linux ympäristön s
 ## komennot
 
 Debian, Kali, and Ubuntu
-`systemctl <start|stop> nessusd`
+`systemctl <start|stop|status> nessusd`
+
+```
+┌──(kali㉿kali)-[~]
+└─$ systemctl status nessusd
+● nessusd.service - The Nessus Vulnerability Scanner
+     Loaded: loaded (/lib/systemd/system/nessusd.service; disabled; preset: disabled)
+     Active: active (running) since Sun 2023-12-31 21:08:15 EET; 3s ago
+   Main PID: 175331 (nessus-service)
+      Tasks: 12 (limit: 2261)
+     Memory: 93.6M
+        CPU: 2.054s
+     CGroup: /system.slice/nessusd.service
+             ├─175331 /opt/nessus/sbin/nessus-service -q
+             └─175335 nessusd -q
+
+Dec 31 21:08:15 kali systemd[1]: Started nessusd.service - The Nessus Vulnerability Scanner.
+
+```
 
 
 ## scannaus
