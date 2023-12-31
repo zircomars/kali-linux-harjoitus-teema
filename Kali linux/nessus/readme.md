@@ -29,7 +29,7 @@ Nessus tekee useita skannauksia ja eri tyyppisiä mm.
 -  Basic Network Scan: Generic scan with various checks that are suitable to be used against various target types.
 -  Credentialed Patch Audit: Authenticated scan that enumerates missing patches.
 -  Web Application Tests: Specialized scan for discovering published vulnerabilities in Web Applications.
--  Spectre and Meltdown: Targeted scan for the Spectre231 and Meltdown232 vulnerabilities.
+-  Spectre and Meltdown: Targeted scan for the Spectre and Meltdown vulnerabilities.
 
 
 
