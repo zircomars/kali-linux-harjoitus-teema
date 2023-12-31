@@ -24,7 +24,7 @@ Nessusta asennettaan virtualikoneen vmware:n sisäisen kali linux ympäristön s
 
 ## komennot
 
-Debian, Kali, and Ubuntu
+Debian, Kali, and Ubuntu <br>
 `systemctl <start|stop|status> nessusd`
 
 ```
@@ -45,6 +45,21 @@ Dec 31 21:08:15 kali systemd[1]: Started nessusd.service - The Nessus Vulnerabil
 
 ```
 
+<br>
+Jos on unohtanut kokonaan käyttäjätunnukset ja salasanan niin kantsii resetoida ja mene `$┌──(root㉿kali)-[/opt/nessus/sbin]`
+ja komennolla toistaa mikä käyttäjä (siis on ollut alunperin) siis ladattu siinä Kali linux ympäristössä (yksi ainoa käyttäjä) ja suoritettaan salasanan muutos samalla. Kun salasana on resetoitu niin on valmis leikkimään taas Nessus;sta ja scannamaan haavoittuvuutta verkostosta.
+
+```
+┌──(root㉿kali)-[/opt/nessus/sbin]
+└─# ./nessuscli chpasswd
+Login to change: Nick96
+New password: 
+New password (again): 
+Password changed for Nick96
+                                                                                                      
+┌──(root㉿kali)-[/opt/nessus/sbin]
+└─#
+```
 
 ## scannaus
 
