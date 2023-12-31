@@ -31,7 +31,9 @@ Nessus tekee useita skannauksia ja eri tyyppisiä mm.
 -  Web Application Tests: Specialized scan for discovering published vulnerabilities in Web Applications.
 -  Spectre and Meltdown: Targeted scan for the Spectre and Meltdown vulnerabilities.
 
+Nessus tukee kohteen lisäämistä IP-osoitteena, IP-alueena tai pilkuilla eroteltuna FQDN- tai IP-luettelona.
 
+![Alt text](nessus_image/nessus_2.png)
 
 
 
