@@ -21,3 +21,17 @@ Skannauksesta voi olla url linkki joko http tai https - protokolla (http://name.
 Nessus asennusohjeesta löytyy pientä tarkennusta, että kuinka asentuu. Pieni huomiona kevät 2023 mennään versio 10.x.y jotakin ja se ei tykkää google gmail sähköpostia jotain syystä, kantsii kokeilla jos täydentää omalla työsähköpostilla (esim. vale työsähköposti...)
 
 Nessusta asennettaan virtualikoneen vmware:n sisäisen kali linux ympäristön sisään eli kantsii ensimmäisenä kirjautua kali linux:sen sisään, niin sieltä lataa sitä nessus sovellusta.
+
+
+## scannaus
+
+Nessus tekee useita skannauksia ja eri tyyppisiä mm.
+-  Basic Network Scan: Generic scan with various checks that are suitable to be used against various target types.
+-  Credentialed Patch Audit: Authenticated scan that enumerates missing patches.
+-  Web Application Tests: Specialized scan for discovering published vulnerabilities in Web Applications.
+-  Spectre and Meltdown: Targeted scan for the Spectre231 and Meltdown232 vulnerabilities.
+
+
+
+
+
