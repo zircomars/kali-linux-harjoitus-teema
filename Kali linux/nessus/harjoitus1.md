@@ -35,10 +35,12 @@ Odota joko pari-muutama minuutti, niin sieltä tulee jokin pieni matala prioriso
 ![Alt text](Screenshots/scan16.png)
 ![Alt text](Screenshots/scan17.png)
 
-Oranssi värinen haavoittuvuus
+Oranssi värinen haavoittuvuus ja priorisoitu "medium" tasoksi.
 ![Alt text](Screenshots/scan18.png)
 
 ![Alt text](Screenshots/scan19.png)
+
+Keskeytin itse ton skannaukse (oikea toiseksi) nappista, koska katsellaan viimeisimpien tulosta ja mitä skannauksen tulostusta on löytynyt.
 ![Alt text](Screenshots/scan20.png)
 ![Alt text](Screenshots/scan21.png)
 
