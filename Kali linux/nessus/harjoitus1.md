@@ -42,10 +42,14 @@ Oranssi värinen haavoittuvuus ja priorisoitu "medium" tasoksi.
 
 Keskeytin itse ton skannaukse (oikea toiseksi) nappista, koska katsellaan viimeisimpien tulosta ja mitä skannauksen tulostusta on löytynyt.
 ![Alt text](Screenshots/scan20.png)
+
+Pieni yhteenveto, että mitä skannausta on löydetty tähän menessä (sen muutaman minuuttin aikana). Tuloksena löytyi 4 medium ja muut ovat info tyyppejä. Jos tarkennettaan vähä lisää..
 ![Alt text](Screenshots/scan21.png)
 
+Valitaan se ensimmäinen vaihtoehto (violetti "mixed")
 ![Alt text](Screenshots/scan22.png)
 ![Alt text](Screenshots/scan23.png)
 
+Haavoittuvuudesta löytyi tämmöinen tekijä eli HSTS mising From HTTPS Server
 ![Alt text](Screenshots/scan24.png)
 
