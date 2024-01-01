@@ -1,6 +1,6 @@
 # Nessus
 
-Ohjelmistosovellu, jossa vaadittaan sisään kirjautumista sallii ohjelmiston käyttöä eli tunnuksia sisään ja nessus on oma haavoittuvuuden skanneri. 
+Ohjelmistosovellus, jossa vaadittaan sisään kirjautumista sallii ohjelmiston käyttöä eli tunnuksia sisään ja nessus on oma haavoittuvuuden skanneri. 
 
 Esim. haavoittuvuuksista ja altistumisesta, josta Nessus voi etsiä mm;
 - haavoittuvuuden, jotka voivat sallia luvattoman hallinnan tai pääsyn johonkin järjestelmän arkisto tietoihin
@@ -46,8 +46,7 @@ Dec 31 21:08:15 kali systemd[1]: Started nessusd.service - The Nessus Vulnerabil
 ```
 
 <br>
-Jos on unohtanut kokonaan käyttäjätunnukset ja salasanan niin kantsii resetoida ja mene `$┌──(root㉿kali)-[/opt/nessus/sbin]`
-ja komennolla toistaa mikä käyttäjä (siis on ollut alunperin) siis ladattu siinä Kali linux ympäristössä (yksi ainoa käyttäjä) ja suoritettaan salasanan muutos samalla. Kun salasana on resetoitu niin on valmis leikkimään taas Nessus;sta ja scannamaan haavoittuvuutta verkostosta.
+Jos on unohtanut kokonaan käyttäjätunnukset ja salasanan niin kantsii resetoida ja mene polkuun kuin ` /opt/nessus/sbin ` ja komennolla toistaa mikä käyttäjä (siis on ollut alunperin) siis ladattu siinä Kali linux ympäristössä (yksi ainoa käyttäjä) ja suoritettaan salasanan muutos samalla. Kun salasana on resetoitu niin on valmis leikkimään taas Nessus;sta ja scannamaan haavoittuvuutta verkostosta.
 
 ```
 ┌──(root㉿kali)-[/opt/nessus/sbin]
