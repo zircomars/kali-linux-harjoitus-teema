@@ -47,4 +47,5 @@ Keskeytin itse ton skannaukse (oikea toiseksi) nappista, koska katsellaan viimei
 ![Alt text](Screenshots/scan22.png)
 ![Alt text](Screenshots/scan23.png)
 
+![Alt text](Screenshots/scan24.png)
 
