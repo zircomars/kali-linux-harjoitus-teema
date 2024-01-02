@@ -1,4 +1,4 @@
-# toinen harjoitus skannaus
+# pieni Teoria ja huomiota
 
 Configuring Scan Definitions - skannauksien määrittelmiä
 
