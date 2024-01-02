@@ -1,0 +1,2 @@
+# toinen harjoitus skannaus
+
