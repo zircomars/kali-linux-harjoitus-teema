@@ -2,14 +2,20 @@
 
 Configuring Scan Definitions - skannauksien määrittelmiä
 
-Usein skannauksessa valitaan joku pohja niin mennään esikonfattujen oletusasetuksilla. Usein oletusasetukset eivät ihan välttämättä anna oikeetta skannausta ja on otettava huomioita ympäröivän alueen, aikana rajoitukset ja tarkistettava kohdetta. Joitakn asioissa, jotka on otettava huomioon määrittäessä.
+Usein skannauksessa valitaan joku pohja niin mennään esikonfattujen oletusasetuksilla. Usein oletusasetukset eivät ihan välttämättä anna oikeetta skannausta ja on otettava huomioita ympäröivän alueen, aikana rajoitukset ja tarkistettava kohdetta. Joitakn asioissa, jotka on otettava huomioon määrittäessä mm. verkkon skannauksen template sisältyen tai niitä tiettyi tekijöitä;
 
+- Are our targets located on an internal network or are they publicly accessible?
+- Should the scanner attempt to brute force user credentials?
+- Should the scanner scan all TCP and UDP ports or only common ports?
+- Which checks should the scanner run and which ones should it avoid?
+- Should the scanner run an Authenticated Scan or an Unauthenticated Scan?
 
+Tässä ranskalais viivattua tarkistustan varten voidaan suorittaa ensimmäisen perus porttien skannausta KAIKKISTA portista. Oletuksena verkon skannauksena kannattaa skannata vain yleisiä portteja.
+Eli jos avaa Discovery - ikkunan puolen
 
+![Alt text](Screenshots/scan5.png)
 
-
-
-
-
+Discover - välilehdestä, ja scan type: josta voi valita muita vaihtohtoehtoja mm. on port scan (common ports), port scan (all ports) tai custom 
+![Alt text](Screenshots/scan6.png)
 
 
