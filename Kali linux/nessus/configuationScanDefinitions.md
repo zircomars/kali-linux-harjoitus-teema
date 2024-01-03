@@ -15,7 +15,13 @@ Eli jos avaa Discovery - ikkunan puolen
 
 ![Alt text](Screenshots/scan5.png)
 
-Discover - välilehdestä, ja scan type: josta voi valita muita vaihtohtoehtoja mm. on port scan (common ports), port scan (all ports) tai custom 
-![Alt text](Screenshots/scan6.png)
+Discover - välilehdestä, ja scan type: josta voi valita muita vaihtohtoehtoja mm. on port scan (common ports), port scan (all ports) tai custom.
+![Alt text](Screenshots/scan25.png)
 
+Kun otettaan "custom" valikkoa, josta jonka jälkeen "Discovery" kategorian alle ilmestyy "Port scanning" valikkoa, josta konfiguroidaan ja määritettään tcp/upd olemassa olevia porttien määrää
+
+![Alt text](Screenshots/scan26.png)
+
+Port scan range , usein on oletuksena, mutta scannattaan koko tcp/udp olemassa olevat kaikki portit eli 0-65535
+![Alt text](Screenshots/scan28.png)
 
