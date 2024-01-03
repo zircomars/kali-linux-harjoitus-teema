@@ -2,6 +2,8 @@
 
 Configuring Scan Definitions - skannauksien määrittelmiä
 
+Offensive-Security-OSCP-by-Offensive-Security_2020 (PAGE: 218 - 222)
+
 Usein skannauksessa valitaan joku pohja niin mennään esikonfattujen oletusasetuksilla. Usein oletusasetukset eivät ihan välttämättä anna oikeetta skannausta ja on otettava huomioita ympäröivän alueen, aikana rajoitukset ja tarkistettava kohdetta. Joitakn asioissa, jotka on otettava huomioon määrittäessä mm. verkkon skannauksen template sisältyen tai niitä tiettyi tekijöitä;
 
 - Are our targets located on an internal network or are they publicly accessible?
