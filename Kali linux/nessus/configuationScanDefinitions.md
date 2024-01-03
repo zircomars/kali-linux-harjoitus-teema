@@ -25,3 +25,11 @@ Kun otettaan "custom" valikkoa, josta jonka jälkeen "Discovery" kategorian alle
 Port scan range , usein on oletuksena, mutta scannattaan koko tcp/udp olemassa olevat kaikki portit eli 0-65535
 ![Alt text](Screenshots/scan28.png)
 
+Sitoutumisen ajalla on kuitenkkin punnittaa kohteen verkkon vakautta, kohteen laajuutta, sitoutumisen kestoa ja monia muita tekijöitä porttienskananuksien vaihtoehtoja määrittäessä.
+
+Skannauksen määrityksen konfigurointien ajalla ei voida vain konfiguroida mitään tunnnistetietoja, mikä tarkoittaa, ettei tämä tarkituksen skannaus ole todentamatta. Jos tarkistaa muita vaihtoehtoja Basic Network Scan - platformista, voidaan varmistaa, että tarkitus suorittaa yleisiä tarktuksien kohteita suhteen toisin kuin muut mallit ko. Spectre ja Meltdown, johon sisältävät erityisiä haavoittuvuuden tarkituksia.
+
+Pien huomio, määritetty tarkitus on erittäin havaittavissa verkkoliikenteen tasolla, koska se tarkistaa kaikki portit ja etsii kaikkia soveltuvia haavoittuvuksia.
+
+
+
