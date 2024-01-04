@@ -72,5 +72,7 @@ Nessus tukee kohteen lisäämistä IP-osoitteena, IP-alueena tai pilkuilla erote
 
 ![Alt text](nessus_image/nessus_2.png)
 
+# ohjeita ja muita tutoriaalia;
 
-
+guide; <br>
+https://docs.tenable.com/quick-reference/nessus-scan-tuning/Content/PDF/Nessus_Scan_Tuning_Guide.pdf
