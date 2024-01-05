@@ -49,6 +49,11 @@ Dec 31 21:08:15 kali systemd[1]: Started nessusd.service - The Nessus Vulnerabil
 Jos on unohtanut kokonaan käyttäjätunnukset ja salasanan niin kantsii resetoida ja mene polkuun kuin ` /opt/nessus/sbin ` ja komennolla toistaa mikä käyttäjä (siis on ollut alunperin) siis ladattu siinä Kali linux ympäristössä (yksi ainoa käyttäjä) ja suoritettaan salasanan muutos samalla. Kun salasana on resetoitu niin on valmis leikkimään taas Nessus;sta ja scannamaan haavoittuvuutta verkostosta.
 
 ```
+# tähän pitää mennä root käyttäjään niin vasta sen jälkeen voi tarkistaa mikä se oman virallisen nessus käyttäjä onkaan eli..
+┌──(root㉿kali)-[/opt/nessus/sbin]
+└─# ./nessuscli lsuser
+zhaotan
+
 ┌──(root㉿kali)-[/opt/nessus/sbin]
 └─# ./nessuscli chpasswd
 Login to change: Nick96
