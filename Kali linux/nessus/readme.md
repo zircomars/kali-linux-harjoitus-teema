@@ -52,7 +52,7 @@ Jos on unohtanut kokonaan käyttäjätunnukset ja salasanan niin kantsii resetoi
 # tähän pitää mennä root käyttäjään niin vasta sen jälkeen voi tarkistaa mikä se oman virallisen nessus käyttäjä onkaan eli..
 ┌──(root㉿kali)-[/opt/nessus/sbin]
 └─# ./nessuscli lsuser
-zhaotan
+Nick96
 
 ┌──(root㉿kali)-[/opt/nessus/sbin]
 └─# ./nessuscli chpasswd
