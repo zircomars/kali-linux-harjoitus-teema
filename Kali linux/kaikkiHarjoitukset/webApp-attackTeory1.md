@@ -62,8 +62,55 @@ From Inspect and cateogires "Network" and select "All". Where can click on a req
 
 ![Alt text](webApp-attackTeory1/webapp_att4.png)
 
+The “Server” header displayed above will often reveal at least the name of the web server software. In many default configurations, it also reveals the version number.
+
 ![Alt text](webApp-attackTeory1/webapp_att5.png)
 
-![Alt text](webApp-attackTeory1/webapp_att6.png)
+## Inspecting Sitemaps
+Web applications can include sitemaps files to help search engine bots crawl and index their sites. As files included directives of URLs not to crawl. These are usually sensitive pages or 
+administrative consoles–exactly the sort of pages we are interested in. The most common sitemap of two filenames are robots.txt and sitemap.xml
 
+For example try at reality Chrome or Edge browser web tab and can see robots.txt files.
+https://www.google.fi/robots.txt
+https://www.google.fi/sitemap.xml
+https://www.megacorpone.com/robots.txt
+
+Or if like using command line as Kali Linux and it will show the files;
+```
+└─$ curl https://www.google.com/robots.txt
+User-agent: *
+Disallow: /search
+Allow: /search/about
+Allow: /search/static
+Allow: /search/howsearchworks
+Disallow: /sdch
+Disallow: /groups
+Disallow: /index.html?
+Disallow: /?
+Allow: /?hl=
+Disallow: /?hl=*&
+.....
+```
+
+"Allow" and "Disallow" are directives for web crawlers indicating pages or directories that "polite" web crawlers may or may not access. The listed pages and irectories are most cases may not be interested and some may even be invalid, sitemap files should not be overlooked as they may contain clues about the website layout or other interesting information.
+
+Another example
+```
+┌──(kali㉿kali)-[~]
+└─$ curl https://www.google.com/sitemap.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.google.com/schemas/sitemap/0.84">
+  <sitemap>
+    <loc>https://www.google.com/gmail/sitemap.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.google.com/forms/sitemaps.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.google.com/slides/sitemaps.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.google.com/sheets/sitemaps.xml</loc>
+  </sitemap>
+```
 
