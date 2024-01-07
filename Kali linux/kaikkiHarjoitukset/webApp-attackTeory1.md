@@ -1,5 +1,5 @@
 # Web app attacks
-Offensive-Security-OSCP-by-Offensive-Security_2020 (PAGE; 240 - 248, part 1)
+Offensive-Security-OSCP-by-Offensive-Security_2020 (PAGE; 240 - 248, part 1) <br>
 Current as in the future development frameworks and hosting solutions have simplified the process of the building and deploying web-based applications. These applications usually expose a large attack surface because of a lack of mature application code, multiple dependencies and insecure server configurations.
 
 Web applications can be written in a many variety of programming languages and framework e.g. nodejs, react and ect. each of which can introduce specific types of vulnerabilities. Most vulnerabilities are similar in concept, regardless of the underlying technology stack.
