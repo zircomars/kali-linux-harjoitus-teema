@@ -9,7 +9,10 @@ The attack vectors will server as basic building blocks as used to construct mor
 - [Web app assessment methodology](#Web-app-assessment-methodology)
 - [web app enumeration](#web-app-enumeration)
 - [Inspecting URL(s)](#Inspecting-URL(s))
-- [](#)
+- [Inspecting Page Content](#Inspecting-Page-Content)
+- [Viewing Response Headers](#Viewing-Response-Headers)
+- [Inspecting Sitemaps](#Inspecting-Sitemaps)
+- [Locating Administration Consoles](#Locating-Administration-Consoles)
 
 ## Web app assessment methodology
 Before start doing basic web app penetration testing methodology. At first, gather information about the application. What does the application do? 
@@ -118,4 +121,21 @@ Another example
   </sitemap>
 ```
 
+small exercises;
+try example similar other hosts what known or similarweb sites and add path ends "robots.txt" or "sitemap.xml". Other might work or not, or it does not support
+
 ## Locating Administration Consoles
+
+Web server ship with remote administration web applications or consoles, where is accessible via particular URL and often listening on a specifi TCP port.
+
+Two most common example are the manager application for "Tomcat" and "phpMyAdmin" for mySQL hosted at path "/manager/html" and "/phpmyadmin" respectively.
+
+When the consoles can be restricted to local accesss or just may be hosted on custom for TCP ports, so often it externally exposed by default configurations. As a penetration tester shold check the default console locations, identified in the application server software documentation. 
+
+
+
+
+
+
+
+
