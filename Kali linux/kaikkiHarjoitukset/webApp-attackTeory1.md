@@ -70,10 +70,10 @@ The “Server” header displayed above will often reveal at least the name of t
 Web applications can include sitemaps files to help search engine bots crawl and index their sites. As files included directives of URLs not to crawl. These are usually sensitive pages or 
 administrative consoles–exactly the sort of pages we are interested in. The most common sitemap of two filenames are robots.txt and sitemap.xml
 
-For example try at reality Chrome or Edge browser web tab and can see robots.txt files.
-https://www.google.fi/robots.txt
-https://www.google.fi/sitemap.xml
-https://www.megacorpone.com/robots.txt
+For example try at reality Chrome or Edge browser web tab and can see robots.txt files. <br>
+https://www.google.fi/robots.txt <br>
+https://www.google.fi/sitemap.xml <br>
+https://www.megacorpone.com/robots.txt <br>
 
 Or if like using command line as Kali Linux and it will show the files;
 ```
