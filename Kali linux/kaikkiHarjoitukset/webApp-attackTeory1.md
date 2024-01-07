@@ -37,7 +37,9 @@ File recognition on web pages are becoming less common since many languages and 
 ## Inspecting Page Content
 
 
+At URL inspection can provide some clues about the target from the web applications, most context clues can be found in the source of the web page. At Kali Linux default browser is Firefox so open inspect will debbuger tool click by menu or by pressing "CTRL" + "SHIFT" + "K". It will display Javascript frameworks, hidden input fields, comments, client-side controls within HTML , javascript and ect. 
 
+But in reality if using Chrome or Edge browser most pressing on keyboard F12 or just mouse right click and open "inspect".
 
 
 
