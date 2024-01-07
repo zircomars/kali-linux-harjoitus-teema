@@ -6,6 +6,8 @@ Web applications can be written in a many variety of programming languages and f
 
 The attack vectors will server as basic building blocks as used to construct more advanced attacks.
 
+- [Web app assessment methodology](#Web-app-assessment-methodology)
+
 
 ## Web app assessment methodology
 Before start doing basic web app penetration testing methodology. At first, gather information about the application. What does the application do? 
@@ -114,3 +116,4 @@ Another example
   </sitemap>
 ```
 
+## Locating Administration Consoles
