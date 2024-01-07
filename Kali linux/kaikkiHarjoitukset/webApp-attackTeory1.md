@@ -1,4 +1,5 @@
 # Web app attacks
+Offensive-Security-OSCP-by-Offensive-Security_2020 (PAGE; 240 - 248, part 1)
 Current as in the future development frameworks and hosting solutions have simplified the process of the building and deploying web-based applications. These applications usually expose a large attack surface because of a lack of mature application code, multiple dependencies and insecure server configurations.
 
 Web applications can be written in a many variety of programming languages and framework e.g. nodejs, react and ect. each of which can introduce specific types of vulnerabilities. Most vulnerabilities are similar in concept, regardless of the underlying technology stack.
@@ -29,11 +30,11 @@ There exist several techniques that can use to gather this information directly 
 
 ## Inspecting URL(s)
 
+file recognition, which are sometimes a part of a URL-path, where can reveal the proggramming lanaguage the applications is written in. Sort of as like .php are straightforward, but other extensions are more cryptic and vary based on the frameworks in use. E.g. a java-base web application might use .jsp, .do or .html format.
 
+File recognition on web pages are becoming less common since many languages and frameworks now support the conpect of the routes, which where allow developers to map a URI to a section of code.
 
-
-
-
+## Inspecting Page Content
 
 
 
