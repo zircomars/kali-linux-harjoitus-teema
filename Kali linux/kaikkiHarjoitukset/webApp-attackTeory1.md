@@ -41,6 +41,29 @@ At URL inspection can provide some clues about the target from the web applicati
 
 But in reality if using Chrome or Edge browser most pressing on keyboard F12 or just mouse right click and open "inspect".
 
+![Alt text](webApp-attackTeory1/webapp_att1.png)
 
+Just check the application running on www.megacorpone.com uses jQuery version 1.11.0, which is a commong JavaScript library. In this case, the developer minifield the code, making it more compact and conserving resources but it will making it somewhat difficult to read. 
+
+Down there is small green circle it will make the code more readable and prettify so within by click the "Print" source with the double curly braces;
+
+![Alt text](webApp-attackTeory1/webapp_att2.png)
+
+Also can use the "Inspector" tool to drill down into specific page content. Like using mouse point to email input elements or other text inputs and click by right-clicking and show "Inspect". It will show as index.html or other html edition where can find out of this code from the code scripts.
+
+ The Inspector tool and highlight the HTML for the element we right-clicked on
+![Alt text](webApp-attackTeory1/webapp_att3.png)
+
+## Viewing Response Headers
+
+Also can get research server responses for additional information. There are two types of tools what can use to accomplish this task. The first type of tool is a proxy, which intercepts requests and responses between a client and a webserver. The Firefox Web Developer menu, to view HTTP requests and responses. This tool shows network activity that occurs after it launches, so we must refresh the page to see traffic.
+
+From Inspect and cateogires "Network" and select "All". Where can click on a request to get more details about it, in this case the response headers:
+
+![Alt text](webApp-attackTeory1/webapp_att4.png)
+
+![Alt text](webApp-attackTeory1/webapp_att5.png)
+
+![Alt text](webApp-attackTeory1/webapp_att6.png)
 
 
