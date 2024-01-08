@@ -3,6 +3,7 @@ Offensive-Security-OSCP-by-Offensive-Security_2020 (PAGE; 248 - 274, part 2) << 
 
 - [Web Application Assessment Tools](#Web-Application-Assessment-Tools)
 - [DIRB](#DIRB)
+- [Burp Suite](#Burp-Suite)
 
 # Web Application Assessment Tools
 Long chapter demostrate tools be using to automate the search the console and demostrate exploitation techniques. Consider using a web application assessments tools to enumerate more information about the target.
@@ -58,6 +59,32 @@ At the result DIRB made 4612 requests and reported the URL, status, code and siz
 At begin with non-recursive scan against a large target and recursively search directories or begin within a ful recursive scan depending on needs.
 
 <b>SMALL NOTE;</b> DirBuster is a Java application similar to DIRB that offers multi-threading and a GUI-based interface.
+
+## Burp Suite
+
+Burp Suite is a GUI(graphical user interface) software collection of tools geared towards web application security testing, arguably best-known as powerful proxy tool. It is free Community Edition ( an open source license) mainly contains tools used in manual testing, the commercial versions include additional features and a formidable web application vulnerability scanner. 
+
+Burp Suite has an extensive feature list and is worth investigation. Small note Burp Suite Professional is prohibited during the OSCP exam, and it is also not necesary.
+
+At the Kali Linux open-source operating system inside got already this Bur Suite GUI software so no need to install or anything. It can be found under "Application > 03 Web Application Analysis > Burpsuite". Although just enough go at "applications" > and search by name "burp suite", or just launch and open command line with burpsuite.
+
+```
+kali@kali:~$ burpsuite
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
