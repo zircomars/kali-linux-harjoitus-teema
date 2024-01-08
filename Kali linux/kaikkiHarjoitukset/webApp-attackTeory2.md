@@ -72,7 +72,9 @@ At the Kali Linux open-source operating system inside got already this Bur Suite
 kali@kali:~$ burpsuite
 ```
 
+<!-- Offensive-Security-OSCP-by-Offensive-Security_2020 PAGE: 250 - 273 -->
 
+## Nikto
 
 
 
