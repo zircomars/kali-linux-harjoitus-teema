@@ -146,4 +146,4 @@ msf6 auxiliary(gather/search_email_collector) >
 
 # https://www.youtube.com/watch?v=9HhfPRNK288
 
-
+theHarvester -d <hostname> -l 300 -b all
