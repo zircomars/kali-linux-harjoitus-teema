@@ -2,6 +2,7 @@
 
 # https://www.amirootyet.com/post/email-harvesting-in-kali-linux-find-out/
 # exmaple practice this can try own kali linux
+# for example scan the who is spammer (junk mail)
 
 # first set a 'domain' of the organization and the 'output' file where want the results "email address" saved and "execute" the module
 # first $banner , some funny photo first :D
