@@ -76,14 +76,35 @@ kali@kali:~$ burpsuite
 
 ## Nikto
 
+Nikto is a highly configurable Open Source web server scanner it tests for thousands of dangerous files and programs, vulnerable server versiona nd many various server configurations.
 
+It is not for designed for stealth as it will send many requests and embed information about itself in the User-Agents headers.
 
+Nikto can scan multiple servers and ports and it can scans as many pages as it can find out. On sites (pages) with heavy content, such as an ecommerce site (like online store), so a Nikto scan can take several hours to complete it. So there got two options to control the scan duration. The simplest option is to set the "-maxtime" option, it will halt the scan after the specified time limit. This does not optimize the scan in any way.
 
+Nikto will simply stop the scanning. The second option is to tune the scan with the "-T" option. It can use this feature to control which types of the tests we want to run. There are times when we do not want to run all the tests result built in to Nikto, like as verifying if the certain class of vulnerabilities is present. Tuning a scan is invaluable in these situations.
 
+Small command example using by Nikto against host www.megacorpone.com. Using host we want to scan (-host=http://www.megacorpone.com) and for the sake this example will use "-maxtime=30s" to limit the scan duration to scan 30 seconds.
 
-
-
-
+```
+┌──(kali㉿kali)-[~]
+└─$  nikto -host=http://www.megacorpone.com -maxtime=30s
+- Nikto v2.5.0
+---------------------------------------------------------------------------
++ Target IP:          149.56.244.87
++ Target Hostname:    www.megacorpone.com
++ Target Port:        80
++ Start Time:         2024-01-19 21:21:52 (GMT2)
+---------------------------------------------------------------------------
++ Server: Apache/2.4.38 (Debian)
++ /: The anti-clickjacking X-Frame-Options header is not present. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
++ /: The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type. See: https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/missing-content-type-header/
++ ERROR: Host maximum execution time of 30 seconds reached
++ Scan terminated: 0 error(s) and 2 item(s) reported on remote host
++ End Time:           2024-01-19 21:22:23 (GMT2) (31 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+```
 
 
 
