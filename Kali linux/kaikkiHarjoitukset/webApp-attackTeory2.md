@@ -86,6 +86,8 @@ Nikto will simply stop the scanning. The second option is to tune the scan with 
 
 Small command example using by Nikto against host www.megacorpone.com. Using host we want to scan (-host=http://www.megacorpone.com) and for the sake this example will use "-maxtime=30s" to limit the scan duration to scan 30 seconds.
 
+`$nikto -host=<URL-SITE/IP-add> -maxtime=<value by seconds>`
+
 ```
 ┌──(kali㉿kali)-[~]
 └─$  nikto -host=http://www.megacorpone.com -maxtime=30s
