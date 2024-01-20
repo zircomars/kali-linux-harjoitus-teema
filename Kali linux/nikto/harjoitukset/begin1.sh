@@ -24,3 +24,5 @@
 ^
 ┌──(kali㉿kali)-[~]
 └─$ nikto -h <IP-add | host name>
+
+# 
