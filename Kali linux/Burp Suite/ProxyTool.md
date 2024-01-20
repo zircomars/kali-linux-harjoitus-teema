@@ -11,15 +11,17 @@ Basically button "Intercept" is like on/off toggle to displays the current situa
 ![Alt text](BurpSuite_images/burpsuiteProxy-2.png)
 
 
-## First step
+## First check
 
 Small practices so review the proxy listener settings. The "proxy settings" sub-tab show what ports are listening for proxy requests.
 
 ![Alt text](BurpSuite_images/burpsuiteProxy-3.png)
 
+This is just default view, is enables a proxy listener on "localhost:8080". This is just the host and port the browser must connect to in order to proxy traffic through Burp Suite. Let the default setting alone (leave it).
+
 ![Alt text](BurpSuite_images/burpsuiteProxy-4.png)
 
 
-
+## Another check
 
 
