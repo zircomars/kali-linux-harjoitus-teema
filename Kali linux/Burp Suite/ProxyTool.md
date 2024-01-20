@@ -6,11 +6,18 @@ To order to set up a proxy, and disable the "interecpt tool", check under the In
 
 Basically button "Intercept" is like on/off toggle to displays the current situation current state of the tool and it will can be used to enable or disabled it as required. So, for set this to "Intercept" is off to allow the target browser traffic to flow normally.
 
+![Alt text](BurpSuite_images/burpsuiteProxy-1.png)
+
+![Alt text](BurpSuite_images/burpsuiteProxy-2.png)
+
+
 ## First step
 
 Small practices so review the proxy listener settings. The "proxy settings" sub-tab show what ports are listening for proxy requests.
 
+![Alt text](BurpSuite_images/burpsuiteProxy-3.png)
 
+![Alt text](BurpSuite_images/burpsuiteProxy-4.png)
 
 
 
