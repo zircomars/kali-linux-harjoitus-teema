@@ -29,7 +29,7 @@
 
 $ nikto -h <IP or hostname> -ssl
 
-# example target SSL, scanning host "pbs.org" it will gave of the types of information that a Nikto scan will show up. After it connects to port 443, and there is some useful information about the cipher a list of other details like that server is a "openresty", and there is not whole a lot interesting data here show up. This command scanning may take few minutes, but at this command will added "-maxtime" and at scannning takes 30seconds
+# example target SSL, scanning host "pbs.org" it will gave of the types of information that a Nikto scan will show up. After it connects to port 443, and there is some useful information about the cipher a list of other details like that server is a "openresty", and there is not whole a lot interesting data here show up. This command scanning may take few minutes or even forever, but at this command will added "-maxtime" and at scannning takes 30seconds
 
 ┌──(kali㉿kali)-[~]
 └─$ nikto -h pbs.org -ssl -maxtime=30s
