@@ -25,7 +25,8 @@
 ┌──(kali㉿kali)-[~]
 └─$ nikto -h <IP-add | host name>
 
-<# asdfsd fsdfsdfsdf 
-
-asdfsf
-#> 
+/* 
+asdfasdf
+asdfgdfg
+qwe
+*/
