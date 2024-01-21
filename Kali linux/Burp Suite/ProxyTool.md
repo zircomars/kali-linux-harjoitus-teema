@@ -23,5 +23,23 @@ This is just default view, is enables a proxy listener on "localhost:8080". This
 
 
 ## Another check
+<!-- Offensive-Security-OSCP-by-Offensive-Security_2020.pdf PAGE; 255 - --> 
+
+Check the revivew is at "proxy" -> "Http history" at as default it's empty and blank until traffic has been sent through Burp Suite.
+
+![Alt text](BurpSuite_images/burpsuit-scan-1.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
