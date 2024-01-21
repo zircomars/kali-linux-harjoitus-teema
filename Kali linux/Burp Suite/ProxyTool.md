@@ -62,12 +62,27 @@ After save it, it will added to add-on under the list.
 
 ## Third example
 
+Actually this Burp Suite this third example is like firewall/linux/web application settings, it will block the user go to host site like surfing, video games, gambling or ect websites. Like example organization there websites from list are not allow it (access denied) like block these sites network traffic it.
 
+Only administrator or other type network administrator or other administrator type can make it allow or block, or even edit the network traffic like as whitelist.
 
+For example block this site "www.megacorpone.com" as type "HTTP" and save it, and it will added to browser "Add-on" under the list, and actived it, as choose it.
 
+![Alt text](BurpSuite_images/burpsuit-scan-11.1.png)
 
+At short moments times it will block this traffic site, so user can not go to this website. It works also either reality, if using chrome/edge browser it does block it at same time until "Disable" it.
 
+![Alt text](BurpSuite_images/burpsuit-scan-11.2.png)
 
+![Alt text](BurpSuite_images/burpsuit-scan-11.3.png)
+
+If refresh the page does not work try to open another "tab" and input the host site name and try again. It might be take for moment because it's trying to find the DNS/IP-address and ect from the network traffic.
+
+Although can even at the same times try to ping the host, what is the status where it's going through.
+
+![Alt text](BurpSuite_images/burpsuit-scan-11.4.png)
+
+![Alt text](BurpSuite_images/burpsuit-scan-11.5.png)
 
 
 
