@@ -29,8 +29,12 @@ Check the revivew is at "proxy" -> "Http history" at as default it's empty and b
 
 ![Alt text](BurpSuite_images/burpsuit-scan-1.png)
 
+At book & its author Foxy Proxy Basic is a simple using "on/off proxy switcher" add on Kali Linux default browser FireFox. This small check is just how to "Add-ons" on browser, just go to enable or disbale Fire Fox proxy settings. This install is from within FireFox by clicking the Open menu button and select "add ons and themes" from the menu.
 
+![Alt text](BurpSuite_images/burpsuit-scan-3.png)
 
+When "add ons and theme" page is open, search for "foxyproxy basic" by enetering it in the search box (same as super search find some more items)
+![Alt text](BurpSuite_images/burpsuit-scan-4.png)
 
 
 
