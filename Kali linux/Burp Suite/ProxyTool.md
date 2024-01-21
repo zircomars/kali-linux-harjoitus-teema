@@ -52,15 +52,15 @@ after the installation it will added to right corner for small icon. Click the "
 
 At "Proxies" navigator bar, can set first Proxyu Type "http" and enter title (give a name), and using IP-address (127.0.0.1). This will add BUrp Suite proxy listener port number which left as the default of 8080 port, and save it.
 
-![Alt text](BurpSuite_images/burpsuit-scan-9.1.png)
+![Alt text](BurpSuite_images/burpsuit-scan-9.png)
 
-![Alt text](BurpSuite_images/burpsuit-scan-9.2.png)
+![Alt text](BurpSuite_images/burpsuit-scan-9.1.png)
 
 After save it, it will added to add-on under the list. 
 
-![Alt text](BurpSuite_images/burpsuit-scan-9.10.png)
+![Alt text](BurpSuite_images/burpsuit-scan-10.png)
 
-
+## Third example
 
 
 
