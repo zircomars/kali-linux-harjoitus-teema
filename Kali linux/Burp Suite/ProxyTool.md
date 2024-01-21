@@ -64,6 +64,8 @@ After save it, it will added to add-on under the list.
 
 Actually this Burp Suite this third example is like firewall/linux/web application settings, it will block the user go to host site like surfing, video games, gambling or ect websites. Like example organization there websites from list are not allow it (access denied) like block these sites network traffic it.
 
+Host can be an IP-address or real host like a hostname of the website.
+
 Only administrator or other type network administrator or other administrator type can make it allow or block, or even edit the network traffic like as whitelist.
 
 For example block this site "www.megacorpone.com" as type "HTTP" and save it, and it will added to browser "Add-on" under the list, and actived it, as choose it.
