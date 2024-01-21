@@ -36,6 +36,33 @@ At book & its author Foxy Proxy Basic is a simple using "on/off proxy switcher" 
 When "add ons and theme" page is open, search for "foxyproxy basic" by enetering it in the search box (same as super search find some more items)
 ![Alt text](BurpSuite_images/burpsuit-scan-4.png)
 
+There exist two version of Foxy Proxy as "Basic" and "Standard". So use the "basic" version because it is easier to confingure and do not need any of the extra functionality of the standard version.
+
+Click the Basic versio to view more details about the extension and add to browser FireFox to install the add-on
+
+![Alt text](BurpSuite_images/burpsuit-scan-5.png)
+
+![Alt text](BurpSuite_images/burpsuit-scan-6.png)
+
+after the installation it will added to right corner for small icon. Click the "options" it will give a new page of this Foxy tool view.
+
+![Alt text](BurpSuite_images/burpsuit-scan-7.png)
+
+![Alt text](BurpSuite_images/burpsuit-scan-8.png)
+
+At "Proxies" navigator bar, can set first Proxyu Type "http" and enter title (give a name), and using IP-address (127.0.0.1). This will add BUrp Suite proxy listener port number which left as the default of 8080 port, and save it.
+
+![Alt text](BurpSuite_images/burpsuit-scan-9.1.png)
+
+![Alt text](BurpSuite_images/burpsuit-scan-9.2.png)
+
+After save it, it will added to add-on under the list. 
+
+![Alt text](BurpSuite_images/burpsuit-scan-9.10.png)
+
+
+
+
 
 
 
