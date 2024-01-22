@@ -2,6 +2,9 @@
 
 <!-- Offensive-Security-OSCP-by-Offensive-Security_2020.pdf practice page: 268 - 270 -->
 
+same configuration idea, but different as book.
+https://portswigger.net/burp/documentation/desktop/external-browser-config/certificate/ca-cert-firefox
+
 Burp Suite can easily decyrpt the HTTPS protocol traffic by generating its own SSL/TSL certificate, which essentially man-in-the-middling attack ourselves in order to capture the traffic. These warning may be irritating, but we can prevent them by issuing a new certificate and importing it into FireFox.
 
 
@@ -26,10 +29,11 @@ Next step is add to hostname path "/cert" so it will give some document/files to
 
 ![Alt text](BurpSuite_images/burpSuite_SSL-6.png)
 
-Actually this file can download it just click on "CA certificate" on host; 127:0.0.1:8080, after download it need to open the "settings" / "options" / "prefeences".
-
+Actually this file can download it just click on "CA certificate" on host; 127:0.0.1:8080, after download it need to open the "settings" / "options" / "prefeences". Kali Linux's the default browser as FireFox "might" different later.. and just open it and searh by name "certificate" , just scroll down and find "View certificates"
 
 ![Alt text](BurpSuite_images/burpSuite_SSL-7.png)
+
+Open "View certificates", at "import" add that "cacert.der" file to there and configured, and installed.
 
 ![Alt text](BurpSuite_images/burpSuite_SSL-8.png)
 
@@ -37,4 +41,12 @@ Actually this file can download it just click on "CA certificate" on host; 127:0
 
 ![Alt text](BurpSuite_images/burpSuite_SSL-10.png)
 
+After installed (OK), then go to any "https://" browser as Google or megacorpone, but at "Burp Suite" software inside can might see HTTPS history.. but there might be missing something if is the HTTPS history is empty.
+
 ![Alt text](BurpSuite_images/burpSuite_SSL-11.png)
+
+
+
+
+
+
