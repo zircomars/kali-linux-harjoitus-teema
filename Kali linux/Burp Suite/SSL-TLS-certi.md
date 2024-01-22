@@ -26,8 +26,6 @@ Next step is add to hostname path "/cert" so it will give some document/files to
 
 ![Alt text](BurpSuite_images/burpSuite_SSL-6.png)
 
-continue...
-
-
+Actually this file can download it just click on "CA certificate" on host; 127:0.0.1:8080, after download it need to open the "settings" / "options" / "prefeences".
 
 
