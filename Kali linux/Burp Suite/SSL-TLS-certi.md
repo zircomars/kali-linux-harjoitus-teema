@@ -53,21 +53,37 @@ actually there no need install module/configured just use the Burp Suite inside 
 
 ![Alt text](BurpSuite_images/burpSuite_SSL-13.png)
 
+So.. how it works actually, at navigator bar open "Proxy" > "intercept" bust me off, because if checking some any of the HTTPS website it will work, but if on so it always work but scanning may missing something.
+
+Open then browser (open bwoser) just click it, it's like firefox, but this one is Burp Suite own features.
+
 ![Alt text](BurpSuite_images/burpSuite_SSL-14.png)
 
 ![Alt text](BurpSuite_images/burpSuite_SSL-15.png)
+
+Search any websites like https://www.meagcorpone.com or google.com and ect. and check "http history" down there got the list of the host frameworks as javascript(s), html and css.
 
 ![Alt text](BurpSuite_images/burpSuite_SSL-16.png)
 
 ![Alt text](BurpSuite_images/burpSuite_SSL-17.png)
 
+With the Repeter tool can modify requests, resend them and review the responses and select "Send to Repeater".
+
 ![Alt text](BurpSuite_images/burpSuite_SSL-18.png)
+
+If click on (mouse right click) choose "send to repeater" it will show one sub-tab with request on the left side of the windows. It also can fit the view like two tab or lines (choose your which suit yourself). It also can send multiple requests to Repeater and it will display them on spearate tabs. 
+
+And also can send the request to the server by clicking Send.
 
 ![Alt text](BurpSuite_images/burpSuite_SSL-19.png)
 
-![Alt text](BurpSuite_images/burpSuite_SSL-21.png)
+![Alt text](BurpSuite_images/burpSuite_SSL-20.png)
+
+Small duplicate
 
 ![Alt text](BurpSuite_images/burpSuite_SSL-21.png)
+
+![Alt text](BurpSuite_images/burpSuite_SSL-22.png)
 
 
 
