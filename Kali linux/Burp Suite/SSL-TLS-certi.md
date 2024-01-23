@@ -47,6 +47,8 @@ After installed (OK), then go to any "https://" browser as Google or megacorpone
 
 ## https history
 
+<!-- Offensive-Security-OSCP-by-Offensive-Security_2020.pdf page; 271 - 273 -->
+
 actually there no need install module/configured just use the Burp Suite inside the browsers which is one of the software one of the tool features.
 
 ![Alt text](BurpSuite_images/burpSuite_SSL-12.png)
