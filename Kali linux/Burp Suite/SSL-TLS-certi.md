@@ -41,7 +41,7 @@ Open "View certificates", at "import" add that "cacert.der" file to there and co
 
 ![Alt text](BurpSuite_images/burpSuite_SSL-10.png)
 
-After installed (OK), then go to any "https://" browser as Google or megacorpone, but at "Burp Suite" software inside can might see HTTPS history.. but there might be missing something if is the HTTPS history is empty.
+After installed (OK), then go to any "https://" browser as Google or megacorpone, but at "Burp Suite" software inside can might see HTTPS history.. but there might be missing something if is the HTTPS history is empty. So might be need configured/install something missing pieces (module)
 
 ![Alt text](BurpSuite_images/burpSuite_SSL-11.png)
 
