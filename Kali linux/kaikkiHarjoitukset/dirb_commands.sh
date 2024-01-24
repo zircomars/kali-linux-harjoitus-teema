@@ -49,6 +49,37 @@ OPTIONS
 
 # another example using hostname "www.megacorpone.com" , it supply several arguments: the URL to scan, -r to scan non-recursively, and -z 10 to add a 10 millisecond delay to each request
 
+#  By default, the tool will recurse into newly-discovered directories, but in this case, our non-recursive (-r) scan simply reports directories without descending into them
+
+┌──(kali㉿kali)-[~]
+└─$ dirb http://www.megacorpone.com -r -z 10
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+START_TIME: Wed Jan 24 20:09:29 2024
+URL_BASE: http://www.megacorpone.com/
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+OPTION: Not Recursive
+SPEED_DELAY: 10 milliseconds
+
+-----------------
+
+GENERATED WORDS: 4612                                                          
+
+---- Scanning URL: http://www.megacorpone.com/ ----
++ http://www.megacorpone.com/admin (CODE:403|SIZE:284)                                                                         
+==> DIRECTORY: http://www.megacorpone.com/assets/                                                                              
++ http://www.megacorpone.com/index.html (CODE:200|SIZE:14603)                                                                  
+==> DIRECTORY: http://www.megacorpone.com/old-site/                                                                            
++ http://www.megacorpone.com/robots.txt (CODE:200|SIZE:43)                                                                     
++ http://www.megacorpone.com/server-status (CODE:403|SIZE:284)                                                                 
+                                                                                                                               
+-----------------
+END_TIME: Wed Jan 24 20:22:18 2024
+DOWNLOADED: 4612 - FOUND: 4
 
 
 
