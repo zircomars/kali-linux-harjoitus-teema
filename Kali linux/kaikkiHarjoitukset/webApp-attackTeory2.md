@@ -21,6 +21,21 @@ DIRB a a web content scanner, which uses a wordlist to find directories and page
 DIRB will identify some interesting directories on the server but it can be customized to search for specific directories, use a custom dirctionaires for a set custom cookies or header on each request and ect much more.
 
 This command searching the web sites www.megacorpone.com will supply arguments as the URL to scan, -r to scan non-recursively, and -z 10 to add 10 a millisecond delay to each requests.
+
+```
+┌──(kali㉿kali)-[~]
+└─$ dirb ?       
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+
+(!) FATAL: Invalid URL format: ?
+    (Use: "http://host/" or "https://host/" for SSL)
+```
+
 ```
 ┌──(kali㉿kali)-[~]
 └─$ dirb http://www.megacorpone.com -r -z 10 
