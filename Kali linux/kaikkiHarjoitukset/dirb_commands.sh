@@ -4,6 +4,8 @@
 ######################################################
 # few examples and some help and directionaries commands
 
+$dirb http://[hostname/IP-add]
+
 ┌──(kali㉿kali)-[~]
 └─$ man dirb
 
@@ -80,6 +82,8 @@ GENERATED WORDS: 4612
 -----------------
 END_TIME: Wed Jan 24 20:22:18 2024
 DOWNLOADED: 4612 - FOUND: 4
+
+# The results list with the response code and the size of the file for each ping. DIRB stars searching the files of the folder which returns the response code as 200. It searches the entire folders with wordlist and display the results. This example it found objects (4 in this case).
 
 ####################################
 
