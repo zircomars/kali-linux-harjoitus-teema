@@ -81,8 +81,25 @@ GENERATED WORDS: 4612
 END_TIME: Wed Jan 24 20:22:18 2024
 DOWNLOADED: 4612 - FOUND: 4
 
+####################################
 
+┌──(kali㉿kali)-[~]
+└─$  dirb-gendict -h
+Usage: dirb-gendict -type pattern
+  type: -n numeric [0-9]
+        -c character [a-z]
+        -C uppercase character [A-Z]
+        -h hexa [0-f]
+        -a alfanumeric [0-9a-z]
+        -s case sensitive alfanumeric [0-9a-zA-Z]
+  pattern: Must be an ascii string in which every 'X' character wildcard
+           will be replaced with the incremental value.
 
+Example: dirb-gendict -n thisword_X
+  thisword_0
+  thisword_1
+  [...]
+  thisword_9
 
 
 
