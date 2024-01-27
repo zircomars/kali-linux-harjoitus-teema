@@ -1,5 +1,5 @@
 # Cross-Site Scripting (XSS)
-<!-- Offensive-Security-OSCP-by-Offensive-Security_2020 page: 297 - 312 -->
+<!-- Offensive-Security-OSCP-by-Offensive-Security_2020 page: 297 - 312 & some theory and memo from other pages-->
 
 One of the important features of well-defended web application is a data sanitization ( the secure and permanent erasure of sensitive data from datasets and media to guarantee that no residual data can be recovered even through extensive forensic analysis). 
 
@@ -43,6 +43,8 @@ For example: web page includes JavaScript code will sets the value of an input f
 This variant occurs when a page’s DOM is modified with user-controlled values. DOM-based XSS can be stored or reflected. The key difference is that DOM-based XSS attacks occur when a browser parses the page’s content and inserted JavaScript is executed.
 
 Regardless of how the XSS payload is delivered and executed, the injected scripts run under the context of the user viewing the affected page.
+
+<hr>
 
 ## Identifying XSS Vulnerabilities
 
