@@ -110,3 +110,14 @@ kroemer/s3Cr3t/gold/10.100.100.1
 └─$ echo amFuZXVzZXIvd2FpdGluZzRGcmlkYXkvMTcyLjIyLjEyLjE5 | base64 --decode
 janeuser/waiting4Friday/172.22.12.19                                                                                        
 ```
+
+There is couple example how it works for BadStore, just input and create a payload that display a simple JavaScript alert and change a color. Based on the code will reviewed and penetration tester can see that message and changes is being inserted into an HTML table cell. There no need necessary any of the fancy encoding trick (no need to be beautiful program trick) just basic XSS payload.
+
+![Alt text](webApp-attackTeory1/webapp_xss4.png)
+
+![Alt text](webApp-attackTeory1/webapp_xss5.png)
+
+![Alt text](webApp-attackTeory1/webapp_xss6.png)
+
+![Alt text](webApp-attackTeory1/webapp_xss7.png)
+
