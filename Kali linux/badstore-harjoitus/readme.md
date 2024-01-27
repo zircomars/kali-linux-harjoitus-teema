@@ -232,7 +232,10 @@ Pieni esim. josta muutettaan sivuston väri (mutta se on vain väliaikaisesti), 
 
 ![Alt text](../kaikkiHarjoitukset/webApp-attackTeory1/webapp_xss9.png)
 
-![Alt text](../kaikkiHarjoitukset/webApp-attackTeory1/webapp_xss10.png)
+![Alt text](../kaikkiHarjoitukset/webApp-attackTeory1/webapp_xss410.png)
+
+![Alt text](../kaikkiHarjoitukset/webApp-attackTeory1/webapp_xss11.png)
+
 
 
 ## komentoja
