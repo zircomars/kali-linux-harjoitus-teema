@@ -59,7 +59,7 @@ The most common special characters used for purpose include; `< > ' " { } ;` as 
 
 This is like former when practices/demonstrate within Badstore (small repeat) what this XSS is meaning and although of course there is other tools practices with Kali Linux, not just Badstore.
 
-
+On kali linux xss tool like <b>Beef-xss</b>
 
 
 
