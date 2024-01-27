@@ -16,6 +16,10 @@ Cross-Site Scripting got few types as e.g. Non-persistent (reflected), Persisten
 - DOM-based XSS attacks are similar to the other two types (Stored and Reflected XSS), but take place solely within the page’s Document Object Model (DOM).  The browser
 parses a page’s HTML content and generates an internal DOM representation. JavaScript can programmatically interact with this DOM. In other words a DOM-based XSS attack, the malicious data does not touch the web server. Rather, it is being reflected by the JavaScript code, fully on the client side.
 
+For example: web page includes JavaScript code will sets the value of an input field based on a query paameter, an attacke could construct a URL that contains a malicious script. <br>
+
+`https://example.com/page.html#input <script>alert(‘XSS attack!’)</script>`
+
 This variant occurs when a page’s DOM is modified with user-controlled values. DOM-based XSS can be stored or reflected. The key difference is that DOM-based XSS attacks occur when a browser parses the page’s content and inserted JavaScript is executed.
 
 Regardless of how the XSS payload is delivered and executed, the injected scripts run under the context of the user viewing the affected page.
