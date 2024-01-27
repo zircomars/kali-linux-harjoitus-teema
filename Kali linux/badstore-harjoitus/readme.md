@@ -6,6 +6,7 @@
     * [vm (virtual machines)](#vm-virtual-machines)
     * [steppi vaiheet](#steppi-vaiheet)
     * [mysql tietokanta](#mysql-tietokanta)
+    * [XSS](#XSS)
     * [komentoja](#komentoja)
 
 - [lataus materiaalit;](#lataus-materiaalit)
@@ -210,6 +211,29 @@ MySQL [badstoredb]> select * from userdb;
 26 rows in set (0.001 sec)
 
 ```
+
+## XSS
+
+Cross-site scripting (XSS), tarkoittaa tietoturva-aukko (haavoittuvuuden viittaava virhe, johon ulkopuolinen voi päästä tekee tiettyjä toimintoja joihin ei normaalisti ei pitäisi päästä tekemään), joka esiintyy usein web/www-sovelluksissa. Johon mahdollista koodin syöttämiseen ja avulla voi mahdollista tunkeutua sisään. 
+
+Tätä voi tapahtua käyttämällä HTML tai suoritettavia scriptiä, sekä mahdollista kentän täydentämistä käyttäen scripttausta ko. JavaScript kieltä.
+
+Pieni esim. josta muutettaan sivuston väri (mutta se on vain väliaikaisesti), kun uudelleen käynnistää "BadStore" ohjelman niin se muuttuu takaisin sellaiseksi väriksi.
+
+![Alt text](../kaikkiHarjoitukset/webApp-attackTeory1/webapp_xss4.png)
+
+![Alt text](../kaikkiHarjoitukset/webApp-attackTeory1/webapp_xss5.png)
+
+![Alt text](../kaikkiHarjoitukset/webApp-attackTeory1/webapp_xss6.png)
+
+![Alt text](../kaikkiHarjoitukset/webApp-attackTeory1/webapp_xss7.png)
+
+![Alt text](../kaikkiHarjoitukset/webApp-attackTeory1/webapp_xss8.png)
+
+![Alt text](../kaikkiHarjoitukset/webApp-attackTeory1/webapp_xss9.png)
+
+![Alt text](../kaikkiHarjoitukset/webApp-attackTeory1/webapp_xss10.png)
+
 
 ## komentoja
 
@@ -419,6 +443,8 @@ END_TIME: Mon May  1 09:40:23 2023
 DOWNLOADED: 4612 - FOUND: 6
 
 ```
+
+<hr>
 
 # lataus materiaalit;
 
