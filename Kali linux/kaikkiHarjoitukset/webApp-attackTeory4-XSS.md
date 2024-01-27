@@ -13,11 +13,25 @@ Cross-Site Scripting got few types as e.g. Non-persistent (reflected), Persisten
 
 - Stored XSS attacks is another name as Persistent XSS, occurs when the exploit payload is stored in a database or else cached by a server. The web application will retrieves this payload and isplays it to anyone that views a vulnerable page(s).  A single Stored XSS vulnerability can therefore attack all users of the site. Stored XSS vulnerabilities often exist in forum software, especially in comment sections, or in product reviews.
 
-![Alt text](webApp-attackTeory1/webapp_xss2.png)
+Stored XSS attacks involve injecting malicious code into a web application’s database that is then displayed to other users who view the affected page. For example this can be happening when a web application allows users to post content, such as comments or messages, stored in the database and displayed to other users.
+
+![Alt text](webApp-attackTeory1/webapp_xss3.png)
+
+If an attacker can inject a script tag or other malicious code into their own content, it will be stored in the database and executed by the browser when other users view the affected page.
+
+An attacker could post a comment that includes a malicious script;
+`<script>alert(‘XSS attack!’)</script>`
 
 - Reflected XSS attacks include the payload in a crafted request or link. The web application will takes this value and places it into the page content. This variant only attacks the person submitting the request or viewing the link. Reflected XSS vulnerabilities can often occur in search fields and results, as well as anywhere user input is included in error messages.
 
-![Alt text](webApp-attackTeory1/webapp_xss3.png)
+For exampe this can be happen when a user submits a form with a search query or other user input, and the web application includes that input in the response without proper validation or sanitization.
+
+![Alt text](webApp-attackTeory1/webapp_xss2.png)
+
+If an attacker can inject a script tag or other malicious code into the user input, it will be reflected by the user and executed by the browser.
+
+Fo example attacker could construct a URL includes a malicious script.
+`https://example.com/search?q=<script>alert(‘XSS attack!’)</script>`
   
 - DOM-based XSS attacks are similar to the other two types (Stored and Reflected XSS), but take place solely within the page’s Document Object Model (DOM).  The browser
 parses a page’s HTML content and generates an internal DOM representation. JavaScript can programmatically interact with this DOM. In other words a DOM-based XSS attack, the malicious data does not touch the web server. Rather, it is being reflected by the JavaScript code, fully on the client side.
