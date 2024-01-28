@@ -1,6 +1,9 @@
 # Cross-Site Scripting (XSS)
 <!-- Offensive-Security-OSCP-by-Offensive-Security_2020 page: 297 - 312 & some theory and memo from other pages-->
 
+* [Identifying XSS Vulnerabilities](#Identifying-XSS-Vulnerabilities)
+* [Basic XSS](#Basic-XSS)
+
 One of the important features of well-defended web application is a data sanitization ( the secure and permanent erasure of sensitive data from datasets and media to guarantee that no residual data can be recovered even through extensive forensic analysis). 
 
 Which a process in which user input is process, removing or transfoming all dangerous characters or stings. Unsanitized  data allows an attack to inject and potentially execute malicious code. When this unsanitized input is displayed on a web page, this creates a Cross-Site Scripting (XSS) vulnerability.
@@ -120,4 +123,12 @@ There is couple example how it works for BadStore, just input and create a paylo
 ![Alt text](webApp-attackTeory1/webapp_xss6.png)
 
 ![Alt text](webApp-attackTeory1/webapp_xss7.png)
+
+<hr>
+
+Another example basic xss attack is open browser the "inspect" tool, which can see for example input the characters for forms. Since the input is not filtered or sanitized, and our special characters have passed through into the output, the conditions look right for an XSS vulnerability.
+
+
+
+
 
