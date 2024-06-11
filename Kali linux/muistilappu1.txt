@@ -41,6 +41,9 @@ esimerkki linkkei josta voi suorittaa ja tarkistaa niiden haavoittuvuudet ja mui
 http://www.vulnweb.com/
 https://hackthissite.org/
 
+nmap scanme.nmap.org/
+
+
 pientä sivustojen linkkiä, mitä voisi esim suorittaa pien penetraatio testauksia
 www.megacorpone.com
 
