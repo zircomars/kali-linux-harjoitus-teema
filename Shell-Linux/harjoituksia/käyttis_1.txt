@@ -26,3 +26,17 @@ New password:
 Retype new password:
 passwd: all authentication tokens updated successfully
 wadams@Wrkl:~$
+
+
+
+#############################
+# käyttäjän poistaminen
+
+$userdel <username>
+
+#toista tämä ekana jos ei musita kaikkien käyttäjien tunnarien nimeitä (username) ja sitten poistettun jälkeen niin toista uudestaan, koska niin sieltä listasta sitten näkee onko käyttäjä poistettu vai ei. Varmistathan olet mennyt root:iin eli user admin oikeuteen
+$cat /etc/passwd
+
+
+
+
