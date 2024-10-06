@@ -18,3 +18,11 @@ tämä päivitystä uudelle käyttäjälle
 $passwd -e username
 
 
+
+# jos henkilö ei muista oma salasanaa niin on hyvä päivittää ja huomiona tässä toistettiin root:in salasana joka on 1worm4b8 ja tälle schawla:lle laitettiin uusi salasanaksi G20oly04 
+wadams@Wrkl:~$ su -c "passwd schwala"
+Password:
+New password:
+Retype new password:
+passwd: all authentication tokens updated successfully
+wadams@Wrkl:~$
