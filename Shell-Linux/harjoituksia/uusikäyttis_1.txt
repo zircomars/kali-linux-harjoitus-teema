@@ -1,0 +1,11 @@
+root@tryit:/home/ubuntu# useradd -c "Paul Dave" pdave
+
+tässä luodaan uusi salasana käyttikselle, ja perus toistettaan se
+root@tryit:/home/ubuntu# passwd pdave
+New password: 
+Retype new password: 
+passwd: password updated successfully
+ubuntu:x:1000:1000::/home/ubuntu:/bin/bash
+dnsmasq:x:106:65534:dnsmasq,,,:/var/lib/misc:/usr/sbin/nologin
+incus:x:999:999:Incus user:/var/lib/incus:/usr/bin/nologin
+pdave:x:1001:1001:Paul Dave:/home/pdave:/bin/sh
