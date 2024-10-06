@@ -39,4 +39,47 @@ $cat /etc/passwd
 
 
 
+#############################
+# kolme ensimmäistä lukittaan käyttäjää
+root@Wrk1:~# usermod -L vedwards
+root@Wrk1:~# usermod -L cflynn
+root@Wrk1:~# usermod -L bkahn
+
+
+# viimeiset kolmesta avataan käyttäjät, mikäli jos on blokattu (disabled)
+
+root@Wrk1:~# usermod -U mbrown
+root@Wrk1:~# usermod -U bcassini
+root@Wrk1:~# usermod -U aespinoza
+
+# viimeisenä tarkistellaan /etc/shadow varmistuksen tehdyt muutokset
+root@Wrk1:~# cat /etc/shadow
+root@Wrk1:~# rpc: !!: 14715:0:99999:7::
+root@Wrk1:~# nscd: !!: 14715:0:99999:7::
+root@Wrk1:~# rpcuser: !!: 14715:0:99999:7::
+root@Wrk1:~# nfsnobody: !!: 14715:0:99999:7::
+root@Wrk1:~# tcpdump: !!: 14715:0:99999:7::
+root@Wrk1:~# torrent: !!: 14715:0:99999:7::
+root@Wrk1:~# avahi: !!: 14715:0:99999:7::
+root@Wrk1:~# saslauth: !!: 14715:0:99999:7::
+root@Wrk1:~# mailnull: !!: 14715:0:99999:7::
+root@Wrk1:~# smmsp: !!: 14715:0:99999:7::
+root@Wrk1:~# mysql: !!: 14715:0:99999:7::
+root@Wrk1:~# haldaemon: !!: 14715:0:99999:7::
+root@Wrk1:~# sshd: !!: 14715:0:99999:7::
+root@Wrk1:~# wadams: $FfVAvX4rpXJCsLbjXzWlew==:19947:32572340278:0:99999:7::
+root@Wrk1:~# rcronn: $FfVAvX4rpXJCsLbjXzWlew==:19947:325724583334:0:99999:7::
+root@Wrk1:~# vedwards: !!$FfVAvX4rpXJCsLbjXzW1ew==:20002:80565791667:0:99999:7::
+root@Wrk1:~# cflynn: !!$FfVAvX4rpXJCsLbjXzWlew==:20002:805725775463:0:99999:7::
+root@Wrk1:~# mbrown: $FfVAvX4rpXJCsLbjXzW1ew==:20002:80587828704:0:99999:7::
+root@Wrk1:~# placy: $FfVAvX4rpXJCsLbjXzWlew==:19947:325728263888:0:99999:7::
+root@Wrk1:~# bcassini: $FfVAvX4rpXJCsLbjXzW1ew==:20002:805950370373:0:99999:7::
+root@Wrk1:~# aespinoza: $FfVAvX4rpXJCsLbjXzWlew==:20002:806010787037:0:99999:7::
+root@Wrk1:~# bkahn: !!$FfVAvX4rpXJCsLbjXzW1ew==:20002:805810300928:0:99999:7::
+root@Wrk1:~# schawla: $FfVAvX4rpXJCsLbjxzWlew==:19947:32573162037:0:99999:7::
+root@Wrk1:~#
+
+
+
+
 
