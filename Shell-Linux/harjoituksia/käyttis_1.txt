@@ -9,3 +9,12 @@ ubuntu:x:1000:1000::/home/ubuntu:/bin/bash
 dnsmasq:x:106:65534:dnsmasq,,,:/var/lib/misc:/usr/sbin/nologin
 incus:x:999:999:Incus user:/var/lib/incus:/usr/bin/nologin
 pdave:x:1001:1001:Paul Dave:/home/pdave:/bin/sh
+
+
+###############################################
+salasanan vaihto , eli päivitystä
+
+tämä päivitystä uudelle käyttäjälle
+$passwd -e username
+
+
