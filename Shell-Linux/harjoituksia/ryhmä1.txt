@@ -1,0 +1,13 @@
+#ekana ryhmän uudelleen nimeäminen ja tässä -n jälkeen <uusiNimi> <vanhanimi)
+root@wrk1:~# groupmod -n western_sales_division sales 
+
+# luodaan uusi ryhmä
+root@wrk1:~# groupadd eastern_sales_division
+root@wrk1:~#
+
+#poistettaan henkilö ryhmästä (ekana -G <ryhmänNimi> <henkilö>
+root@wrk1:~# usermod -G western_sales_division aespinoza
+root@wrk1:~# cat /etc/group
+
+# lisätään ryhmään tämä käyttäjä
+root@wrk1:~# usermod -G eastern_sales_division aespinoza
