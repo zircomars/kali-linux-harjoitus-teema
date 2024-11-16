@@ -113,6 +113,14 @@ muita grep komentoja ja esimerkkejä:
 1*cowcode1*cowco
 ```
 
+mutta tässä parissa esimerkissä on sitten eri, koska se etsii kaikkia listasta, että täsmentyy näiden merkkijonojsen mukaan eli tulostuu yli satoja riviä.
 
+```
+┌──(kali㉿kali)-[/usr/share/wordlists]
+└─$ grep -F "***" rockyou.txt
+                                                                      
+┌──(kali㉿kali)-[/usr/share/wordlists]
+└─$ grep -F "code" rockyou.txt 
+```
 
 
