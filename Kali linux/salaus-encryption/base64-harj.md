@@ -7,6 +7,8 @@ Base64 ei ole salausmenetelmä vaan koodausmenetelmä, mikä tarkoituksena on mu
 
 Base64 toimii siis enemmänkin koodauksena kuin salauksena, eikä se tarjoa mitään suojaa tiedon sisällölle. Jos halutaan suojata dataa salaamalla se, tarvitaan oikeita salausalgoritmeja, kuten AES, RSA tai muita vastaavia salausmenetelmiä.
 
+Base64 toimii Linux komennolla (Bash terminaalissa)
+
 
 Esim1. binäärinen "kissa" sana, muuntaisi Base64 muotoon, ensimmäisessä tapahtuu <b>encode</b> ja muutetun takaisin on <b>decode</b>
 ```
@@ -42,6 +44,16 @@ tämä on hauskaa!
 ```
 
 <hr>
+
+Esim. <b>Powershell terminaalissa </b> , sekä ensimmäinen tapahtuu <b>enkoodaus</b> ja toisena <b>dekoodaus</b>
+
+```
+PS C:\> [Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes("merkkijono"))
+bWVya2tpam9ubw==
+PS C:\>
+PS C:\> [System.Text.Encoding]::UTF8.GetString([Convert]::FromBase64String("SGVsbG8gV29ybGQ="))
+Hello World
+```
 
 ## enkoodaus ja dekoodaus
 
