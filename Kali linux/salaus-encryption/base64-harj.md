@@ -7,7 +7,7 @@ Base64 ei ole salausmenetelmä vaan koodausmenetelmä, mikä tarkoituksena on mu
 
 Base64 toimii siis enemmänkin koodauksena kuin salauksena, eikä se tarjoa mitään suojaa tiedon sisällölle. Jos halutaan suojata dataa salaamalla se, tarvitaan oikeita salausalgoritmeja, kuten AES, RSA tai muita vastaavia salausmenetelmiä.
 
-Base64 toimii Linux komennolla (Bash terminaalissa)
+Base64 toimii Linux komennolla (Bash terminaalissa) ja vastaavasti voi toki hyvinkin rakentaa jos on koodauksessa hyvä niin koodaa Python kielellä.
 
 
 Esim1. binäärinen "kissa" sana, muuntaisi Base64 muotoon, ensimmäisessä tapahtuu <b>encode</b> ja muutetun takaisin on <b>decode</b>
