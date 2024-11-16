@@ -7,7 +7,8 @@ AES-salauksen perusperiaate on, että se käyttää samaa avainta tiedon salaami
 - [AES piirteet](#AES-piirteet)
 - [toiminnassa](#toiminnassa)
 - [AES terminaali ja OpenSSL työkalun käyttö](#AES-terminaali-ja-OpenSSL-työkalun-käyttö)  
-- [AES-salausta tiedostoa](#AES-salausta-tiedostoa)  
+- [AES-salausta tiedostoa](#AES-salausta-tiedostoa)
+- [Kali linux harj](#Kali-linux-harj)
 - [lähteitä](#lähteitä)  
 [Headers](#headers)  
 
@@ -130,7 +131,7 @@ Purkaminen keyfilellä; <br>
 <hr>
 
 
-## Kali linux harj
+# Kali linux harj
 
 - 1. Otettaan esim, satunainen tiedosto (txt) jossa on muutama riviä hepreaa ja salattua tietoa:
 
