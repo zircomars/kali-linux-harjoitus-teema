@@ -8,6 +8,8 @@ AES-salauksen perusperiaate on, että se käyttää samaa avainta tiedon salaami
 - [toiminnassa](#toiminnassa)
 - [AES terminaali ja OpenSSL työkalun käyttö](#AES-terminaali-ja-OpenSSL-työkalun-käyttö)  
 - [AES-salausta tiedostoa](#AES-salausta-tiedostoa)  
+- [lähteitä](#lähteitä)  
+[Headers](#headers)  
 
 ## AES piirteet
 
@@ -109,3 +111,14 @@ AES-salausta voidaan käyttää tiedostojen salaamiseen, ja se toimii erinomaise
 
 
 AES-salausta tiedostoille esimerkiksi openssl-työkalulla, joka on saatavilla useimmissa Linux-järjestelmissä ja myös Windowsilla. Alla näet, kuinka tiedosto voidaan salata ja purkaa käyttämällä AES:ää tiedostojen kanssa.
+
+<hr>
+
+## lähteitä
+
+https://docs.anchormydata.com/docs/what-is-aes-256-cbc
+
+
+
+
+
