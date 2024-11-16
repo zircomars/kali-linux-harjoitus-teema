@@ -128,7 +128,9 @@ moi
 
 ```
 
+# luettavaa ja muita lisätietoa:
 
+https://www.secmeter.com/salakirjoitusmenetelmat.html
 
 
 
