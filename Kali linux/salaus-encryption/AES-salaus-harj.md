@@ -4,6 +4,8 @@ AES (Advanced Encryption Standard) on <b> symmetrinen salausalgoritmi</b>, joka 
 
 AES-salauksen perusperiaate on, että se käyttää samaa avainta tiedon salaamiseen ja purkamiseen. Tämä tekee siitä "symmetrisen" salauksen, koska salaustapahtuma ja purkamisprosessi ovat identtiset, mutta avaimet pysyvät samoina molemmissa vaiheissa.
 
+[AES piirteet](#AES-piirteet)
+
 ## AES piirteet
 
 Salauksen avaimen pituus jakautuu kolmeen eri pituutta:
@@ -85,6 +87,18 @@ Tämä käyttää AES-256-CBC-tilaa ja salaa tekstin base64-muotoon.
 Using -iter or -pbkdf2 would be better.
 Hello World
 ```
+
+<hr>
+
+Tosiaan `openssl` ei ole ainoa työkalu , jonka avulla voit käyttää AES-salausta. On olemassa monia muita työkaluja ja kirjastoja, kuten:
+
+- GPG (GNU Privacy Guard) salaukseen ja allekirjoituksiin.
+- Cryptography Python-kirjasto salaukseen.
+- NaCl (Networking and Cryptography Library) tai libsodium.
+
+Kuitenkin `openssl` on yleisesti käytetty työkalu monenlaisiin kryptografisiin tehtäviin, koska se on erittäin joustava ja se tukee monia eri algoritmeja. Kuitenkin se on kätevä ja laajasti käytetty työkalu, on myös muitakin vaihtoehtoja riippuen, mitä ja millaisia ympäristöä ja/tai ohjelmintikieltä käyttää.
+
+<hr>
 
 ## AES-salausta tiedostoa
 
