@@ -4,7 +4,10 @@ AES (Advanced Encryption Standard) on <b> symmetrinen salausalgoritmi</b>, joka 
 
 AES-salauksen perusperiaate on, että se käyttää samaa avainta tiedon salaamiseen ja purkamiseen. Tämä tekee siitä "symmetrisen" salauksen, koska salaustapahtuma ja purkamisprosessi ovat identtiset, mutta avaimet pysyvät samoina molemmissa vaiheissa.
 
-[AES piirteet](#AES-piirteet)
+- [AES piirteet](#AES-piirteet)
+- [toiminnassa](#toiminnassa)
+- [AES terminaali ja OpenSSL työkalun käyttö](#AES-terminaali-ja-OpenSSL-työkalun-käyttö)  
+- [AES-salausta tiedostoa](#AES-salausta-tiedostoa)  
 
 ## AES piirteet
 
