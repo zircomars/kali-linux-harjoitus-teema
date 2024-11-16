@@ -129,6 +129,114 @@ Purkaminen keyfilellä; <br>
 
 <hr>
 
+
+## Kali linux harj
+
+- 1. Otettaan esim, satunainen tiedosto (txt) jossa on muutama riviä hepreaa ja salattua tietoa:
+
+```
+┌──(kali㉿kali)-[~/Desktop]
+└─$ touch file1.txt
+                                                                                                                    
+┌──(kali㉿kali)-[~/Desktop]
+└─$ sudo nano file1.txt
+[sudo] password for kali: 
+                                                                                                                    
+┌──(kali㉿kali)-[~/Desktop]
+└─$ cat file1.txt 
+moi 
+salainen numero on:
+123456
+
+tämän sijainti on
+XYZ
+
+```
+
+- 2. Sitten seuraavaksi salataan tämä tiedosto ja tuossa annettaan salasana, niin laitoin esim. "testi" :
+
+```
+┌──(kali㉿kali)-[~/Desktop]
+└─$ openssl enc -aes-256-cbc -in file1.txt -out file1.txt.enc   
+enter AES-256-CBC encryption password:
+Verifying - enter AES-256-CBC encryption password:
+*** WARNING : deprecated key derivation used.
+Using -iter or -pbkdf2 would be better.
+                                                                                                                    
+┌──(kali㉿kali)-[~/Desktop]
+└─$ ls
+file1.txt  file1.txt.enc
+                                                                                                                    
+┌──(kali㉿kali)-[~/Desktop]
+└─$ ls -all
+total 16
+drwxr-xr-x  2 kali kali 4096 Nov 16 20:50 .
+drwx------ 19 kali kali 4096 Nov 16 15:06 ..
+-rw-rw-r--  1 kali kali   57 Nov 16 20:44 file1.txt
+-rw-rw-r--  1 kali kali   80 Nov 16 20:50 file1.txt.enc
+```
+
+vastaavasti jos haluan lukea tätä salattua tiedostoa "file1.txt.enc" niin se tulostaa tällaisia mysteerisiä tekstiä:
+
+```
+┌──(kali㉿kali)-[~/Desktop]
+└─$ cat file1.txt.enc 
+Salted__˘�;�q���Ў�ծ����E?^��Z�▒���!�[�ȺT����
+˔�/Bt�`�9'"�N���$Y�X�����                                                                    ```                    
+```
+
+2.1. muita sivullisia kokeillaan vaikappa kopsata tätä samaa (file1.txt.enc) toiseen kansion polun alle, ja ikään kuin kopsattu sama tiedosto menisi muualle kansio polkuun ja vastaavasti se salausavain niin pysyykö se samana. Vastaavasti tämä on sama identinen tiedosto, sekä jos esim. toi ykkönen jos yhtäkkiä poistettaan ja käytettäisin tätä samaa "file2.txt.enc" niin kopsautuu useampaan samaan ja toimii jatkuvana backup prosessina. Vastaavasti ei voi lukea kopsattua salattua tiedostoa kunnes sitä puretaan ja komennot `$cat` ja `sudo nano` - nämä ei toimi.
+
+```
+┌──(kali㉿kali)-[~/Desktop]
+└─$ cp -R /home/kali/Desktop/file1.txt.enc /home/kali/Documents/kansio/file2.txt.enc
+
+┌──(kali㉿kali)-[~/Documents/kansio]
+└─$ ls
+file2.txt.enc
+                                                                                                                    
+┌──(kali㉿kali)-[~/Documents/kansio]
+└─$ ll
+total 4
+-rw-rw-r-- 1 kali kali 80 Nov 16 21:05 file2.txt.enc
+```
+
+- 2.2. nyt kokeillan vaikappa purkaa "file2.txt.enc" ja saadaanko samaa kuin mitä luotiin alunperin, ja vastaavasti tietenkin toistettan se sama koodi encryptattu salasana eli "testi" ja purettu tiedosto tulostuu uutena eli (tiedosto.purku.txt)
+
+```
+┌──(kali㉿kali)-[~/Documents/kansio]
+└─$ openssl enc -d -aes-256-cbc -in file2.txt.enc -out tiedosto.purku.txt 
+enter AES-256-CBC decryption password:
+*** WARNING : deprecated key derivation used.
+Using -iter or -pbkdf2 would be better.
+                                                                                                                    
+┌──(kali㉿kali)-[~/Documents/kansio]
+└─$ ls
+file2.txt.enc  tiedosto.purku.txt
+                                                                                                                    
+┌──(kali㉿kali)-[~/Documents/kansio]
+└─$ ll
+total 8
+-rw-rw-r-- 1 kali kali 80 Nov 16 21:05 file2.txt.enc
+-rw-rw-r-- 1 kali kali 57 Nov 16 21:19 tiedosto.purku.txt
+
+┌──(kali㉿kali)-[~/Documents/kansio]
+└─$ cat tiedosto.purku.txt 
+moi 
+salainen numero on:
+123456
+
+tämän sijainti on
+XYZ
+
+```
+
+## muita kysymyksiä?
+
+mistä tietää jos purettaan onko se (AES-256-CBC) vai muu (AES-128-CBC & ...)
+
+
+<hr>
 ## lähteitä
 
 https://docs.anchormydata.com/docs/what-is-aes-256-cbc
