@@ -112,6 +112,21 @@ AES-salausta voidaan käyttää tiedostojen salaamiseen, ja se toimii erinomaise
 
 AES-salausta tiedostoille esimerkiksi openssl-työkalulla, joka on saatavilla useimmissa Linux-järjestelmissä ja myös Windowsilla. Alla näet, kuinka tiedosto voidaan salata ja purkaa käyttämällä AES:ää tiedostojen kanssa.
 
+Jos ei halua käyttää salasanaa komentorivillä, voit valita myös keyfile (avain-tiedosto) -ratkaisun, jolloin ei tarvitse kirjoittaa salasanaa suoraan komentoriville. Se lisää turvallisuutta, koska salasanan ei tarvitse näkyä komentorivillä. Eli ilman salasanaa vaikka salaisi tiedoston.
+
+<br>
+Tässä esimerkki, ja tässä tapahtuu salaus keyfile:lle: <br>
+
+`openssl enc -aes-256-cbc -salt -in sensitive.txt -out sensitive.enc -pass file:/path/to/keyfile`
+
+
+`-pass file:/path/to/keyfile`: Tässä käytetään tiedostoa, joka sisältää salausavaimen, eikä salasanaa kirjoiteta suoraan komentoriville.
+
+<br>
+Purkaminen keyfilellä; <br>
+
+`openssl enc -aes-256-cbc -d -in sensitive.enc -out sensitive_decrypted.txt -pass file:/path/to/keyfile`
+
 <hr>
 
 ## lähteitä
