@@ -4,8 +4,6 @@ AES (Advanced Encryption Standard) on <b> symmetrinen salausalgoritmi</b>, joka 
 
 AES-salauksen perusperiaate on, että se käyttää samaa avainta tiedon salaamiseen ja purkamiseen. Tämä tekee siitä "symmetrisen" salauksen, koska salaustapahtuma ja purkamisprosessi ovat identtiset, mutta avaimet pysyvät samoina molemmissa vaiheissa.
 
-<hr>
-
 ## AES piirteet
 
 Salauksen avaimen pituus jakautuu kolmeen eri pituutta:
@@ -39,9 +37,32 @@ Käyttökohteet: AES on standardi salausalgoritmi, jota käytetään mm. VPN:ä,
 
 - Purkaminen: Salausavaimen avulla salattu tieto voidaan purkaa takaisin alkuperäiseen muotoonsa.
 
+Tätä ei ole rajoitettu missään eli voi tukea hyvinkin Linux terminaalissa, että muissa ymprästissö mukaan lkien Windows, MacOS, palvelimella ja jopa ohjelmointikielessä kuten Python. Tätä AES salausalgoritmiä käytetään laajasti tiedon salaamiseen ja suojaamiseen eri sovelluksissa ja järjestelmissä.
 
+Salausavaimen käsittelyä;
+AES-salauksen käyttö vaatii salausavaimen (tai salausavaimen ja alustusvektorin). Komentoriviltä voi määrittää salausavaimen manuaalisesti, mutta on tärkeää, että avaimet käsitellään turvallisesti. OpenSSL voi luoda salausavaimen automaattisesti, mutta yleensä se voidaan antaa myös suoraan komentoriviltä `-k` -parametrilla, jos ei haluta käyttää salasanan syöttöä.
+
+## AES terminaali ja OpenSSL työkalun käyttö
+
+OpenSSL on työkalu, joka on hyvin yleinen salaustekniikoiden toteutuksessa Linux-ympäristössä. Sen avulla voidaan käyttää AES-salausta ja muita salausalgoritmeja.
+
+Vaikka AES-salaus voidaan toteuttaa eri ohjelmointikielissä ja kirjastoissa, kuten Pythonissa, C:ssä tai Java, , `openssl` on kätevä komentorivityökalu, joka mahdollistaa salauksen ja purkamisen ilman erillistä ohjelmointia. Se on laajasti käytetty Linux-terminaalissa.
+
+
+- Esim. malli AES salaksen luominen tiedostolle ja käyttäen komentoa; <br>
+`openssl enc -aes-256-cbc -in tiedosto.txt -out tiedosto.txt.enc`
+
+Tässä `enc` viittaa salausta, `-aes-256-cbc` tarkoittaa käyttäen AES-256 salausavainta CBC (Cipher Block Chaining) -moodilla, `-in tiedosto.txt` määritettään mille tiedostolle joka salataan ja `-out tiedosto.txt.enc` määrittää salatun uuden tiedoston nimen
+
+
+- Vastaavasti tätä purkausta tiedostoa jos halutaan purkaa (aiemman tiedoston), niin tapahtuu komennolla; <br> 
+`openssl enc -d -aes-256-cbc -in tiedosto.txt.enc -out tiedosto.purku.txt` 
+
+tässä sama idea kuin salauksen luominen vain siinä on `-d` mikä tarkoittaa purkamista (decrypt).
+
+<br><br>
 AES-salauksen toteutus openssl-komennolla:
-Salauksen tekeminen (salataan tiedosto):
+- Salauksen tekeminen (salataan tiedosto):
 
 ```
 ┌──(kali㉿kali)-[~/Desktop]
@@ -55,7 +76,8 @@ U2FsdGVkX18J5GA0j8d6BE76Wlvk7htXTKwCqY06VVs=
 Tämä käyttää AES-256-CBC-tilaa ja salaa tekstin base64-muotoon.
 -pass pass:salasanasi määrittelee salasanan, jota käytetään avaimena salauksessa
 
-Salauksen purku
+
+- Salauksen purku
 ```
 ┌──(kali㉿kali)-[~/Desktop]
 └─$ echo "U2FsdGVkX18J5GA0j8d6BE76Wlvk7htXTKwCqY06VVs=" | openssl enc -aes-256-cbc -base64 -d -pass pass:salasana
@@ -63,8 +85,6 @@ Salauksen purku
 Using -iter or -pbkdf2 would be better.
 Hello World
 ```
-
-<hr>
 
 ## AES-salausta tiedostoa
 
