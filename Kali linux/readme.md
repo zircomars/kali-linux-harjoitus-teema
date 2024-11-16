@@ -26,7 +26,7 @@ Vaihtoehtona pyörittää virtualibox, että sekin toimii ilmaisena. Myös huomi
 Ladattavina kali linux; https://www.kali.org/get-kali/#kali-platforms <br>
 Kali linux sisäiset työkalut; https://www.kali.org/tools/ <br><br>
 
-ensimmäisenä kantsii muuttaa linux:sen näppäimistö asetukset eli riittää avaa komentorivin ja syöttää;; <br> 
+ensimmäisenä kantsii muuttaa linux:sen näppäimistö asetukset eli riittää avaa komentorivin ja syöttää / toinen vaihtoehtona on käyttöliittymästä asettaa sen ettei tarvi joka kerta vaihtaa (keinoa löytyy);; <br> 
 ```
 ┌──(kali㉿kali)-[~] <br> 
 └─$ setxkbmap fi <br>  
