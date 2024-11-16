@@ -3,7 +3,7 @@ Base64 on encoding-menetelmä, joka muuntaa binääridataksi just kuvat, tiedost
 
 ## base64 koodaus
 
-Base64 ei ole salausmenetelmä vaan koodausmenetelmä, mikä tarokituksena on muuntaa binääridataksi tekstimuotoon just mm. tiedostoja ja tai merkkijonoa. Jonka kautta voi turvallisesti siirtää tekstipohjoisessa ympäristössä vaikkapa .txt , sähköpostissa tai URL-osoitteissa. Vaikka se muuttaisikin ja esittää binääridataa vai nmerkkeinä, mutta se ei suojaa dataa- se ei ole salusta, koska sen voi helposti purkaa takaisin lakuperäiseen muotoonsa.
+Base64 ei ole salausmenetelmä vaan koodausmenetelmä, mikä tarkoituksena on muuntaa binääridataksi tekstimuotoon just mm. tiedostoja ja tai merkkijonoa. Jonka kautta voi turvallisesti siirtää tekstipohjoisessa ympäristössä vaikkapa .txt , sähköpostissa tai URL-osoitteissa. Vaikka se muuttaisikin ja esittää binääridata tai merkeinä, mutta se ei suojaa dataa- se ei ole salusta, koska sen voi helposti purkaa takaisin lakuperäiseen muotoonsa.
 
 Base64 toimii siis enemmänkin koodauksena kuin salauksena, eikä se tarjoa mitään suojaa tiedon sisällölle. Jos halutaan suojata dataa salaamalla se, tarvitaan oikeita salausalgoritmeja, kuten AES, RSA tai muita vastaavia salausmenetelmiä.
 
