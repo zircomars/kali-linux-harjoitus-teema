@@ -9,7 +9,7 @@ AES-salauksen perusperiaate on, että se käyttää samaa avainta tiedon salaami
 - [AES terminaali ja OpenSSL työkalun käyttö](#AES-terminaali-ja-OpenSSL-työkalun-käyttö)  
 - [AES-salausta tiedostoa](#AES-salausta-tiedostoa)
 - [Kali linux harj](#Kali-linux-harj)
-- [muita kysymyksiä?](#muita-kysymyksiä?)
+- [muita kysymyksiä](#muita-kysymyksiä)
 - [lähteitä](#lähteitä) 
 
 ## AES piirteet
@@ -237,7 +237,7 @@ Periaatteessa toimii, jos ensimmäisestä tiedostosta salataisiin ja luodaan sii
 
 Jos tiedosto menee rikki kopioinnin aikana (esimerkiksi jos tiedosto vahingoittuu siirron aikana tai tiedostojärjestelmässä tapahtuu virhe), silloin tiedoston salauksen purkaminen epäonnistuu. Tässä tapauksessa tiedoston eheys on mennyt rikki.
 
-## muita kysymyksiä?
+## muita kysymyksiä
 
 :question: mistä tietää jos purettaan onko se (AES-256-CBC) vai muu (AES-128-CBC & ...) <br>
 
