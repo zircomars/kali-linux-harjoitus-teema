@@ -1,11 +1,11 @@
 # lisää harjoituksia (kali linux)
 Tänne tulee pari-muutamia kivoja harjoituksia kali linux:seen, että tänne ja vastaavasti pientä kysymyksiä
 
-[pieni lunttilappu](#pieni-lunttilappu)
-[harj ](#harj 1)
-[harj 2](#harj 2)
-[header](#header)
-[header](#header)
+- [pieni lunttilappu](#pieni-lunttilappu)
+- [harj ](#harj-1)
+- [harj 2](#harj-2)
+- [header](#header)
+- [header](#header)
 
 ## pieni lunttilappu
 
