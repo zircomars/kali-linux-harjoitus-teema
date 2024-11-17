@@ -186,7 +186,7 @@ Salted__˘�;�q���Ў�ծ����E?^��Z�▒���!�[��
 ˔�/Bt�`�9'"�N���$Y�X�����                                                                    ```                    
 ```
 
-2.1. muita sivullisia kokeillaan vaikappa kopsata tätä samaa (file1.txt.enc) toiseen kansion polun alle, ja ikään kuin kopsattu sama tiedosto menisi muualle kansio polkuun ja vastaavasti se salausavain niin pysyykö se samana. Vastaavasti tämä on sama identinen tiedosto, sekä jos esim. toi ykkönen jos yhtäkkiä poistettaan ja käytettäisin tätä samaa "file2.txt.enc" niin kopsautuu useampaan samaan ja toimii jatkuvana backup prosessina. Vastaavasti ei voi lukea kopsattua salattua tiedostoa kunnes sitä puretaan ja komennot `$cat` ja `sudo nano` - nämä ei toimi.
+- 2.1. muita sivullisia kokeillaan vaikappa kopsata tätä samaa (file1.txt.enc) toiseen kansion polun alle, ja ikään kuin kopsattu sama tiedosto menisi muualle kansio polkuun ja vastaavasti se salausavain niin pysyykö se samana. Vastaavasti tämä on sama identinen tiedosto, sekä jos esim. toi ykkönen jos yhtäkkiä poistettaan ja käytettäisin tätä samaa "file2.txt.enc" niin kopsautuu useampaan samaan versioon ja toimii jatkuvana backup prosessina. Vastaavasti ei voi lukea kopsattua salattua tiedostoa kunnes sitä puretaan ja komennot `$cat` ja `sudo nano` - nämä ei toimi, jos normaalisti linux komennolla toistetaan ja luetaan sitä tiedostoa.
 
 ```
 ┌──(kali㉿kali)-[~/Desktop]
@@ -202,7 +202,7 @@ total 4
 -rw-rw-r-- 1 kali kali 80 Nov 16 21:05 file2.txt.enc
 ```
 
-- 2.2. nyt kokeillan vaikappa purkaa "file2.txt.enc" ja saadaanko samaa kuin mitä luotiin alunperin, ja vastaavasti tietenkin toistettan se sama koodi encryptattu salasana eli "testi" ja purettu tiedosto tulostuu uutena eli (tiedosto.purku.txt)
+- 2.2. nyt kokeillan vaikappa <b>purkaa</b> "file2.txt.enc" ja saadaanko samaa kuin mitä luotiin alunperin, ja vastaavasti tietenkin toistettan se sama koodi encryptattu salasana eli "testi" ja purettu tiedosto tulostuu uutena eli (tiedosto.purku.txt)
 
 ```
 ┌──(kali㉿kali)-[~/Documents/kansio]
@@ -231,6 +231,10 @@ tämän sijainti on
 XYZ
 
 ```
+
+3. pieni yhteenveto; 
+Periaatteessa toimii, jos ensimmäisestä tiedostosta salataisiin ja luodaan siitä joko pari tai useampi kopio, mutta ongelmana tätä salattua tiedosto pitää asettaa avain, jonka jälkeen kopsatuista tiedoista kulkee se sama salattu avain seuraaville tiedostoille. Jos halutaan purkaa seuraavat kopsatut tiedostot niin sitten pitää purkkaa, kunnes voidaan lukea ja katsoa mitä sen tiedoston takana onkaan.
+
 
 ## muita kysymyksiä?
 
