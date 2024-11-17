@@ -128,6 +128,33 @@ moi
 
 ```
 
+# muita salausmenetelmiä 
+Tässä listattuna, mitkä suurin osat eivät ole salausmenetelmiä, vaikka kuulostaisikin:
+
+- ASCII (koodausstandardi) – Ei salaus. ASCII on merkistökoodausstandardi, jonka avulla tietokoneet voivat esittää tekstimuotoisia merkkejä. Se ei liity suoraan salaamiseen, vaan ainoastaan merkkien esittämiseen binäärimuodossa.
+
+- Base64 (koodausmenetelmä) – Ei salaus. Base64 on koodausmenetelmä, jonka tarkoituksena on muuntaa binääridataa tekstimuotoon (esim. lähettäminen sähköpostissa). Se ei ole salaus, koska tiedot ovat helposti palautettavissa alkuperäiseen muotoonsa ilman avainta.
+
+- ROT13 (merkkien siirto) – Ei salaus. ROT13 on yksinkertainen kaanonsiirtomenetelmä, jossa kukin kirjain siirretään 13 paikkaa eteenpäin. Tämä on enemmänkin "peukaloitu" salaustyyppi, mutta ei ole oikea salaus, koska ROT13 on helposti palautettavissa alkuperäiseen muotoonsa ilman salauksen purkamisavainta.
+
+- MD5 ja SHA (hajautusfunktiot) – Ei salaus. MD5 ja SHA (Secure Hash Algorithm) ovat hajautusfunktioita, ei varsinaisia salausmenetelmiä. Ne muuntavat syötteen kiinteän pituiseksi merkkijonoksi, mutta niitä ei voi purkaa alkuperäiseen muotoonsa. Hajautusfunktiot eivät ole käänteisiä kuten salausmenetelmät, eikä niitä käytetä tiedon suojaamiseen tai salaamiseen.
+
+- HMAC (viestien aitouden varmistus, ei salaus) – Ei salaus. HMAC (Hash-based Message Authentication Code) on mekanismi, jolla voidaan varmistaa viestin aitous ja eheyys. Se käyttää hajautusfunktioita ja salausavaimia, mutta HMAC ei ole itse salausmenetelmä vaan käytetään viestin aitouden tarkistamiseen.
+
+- XOR (looginen operaatio, ei salaus) – Ei salaus. XOR on looginen operaatio, jota voidaan käyttää yksinkertaisissa salausmenetelmissä (esim. yksinkertainen "XOR-salaus"), mutta se ei itsessään ole salaus. XOR on matemaattinen operaatio, jonka avulla voi yhdistää ja vertailla bittejä.
+
+- Pakkausmenetelmät (esim. ZIP, GZIP) – Ei salaus. ZIP ja GZIP ovat tiedostojen pakkausmenetelmiä, joiden avulla voidaan vähentää tiedostojen kokoa. Ne eivät ole salausmenetelmiä, mutta voivat sisältää salausmahdollisuuden (esim. ZIP-tiedostot voivat olla salattuja, mutta pakkaaminen itsessään ei ole salaus).
+
+- Vigenère ja Caesar-salaus (perinteisiä, heikkoja salausmenetelmiä) – Kyllä, salausmenetelmiä. Vigenère- ja Caesar-salaukset ovat perinteisiä salausmenetelmiä, mutta nykyisin ne ovat heikkoja ja helposti murrettavissa. Niitä voidaan pitää varhaisina salausmenetelminä, mutta ne eivät tarjoa turvallisuutta nykyaikaisessa kryptografiassa.
+
+- AES (Advanced Encryption Standard) on oikea salausmenetelmä ja yksi nykyisistä vakiintuneista ja turvallisista salausalgoritmeista. AES on symmetrinen salausmenetelmä, mikä tarkoittaa, että sama avain käytetään sekä tiedon salaamiseen että purkamiseen.
+
+Vaikka nämä voivat liittyä tietoturvaan ja voivat tukea salausta tai tietojen piilottamista, ne eivät varsinaisesti ole salauksia, koska ne eivät tarjoa riittävää suojaa tietojen lukemisen estämiseksi ilman oikeaa avainta.
+
+Oikeat salausmenetelmät (kuten AES, RSA, ECC, Blowfish jne.) tarjoavat vahvaa tietoturvaa ja ovat suunniteltu juuri estämään datan luvaton purkaminen ilman salausavainta.
+
+<hr>
+
 # luettavaa ja muita lisätietoa:
 
 https://www.secmeter.com/salakirjoitusmenetelmat.html
