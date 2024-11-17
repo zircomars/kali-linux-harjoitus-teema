@@ -240,18 +240,60 @@ Jos tiedosto menee rikki kopioinnin aikana (esimerkiksi jos tiedosto vahingoittu
 
 ## muita kysymyksiä?
 
-- mistä tietää jos purettaan onko se (AES-256-CBC) vai muu (AES-128-CBC & ...)
+:question: mistä tietää jos purettaan onko se (AES-256-CBC) vai muu (AES-128-CBC & ...) <br>
+
 Purkauksen salatun tiedoston, just salusalgoritmin se avaimen pituus eli millä se on rakennettu/salattu joko just (128, 192 ja 256 bittiä) on määritetty jo salausvaiheessa. Purkauksessa tiedoston sisältö palautetaan alkuperäiseksi, vain jos se <b>sama avainta ja algoritmia</b>, joka käytetiin salauksessa.
 
-Eli lyhyesti sanottuna: kuka loi sen salauksen tiedoston käyttäen avaimen pituutta ja purkamisessa mennään sama kuin luomisessa, että vastaavasti salatun koodi.
-
-Avaimen pituus (128, 192 tai 256 bittiä) ei ole suoraan luettavissa salatusta tiedostosta ilman lisätietoa, koska AES salaa tiedon riippumatta siitä, mikä avaimen pituus on.
+Eli lyhyesti sanottuna: kuka loi sen salauksen tiedoston käyttäen avaimen pituutta ja salasanan, sekä purkamisessa mennään sama kuin luomisessa, että sen avaimanpituus ja salasana.
 
 
-- mitä tapahtuu jos ei muista sisä salasanaa jos purkamisessa suorittaisiin se prosessi?
+Avaimen pituus (128, 192 tai 256 bittiä) ei ole suoraan luettavissa salatusta tiedostosta ilman lisätietoa, koska AES salaa tiedon riippumatta siitä, mikä avaimen pituus on. AES salaus itsensään ei tallenna tätä tietoa tiedostoon, vaan se on vain osa salausprosessia eli <b>salatun tiedoston</b> purkamiseksi on tiedettävä etukäteen, mitä avaimen pituutta käytettiin.
+
+Vastaavasti jos ei tiedä avaimen pituutta oisko se 128, 192 tai 256, niin yrittää kokeilla kaikkia vaihtoehtoja ja tarkistaa, mikä purku onnistuu. Turvallisuuden kannalta se salasana on tiedettävä kuitenkin etukäteen, kunnes se tiedosto purkautuu vaikka yritisi arvata ja tietää avaimen pituutta.
+
+perus normi, tarkistaa ja lukee tiedon vähä pientä yksityiskohtaisia tietoja vähä kuin ominaisuus: 
+```
+┌──(kali㉿kali)-[~/Documents/kansio]
+└─$ stat file2.txt.enc 
+  File: file2.txt.enc
+  Size: 80              Blocks: 8          IO Block: 4096   regular file
+Device: 8,1     Inode: 2754991     Links: 1
+Access: (0664/-rw-rw-r--)  Uid: ( 1000/    kali)   Gid: ( 1000/    kali)
+Access: 2024-11-16 21:16:31.028756856 +0200
+Modify: 2024-11-16 21:05:59.324882721 +0200
+Change: 2024-11-16 21:05:59.324882721 +0200
+ Birth: 2024-11-16 21:05:59.324882721 +0200
+
+
+┌──(kali㉿kali)-[~/Documents/kansio]
+└─$ file file2.txt.enc 
+file2.txt.enc: openssl enc'd data with salted password
+
+```
+
+Tässä alemmassa komennossa tiedosto on salattu käyttäen <b>OpenSSL</b> ja sisältyen viesti "openssl enc'd data with salted password", tarkoitaa tiedosto on salattu käyttämälä sitä salausmenetelmää ja on suolaus (salt) mukana salauksessa. Tämä tarkoittaa että salauksessa on suoritettu suolalla (salt) varusteella salasanalla. 
+
+Mitä nämä vaiheet tarkoittaa:
+
+- salt (suolaus) on menetelmä,  joka lisää satunnaisen datan (suolan) salaukseen ennen salauksen suorittamista. Tämä tekee samankin salasanan käytöstä erinäköisiä salauksia, koska suola on ainutlaatuinen joka kerta. Saltin käyttö estää esimerkiksi <b>sanakirjahyökkäyksiä ja precomputed-hyökkäyksiä</b> (kuten rainbow table -hyökkäykset).
+
+- kun näkee tiedoston salatuksi ja tiedoston tiedoissa on maininta "openssl enc'd data with salted password", tämä tarkoittaa, että tiedostossa on käytetty salasanalla luotua suolattua avainta. Tämä suola on mukana salauksessa ja se on tärkeää purkamisen kannalta.
+
+- Tiedostoon sisältyy suolaus ja avain. Purkamisen yhteydessä OpenSSL käyttää suolaa yhdessä salasanan kanssa luodakseen oikean salausavaimen. Tämä suola ei ole erikseen nähtävissä tiedostossa, mutta se on mukana tiedoston salauksen purkamista varten.
+
+<hr>
+
+:question: mitä tapahtuisi, jos käyttäisi väärää avaimen pituutta?
+Jos käyttää väärää avaimen pituutta tai väärää algoritmia, tiedoston purkaminen epäonnistuu. 
+
+Yleensä saa virheilmoituksen, kuten:
+
+- `bad decrypt` — tämä tarkoittaa, että purku epäonnistui, koska oikeaa avainta tai salaustekniikkaa ei löytynyt.
+- Jos käytät väärää salausmoodia tai avainta, tuloksena voi olla korruptoitunut tiedosto tai muodoton data.
 
 
 <hr>
+
 ## lähteitä
 
 https://docs.anchormydata.com/docs/what-is-aes-256-cbc
