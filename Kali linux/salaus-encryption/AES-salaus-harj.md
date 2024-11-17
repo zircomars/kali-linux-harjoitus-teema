@@ -10,8 +10,7 @@ AES-salauksen perusperiaate on, että se käyttää samaa avainta tiedon salaami
 - [AES-salausta tiedostoa](#AES-salausta-tiedostoa)
 - [Kali linux harj](#Kali-linux-harj)
 - [muita kysymyksiä?](#muita-kysymyksiä?)
-- [lähteitä](#lähteitä)  
-[Headers](#headers)  
+- [lähteitä](#lähteitä) 
 
 ## AES piirteet
 
