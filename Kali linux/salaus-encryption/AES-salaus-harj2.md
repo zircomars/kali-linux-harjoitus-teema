@@ -4,9 +4,11 @@ Tänne tulee pari-muutamia kivoja harjoituksia kali linux:seen, että tänne ja 
 - [pieni lunttilappu](#pieni-lunttilappu)
 - [harj 1 - ilman salasanaa](#harj-1-ilman-salasanaa)
 - [harj 2 muut bittit](#harj-2-muut-bittit)
+- [harj 3 hyökkäys](#harj-3-hyökkäys)
+- [harj 4 vertailuun CBC ja GC](#harj-4-vertailuun-CBC-ja-GC)
 - [header](#header)
 - [header](#header)
-
+- 
 ## pieni lunttilappu
 
 Salataan tiedosto: `$ openssl enc -aes-256-cbc -in file1.txt -out file1.txt.enc`
@@ -127,4 +129,46 @@ kokeillaan 128/192 bittiä
 
 <hr>
 
-## harj 3
+## harj 3 hyökkäys
+
+AES-salauksen hyökkäykset: Brute-force ja sanakirjahyökkäykset
+Tavoite: Ymmärtää, kuinka helposti salasanoja voidaan murtamalla AES-salauksessa ja harjoitella sitä.
+
+Harjoitus:
+Salasanojen murtaminen:
+
+Käytä brute-force- ja sanakirjahyökkäyksiä salasanan murtamiseen. Voit käyttää esimerkiksi Hashcat-työkalua yhdessä openssl-komentojen kanssa.
+Testaa erilaisia salasanoja:
+
+Luo eri pituisia ja vaikeusasteisia salasanoja ja testaa, kuinka nopeasti ne voidaan murtaa brute-force tai sanakirjahyökkäyksillä.
+Tavoitteet:
+
+Ymmärtää salasanan heikkoudet AES-salauksessa.
+Harjoitella hyökkäyksiä (brute-force, sanakirjahyökkäykset) ja ymmärtää, miksi vahvat salasanat ovat tärkeitä.
+
+<hr>
+
+## harj 4 vertailuun CBC ja GC
+AES-salauksen vertailu eri tiloilla (CBC vs GCM)
+
+
+
+<hr>
+
+## harj 5
+
+Tavoite: Ymmärtää AES
+eri toimintatilojen (moodien) vaikutus turvallisuuteen ja suorituskykyyn.
+
+Salaaminen CBC-tilassa (Cipher Block Chaining):
+`openssl enc -aes-256-cbc -salt -in file1.txt -out file1.txt.enc -pass pass:"salasana"` 
+
+
+Salaaminen GCM-tilassa (Galois/Counter Mode):
+`openssl enc -aes-256-gcm -salt -in file1.txt -out file1.txt.enc -pass pass:"salasana"` 
+
+Vertaa GCM-tilan ja CBC-tilan eroja suorituskyvyssä ja turvallisuudessa.
+eri tilojen (moodien) rooli ja niiden ero.
+Harjoitella AES-GCM ja AES-CBC-moodien käyttöä ja ymmärtää niiden käytön edut ja rajoitukset.
+
+
