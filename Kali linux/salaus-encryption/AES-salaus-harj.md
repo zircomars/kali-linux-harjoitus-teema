@@ -236,11 +236,19 @@ XYZ
 3. pieni yhteenveto; 
 Periaatteessa toimii, jos ensimmäisestä tiedostosta salataisiin ja luodaan siitä joko pari tai useampi kopio, mutta ongelmana tätä salattua tiedosto pitää asettaa avain, jonka jälkeen kopsatuista tiedoista kulkee se sama salattu avain seuraaville tiedostoille. Jos halutaan purkaa seuraavat kopsatut tiedostot niin sitten pitää purkkaa, kunnes voidaan lukea ja katsoa mitä sen tiedoston takana onkaan.
 
+Jos tiedosto menee rikki kopioinnin aikana (esimerkiksi jos tiedosto vahingoittuu siirron aikana tai tiedostojärjestelmässä tapahtuu virhe), silloin tiedoston salauksen purkaminen epäonnistuu. Tässä tapauksessa tiedoston eheys on mennyt rikki.
 
 ## muita kysymyksiä?
 
-mistä tietää jos purettaan onko se (AES-256-CBC) vai muu (AES-128-CBC & ...)
-mitä tapahtuu jos ei muista sisä salasanaa jos purkamisessa suorittaisiin se prosessi?
+- mistä tietää jos purettaan onko se (AES-256-CBC) vai muu (AES-128-CBC & ...)
+Purkauksen salatun tiedoston, just salusalgoritmin se avaimen pituus eli millä se on rakennettu/salattu joko just (128, 192 ja 256 bittiä) on määritetty jo salausvaiheessa. Purkauksessa tiedoston sisältö palautetaan alkuperäiseksi, vain jos se <b>sama avainta ja algoritmia</b>, joka käytetiin salauksessa.
+
+Eli lyhyesti sanottuna: kuka loi sen salauksen tiedoston käyttäen avaimen pituutta ja purkamisessa mennään sama kuin luomisessa, että vastaavasti salatun koodi.
+
+Avaimen pituus (128, 192 tai 256 bittiä) ei ole suoraan luettavissa salatusta tiedostosta ilman lisätietoa, koska AES salaa tiedon riippumatta siitä, mikä avaimen pituus on.
+
+
+- mitä tapahtuu jos ei muista sisä salasanaa jos purkamisessa suorittaisiin se prosessi?
 
 
 <hr>
