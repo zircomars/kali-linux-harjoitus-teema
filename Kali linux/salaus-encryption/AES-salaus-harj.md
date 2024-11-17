@@ -240,6 +240,7 @@ Periaatteessa toimii, jos ensimmäisestä tiedostosta salataisiin ja luodaan sii
 ## muita kysymyksiä?
 
 mistä tietää jos purettaan onko se (AES-256-CBC) vai muu (AES-128-CBC & ...)
+mitä tapahtuu jos ei muista sisä salasanaa jos purkamisessa suorittaisiin se prosessi?
 
 
 <hr>
