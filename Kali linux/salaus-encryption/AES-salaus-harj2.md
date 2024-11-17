@@ -18,7 +18,11 @@ Purettaan salaus: `$ openssl enc -d -aes-256-cbc -in file2.txt.enc -out tiedosto
 Salauksen avaimia jakautuu kolmeen avaimeen eli (AES 128/192/256), mitä pidempi avaimen pituus, niin sitä vahvempi ja turvallisempi salaus on
 
 ## harj 1 
-
+Ilman salasanaa
 
 
 ## harj 2
+kokeillaan 128/192 bittiä
+
+
+## harj 3
