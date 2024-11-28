@@ -212,6 +212,14 @@ MySQL [badstoredb]> select * from userdb;
 
 ```
 
+tässä pieni huomiona näiden salasant ovat valeita vaikka ovatkin pitkiä eli passwd sarakeen kentästä:
+| admin                | 5EBE2294ECD0E0F08EAB7690D2A6EE69 | black   | Master System Administrator | A    |
+| joe@supplier.com     | 62072d95acb588c7ee9d6fa0c6c85155 | green   | Joe Supplier                | S    |
+| big@spender.com      | 9726255eec083aa56dc0449a21b33190 | blue    | Big Spender                 | U    |
+
+virallisesti ne on tallennettu arvoltaan MD5-hasheja, eivät alkuperäisiä salasanoja. Jos tietokantaan loisi uuden käyttiksen, joka on hevonkuusi ja purkauksessa se ei ole MD5-hash salausalgoritmi, niin on muita salausmenetelmiä mm. SHA-1 tai sitä vahvempa algoritmia. 
+
+
 ## XSS
 
 Cross-site scripting (XSS), tarkoittaa tietoturva-aukko (haavoittuvuuden viittaava virhe, johon ulkopuolinen voi päästä tekee tiettyjä toimintoja joihin ei normaalisti ei pitäisi päästä tekemään), joka esiintyy usein web/www-sovelluksissa. Johon mahdollista koodin syöttämiseen ja avulla voi mahdollista tunkeutua sisään. 
