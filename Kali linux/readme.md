@@ -32,7 +32,54 @@ ensimmäisenä kantsii muuttaa linux:sen näppäimistö asetukset eli riittää 
 └─$ setxkbmap fi <br>  
 ```
 
+- Virtuaalikoneen pystyttäminen Kali Linuxille: <br>
+Virtuaalikoneen pystyttämisessä Kali Linuxille (tai muille käyttöjärjestelmille, kuten Windows 10/11 tai Windows Server) on suositeltavaa aloittaa tyhjästä virtuaalikoneen pohjasta. Virtuaalikoneelle on tärkeää määrittää riittävästi resursseja, sillä virtualisointi vie huomattavan määrän fyysistä muistia, erityisesti satunnaista päämuistia (RAM) ja tallennustilaa (HDD/SSD) erityisesti fyysisen koneen. Virtuaalikoneen suositeltava koko on noin 40–60 GB levytilaa, mikä riittää useimpiin käyttötarkoituksiin.
+
+- Virtuaalikoneessa suoritetut ohjelmat ja prosessit: <br>
+On hyvä ottaa huomioon, ettei virtuaalikoneessa kannata suorittaa kaikkia ohjelmia ja prosesseja yhden virtualisoinnin ympäristössä. Jos jokin ohjelma, työkalu, sovellus, asennusohjelma tai avoimen lähdekoodin projekti ei toimi oikein, voi olla tarpeen poistaa koko virtuaalikone ja aloittaa alusta. Tämä voi olla aikaa vievää, joten on suositeltavaa testata ohjelmat erikseen ennen monimutkaisempien kokoonpanojen käyttöönottoa. Toisena vaihtoehtona pystyttää toisen/kolmannen virtualisointi ympäristön erikseen, jossa erillisenä ohjelman alla suorittaa sitä prosessia ja avoimen lähdekoodin testausta.
+
+Kali linux ohjelman muistin tarkistmainen komennot `free -h` ja `df -h` 
+
+- `free -h` ; näyttää vain RAM muistin käytön
+- `df -h` ; näyttää kovalevyn tilan
+
+Esim. ensimmäisessä nähdään kokonaisuudsesaan 
+
+- Mem riviltä - fyysiesn muistin (RAM) muistin, eli tämän Kali Linux ohjelma johon annettu VMware workstation ohjelmana muistia fyysisen koneelta.
+ - total: Kokonaismuisti (tässä 1.9 GiB).
+ - used: Käytetty muisti (861 MiB).
+ - free: Vapaat muistivarat (747 MiB).
+ - buff/cache: Välimuisti ja buufferit, jotka voivat käytännössä vapautua tarpeen mukaan.
+ - available: Tämä on muistia, joka on käytettävissä ohjelmille ilman swapin käyttöä (1.1 GiB).
+
+<br> 
+
+- Swap riviltä - on virtuaalinen muisti, jota käytetään, kun RAM on täynnä. Tämä sijaitsee yleensä kiintolevyllä.
+ - total: Swap-tilan kokonaiskapasiteetti (1.0 GiB).
+ - used: Käytetty swap-tila (0 B tässä tapauksessa, eli swap-tilaa ei ole tarvittu).
+ - free: Vapaan swap-tilan määrä (tässä 1.0 GiB).
+
+```
+┌──(kali㉿kali)-[~]
+└─$ free -h
+               total        used        free      shared  buff/cache   available
+Mem:           1.9Gi       857Mi       503Mi       5.1Mi       731Mi       1.1Gi
+Swap:          1.0Gi          0B       1.0Gi
+                                                                                                                    
+┌──(kali㉿kali)-[~]
+└─$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+udev            929M     0  929M   0% /dev
+tmpfs           195M  1.2M  193M   1% /run
+/dev/sda1        79G   17G   58G  23% /
+tmpfs           971M     0  971M   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+tmpfs           195M  128K  194M   1% /run/user/1000
+
+```
+
 <hr>
+
 <br>
 Kali linux / Linux tiedoston järjestelmän poku, joka noudattaa <b>filesystem hierachy standard (FHS) </b>, johon ollaan usein tottuttu siihen rakenteeseen ja yleisen asteltujen Linux järjestelmään eli tiedostojen polkua ja jne.
 
