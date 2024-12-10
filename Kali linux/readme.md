@@ -46,18 +46,18 @@ Kali linux ohjelman muistin tarkistmainen komennot `free -h` ja `df -h`
 Esim. ensimmäisessä nähdään kokonaisuudsesaan 
 
 - Mem riviltä - fyysiesn muistin (RAM) muistin, eli tämän Kali Linux ohjelma johon annettu VMware workstation ohjelmana muistia fyysisen koneelta.
- - total: Kokonaismuisti (tässä 1.9 GiB).
- - used: Käytetty muisti (861 MiB).
- - free: Vapaat muistivarat (747 MiB).
- - buff/cache: Välimuisti ja buufferit, jotka voivat käytännössä vapautua tarpeen mukaan.
- - available: Tämä on muistia, joka on käytettävissä ohjelmille ilman swapin käyttöä (1.1 GiB).
+  - total: Kokonaismuisti (tässä 1.9 GiB).
+  - used: Käytetty muisti (861 MiB).
+  - free: Vapaat muistivarat (747 MiB).
+  - buff/cache: Välimuisti ja buufferit, jotka voivat käytännössä vapautua tarpeen mukaan.
+  - available: Tämä on muistia, joka on käytettävissä ohjelmille ilman swapin käyttöä (1.1 GiB).
 
 <br> 
 
 - Swap riviltä - on virtuaalinen muisti, jota käytetään, kun RAM on täynnä. Tämä sijaitsee yleensä kiintolevyllä.
- - total: Swap-tilan kokonaiskapasiteetti (1.0 GiB).
- - used: Käytetty swap-tila (0 B tässä tapauksessa, eli swap-tilaa ei ole tarvittu).
- - free: Vapaan swap-tilan määrä (tässä 1.0 GiB).
+  - total: Swap-tilan kokonaiskapasiteetti (1.0 GiB).
+  - used: Käytetty swap-tila (0 B tässä tapauksessa, eli swap-tilaa ei ole tarvittu).
+  - free: Vapaan swap-tilan määrä (tässä 1.0 GiB).
 
 ```
 ┌──(kali㉿kali)-[~]
