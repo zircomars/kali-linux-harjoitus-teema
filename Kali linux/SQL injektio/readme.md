@@ -54,11 +54,11 @@ Kolmen typpistä injektio ovat;
    (lyhyesti sanottuna;  Hyökkääjä saa tietoa muilla kanavilla, kuten verkkopyynnöillä.)
 
 - blind / inferential SQL injection; Blind SQL-injektiossa ei saada suoraa palautetta SQL-kyselyistä, mutta hyökkääjä voi päätellä tietoja epäsuorasti, esimerkiksi kokeilemalla erilaisia ehtoja ja katsomalla, miten sivusto reagoi. Tässä ei ole virheilmoituksia eikä suoraa tietoa, mutta silti hyökkääjä voi arvaamalla selvittää tietokannan rakennetta ja tietoja. Blind SQL Injection voidaan jakaa edelleen kahteen tyyppiin:
+        (lyhyesti sanottuna; Hyökkääjä ei saa suoraa palautetta, vaan päättelee tietoja epäsuorasti käyttäen sivuston käyttäytymistä (boolean- tai time-based).)
   
  -  boolean-based Blind SQL injection: Hyökkääjä yrittää muuttaa SQL-kyselyä siten, että kyselyn tulos on joko "totta" tai "epätotta", ja seuraamalla käyttäjän reaktiota (esim. sivun lataus tai virhe) voi päätellä, onko tietty ehto täsmällinen.
  -  Time-based Blind SQL Injection: Tässä hyökkääjä pakottaa tietokannan odottamaan tietyn ajan ennen vastauksen lähettämistä, ja aikaa mittaamalla voidaan päätellä, onko ehto ollut totta vai epätotta.
 
 Esim. `' AND 1=1 --` - sivu latautuu normaalisti tarkoittaa ehto 1=1. Mutta jos esim. `' AND 1=2 --` ettei sivu lataudu. Näin hän voi päätellä, että ehto 1=2 on epätosi.
 
-   (lyhyesti sanottuna; Hyökkääjä ei saa suoraa palautetta, vaan päättelee tietoja epäsuorasti käyttäen sivuston käyttäytymistä (boolean- tai time-based).)
 
