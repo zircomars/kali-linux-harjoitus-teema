@@ -1,3 +1,5 @@
+# SQL injektio
+
 SQL-injektio (SQL injection) on tietoturvahyökkäys, jossa hyökkääjä voi manipuloida verkkosovelluksen tai tietokannan SQL-kyselyitä. Tämä tapahtuu syöttämällä haitallista SQL-koodia sovellukseen, joka ei ole suojattu asianmukaisesti. SQL-injektio voi mahdollistaa hyökkääjän suorittaa tietokannan komentoja, kuten lukemaan, muokkaamaan tai poistamaan tietoja, jopa hankkimaan järjestelmänvalvojan oikeudet.
 
 SQL-injektiohyökkäyksen perusidea on hyödyntää puutteellisesti suodatettuja syötteitä (kuten käyttäjän syöttämiä lomaketietoja tai URL-parametreja) ja liittää niihin haitallista SQL-koodia. Jos sovellus ei tarkista tai puhdista syötteitä kunnolla, hyökkääjä voi lisätä oman SQL-lausekkeen alkuperäiseen kyselyyn, joka suoritetaan tietokannassa.
