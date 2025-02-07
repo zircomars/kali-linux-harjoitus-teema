@@ -266,6 +266,41 @@ Nmap done: 1 IP address (1 host up) scanned in 59.31 seconds
 
 </detail>
 
+## --script 
+
+nmap NSE (Nmap scripting engine) eli tämä `--script` komento lisäyksenä. Komento nmap --script antaa käyttäjälle mahdollisuuden suorittaa Nmapin skriptejä tietyn kohteen osalta. Nämä skriptit voivat olla erikoistuneita tietoturvatarkastuksia, kuten haavoittuvuuden etsimistä, palveluiden versioiden tarkistamista, autentikointitarkistuksia jne
+
+Muutamia esimerkkejä ja komennon syntaksi; `$nmap --script <script_name> <kohteen_ip>`
+
+- tietoturvasskripti esim. haavoittuvuudentarkistus; `nmap --script=vuln <IP-add/URL>` && toinen esim. porttista tarkista; `$nmap -p 80,443 --script=vuln <IP-add/URL>`
+- vekrkopalvelin versiotiedot; `nmap --script=http-title <IP-add/URL>` && toinen esim. tietty portit. `$nmap -p 80,443 --script=http-title <IP-add/URL>`
+- Haavoittuvuuksien etsintä tietyistä protokollista `$nmap --script=smb-vuln-ms17-010 <IP-add/URL>`
+
+Skriptien luokittelu, eli NMAP NSE-skriptejä on useita eri luokkia ja niitä voi käyttää eri tarkoituksiinsa mm; 
+
+- Discovery: Auttaa tunnistamaan palveluja, reitittimiä, tiedostoja, ja muita verkon elementtejä.
+- Vuln: Haavoittuvuustarkistukset, kuten tunnetut heikkoudet ja niihin liittyvät hyökkäykset.
+- Safe: Skriptit, jotka eivät ole aggressiivisia ja joita voidaan käyttää turvallisesti ilman, että ne aiheuttavat haittaa.
+- Auth: Skriptit, jotka auttavat testamaan autentikointimekanismeja.
+
+Teoreettinen käyttö ja tarkoitus lisätietoa; <br>
+
+<details>
+Teoreettinen käyttö ja tarkoitus <br>
+Verkon turvallisuuden arviointi: nmap --script voi auttaa tunnistamaan mahdollisia heikkouksia verkossa ennen kuin ne hyväksikäytetään haitallisissa hyökkäyksissä. Se on osa ns. "penetraatiotestausta" (pentest), jossa pyritään tunnistamaan ja korjaamaan haavoittuvuuksia ennen kuin ne voivat tulla hyväksikäytetyksi.
+
+Verkon ja palveluiden kartoitus: Nmapin skriptit voivat myös auttaa kartoittamaan, mitä palveluja ja sovelluksia verkossa on aktiivisia ja kuinka ne ovat konfiguroituja. Tämä voi olla erityisen tärkeää, jos esimerkiksi yritys haluaa varmistaa, että sen sisäverkko on suojattu asianmukaisesti.
+
+Haavoittuvuustarkastukset: Nmapin skriptit, kuten vuln, voivat automaattisesti testata kohteen palveluja tunnetuille haavoittuvuuksille (esim. CVE-haavoittuvuudet). Tämä voi säästää aikaa ja vaivannäköä verrattuna käsin tehtäviin haavoittuvuustarkastuksiin.
+
+Verkon analysointi ja valvonta: Käyttämällä Nmapin skriptejä voidaan tarkastella, kuinka verkon eri palvelut reagoivat tiettyihin pyyntöihin ja olisiko niissä parantamisen varaa. Tämä voi auttaa myös verkon vianmäärityksessä ja ylläpidossa.
+</details>
+
+<br>
+
+`nmap --script` on erittäin tehokas työkalu, joka voi laajentaa Nmapin toimintoja monilla eri tavoilla, aina verkon ja palveluiden kartoittamisesta haavoittuvuuksien etsimiseen. Sitä käytetään verkon turvallisuuden testaamiseen, haavoittuvuuksien tunnistamiseen, palveluiden analysointiin ja moniin muihin tarkoituksiin, jotka liittyvät verkkoturvallisuuden arviointiin. Teoreettisesti tämä mahdollistaa verkkojen turvallisuuden arvioinnin ja haavoittuvuuksien minimoinnin ennen, kuin niitä voidaan hyödyntää haitallisiin tarkoituksiin.
+
+
 # lisätieoriaa mikä on nmap
 
 https://www.topsevenreviews.com/fi/nmap-review/ <br>
