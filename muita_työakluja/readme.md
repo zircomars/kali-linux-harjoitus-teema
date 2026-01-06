@@ -19,5 +19,8 @@ ei koske latausta, mutta niitä on aika paljon, ja osasta joutuu luomaan oman tu
 - https://www.hybrid-analysis.com/
 -
 -
--
--
+
+
+## muita linkkejä 
+
+- https://www.root-me.org/?lang=en
